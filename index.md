@@ -1,6 +1,7 @@
 ---
 title: 기술블로그
-subtitle: This is the demo site for Bulma Clean Theme
+subtitle: Beyond Price Comparison |
+        너와 나와, 다나와에서 함께
 layout: page
 callouts: home_callouts
 show_sidebar: true
