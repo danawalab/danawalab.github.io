@@ -6,47 +6,48 @@ callouts: home_callouts
 show_sidebar: true
 ---
 
-# Bulma Clean Theme demo website
 
-This website showcases the options for the Bulma Clean theme. The theme is available as a ruby gem or can be used with GitHub pages. 
+# 우리가 가치 있게 생각하는 것
 
-[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
-![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
+### 함께 일합니다.
+> 각자의 시선과 관점이 모여 더 나은 우리가 될 수 있다고 믿습니다.
+함께 고민하고, 함께 일하며, 함께 성장합니다.
 
-## Ruby Gem
 
-The ruby gem is available on the Ruby Gems website at the following location. [https://rubygems.org/gems/bulma-clean-theme](https://rubygems.org/gems/bulma-clean-theme)
+### 함걸음씩 성장합니다.
+> 우리는 스스로의 성장을 위한 고민과 노력을 가치 있게 생각합니다.
+우리는 스스로의 성장을 위한 고민과 노력을 가치 있게 생각합니다.
+소의 걸음으로 천리를 가듯(牛步千里) 천천히, 그러나 지속적으로 성장하는 것을 추구합니다.
 
-## GitHub Pages
 
-The theme can be used with GitHub Pages bu setting the `remote_theme` in your Jekyll sites `_config.yml`
+### 바름을 추구합니다.
+> 우리는 올바르고 투명한 문화가 사용자(User)의 신뢰를 향한 길임을 믿습니다.
+편법은 멀리하고, 바른 방향을 추구하여 스스로 당당한 문화를 만들어 갑니다.
 
-```yml
-remote_theme: chrisrhymes/bulma-clean-theme
-```
+---
 
-## Instructions
+# 복리후생
 
-For full instructions, please see the Readme at the GitHub repo:
-[https://github.com/chrisrhymes/bulma-clean-theme/blob/master/README.md](https://github.com/chrisrhymes/bulma-clean-theme/blob/master/README.md)
+## 생활/안정/건강
 
-## Page Layouts
+### 기숙사 운영
+> 다나와에 근무하는 직원들에게 주거의 편의를 제공하기 위하여 기숙사를 운영하고 있습니다.
+### 생활안정대출
+> 임직원의 복리증진 및 생활안정을 위해 대출을 지원하고 있습니다. 
+### 단체상해보험
+> 단체상해보험에 가입하여 불의의 사고 시 경제적인 보상을 받을 수 있도록 하고 있습니다.
+### 종합건강검진
+> 임직원의 건강관리를 위해 전문기관에서 정밀검진을 시행하고 있습니다.
 
-This demo site showcases the available page layout options.
 
-* Page With Sidebar
-* Page Without Sidebar
-* Page With Menubar
-* Page With Tabs
-* Page Without Footer
-* Page Without Hero
-* Page With Contents
-* Landing Page With Callouts
-* Blog
-* Post
+# 행복/여가/워라벨
 
-## Supported By JetBrains
+### Refresh 휴가
+> Refresh 차원의 근속휴가제도를 운영하고 있으며, 별도 휴가비를 지급하고 있습니다.
+### 동호회 지원
+> 즐거운 조직문화 정착을 위해 동호회 활동을 지원하고 있습니다.
+### 기념일 지원
+> 생일날 조기퇴근을 실시하고 있으며, 각종 기념일에 선물을 증정하고 있습니다. (생일, 결혼기념일, 어버이날 등)
+### 경조사 지원
+> 경조휴가를 부여하고, 경조금과 경조화환 등을 지원하고 있습니다.
 
-JetBrains have kindly provided an Open Source licence to aid in the future development of Bulma Clean Theme.
-
-[![JetBrains](img/jetbrains-variant-4.svg)](https://www.jetbrains.com/?from=bulma-clean-theme)
