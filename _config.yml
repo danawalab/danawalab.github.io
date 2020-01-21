@@ -1,11 +1,11 @@
 # Site Settings
 remote_theme: chrisrhymes/bulma-clean-theme
 
-title: 다나와 기술블로그
+title: 다나와
 email: cs@danawa.com
 description: >
   다나와 기술블로그
-baseurl: "/blog/"
+# baseurl: "/blog/"
 # url: "https://danawalab.github.io"
 # permalink: pretty
 favicon: favicon.ico
