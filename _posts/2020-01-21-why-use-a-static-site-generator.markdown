@@ -5,6 +5,7 @@ date:   2020-01-21 10:38:07
 categories: development
 description: "테스트 블로그1 설명"
 image: 'https://www.csrhymes.com//img/static-site-generator.jpg'
+hero_image: https://image.fmkorea.com/files/attach/new/20190921/486616/1238022905/2204617173/b011197c3b16890297a440dfcf8f79b9.png
 published: true
 canonical_url: https://www.csrhymes.com/development/2018/05/28/why-use-a-static-site-generator.html
 ---
@@ -15,8 +16,8 @@ canonical_url: https://www.csrhymes.com/development/2018/05/28/why-use-a-static-
 무궁화 삼천리 화려강산
 대한 사람, 대한으로 길이 보전하세.
 
-2. 남산[11] 위에 저 소나무, 철갑을 두른 듯
-바람서리[12] 불변함은 우리 기상일세.
+2. 남산 위에 저 소나무, 철갑을 두른 듯
+바람서리 불변함은 우리 기상일세.
 무궁화 삼천리 화려강산
 대한 사람, 대한으로 길이 보전하세.
 
