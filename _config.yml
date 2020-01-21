@@ -5,7 +5,7 @@ title: 다나와 기술블로그
 email: cs@danawa.com
 description: >
   다나와 기술블로그
-# baseurl: "/"
+baseurl: "/blog/"
 # url: "https://danawalab.github.io"
 # permalink: pretty
 favicon: favicon.ico
