@@ -5,9 +5,9 @@ title: 다나와 기술블로그
 email: cs@danawa.com
 description: >
   다나와 기술블로그
-baseurl: "/"
-url: "https://danawalab.github.io"
-permalink: pretty
+# baseurl: "/"
+# url: "https://danawalab.github.io"
+# permalink: pretty
 favicon: favicon.ico
 
 paginate: 5
@@ -33,7 +33,7 @@ paginate_path: "/blog/page:num"
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# livereload: true
+livereload: true
 
 # sass:
 #   style: compressed
@@ -41,22 +41,22 @@ paginate_path: "/blog/page:num"
 
 # #google_analytics: UA-code-here
 
-# defaults:
-#   -
-#     scope:
-#       path: ""
-#       type: "pages"
-#     values:
-#       show_sidebar: true
-#   -
-#     scope:
-#       path: ""
-#       type: "posts"
-#     values:
-#       author: "C.S. Rhymes"
-#       layout: post
-#       image: https://via.placeholder.com/1200x800
-#       show_sidebar: true
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "C.S. Rhymes"
+      layout: post
+      image: https://via.placeholder.com/1200x800
+      show_sidebar: true
 
 # markdown: kramdown
 # highlighter: rouge
