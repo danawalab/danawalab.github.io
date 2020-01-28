@@ -1,6 +1,6 @@
 
 <div class="main-banner {% if page.layout == 'category' or page.layout == 'post' %} main-banner--list {% endif %}">
-    <div class="main-banner__cover"></div>
+    <div class="main-banner__cover" style="{% if page.image %} background-image: url({{page.image}}) {% endif %}"></div>
     <div class="main-banner__text">
         <h2 class="main-banner__h2">
             {% if page.layout == 'category' or page.layout == 'post' %}

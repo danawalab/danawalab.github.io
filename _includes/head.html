@@ -2,15 +2,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>다나와 기술 블로그 - 해당페이지 타이틀 노출</title>
-<meta name="description" content="기획 확인 후 작성">
-<meta property="fb:app_id" content="페이스북 인사이트">
-<meta property="og:title" content="다나와 기술 블로그">
-<meta property="og:site_name" content="다나와 기술 블로그">
+<title>{{page.title}} - {{site.title}}</title>
+<meta name="description" content="{{site.description}}">
+
+<meta property="og:title" content="{{page.title}}">
+<meta property="og:site_name" content="{{site.title}}">
 <meta property="og:type" content="website">
-<meta property="og:url" content="랜딩 url 입력">
-<meta property="og:image" content="">
-<meta property="og:description" content="기획 확인 후 작성">
+<meta property="og:url" content="{{site.url}}{{page.url}}">
+<meta property="og:image" content="{{page.image}}">
+<meta property="og:description" content="{{page.description}}">
+
 <link rel="stylesheet" type="text/css" href="/assets/css/techblog.css">
 <link rel="stylesheet" href="/assets/css/monokai_sublime.min.css">
 <script src="/assets/js/highlight.min.js"></script> 
