@@ -1,6 +1,6 @@
 ---
 
 layout: category
-title: #jekyll
+title: 김준우
 
 ---
