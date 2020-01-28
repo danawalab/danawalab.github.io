@@ -1,0 +1,24 @@
+{% assign pages_list = site.pages %}
+
+<aside class="content__aside">
+    <h4 class="content__h4">
+        <strong>Categories</strong>
+        <button type="button" class="button__toggle">
+            <span class="blind">숨기기</span>
+        </button>
+    </h4>
+        <ul>
+            
+            {% for cat in site.categories %}
+            
+            <li class="{% if page.title == cat[0] %} selected {%endif%}">
+                <a href="{{ site.baseurl }}/category/{{ cat[0] }}.html">
+                    <span>{{ cat[0] }} (<em>{{ cat[1].size }}</em>)</span>
+                </a>
+            </li>
+   
+            {% endfor %}
+        </ul>
+</aside>
+
+<!-- 카테고리 -->

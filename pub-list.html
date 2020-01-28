@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>다나와 기술 블로그 - 해당페이지 타이틀 노출</title>
+    <meta name="description" content="기획 확인 후 작성">
+    <meta property="fb:app_id" content="페이스북 인사이트">
+    <meta property="og:title" content="다나와 기술 블로그">
+    <meta property="og:site_name" content="다나와 기술 블로그">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="랜딩 url 입력">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="기획 확인 후 작성">
+    <link rel="stylesheet" type="text/css" href="//static-t.danawa.com/css/techblog.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.7/styles/monokai_sublime.min.css">
+    <script src="//cdn.jsdelivr.net/highlight.js/8.7/highlight.min.js"></script> 
+    <script>hljs.initHighlightingOnLoad();</script>
+        <!-- 디자인 확인용 스크립트 개발시 삭제 -->
+        <script async type="text/javascript">
+            (function () {
+                document.addEventListener('DOMContentLoaded', function () {
+                    const headerBtn = document.querySelector(".header__btn");
+                    const buttonCate = document.querySelector(".button--cate");
+                    const buttonToggle = document.querySelector(".button__toggle");
+                    const content = document.querySelector(".content");
+
+                    headerBtn.addEventListener("click", toggle_btn);
+                    buttonCate.addEventListener("click", toggle_btn);
+                    buttonToggle.addEventListener("click", removeClass)
+
+                    function toggle_btn() {
+                        content.classList.toggle("content--side");
+                    };
+
+                    function removeClass() {
+                        content.classList.remove("content--side");
+                    }
+
+                })
+            })();
+        </script>
+</head>
+<body>
+    <!-- 리스트 클래스 header--list -->
+    <header class="header header--list">
+        <div class="header__wrap">
+            <button type="button" class="header__btn">
+                <span class="blind">네비게이션</span>
+            </button>
+            <h1 class="header__h1">
+                <a href="" target="_self" class="header__link">
+                    <span class="header__logo">
+                        <strong class="blind">danawa</strong>
+                    </span>
+                    <span class="header__logo header__logo--techblog">
+                        <strong class="blind">기술 블로그</strong>
+                    </span>
+                </a>
+            </h1>
+        </div>
+    </header>
+    <div class="content">
+        <div class="content__wrap">
+            <div class="main-banner main-banner--list">
+                <div class="main-banner__cover"></div>
+                <div class="main-banner__text">
+                    <a href="" class="link--back">
+                        <span class="blind">뒤로가기</span>
+                    </a>
+                    <button type="button" class="button--cate">
+                        <span class="blind">카테고리</span>
+                    </button>
+                    <h2 class="main-banner__h2">
+                        <span>Experience</span>
+                    </h2>
+                </div>
+            </div>
+            <section class="content__layout">
+    <aside class="content__aside">
+        <h4 class="content__h4">
+            <strong>Categories</strong>
+            <button type="button" class="button__toggle">
+                <span class="blind">숨기기</span>
+            </button>
+        </h4>
+            <ul>
+                <li>
+                    <a href="">
+                        <span>Interview (<em>0</em>)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Tools (<em>55</em>)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Nerd (<em>14</em>)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Study (<em>12</em>)</span>
+                    </a>
+                </li>
+                <!-- 선택 시 .selected -->
+                <li class="selected">
+                    <a href="">
+                        <span>Experience (<em>26</em>)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>R&D (<em>0</em>)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Security (<em>0</em>)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Swift (<em>0</em>)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>R-D (<em>0</em>)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Techcourse (<em>20</em>)</span>
+                    </a>
+                </li>
+            </ul>
+    </aside>
+    <div class="content__list">
+        <div class="content__post">
+            <a href="" class="content__link">
+                <h3 class="content__h3">feign 좀 더 나아가기</h3>
+                <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+            </a>
+            <div class="content__sub">
+                <span class="name">김다나</span>
+                <span class="date">2020.01.03.</span>
+                
+            </div>
+        </div>
+        <div class="content__post">
+            <a href="" class="content__link">
+                <h3 class="content__h3">메인 데이터베이스 IDC 탈출 성공기</h3>
+                <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+            </a>
+            <span class="content__sub">
+                <span class="name">김다나</span>
+                <span class="date">2020.01.03.</span>
+                <span class="comments">10</span>
+            </span>
+        </div>
+        <div class="content__post">
+            <a href="" class="content__link">
+                <h3 class="content__h3">Spock Extension과 Elasticsearch + Kibana 조합으로 테스트
+                    결과를 빠르게 피드백 받기</h3>
+                <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+            </a>
+            <span class="content__sub">
+                <span class="name">김다나</span>
+                <span class="date">2020.01.03.</span>
+                
+            </span>
+        </div>
+        <div class="content__post">
+            <a href="" class="content__link">
+                <h3 class="content__h3">feign 좀 더 나아가기</h3>
+                <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+            </a>
+            <span class="content__sub">
+                <span class="name">김다나</span>
+                <span class="date">2020.01.03.</span>
+                
+            </span>
+        </div>
+        <div class="content__post">
+            <a href="" class="content__link">
+                <h3 class="content__h3">메인 데이터베이스 IDC 탈출 성공기</h3>
+                <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+            </a>
+            <span class="content__sub">
+                <span class="name">김다나</span>
+                <span class="date">2020.01.03.</span>
+                <span class="comments">10</span>
+            </span>
+        </div>
+        <div class="content__post">
+            <a href="" class="content__link">
+                <h3 class="content__h3">메인 데이터베이스 IDC 탈출 성공기</h3>
+                <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+            </a>
+            <span class="content__sub">
+                <span class="name">김다나</span>
+                <span class="date">2020.01.03.</span>
+                
+            </span>
+        </div>
+        <div class="content__post">
+            <a href="" class="content__link">
+                <h3 class="content__h3">feign 좀 더 나아가기</h3>
+                <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+            </a>
+            <span class="content__sub">
+                <span class="name">김다나</span>
+                <span class="date">2020.01.03.</span>
+                
+            </span>
+        </div>
+        <div class="content__post">
+            <a href="" class="content__link">
+                <h3 class="content__h3">메인 데이터베이스 IDC 탈출 성공기</h3>
+                <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+            </a>
+            <span class="content__sub">
+                <span class="name">김다나</span>
+                <span class="date">2020.01.03.</span>
+                <span class="comments">10</span>
+            </span>
+        </div>
+    </div>
+</section>        </div>
+    </div>
+    </div>
+    <footer class="footer">
+    <p>Copyright © <strong>danawa</strong> Co., Ltd. All Rights Reserved.</p>
+    <span>ⓒ<strong>danawa</strong> </span>
+</footer></body>
+
+</html>

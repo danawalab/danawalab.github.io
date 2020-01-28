@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>다나와 기술 블로그 - Spock Extension과 Elasticsearch + Kibana 조합으로 테스트 결과를 빠르게 피드</title>
+    <meta name="description" content="기획 확인 후 작성">
+    <meta property="fb:app_id" content="페이스북 인사이트">
+    <meta property="og:title" content="다나와 기술 블로그 - Spock Extension과 Elasticsearch + Kibana 조합으로 테스트 결과를 빠르게 피드">
+    <meta property="og:site_name" content="다나와 기술 블로그">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="랜딩 url 입력">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="기획 확인 후 작성">
+    <link rel="stylesheet" type="text/css" href="//static-t.danawa.com/css/techblog.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.7/styles/monokai_sublime.min.css">
+    <script src="//cdn.jsdelivr.net/highlight.js/8.7/highlight.min.js"></script>
+    <!-- 코드 하이라이팅 스크립트 -->
+    <script>
+
+        hljs.initHighlightingOnLoad();
+    </script>
+    <!-- 디자인 확인용 스크립트 개발시 삭제 -->
+    <script async type="text/javascript">
+        (function (){
+            document.addEventListener('DOMContentLoaded', function(){
+                const headerBtn = document.querySelector(".header__btn");
+                const buttonCate = document.querySelector(".button--cate");
+                const buttonToggle = document.querySelector(".button__toggle");
+                const content = document.querySelector(".content");
+
+                headerBtn .addEventListener("click", toggle_btn);
+                buttonCate.addEventListener("click", toggle_btn);
+                buttonToggle.addEventListener("click", removeClass)
+                function toggle_btn(){
+                    content.classList.toggle("content--side");
+                };
+                function removeClass(){
+                    content.classList.remove("content--side");
+                }
+
+            })
+        })();
+    </script>
+</head>
+<body>
+    <!-- 리스트 클래스 header--list -->
+    <header class="header header--list">
+        <div class="header__wrap">
+            <button type="button" class="header__btn">
+                <span class="blind">네비게이션</span>
+            </button>
+            <h1 class="header__h1">
+                <a href="" target="_self" class="header__link">
+                    <span class="header__logo">
+                        <strong class="blind">danawa</strong>
+                    </span>
+                    <span class="header__logo header__logo--techblog">
+                        <strong class="blind">기술 블로그</strong>
+                    </span>
+                </a>
+            </h1>
+        </div>
+    </header>
+    <div class="content">
+        <div class="content__wrap">
+            <div class="main-banner main-banner--list">
+                <div class="main-banner__cover"></div>
+                <div class="main-banner__text">
+                    <a href="" class="link--back">
+                        <span class="blind">뒤로가기</span>
+                    </a>
+                    <button type="button" class="button--cate">
+                        <span class="blind">카테고리</span>
+                    </button>
+                    <h2 class="main-banner__h2">
+                        <span>Experience</span>
+                    </h2>
+                </div>
+            </div>
+            <section class="content__layout content__layout--detail">
+                <aside class="content__aside">
+                    <h4 class="content__h4">
+                        <strong>Categories</strong>
+                        <button type="button" class="button__toggle">
+                            <span class="blind">숨기기</span>
+                        </button>
+                    </h4>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span>Interview (<em>0</em>)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>Tools (<em>55</em>)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>Nerd (<em>14</em>)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>Study (<em>12</em>)</span>
+                            </a>
+                        </li>
+                        <!-- 선택 시 .selected -->
+                        <li class="selected">
+                            <a href="">
+                                <span>Experience (<em>26</em>)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>R&amp;D (<em>0</em>)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>Security (<em>0</em>)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>Swift (<em>0</em>)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>R-D (<em>0</em>)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>Techcourse (<em>20</em>)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+                <!-- markdown-body 마크다운 적용 클래스 -->
+                <div class="markdown-body">
+                    <h1>Spock Extension과 Elasticsearch + Kibana 조합으로 테스트 결과를 빠르게 피드</h1>
+                    <div class="content__sub">
+                        <span class="name">김다나</span>
+                        <span class="date">2020.01.03.</span>
+                        <span class="comments">10</span>
+                    </div>
+                    <p>모든 테스트는 중요하고 가치가 높은 활동입니다. 특히 <strong>개발을 지원하기 위한 기술 중심의 테스트가 조금 더 중요하고 가능하다면 이런 테스트를 더 많이 해야 한다</strong>고 생각해 왔습니다. 왜냐하면, 버그가 나타나는 시점은 코드가 개발된 직후입니다. 이때 테스트가 수행되고 테스트 수행 결과를 피드백 받는 시간 간격이 짧을수록 버그의 원인을 쉽고 빠르게 찾을 수 있기 때문입니다.</p>
+                    <p>하지만, 기술 중심의 자동화된 테스트 없이 수동으로 테스트를 하는 것은 테스트 수행 시간과 결과를 피드백 받는 시간이 더 오래 걸린다는 단점이 있습니다.</p>
+                    <p>자동화된 회귀 테스트는 수행 속도가 빠르고 반복적인 테스트에 적합합니다. 사람의 인지 능력이 있어야 하는 영역에는 사용할 수 없고, <a href=""><strong>살충제 패러독스</strong></a>Pesticide paradox에 빠지기가 더 쉽습니다.</p>
+                    <p><a href="">Effective Unit Testing</a>이란 책에서도 “테스트의 실행 속도가 테스트의 피드백 주기를 감소시키고 생산성에 직접적인 영향을 준다”고 설명하고 있습니다.</p>
+
+                    <h3>http client</h3>
+
+                    <p>담당하고 있는 제품(또는 서비스)의 품질을 유지하면서 업무 생산성을 높이기 위해 API 리그레션 테스트를 자동화했습니다. 그리고, 테스트 결과를 Elasticsearch로 전송하고 Kibana를 통해서 피드백 받을 수 있도록 시스템을 구성한 과정을 공유하고자 합니다.</p>
+                    <ul>
+                        <li>feign client 에서 method return type 을 feign 의 <code>feign.Response</code> 로 하고 있습니다.
+                            <!-- 개발 highlight.js -->
+                            <div class="language-java highlighter-rouge">
+                                <div class="highlight">
+                                    <pre class="highlight">
+                                        <!-- 예시 코드 -->
+                                        <code><span class="nd">@Getter</span>
+<span class="nd">@NoArgsConstructor</span><span class="o">(</span><span class="n">access</span> <span class="o">=</span> <span class="nc">AccessLevel</span><span class="o">.</span><span class="na">PROTECTED</span><span class="o">)</span>
+<span class="nd">@Entity</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Sales</span> <span class="kd">extends</span> <span class="nc">DateTimeEntity</span> <span class="o">{</span>
+
+	<span class="nd">@Id</span>
+	<span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="nc">GenerationType</span><span class="o">.</span><span class="na">IDENTITY</span><span class="o">)</span>
+	<span class="kd">private</span> <span class="nc">Long</span> <span class="n">id</span><span class="o">;</span>
+
+	<span class="nd">@ManyToOne</span><span class="o">(</span><span class="n">fetch</span> <span class="o">=</span> <span class="nc">FetchType</span><span class="o">.</span><span class="na">LAZY</span><span class="o">)</span> <span class="c1">// (2)</span>
+	<span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"owner_id"</span><span class="o">,</span> <span class="n">nullable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span>
+	<span class="kd">private</span> <span class="nc">Owner</span> <span class="n">owner</span><span class="o">;</span>
+
+	<span class="nd">@OneToMany</span><span class="o">(</span><span class="n">mappedBy</span> <span class="o">=</span> <span class="s">"sales"</span><span class="o">,</span> <span class="n">cascade</span> <span class="o">=</span> <span class="nc">CascadeType</span><span class="o">.</span><span class="na">ALL</span><span class="o">,</span> <span class="n">orphanRemoval</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+	<span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">SalesDetail</span><span class="o">&gt;</span> <span class="n">salesDetailList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+
+	<span class="c1">// (3)</span>
+	<span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"item"</span><span class="o">,</span> <span class="n">nullable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span>
+	<span class="kd">private</span> <span class="nc">String</span> <span class="n">item</span><span class="o">;</span>
+
+	<span class="kd">private</span> <span class="kt">long</span> <span class="n">totalSales</span><span class="o">;</span>
+
+	<span class="kd">private</span> <span class="kt">long</span> <span class="n">settlement</span><span class="o">;</span>
+
+	<span class="c1">// (1)</span>
+	<span class="nd">@Column</span><span class="o">(</span><span class="n">nullable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span>
+	<span class="kd">private</span> <span class="nc">LocalDateTime</span> <span class="n">occurDateTime</span><span class="o">;</span>
+	
+	<span class="c1">// (4)</span>
+<span class="o">}</span>
+                                    </code></pre>
+                                        <!--// 예시 코드 -->
+                                </div>
+                            </div>
+                            <!--// 개발 highlight.js -->
+                            <ul>
+                                <li>OkHttpClient 로 설정하기
+                                    <ul>
+                                        <li>의존성 추가하기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- 개발 highlight.js -->
+                            <div class="language-java highlighter-rouge">
+                                <div class="highlight">
+                                    <pre class="highlight">
+                                        <!-- 예시 코드 -->
+                                        <code><span class="nd">@Getter</span>
+<span class="nd">@NoArgsConstructor</span><span class="o">(</span><span class="n">access</span> <span class="o">=</span> <span class="nc">AccessLevel</span><span class="o">.</span><span class="na">PROTECTED</span><span class="o">)</span>
+<span class="nd">@Entity</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Sales</span> <span class="kd">extends</span> <span class="nc">DateTimeEntity</span> <span class="o">{</span>
+
+	<span class="nd">@Id</span>
+	<span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="nc">GenerationType</span><span class="o">.</span><span class="na">IDENTITY</span><span class="o">)</span>
+	<span class="kd">private</span> <span class="nc">Long</span> <span class="n">id</span><span class="o">;</span>
+
+	<span class="nd">@ManyToOne</span><span class="o">(</span><span class="n">fetch</span> <span class="o">=</span> <span class="nc">FetchType</span><span class="o">.</span><span class="na">LAZY</span><span class="o">)</span> <span class="c1">// (2)</span>
+	<span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"owner_id"</span><span class="o">,</span> <span class="n">nullable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span>
+	<span class="kd">private</span> <span class="nc">Owner</span> <span class="n">owner</span><span class="o">;</span>
+
+	<span class="nd">@OneToMany</span><span class="o">(</span><span class="n">mappedBy</span> <span class="o">=</span> <span class="s">"sales"</span><span class="o">,</span> <span class="n">cascade</span> <span class="o">=</span> <span class="nc">CascadeType</span><span class="o">.</span><span class="na">ALL</span><span class="o">,</span> <span class="n">orphanRemoval</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+	<span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">SalesDetail</span><span class="o">&gt;</span> <span class="n">salesDetailList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+
+	<span class="c1">// (3)</span>
+	<span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"item"</span><span class="o">,</span> <span class="n">nullable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span>
+	<span class="kd">private</span> <span class="nc">String</span> <span class="n">item</span><span class="o">;</span>
+
+	<span class="kd">private</span> <span class="kt">long</span> <span class="n">totalSales</span><span class="o">;</span>
+
+	<span class="kd">private</span> <span class="kt">long</span> <span class="n">settlement</span><span class="o">;</span>
+
+	<span class="c1">// (1)</span>
+	<span class="nd">@Column</span><span class="o">(</span><span class="n">nullable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span>
+	<span class="kd">private</span> <span class="nc">LocalDateTime</span> <span class="n">occurDateTime</span><span class="o">;</span>
+	
+	<span class="c1">// (4)</span>
+<span class="o">}</span>
+                                    </code></pre>
+                                    <!--// 예시 코드 -->
+                                </div>
+                            </div>
+                            <!--// 개발 highlight.js -->
+                        </li>
+                    </ul>
+                        
+
+                    
+                        
+                </div>
+            </section>
+            <div class="content__reply">
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v5.0"></script>
+                <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="920px" data-numposts="5"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footer">
+    <p>Copyright © <strong>danawa</strong> Co., Ltd. All Rights Reserved.</p>
+    <span>ⓒ<strong>danawa</strong> </span>
+</footer></body>
+
+</html>
