@@ -1,11 +1,14 @@
 ---
 layout: default
+title: "다나와 기술블로그"
+description: "너와 나와, 다나와에서 함께 개발해요"
+image: 
 ---
 
 <div class="content__list">
     <div class="content__post">
 
-        {% for post in site.posts limit:10 %}
+        {% for post in site.posts limit:30 %}
         
         <div class="content__post">
             <a href="{{ site.baseurl }}{{ post.url }}" class="content__link">
