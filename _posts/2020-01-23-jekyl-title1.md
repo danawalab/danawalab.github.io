@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "메인 데이터베이스 IDC 탈출 성공기13"
+title:  "jekyll test blog 1"
 description: "상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용"
 date:   2020-01-23 10:53:24 +0900
 writer: "김다나"
-categories: java
+categories: jekyll
 ---
 
 
