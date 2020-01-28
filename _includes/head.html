@@ -30,3 +30,27 @@
 
   gtag('config', 'UA-157157616-1');
 </script>
+
+<script async type="text/javascript">
+  (function () {
+      document.addEventListener('DOMContentLoaded', function () {
+          const headerBtn = document.querySelector(".header__btn");
+          const buttonCate = document.querySelector(".button--cate");
+          const buttonToggle = document.querySelector(".button__toggle");
+          const content = document.querySelector(".content");
+
+          headerBtn.addEventListener("click", toggle_btn);
+          buttonCate.addEventListener("click", toggle_btn);
+          buttonToggle.addEventListener("click", removeClass)
+
+          function toggle_btn() {
+              content.classList.toggle("content--side");
+          };
+
+          function removeClass() {
+              content.classList.remove("content--side");
+          }
+
+      })
+  })();
+</script>
