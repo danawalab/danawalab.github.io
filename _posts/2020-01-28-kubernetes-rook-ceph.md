@@ -17,7 +17,7 @@ Rook 은 오픈소스 클라우드 네이티브 스토리지 오케스트레이�
 
 High-level Storage Provider는 Ceph와 EdgeFS를 제공하며 그외 Cassandra, cockroachDB, Minio, NFS, YugabyteDB 등을 제공합니다.
 
-![/assets/img/Kubernetes%20ROOK/Untitled.png](/assets/img/Kubernetes%20ROOK/Untitled.png)
+![/images/2020-01-28-kubernetes-rook-ceph/Untitled.png](/images/2020-01-28-kubernetes-rook-ceph/Untitled.png)
 
 ## Ceph vs EdgeFS
 
@@ -28,7 +28,7 @@ High-level Storage Provider는 Ceph와 EdgeFS를 제공하며 그외 Cassandra, 
 
 Ceph 와 EdgeFS를 비교했을때 EdgeFS는 대용량 스토리지가 필요할때 적합한거같고, Ceph는 공유/확장에 적합한거같다.  우리는 3개의 서버를 HA Cluster로 묶을 예정이고 각 POD는 공유되는 파일 시스템이 필요합니다.
 
-![/assets/img/Kubernetes%20ROOK/Untitled%201.png](/assets/img/Kubernetes%20ROOK/Untitled%201.png)
+![/images/2020-01-28-kubernetes-rook-ceph/Untitled%201.png](/images/2020-01-28-kubernetes-rook-ceph/Untitled%201.png)
 
 ### Ceph는 Block, Object, Shared의 유형의 스토리지를 제공
 
@@ -89,7 +89,7 @@ common.yaml, operator.yaml 은 공통적으로 실행하는 매니패스트다. 
 
 osd는 노드수와 구성된 장치및 디렉토리 수에 따라 다릅니다.
 
-![/assets/img/Kubernetes%20ROOK/Untitled%202.png](/assets/img/Kubernetes%20ROOK/Untitled%202.png)
+![/images/2020-01-28-kubernetes-rook-ceph/Untitled%202.png](/images/2020-01-28-kubernetes-rook-ceph/Untitled%202.png)
 
 operator.yaml 실행하면 rook-ceph-operator-xxxxxx-xxxx 파드가 생성되지만 상태가 계속 Pending 에서 멈춘다면 어떻게 해야될까..?
 
@@ -103,7 +103,7 @@ operator.yaml 실행하면 rook-ceph-operator-xxxxxx-xxxx 파드가 생성되지
 
 결과)
 
-![/assets/img/Kubernetes%20ROOK/Untitled%203.png](/assets/img/Kubernetes%20ROOK/Untitled%203.png)
+![/images/2020-01-28-kubernetes-rook-ceph/Untitled%203.png](/images/2020-01-28-kubernetes-rook-ceph/Untitled%203.png)
 
 이것도 엄청 심플하다... 실행하면 아래 처럼 CephFileSystem이 생성됩니다.
 
@@ -165,19 +165,19 @@ csi.storage.k8s.io/node-stage-secret-namespace: rook-ceph
 
 POD)
 
-![/assets/img/Kubernetes%20ROOK/Untitled%204.png](/assets/img/Kubernetes%20ROOK/Untitled%204.png)
+![/images/2020-01-28-kubernetes-rook-ceph/Untitled%204.png](/images/2020-01-28-kubernetes-rook-ceph/Untitled%204.png)
 
 CephFileSystem)
 
-![/assets/img/Kubernetes%20ROOK/Untitled%205.png](/assets/img/Kubernetes%20ROOK/Untitled%205.png)
+![/images/2020-01-28-kubernetes-rook-ceph/Untitled%205.png](/images/2020-01-28-kubernetes-rook-ceph/Untitled%205.png)
 
 Service)
 
-![/assets/img/Kubernetes%20ROOK/Untitled%206.png](/assets/img/Kubernetes%20ROOK/Untitled%206.png)
+![/images/2020-01-28-kubernetes-rook-ceph/Untitled%206.png](/images/2020-01-28-kubernetes-rook-ceph/Untitled%206.png)
 
 Secrets)
 
-![/assets/img/Kubernetes%20ROOK/Untitled%207.png](/assets/img/Kubernetes%20ROOK/Untitled%207.png)
+![/images/2020-01-28-kubernetes-rook-ceph/Untitled%207.png](/images/2020-01-28-kubernetes-rook-ceph/Untitled%207.png)
 
 ### POD에 Share File System Mount 해보기.
 
