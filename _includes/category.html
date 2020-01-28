@@ -8,9 +8,7 @@
         </button>
     </h4>
         <ul>
-            
             {% for cat in site.categories %}
-            
             <li class="{% if page.title == cat[0] %} selected {%endif%}">
                 <a href="{{ site.baseurl }}/category/{{ cat[0] }}.html">
                     <span>{{ cat[0] }} (<em>{{ cat[1].size }}</em>)</span>
