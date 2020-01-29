@@ -17,6 +17,9 @@ image:
         <div class="content__sub">
             <span class="name">{{ post.writer }}</span>
             <span class="date">{{ post.date | date: "%Y.%m.%d." }}</span>
+            <span class="comments">
+                <span class="fb-comments-count" data-href="{{ site.url }}{{ post.url }}"></span>
+            </span>
         </div>
     </div>
     {% endfor %}
