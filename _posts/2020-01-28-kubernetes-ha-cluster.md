@@ -34,7 +34,7 @@ Storage: 100G
 
 > ## 도커&쿠버네티스 설치   
 
-CentOS 패키지업데이트와 방화벽을 정지및 스왑을 종료합니다.
+CentOS 패키지 업데이트와 방화벽을 정지 및 스왑을 종료합니다.
 
 ```
 $ sudo yum update -y
@@ -73,7 +73,7 @@ $ sudo hostnamectl set-hostname node3
 
 ### 도커 설치   
 
-도커 레파지토리를 등록하여 yum 으로 설치 진햅니다.   
+도커 레파지토리를 등록하여 yum 으로 설치 합니다.   
 ```
 $ sudo yum install -y yum-utils \
     device-mapper-persistent-data \
@@ -89,7 +89,7 @@ $ sudo systemctl start docker
 
 ```
 
-**설치후 daemon.json을 추가하여 cgroupdriver를 systemd 옵션을 사용할 수 있도록 합니다.*
+**설치 후 daemon.json을 추가하여 cgroupdriver를 systemd 옵션으로 사용할 수 있도록 합니다.*
 ```
 $ sudo cat <<EOF > /etc/docker/daemon.json
 {
@@ -116,7 +116,7 @@ $ sudo systemctl restart docker
 쿠버네티스의 레파지토리 저장소를 등록하여 yum 으로 kubelet, kubeadm, kubectl을 설치합니다.
 
 - kubeadm: 클러스터 관련 작업시 사용됩니다.
-- kubectl: 클러스터의 서비스및 pod 관리시 사용됩니다.
+- kubectl: 클러스터의 서비스 및 pod 관리시 사용됩니다.
 - kubelet: 클러스터 에이전트역할을 합니다.
 
 ```
@@ -147,8 +147,8 @@ $ kubectl version
 
 > ## 로드밸런서 설치   
 
-쿠버네티스에서 공식문서에서 사용되고 있는 HAProxy를 사용하도록 하겠습니다.   
-테스트환경이기 때문에 keepalive및 failover 기능 사용없이 진행하도록 하겠습니다.  
+공식문서에서 사용되고 있는 HAProxy를 사용하도록 하겠습니다.   
+테스트환경이기 때문에 keepalive및 failover 기능없이 진행하도록 하겠습니다.  
 
 
 ### 노드1에만 haproxy 를 설치하도록 하겠습니다.   
@@ -160,7 +160,7 @@ $ sudo yum install haproxy -y
 ### haproxy 로드밸런싱 설정   
 
 node1 IP의 26443포트로 전달받은 데이터를 node1 ~ node3의 6443 포트로 포워드 시켜줍니다.   
-balance 방식은 라운드로빈으로 순차적으로 접근하도록 하겠습니다.
+라운드로빈으로 순차적으로 접근하도록 하겠습니다.
 
 ```
 $ sudo cat <<EOF >> /etc/haproxy/haproxy.cfg
@@ -186,14 +186,14 @@ $ sudo systemctl restart haproxy
 ### haproxy 확인   
 
 해당 포트가 오픈되어 있는지 확인합니다.   
-포트가 오픈되어 있어도 접근이 안될때는 방화벽을 확인해보아야 합니다.
+포트가 오픈되어 있어도 접근이 안될때는 방화벽을 확인해야 합니다.
 ```
 netstat -an|grep 26443
 ```
 
 > ## 클러스터 생성
 
- 클러스터 생성할때 --upload-certs, --control-plane-endpoint 플래그를 추가해야 인증서가 자동 배포가 되고, 마스터 노드 조인 명령어가 출력됩니다.
+ 클러스터 생성할때 --upload-certs, --control-plane-endpoint 플래그를 추가해야 인증서가 자동 배포되고, 마스터 노드 조인 명령어가 출력됩니다.
 
 ```
 $ sudo kubeadm init --control-plane-endpoint "<노드1 DNS/IP or LoadBalancer DNS/IP>:26443" \
@@ -214,7 +214,7 @@ $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 > ## 클러스터 연결
 
-노드1에서 클러스터 생성시 kubeadm join 명령어가 출력되는데 --control-plane --certificate-key 플래그 포함하여 명령어를 실행하면 마스터 노드로 연결이되고, 플래그는 추가하지 않고 사용하게 되면 워커노드로 연결됩니다. 
+노드1에서 클러스터 생성시 kubeadm join 명령어가 출력되는데 --control-plane --certificate-key 플래그 포함하여 명령어를 실행하면 마스터 노드로 연결이 되고, 플래그는 추가하지 않고 사용하게 되면 워커노드로 연결됩니다. 
 
 ### 노드2 클러스터 연결
 
@@ -226,7 +226,7 @@ $ sudo kubeadm join 192.168.248.251:26443 --token 06glbc.s0yaqonyajs95ez3 \
 
 ### config 생성
 
-노드2의 사용자에서도 kubectl 명령어를 사용하기 위해선 config를 생성해야합니다.
+노드2의 사용자에서도 kubectl 명령어를 사용하기 위해선 config를 생성해야 합니다.
 ```
 $ mkdir -p $HOME/.kube
 $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -255,13 +255,12 @@ $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 > ## 클러스터 구성 확인
 
-노드가 연결이 정상적으로 되었다면 아래 명령어를 실행하였을때 노드가 전부 보여야합니다.
+노드가 연결이 되었다면 아래 명령어를 실행시 노드가 전부 보여야합니다.
 ```
 $ kubectl get node
 ```
 
-마스터 노드에는 기본설정이 pod를 배포가 안됩니다. 
-taint명령어를 통해 pod 배포가 가능하도록 해지 시키도록 하겠습니다.
+마스터 노드에는 기본설정으로 pod 배포가 안됩니다. taint명령어를 통해 pod 배포가 가능하도록 하겠습니다.
 ```
 $ kubectl taint nodes --all node-role.kubernetes.io/master-
 ```
