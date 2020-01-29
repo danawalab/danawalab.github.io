@@ -1,8 +1,9 @@
 
-{% if page.layout == 'category' %}
+{% if page.name == 'index.html' %}
+    {% assign list-class = "" %}
+{% elsif page.layout == 'category' %}
     {% assign list-class = "main-banner--list" %}
-{% endif %}
-{% if page.layout == 'post' %}
+{% elsif page.layout == 'post' %}
     {% assign list-class = "main-banner--list" %}
 {% endif %}
 
@@ -18,23 +19,22 @@
             <span class="blind">카테고리</span>
         </button>
 
-
         <h2 class="main-banner__h2">
-            {% if page.layout == 'post' %}
-               <span>
-                    {{ page.categories }}
-               </span>
-            {% else if page.layout == 'category' %}
-               <span>
-                   {{page.title}}
-               </span>
-            {% else %}
+            {% if page.name == 'index.html' %}
                 <span>Beyond Price Comparison</span>
                 <br>
                 <strong>너와 나와, 다나와에서 함께 개발해요</strong>
                 <a href="https://recruit.danawa.com/" class="main-banner__link" target="_blank">
                     <strong>개발자 지원하기</strong>
                 </a>
+            {% elsif page.layout == 'category' %}
+                <span>
+                    {{page.title}}
+                </span>
+            {% elsif page.layout == 'post' %}
+               <span>
+                    {{ page.categories }}
+               </span>    
             {% endif %}
         </h2>
     </div>

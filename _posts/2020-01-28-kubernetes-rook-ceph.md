@@ -7,9 +7,7 @@ writer: "김준우"
 categories: Kubernetes
 ---
 
-# Kubernetes ROOK 사용해보기
-
-# Rook?
+### Rook?
 
 ---
 
@@ -20,7 +18,7 @@ High-level Storage Provider는 Ceph와 EdgeFS를 제공하며 그외 Cassandra, 
 
 ![/images/2020-01-28-kubernetes-rook-ceph/Untitled.png](/images/2020-01-28-kubernetes-rook-ceph/Untitled.png)
 
-## Ceph vs EdgeFS
+### Ceph vs EdgeFS
 
 ---
 

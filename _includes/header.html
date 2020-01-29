@@ -1,7 +1,8 @@
-{% if page.layout == 'category' %}
+{% if page.name == 'index.html' %}
+    {% assign list-class = "" %}
+{% elsif page.layout == 'category' %}
     {% assign list-class = "header--list" %}
-{% endif %}
-{% if page.layout == 'post' %}
+{% elsif page.layout == 'post' %}
     {% assign list-class = "header--list" %}
 {% endif %}
 

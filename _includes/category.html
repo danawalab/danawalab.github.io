@@ -13,7 +13,7 @@
             {% assign select-class = "" %}
             {% if page.title == cat[0] %} 
                 {% assign select-class = "selected" %}
-            {% else if page.categories == cat[0] %}
+            {% elsif page.categories == cat[0] %}
                 {% assign select-class = "selected" %}
             {%endif%}
             <li class="{{select-class}}">
