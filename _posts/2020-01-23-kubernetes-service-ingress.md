@@ -22,14 +22,15 @@ categories: Kubernetes
 
 `Service`는 클러스터 외부로 `PORT`를 노출하는 기능과 부하분산기능을 수행합니다. 그리고 이점은 `Ingress` 도 동일합니다. 차이점은 `Ingress`는 `L7`이고 `Service` 는 `L4`라는 점입니다.
 
-<center>
-
+<p align="center">
 <img src="/images/2020-01-23-kubernetes-service-ingress/2019-08-22-translation-kubernetes-nodeport-vs-loadbalancer-vs-ingress4.png">
-
-**인그레스-서비스 네트워크 구조**
-
-출처: https://medium.com/google-cloud
-</center>
+</p>
+<p align="center">
+인그레스-서비스 네트워크 구조
+</p>
+<p align="center">
+출처: https:\//medium.com/google-cloud
+</p>
 
 
 서비스는 여러개로 복제된 한 종류의 `POD`를 로드밸런싱합니다. 아래는 `50000`포트를 오픈한 `POD`의 `hello-world`라는 서비스의 YMAL 설정입니다.
