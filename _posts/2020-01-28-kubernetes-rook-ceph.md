@@ -19,6 +19,7 @@ categories: Kubernetes
 ## Rook 구성도
 
 Rook은 쿠버네티스 POD에서 실행되며, Ceph, EdgeFS등 가상솔루션을 POD로 배포하여 관리하는 도구입니다. agent를 통해 Ceph, EdgeFS등 가상솔루션을 관리하고, OSD를 통해 데이터를 영구저장합니다.
+
 ![/images/2020-01-28-kubernetes-rook-ceph/Untitled.png](/images/2020-01-28-kubernetes-rook-ceph/Untitled.png)
 
 ## Ceph vs EdgeFS
