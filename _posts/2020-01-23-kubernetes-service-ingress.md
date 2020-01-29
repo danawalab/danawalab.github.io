@@ -26,7 +26,7 @@ categories: Kubernetes
 
 <img src="/images/2020-01-23-kubernetes-service-ingress/2019-08-22-translation-kubernetes-nodeport-vs-loadbalancer-vs-ingress4.png">
 
-<인그레스-서비스 네트워크 구조>
+**인그레스-서비스 네트워크 구조**
 
 출처: https://medium.com/google-cloud
 </center>
