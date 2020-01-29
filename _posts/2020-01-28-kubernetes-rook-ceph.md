@@ -7,7 +7,7 @@ writer: "김준우"
 categories: Kubernetes
 ---
 
-### Rook?
+## Rook?
 
 ---
 
@@ -18,7 +18,7 @@ High-level Storage Provider는 Ceph와 EdgeFS를 제공하며 그외 Cassandra, 
 
 ![/images/2020-01-28-kubernetes-rook-ceph/Untitled.png](/images/2020-01-28-kubernetes-rook-ceph/Untitled.png)
 
-### Ceph vs EdgeFS
+## Ceph vs EdgeFS
 
 ---
 
@@ -29,7 +29,7 @@ Ceph 와 EdgeFS를 비교했을때 EdgeFS는 대용량 스토리지가 필요할
 
 ![/images/2020-01-28-kubernetes-rook-ceph/Untitled%201.png](/images/2020-01-28-kubernetes-rook-ceph/Untitled%201.png)
 
-### Ceph는 Block, Object, Shared의 유형의 스토리지를 제공
+## Ceph는 Block, Object, Shared의 유형의 스토리지를 제공
 
 ---
 
@@ -46,7 +46,7 @@ Ceph 와 EdgeFS를 비교했을때 EdgeFS는 대용량 스토리지가 필요할
     여러 POD에서 공유할 수있는 파일 시스템기반 스토리지
 
 
-### Ceph - Shared Stroage 설치
+## Ceph - Shared Stroage 설치
 
 ---
 
