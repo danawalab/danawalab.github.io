@@ -27,9 +27,8 @@ categories: Kubernetes
 </p>
 <p align="center">
 인그레스-서비스 네트워크 구조
-</p>
-<p align="center">
-출처: https:\//medium.com/google-cloud
+<br/>
+출처: https://<i></i>medium.com/google-cloud
 </p>
 
 
