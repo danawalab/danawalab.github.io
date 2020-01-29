@@ -9,12 +9,12 @@ categories: Kubernetes
 
 
 
-> ## 소개   
+## 소개   
 
 쿠버네티스는 마스터 노드에 내부적으로 API-SERVER를 가지고 있어 마스터 노드를 통해 워커 노드로 통신이 전달됩니다. 대량에 통신량이 발생하게 되면 마스터 노드는 부하를 많이 받아 장애 발생 가능성이 커지게 됩니다. 마스터 노드를 고가용성 클러스터로 연결하게 되면 통신량을 분산시킬 수 있고, 일부가 마스터 노드에서 장애가 발생시 워커 노드의 운영 시스템에는 영향을 줄일 수 있습니다.
 
 
-> ## 구성 환경   
+## 구성 환경   
 
 아래 사양으로 총 3대 서버를 준비합니다.   
 
@@ -24,7 +24,7 @@ RAM: 4
 Storage: 100G   
 
 
-> ## 구성목표   
+## 구성목표   
 
 1. 마스터 노드 3개를 클러스터구성
 2. 가상 네트워크(weave) 적용
@@ -32,7 +32,7 @@ Storage: 100G
 
 
 
-> ## 도커&쿠버네티스 설치   
+## 도커&쿠버네티스 설치   
 
 CentOS 패키지 업데이트와 방화벽을 정지 및 스왑을 종료합니다.
 
@@ -48,7 +48,7 @@ $ sudo sed -i '/swap/d' /etc/fstab
 ```
 
 
-**운영 환경에서는 아래 포트를 오픈하여 진행합니다.*
+운영 환경에서는 아래 포트를 오픈하여 진행합니다.
 
 | 노드 | 포트 | TCP/UDP |
 | --- |--- |---|
@@ -61,7 +61,8 @@ $ sudo sed -i '/swap/d' /etc/fstab
 
 ### 호스트네임 설정   
 
-**호스트네임은 서로 다르게 지정해야합니다.*
+호스트네임은 서로 다르게 지정해야합니다.
+
 ```
 $ sudo hostnamectl set-hostname node1
 
@@ -89,7 +90,7 @@ $ sudo systemctl start docker
 
 ```
 
-**설치 후 daemon.json을 추가하여 cgroupdriver를 systemd 옵션으로 사용할 수 있도록 합니다.*
+설치 후 daemon.json을 추가하여 cgroupdriver를 systemd 옵션으로 사용할 수 있도록 합니다.
 ```
 $ sudo cat <<EOF > /etc/docker/daemon.json
 {
@@ -145,7 +146,7 @@ $ kubectl version
 ```
 
 
-> ## 로드밸런서 설치   
+## 로드밸런서 설치   
 
 공식문서에서 사용되고 있는 HAProxy를 사용하도록 하겠습니다.   
 테스트환경이기 때문에 keepalive및 failover 기능없이 진행하도록 하겠습니다.  
@@ -191,7 +192,7 @@ $ sudo systemctl restart haproxy
 netstat -an|grep 26443
 ```
 
-> ## 클러스터 생성
+## 클러스터 생성
 
  클러스터 생성할때 --upload-certs, --control-plane-endpoint 플래그를 추가해야 인증서가 자동 배포되고, 마스터 노드 조인 명령어가 출력됩니다.
 
@@ -212,7 +213,7 @@ $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-> ## 클러스터 연결
+## 클러스터 연결
 
 노드1에서 클러스터 생성시 kubeadm join 명령어가 출력되는데 --control-plane --certificate-key 플래그 포함하여 명령어를 실행하면 마스터 노드로 연결이 되고, 플래그는 추가하지 않고 사용하게 되면 워커노드로 연결됩니다. 
 
@@ -253,7 +254,7 @@ $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 
-> ## 클러스터 구성 확인
+## 클러스터 구성 확인
 
 노드가 연결이 되었다면 아래 명령어를 실행시 노드가 전부 보여야합니다.
 ```
@@ -266,7 +267,7 @@ $ kubectl taint nodes --all node-role.kubernetes.io/master-
 ```
 
 
-> ## 가상 네트워크(weave) 적용
+## 가상 네트워크(weave) 적용
 
 Calico, Canal, Clilum, Flannel, weave 등 다양한 가상네트워크가 있지만 공식문서에서 제공하는 weave를 적용하도록 하겠습니다.
 ```
@@ -283,7 +284,7 @@ $ kubectl get node
 
 
 
-> ### nginx 배포 해보기
+### nginx 배포 해보기
 
 nginx pod 3개를 배포하는 명령어입니다.
 ```
@@ -295,11 +296,11 @@ kubectl run --image=nginx --port 80 --replicas=3 nginx-app
 kubectl get pod -o wide
 ```
 
-> ## 정리
+## 정리
 
 이번에 쿠버네티스 고가용성 클러스터를 서버에 구축해보았습니다. 쿠버네티스 버전 1.6 이후 부터는 인증서배포 자동화, 클러스터 연결하는 방법이 간편하게 변경되었습니다. 이전 버전에서는 클러스터 구성하기위해선 복잡한 과정과 설정파일을 만들어야 했지만 이제는 간단하게 명령어 한줄만 입력하면 클러스터에 연결/해지를 하도록 변경되었습니다. 자유로운 노드 할당은 자원 낭비없이 효율적으로 관리하는데 장점이 될 것으로 보여집니다.
 
 
-> ## 참고문서
+## 참고문서
 
 - [kubernetes.io](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#check-required-ports)
