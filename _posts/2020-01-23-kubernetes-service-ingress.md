@@ -92,4 +92,4 @@ spec:
 - 프로메테우스, 그라파나
 - 마이크로 서비스 아키텍처
 
-[다나와 채용][https://recruit.danawa.com/] 에서 지금 당장 지원해주세요!
+[다나와 채용](https://recruit.danawa.com/) 에서 지금 당장 지원해주세요!
