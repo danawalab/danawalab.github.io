@@ -191,10 +191,9 @@ $ sudo systemctl restart haproxy
 netstat -an|grep 26443
 ```
 
+> ## 클러스터 생성
 
-> ## 쿠버네티스 클러스터   
-
-클러스터 생성할때 --upload-certs, --control-plane-endpoint 플래그를 추가해야 인증서가 자동 배포가 되고, 마스터 노드 조인 명령어가 출력됩니다.
+ 클러스터 생성할때 --upload-certs, --control-plane-endpoint 플래그를 추가해야 인증서가 자동 배포가 되고, 마스터 노드 조인 명령어가 출력됩니다.
 
 ```
 $ sudo kubeadm init --control-plane-endpoint "<노드1 DNS/IP or LoadBalancer DNS/IP>:26443" \
@@ -204,6 +203,7 @@ $ sudo kubeadm init --control-plane-endpoint "<노드1 DNS/IP or LoadBalancer DN
 
 
 ### config 생성
+
 kubectl 사용하기 위해서는 사용자 디렉토리 하위에 .kube/config 가 필요합니다. kubeadm init 명령어를 진행하고 마지막에 로그를 잘보면 config를 생성하는 명령어가 적혀있습니다.
 
 ```
@@ -212,10 +212,12 @@ $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-> ## 쿠버네티스 클러스터
+> ## 클러스터 연결
+
 노드1에서 클러스터 생성시 kubeadm join 명령어가 출력되는데 --control-plane --certificate-key 플래그 포함하여 명령어를 실행하면 마스터 노드로 연결이되고, 플래그는 추가하지 않고 사용하게 되면 워커노드로 연결됩니다. 
 
 ### 노드2 클러스터 연결
+
 ```
 $ sudo kubeadm join 192.168.248.251:26443 --token 06glbc.s0yaqonyajs95ez3 \
     --discovery-token-ca-cert-hash sha256:379ff0daa2cffa3f6581ae25c96aa3d6e4a9af43df92b8d0ac5a4dbb4c7e5547 \
@@ -223,6 +225,7 @@ $ sudo kubeadm join 192.168.248.251:26443 --token 06glbc.s0yaqonyajs95ez3 \
 ```
 
 ### config 생성
+
 노드2의 사용자에서도 kubectl 명령어를 사용하기 위해선 config를 생성해야합니다.
 ```
 $ mkdir -p $HOME/.kube
@@ -232,13 +235,16 @@ $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 
 ### 노드3 클러스터 연결
+
 노드3에서도 노드2와 동일하게 연결을 진행합니다.
 ```
 $ sudo kubeadm join 192.168.248.251:26443 --token 06glbc.s0yaqonyajs95ez3 \
     --discovery-token-ca-cert-hash sha256:379ff0daa2cffa3f6581ae25c96aa3d6e4a9af43df92b8d0ac5a4dbb4c7e5547 \
     --control-plane --certificate-key 8eb7fa9a38ca1579c3fb61e0a1106935c4e9dfd81cbad259121f223f0adf555f
 ```
+
 ### config 생성
+
 노드3에서도 동일하게 config를 생성해야합니다.
 ```
 $ mkdir -p $HOME/.kube
@@ -270,6 +276,7 @@ $ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl vers
 
 
 ### 가상네트워크 적용 확인
+
 최초 클러스터를 진행하게 되면 노드의 상태는 NotReady 입니다. 가상네트워크를 적용하게 되면 약 1 ~ 3분 소요되고 Ready 상태로 변경되게 됩니다. 이것으로 가상네트워크 적용이 완료 되었습니다.
 ```
 $ kubectl get node
@@ -295,4 +302,5 @@ kubectl get pod -o wide
 
 
 > ## 참고문서
+
 - [kubernetes.io](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#check-required-ports)
