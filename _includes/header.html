@@ -1,4 +1,12 @@
-<header class="header">
+{% if page.layout == 'category' %}
+    {% assign list-class = "header--list" %}
+{% endif %}
+{% if page.layout == 'post' %}
+    {% assign list-class = "header--list" %}
+{% endif %}
+
+
+<header class="header {{ list-class }}">
     <div class="header__wrap">
         <button type="button" class="header__btn">
             <span class="blind">네비게이션</span>

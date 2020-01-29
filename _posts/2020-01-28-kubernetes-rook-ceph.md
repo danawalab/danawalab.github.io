@@ -2,7 +2,7 @@
 layout: post
 title:  "Kubernetes ROOK 사용해보기"
 description: "Rook 은 오픈소스 클라우드 네이티브 스토리지 오케스트레이터로 , 클라우드 네이티브 환경과 기본적으로 통합 할 수있는 다양한 스토리지 솔루션 세트에 대한 플랫폼, 프레임 워크 및 지원합니다."
-date:   2020-01-28 14:00:00 +0900
+date:   2020.01.28.
 writer: "김준우"
 categories: Kubernetes
 ---

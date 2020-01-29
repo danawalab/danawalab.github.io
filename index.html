@@ -6,26 +6,20 @@ image:
 ---
 
 <div class="content__list">
+    {% for post in site.posts limit:30 %}
     <div class="content__post">
-
-        {% for post in site.posts limit:30 %}
-        
-        <div class="content__post">
-            <a href="{{ site.baseurl }}{{ post.url }}" class="content__link">
-                <h3 class="content__h3">{{ post.title }}</h3>
-                <p class="content__p">
-                    {{ post.description }}
-                </p>
-            </a>
-            <div class="content__sub">
-                <span class="name">{{ post.writer }}</span>
-                <span class="date">{{ post.date | date_to_string }}</span>
-            </div>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="content__link">
+            <h3 class="content__h3">{{ post.title }}</h3>
+            <p class="content__p">
+                {{ post.description }}
+            </p>
+        </a>
+        <div class="content__sub">
+            <span class="name">{{ post.writer }}</span>
+            <span class="date">{{ post.date | date: "%Y.%m.%d." }}</span>
         </div>
-
-        {% endfor %}
-        
     </div>
+    {% endfor %}
 </div>
 
 <!-- 메인 카테고리 포스트 -->

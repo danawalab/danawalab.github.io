@@ -9,7 +9,14 @@
     </h4>
         <ul>
             {% for cat in site.categories %}
-            <li class="{% if page.title == cat[0] %} selected {%endif%}">
+
+            {% assign select-class = "" %}
+            {% if page.title == cat[0] %} 
+                {% assign select-class = "selected" %}
+            {% else if page.categories == cat[0] %}
+                {% assign select-class = "selected" %}
+            {%endif%}
+            <li class="{{select-class}}">
                 <a href="{{ site.baseurl }}/category/{{ cat[0] }}.html">
                     <span>{{ cat[0] }} (<em>{{ cat[1].size }}</em>)</span>
                 </a>

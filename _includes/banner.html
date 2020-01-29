@@ -1,12 +1,33 @@
 
-<div class="main-banner {% if page.layout == 'category' or page.layout == 'post' %} main-banner--list {% endif %}">
-    <div class="main-banner__cover" style="{% if page.image %} background-image: url({{page.image}}) {% endif %}"></div>
+{% if page.layout == 'category' %}
+    {% assign list-class = "main-banner--list" %}
+{% endif %}
+{% if page.layout == 'post' %}
+    {% assign list-class = "main-banner--list" %}
+{% endif %}
+
+<div class="main-banner {{ list-class }}">
+
+    <div class="main-banner__cover" style=" {% if page.image %} background-image: url({{page.image}}) {% endif %} "></div>
     <div class="main-banner__text">
+
+        <a href="#" class="link--back">
+            <span class="blind">뒤로가기</span>
+        </a>
+        <button type="button" class="button--cate">
+            <span class="blind">카테고리</span>
+        </button>
+
+
         <h2 class="main-banner__h2">
-            {% if page.layout == 'category' or page.layout == 'post' %}
+            {% if page.layout == 'post' %}
+               <span>
+                    {{ page.categories }}
+               </span>
+            {% else if page.layout == 'category' %}
                <span>
                    {{page.title}}
-               </span> 
+               </span>
             {% else %}
                 <span>Beyond Price Comparison</span>
                 <br>

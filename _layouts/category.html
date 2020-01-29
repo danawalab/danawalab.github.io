@@ -3,24 +3,24 @@ layout: default
 
 ---
 <div class="content__list">
-    <div class="content__post">
-        {% assign category = page.category | default: page.title %}
+    {% assign category = page.category | default: page.title %}
         {% for post in site.categories[category] %}
-            <div class="content__post">
-                <a href="{{ site.baseurl }}{{ post.url }}" class="content__link">
-                    <h3 class="content__h3">{{ post.title }}</h3>
-                    <p class="content__p">
-                        {{ post.description }}
-                    </p>
-                </a>
-                <div class="content__sub">
-                    <span class="name">{{ post.writer }}</span>
-                    <span class="date">{{ post.date | date_to_string }}</span>
-                </div>
+        <div class="content__post">
+            <a href="{{ post.url }}" class="content__link">
+                <h3 class="content__h3">{{ post.title }}</h3>
+                <p class="content__p">
+                    {{ post.description }}
+                </p>
+            </a>
+            <div class="content__sub">
+                <span class="name">{{ post.writer }}</span>
+                <span class="date">{{ post.date | date: "%Y.%m.%d." }}</span>
+                <span class="comments">
+                    <span class="fb-comments-count" data-href="{{ site.url }}{{ post.url }}"></span>
+                </span>
             </div>
-        {% endfor %}
-        
-    </div>
+        </div>
+    {% endfor %}
 </div>
 
 <!-- 카테고리 포스트 -->

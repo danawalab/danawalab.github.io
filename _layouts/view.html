@@ -11,9 +11,12 @@
                 
                 {%- include banner.html -%}
 
-                <section class="content__layout">
+                <section class="content__layout content__layout--detail">
                     {{ content }}
+
+                    {%- include category.html -%}
                 </section>
+                
             </div>
         </div>
         

@@ -1,13 +1,21 @@
 
-<section class="content__layout content__layout--detail">
-    <div class="markdown-body">
-        {{content}}
+<div class="markdown-body">
+
+    <h1>{{page.title}}</h1>
+
+    <div class="content__sub">
+        <span class="name">{{page.writer}}</span>
+        <span class="date">{{ page.date | date: "%Y.%m.%d." }}</span>
+        <span class="comments">
+            <span class="fb-comments-count" data-href="https://danawalab.github.io/{{page.url}}"></span>
+        </span>
     </div>
-</section>
+    <br/>
+    {{content}}
+</div>
 
 <div class="content__reply">
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v5.0"></script>
-    <div class="fb-comments" data-href="https://danawalab.github.io/{{page.url}}" data-width="920" data-numposts="30"></div>
-
+    
+    <div class="fb-comments" data-href="https://danawalab.github.io/{{page.url}}" data-width="920px" data-numposts="30"></div>
 </div>

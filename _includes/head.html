@@ -38,7 +38,8 @@
           const buttonCate = document.querySelector(".button--cate");
           const buttonToggle = document.querySelector(".button__toggle");
           const content = document.querySelector(".content");
-
+          
+          
           headerBtn.addEventListener("click", toggle_btn);
           buttonCate.addEventListener("click", toggle_btn);
           buttonToggle.addEventListener("click", removeClass)
@@ -51,6 +52,12 @@
               content.classList.remove("content--side");
           }
 
+          document.querySelectorAll(".link--back").forEach(e => {
+              console.log(e)
+              e.addEventListener("click", () => {
+                  history.go(-1)
+              })
+          })
       })
   })();
 </script>
