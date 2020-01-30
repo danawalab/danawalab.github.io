@@ -53,13 +53,13 @@
               content.classList.remove("content--side");
           }
 
-          document.querySelectorAll(".link--back").forEach(e => {
-              console.log(e)
-              e.addEventListener("click", () => {
+          const backButtons = document.querySelectorAll(".link--back")
+          for (let i; i < backButtons.length; i++) {
+            backButtons[i].addEventListener("click", () => {
                   history.go(-1)
               })
-          })
-
+          }
+          
           console.warn("\n\n" +
 "       /$$                                                       /$$           /$$      \n" +
 "      | $$                                                      | $$          | $$      \n" +
