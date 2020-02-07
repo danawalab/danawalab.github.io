@@ -156,6 +156,6 @@ source tree를 이용하여 확인해보겠습니다.
 ![/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%206.png](/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%206.png)
 
 
-정리
+## 정리
 
 SVN은 사용이 직관적이고 사용이 단순하다는 장점이 있지만 git을 통해 다양한 서비스를 이용할 수 없는 단점이 있어 svn을 git으로 마이그레이션 해보는 테스트를 해보았습니다. git 명령어를 통해 svn의 프로젝트를 가져오는 기능이 포함되어 있어  어렵지 않게 진행되었습니다.
