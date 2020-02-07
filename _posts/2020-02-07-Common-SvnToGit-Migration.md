@@ -4,7 +4,7 @@ title:  "SVN을 Git으로 마이그레이션"
 description: "프로젝트를 진행할 때 각자 업무를 나눠서 맡은 부분을 개발하게 됩니다. 각자 개발한 코드 혹은 문서를 하나의 관리 도구에서 통합적으로 버전별로 관리하게 되는 것을 형상관리(Configuration Management) 혹은 버전관리(Version Management)라고 부릅니다. 형상관리 방식에는 크게 중앙집중식과 분산관리식으로 나뉘는데 대표적으로 사용되는  도구가 중앙집중관리식에는 Subversion (이하 SVN) 그리고 분산관리식은 GIT을 사용합니다.   "
 date:   2020.02.07.
 writer: "김준우"
-categories: CM
+categories: Common
 ---
 ## 소개
 
@@ -92,15 +92,15 @@ $ chown -R svn:www-data <레파지토리명>
 
 svn 사용자정보를 생성해야 합니다. 이번 블로그에서는 TortoiseSVN을 사용하겠습니다. svn의 레파지토리를 로컬에 체크아웃의 자세한 설명은 생략하도록 하겠습니다. 체크아웃 받은 폴더에서 오른쪽 클릭하여 Show log를 선택합니다.
 
-![/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled.png](/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled.png)
+![/images/2020-02-07-Common-SvnToGit-Migration/Untitled.png](/images/2020-02-07-Common-SvnToGit-Migration/Untitled.png)
 
 선택하면 아래 이미지처럼 화면에서 Statistics를 선택합니다.
 
-![/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%201.png](/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%201.png)
+![/images/2020-02-07-Common-SvnToGit-Migration/Untitled%201.png](/images/2020-02-07-Common-SvnToGit-Migration/Untitled%201.png)
 
 Graph Type을 Commits by author를 선택합니다. 그러면 오른쪽에 컴밋했던 사용자명이 보입니다. 
 
-![/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%202.png](/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%202.png)
+![/images/2020-02-07-Common-SvnToGit-Migration/Untitled%202.png](/images/2020-02-07-Common-SvnToGit-Migration/Untitled%202.png)
 
 SVN에서 컴밋했던 사용자명을 users.txt 파일을 규칙에 맞게 작성합니다.
 
@@ -121,7 +121,7 @@ $ git svn clone <SVN URL> --no-metadata -A users.txt -T trunk -b branches -t tag
 
 정상적으로 복사되었으면 source tree를 이용하여 확인합니다. 원격 하위에 Subversion이 생성되었고 Branches, Tags가 보입니다. 그리고 히스토리도 정상적으로 보입니다.
 
-![/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%203.png](/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%203.png)
+![/images/2020-02-07-Common-SvnToGit-Migration/Untitled%203.png](/images/2020-02-07-Common-SvnToGit-Migration/Untitled%203.png)
 
 원격에 표시되는 branches, tags는 svn에 연결이 되어 있습니다. 앞으로 git으로 사용하기 위해서는 svn의 branches, tags의 history 정보와 새로 만든 git branches, tags의 history가 연결되어야 합니다.
 
@@ -143,17 +143,17 @@ done
 
 source tree를 이용하여 확인해보겠습니다.
 
-![/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%204.png](/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%204.png)
+![/images/2020-02-07-Common-SvnToGit-Migration/Untitled%204.png](/images/2020-02-07-Common-SvnToGit-Migration/Untitled%204.png)
 
 현재 상태에서 github, gitlab등으로 푸시하여 저장할 수 있습니다.
 
 테스트로 gitlab에 푸시하여 브렌치정보를 확인합니다.
 
-![/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%205.png](/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%205.png)
+![/images/2020-02-07-Common-SvnToGit-Migration/Untitled%205.png](/images/2020-02-07-Common-SvnToGit-Migration/Untitled%205.png)
 
 태그도 정상적으로 저장되었는지 확인합니다.
 
-![/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%206.png](/images/2020-02-07-ConfigureManagement-SvnToGit-Migration/Untitled%206.png)
+![/images/2020-02-07-Common-SvnToGit-Migration/Untitled%206.png](/images/2020-02-07-Common-SvnToGit-Migration/Untitled%206.png)
 
 
 ## 정리

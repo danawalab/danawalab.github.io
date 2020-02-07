@@ -1,6 +1,6 @@
 ---
 layout: category
-title: CM
+title: Common
 ---
 
 
