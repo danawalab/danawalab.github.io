@@ -163,8 +163,7 @@ SVN은 사용이 직관적이고 사용이 단순하다는 장점이 있지만 g
 
 ## 참고문서
 
-https://tortoisesvn.net/docs/release/TortoiseMerge_en/index.html
+- [https://tortoisesvn.net/docs/release/TortoiseMerge_en/index.html](https://tortoisesvn.net/docs/release/TortoiseMerge_en/index.html)
+- [https://git-scm.com/docs/git-svn](https://git-scm.com/docs/git-svn)
+- [http://developer.gaeasoft.co.kr/development-guide/gitlab/svn-to-gitlab/](http://developer.gaeasoft.co.kr/development-guide/gitlab/svn-to-gitlab/)
 
-https://git-scm.com/docs/git-svn
-
-http://developer.gaeasoft.co.kr/development-guide/gitlab/svn-to-gitlab/
