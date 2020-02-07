@@ -65,8 +65,12 @@ vi <레파지토리명>/conf/svnserve.conf
 $ docker exec -t svn-server htpasswd -b /etc/subversion/passwd <username> <password>
 ```
 
-또는 <레파지토리명>/conf/passwd 경로 직접 사용자명과 비밀번호를 파일에 작성해야합니다.
+또는 <레파지토리명>/conf/passwd 경로 직접 사용자명과 비밀번호를 파일에 작성해야합니다. 
+
+```
 <사용자 아이디>=<사용자 비밀번호>
+```
+
 
 trunk, branches, tags 디렉토리 구성하기
 
@@ -136,7 +140,6 @@ $ for tag in `git branch -r | grep "tags/" | sed 's/ tags\\///'| cut -d'/' -f 3`
     git tag -a -m "Converting SVN tags" $tag origin/tags/$tag
 done
 ```
-
 
 source tree를 이용하여 확인해보겠습니다.
 
