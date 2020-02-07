@@ -65,9 +65,8 @@ vi <레파지토리명>/conf/svnserve.conf
 $ docker exec -t svn-server htpasswd -b /etc/subversion/passwd <username> <password>
 ```
 
-또는 <레파지토리명>/conf/passwd 경로 직접 사용자명과 비밀번호를 파일에 작성해야합니다.   
+또는 <레파지토리명>/conf/passwd 경로 직접 사용자명과 비밀번호를 파일에 작성해야합니다.
 <사용자 아이디>=<사용자 비밀번호>
-
 
 trunk, branches, tags 디렉토리 구성하기
 
