@@ -4,7 +4,7 @@ title:  "SVN을 Git으로 마이그레이션"
 description: "프로젝트를 진행할 때 각자 업무를 나눠서 맡은 부분을 개발하게 됩니다. 각자 개발한 코드 혹은 문서를 하나의 관리 도구에서 통합적으로 버전별로 관리하게 되는 것을 형상관리(Configuration Management) 혹은 버전관리(Version Management)라고 부릅니다. 형상관리 방식에는 크게 중앙집중식과 분산관리식으로 나뉘는데 대표적으로 사용되는  도구가 중앙집중관리식에는 Subversion (이하 SVN) 그리고 분산관리식은 GIT을 사용합니다.   "
 date:   2020.02.07.
 writer: "김준우"
-categories: ConfigureManagement
+categories: CM
 ---
 # 소개
 
@@ -64,7 +64,6 @@ vi <레파지토리명>/conf/svnserve.conf
 ```
 $ docker exec -t svn-server htpasswd -b /etc/subversion/passwd <username> <password>
 ```
-    
 
 또는 <레파지토리명>/conf/passwd 경로 직접 사용자명과 비밀번호를 파일에 작성해야합니다.   
 <사용자 아이디>=<사용자 비밀번호>
@@ -78,14 +77,13 @@ $ svn mkdir svn://localhost/<레파지토리명>/trunk --username <사용자 아
 $ svn mkdir svn://localhost/<레파지토리명>/branches --username <사용자 아이디> --password <사용자 비밀번호>
 $ svn mkdir svn://localhost/<레파지토리명>/tags --username <사용자 아이디> --password <사용자 비밀번호>
 ```
-    
+
 
 클라이언트에서 http으로 접근이 필요하여 권한을 부여합니다.
 
 ```
 $ chown -R svn:www-data <레파지토리명>
 ```
-    
 
 ### SVN을 로컬 Git으로 마이그레이션
 
