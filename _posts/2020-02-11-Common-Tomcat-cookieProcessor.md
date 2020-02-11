@@ -25,8 +25,10 @@ categories: Common
 
 
 해당 오류의 내용을 알아보면서, Tomcat과 cookieProcessor의 관계를 알게되었습니다.
+
 Tomcat8은 LegacyCookieProcessor와 이를 대체할 수 있는 Rfc6265CookieProcessor를 제공하고 있습니다. 
 따라서 사용자의 입장에 따라 알맞은 cookieProcessor의 구성 요소를 LegacyCookieProcessor로 설정할 수 있고, Rfc6265CookieProcessor로도 설정할 수 있습니다.
+
 cookieProcessor는 className이라는 속성을 가지며, className의 값으로 'org.apache.tomcat.util.http.LegacyCookieProcessor' 및 'org.apache.tomcat.util.http.Rfc6265CookieProcessor'가 될 수 있습니다.
 또한, 별다른 지정을 하지 않으면 Tomcat8은 기본 값으로 LegacyCookieProcessor를 사용하도록 되어 있습니다. 
 
