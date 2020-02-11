@@ -7,6 +7,7 @@ writer: "안성일"
 categories: Common
 ---
 
+
 ## 소개 및 오류 내용
 
 여행 서비스 내 쿠키 생성 시, 다나와 서비스에 쿠키를 공하기 위해서 도메인 설정을 서브도메인('.danawa.com')으로 설정하였습니다.  
@@ -19,7 +20,9 @@ categories: Common
 ```
 쿠키 도메인으로 유효하지 않다는 내용이었습니다.
 
+
 ## 원인
+
 
 해당 오류의 내용을 알아보면서, Tomcat과 cookieProcessor의 관계를 알게되었습니다.
 Tomcat8은 LegacyCookieProcessor와 이를 대체할 수 있는 Rfc6265CookieProcessor를 제공하고 있습니다. 
@@ -29,10 +32,11 @@ cookieProcessor는 className이라는 속성을 가지며, className의 값으�
 
 ## 레거시 쿠키 vs RFC6265 쿠키
 
-"레거시 쿠"는 V0, V1, 여러 구 RFC문서에 근거하는 다양한 스펙을 가질 수 있기 때문에 `레거시 쿠키는 톰캣의 Legacy cookie processor 가 인용한 스펙을 기준`으로 다루겠습니다. 실제로 Legacy cookie processor는 혼란스러운 표준 문제 때문에 RFC2109, 2616, 6265를 모두 부분 부분 인용하고 있습니다.
+
+"레거시 쿠키"는 V0, V1, 여러 구 RFC문서에 근거하는 다양한 스펙을 가질 수 있기 때문에 `레거시 쿠키는 톰캣의 LegacyCookieProcessor 가 인용한 스펙을 기준`으로 다루겠습니다. 실제로 LegacyCookieProcessor는 혼란스러운 표준 문제 때문에 RFC2109, 2616, 6265를 모두 부분 부분 인용하고 있습니다.
 
 | 쿠키 | 버전속성 | Set-cookie 헤더 | 만료 메커니즘 | 도메인 속성 | 쿠키 name,value 제한사항 | 쿠키값 |
-| --- |--- |---|
+| --- | --- | --- | --- | --- | --- | --- |
 | 레거시 | Version=0, 1 | Set-cookie, Set-cookie2 | max-age, expires 혼용 | `.`으로 시작 | name,value 모두 HTTP/1.1 token형식 | name=이후의 token형식 value 또는 `"`로 감싸진 값 |
 | RFC6265 | 사용하지 않음  | Set-cookie | max-age가 있을 경우 expires 무시 | `.`으로 시작하지 않음 | name만 HTTP/1.1 token 형식 | 첫 `=`와 첫 `;`사이의 문자 |
 
@@ -60,13 +64,15 @@ RFC6265 스펙에 정의된 것과는 다르게, 톰캣의 Rfc6265CookieProcesso
 
 ### 톰캣 버전별 차이
 
-| 항목 | Tomcat Legacy cookie processor | Tomcat 8.0.x Rfc6265 cookie processor | Tomcat 8.5.x Rfc6265 cookie processor |
-| --- |--- |---|
+| 항목 | Tomcat LegacyCookieProcessor | Tomcat 8.0.x Rfc6265CookieProcessor | Tomcat 8.5.x Rfc6265CookieProcessor |
+| --- | --- | --- | --- |
 | cookie-value : cookie-value에 특수문자가 있으면 자동으로 `"`로 감싸는가? | O | X | X |
 | cookie-value : `"` 로 감싸지지 않은 cookie-value에 특수문자가 있으면 인식이 가능한가? | X (첫 HTTP/1.1 토큰의 separator 이후 값 사라짐) | O | O |
 | domain : domain이 `.`으로 시작해도 처리가 가능한가? | O (스펙 표준이다)  | O (스펙은 아니지만 무시하고 처리) | X (에러) |
 
+
 ## 해결
+
 
 Tomcat 서버 사용시 context.xml에 추가
 
@@ -99,9 +105,12 @@ Rfc6265CookieProcessor가 더 관대하다는 장점이 있지만, 현재 나온
 - 특수문자가 포함된다면 URL safe 인코딩을 합니다.
 
 
+
 ## 참고문서
 
-- [https://feel5ny.github.io/2019/11/16/HTTP_011_02/](https://feel5ny.github.io/2019/11/16/HTTP_011_02/)
-- [https://meetup.toast.com/posts/209](https://meetup.toast.com/posts/209)
-- [https://jistol.github.io/java/2017/08/30/tomcat8-invalid-domain/](https://jistol.github.io/java/2017/08/30/tomcat8-invalid-domain/)
 
+- [https://feel5ny.github.io/2019/11/16/HTTP_011_02/](https://feel5ny.github.io/2019/11/16/HTTP_011_02/)
+- [https://jistol.github.io/java/2017/08/30/tomcat8-invalid-domain/](https://jistol.github.io/java/2017/08/30/tomcat8-invalid-domain/)
+- [https://meetup.toast.com/posts/209](https://meetup.toast.com/posts/209)
+- [https://tomcat.apache.org/tomcat-8.5-doc/config/cookie-processor.html](https://tomcat.apache.org/tomcat-8.5-doc/config/cookie-processor.html)
+- [http://web04.echomail.com/docs/config/cookie-processor.html](http://web04.echomail.com/docs/config/cookie-processor.html)
