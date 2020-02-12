@@ -33,8 +33,8 @@ cookieProcessor는 className이라는 속성을 가지며, className의 값으�
 또한, 별다른 지정을 하지 않으면 Tomcat8은 기본 값으로 LegacyCookieProcessor를 사용하도록 되어 있습니다. 
 
 하지만 Tomcat8.5를 기점으로 cookieProcessor의 기본값이 Rfc6265CookieProcessor로 변경되었습니다.
-Rfc6265CookieProcessor의 속성 중 하나는 '쿠키 도메인 앞에 속성값으로 (".")문자 없이 설정하십시오.' 라는 내용이 있습니다.
-이 때문에 Rfc6265CookieProcessor의 허용되지 않는 '.danawa.com'와 같이 맨 앞에 (".")을 사용하여 오류가 발생되었습니다.
+Rfc6265CookieProcessor의 속성 중 하나는 '쿠키 도메인 앞에 속성값으로 `.`문자 없이 설정하십시오.' 라는 내용이 있습니다.
+이 때문에 Rfc6265CookieProcessor의 허용되지 않는 '.danawa.com'와 같이 맨 앞에 `.`을 사용하여 오류가 발생되었습니다.
 
 이와 같이, Rfc6265CookieProcessor 스펙을 확실하게 인지하지 않는다면 신규 버전의 tomcat 업그레이드하거나, 사용 서버의 스펙을 알지 못할 때 예키치 못한 오류가 발생할 확률이 있습니다.
 
