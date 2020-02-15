@@ -8,7 +8,7 @@ categories: Common
 ---
 
 
-![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%201.png](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%201.png)
+![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%201.png](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%201.png){: .image-center}  
 
 Vue.js는 2.0버전 이상부터 React와 동일하게 Virtual DOM 기반의 자바스크립트 프레임워크입니다.  
 브라우저의 DOM을 조작하는 것은 매우 무거운 작업인데, 이러한 성능적인 이슈를 개선할 수 있는 프레임워크입니다.
@@ -17,7 +17,7 @@ Vue.js가 출시한 지 6년이 지났고 2017년에는 Github 즐겨찾기 수(
 여전히 대부분 프론트에 의존도가 크지 않은 개발자들은 적용을 하지 않고 있습니다.
 
 
-![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%202.png](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%202.png)
+![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%202.png](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%202.png){: .image-center}
 
 성능이 뛰어난 프레임워크여도 사용성이 복잡하거나 성능 비용의 이익에 비해 개발 비용이 커지게 되면 기존의 익숙한 기술에서 새로운 기술로 이전하기 꺼려지게 됩니다.
 
@@ -30,7 +30,7 @@ Vue.js가 출시한 지 6년이 지났고 2017년에는 Github 즐겨찾기 수(
 
 ## 1. Bootstrap Vue
 
-![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%203.png](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%203.png)
+![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%203.png](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%203.png){: .image-center}
 
 - 공식 : [https://bootstrap-vue.js.org/](https://bootstrap-vue.js.org/)
 - 깃허브 : [https://github.com/bootstrap-vue/bootstrap-vue/](https://github.com/bootstrap-vue/bootstrap-vue/)
@@ -43,7 +43,7 @@ Vue.js가 출시한 지 6년이 지났고 2017년에는 Github 즐겨찾기 수(
 대부분의 컴포넌트가 HTML5에 맞춰져 있어 특정 이하 버전의 브라우저에서는 동작하지 않습니다.  
 (2020년에는 IE8 이하 버전을 쓰는 사람은 없을 거라고 믿고 싶다.)
 
-![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%204.png](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%204.png)  
+![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%204.png](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%204.png){: .image-center}
 _화려한 구성보다는 그리드 레이아웃과 여백이 많은 모던 디자인에 적합한 Bootstrap (디자이너분은 의견좀)_
 
 Bootstrap Vue 공식 웹페이지에서 안내하는 필요 요소는 아래와 같습니다. (2020-02-08 기준)
@@ -57,7 +57,7 @@ Bootstrap Vue 공식 웹페이지에서 안내하는 필요 요소는 아래와 
 
 ## 2. Vue Material Kit
 
-![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%205.png](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%205.png)
+![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%205.png](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%205.png){: .image-center}
 
 - 공식 : [https://www.creative-tim.com/product/vue-material-kit](https://www.creative-tim.com/product/vue-material-kit)
 - 깃허브 : [https://github.com/timcreative](https://github.com/timcreative)
@@ -68,17 +68,17 @@ Nodejs 및 Vue CLI를 바탕으로 개발 가능한 UI 컴포넌트 라이브러
 
 Vue Material Kit은 이름에서도 알 수 있듯이 Google 머티리얼 디자인에서 영감을 받아 제작된 컴포넌트입니다.
 
-![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%206.gif](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%206.gif)  
+![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%206.gif](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%206.gif){: .image-center}
 _Google 머티리얼 디자인은 단순한 색상과 구성에 따른 직관적인 식별성(플랫 디자인)과 그림자 효과를 더한 구성이다._
 
 기본적으로 MIT License를 적용 받지만 Pro 버전의 경우 유료 License입니다. 라이센스 비교는 아래와 같습니다.  
-![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%209.gif](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%209.gif)  
+![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%209.png](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%209.png){: .image-center}
 _Pro 버전을 사용하지 않는다면 위 내용은 관계 없다._
 
 
 ## 3. Keen UI
 
-![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%207.jpg](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%207.jpg)
+![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%207.jpg](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%207.jpg){: .image-center}
 
 - 공식 : [https://josephuspaye.github.io/Keen-UI/#/ui-alert](https://josephuspaye.github.io/Keen-UI/#/ui-alert)
 - 깃허브 : [https://github.com/JosephusPaye/Keen-UI/tree/master#keen-ui](https://github.com/JosephusPaye/Keen-UI/tree/master#keen-ui)
@@ -92,7 +92,7 @@ Keen UI는 패키지 전체에 사용할 필요 없이 필요한 부분에만 �
 
 ## 4. VuePress
 
-![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%208.png](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%208.png)
+![/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%208.png](/images/2020-02-15-Common-vuejs-uiComponentLibrary/Untitled%208.png){: .image-center}
 
 - 공식 : [https://vuepress.vuejs.org/](https://vuepress.vuejs.org/)
 - 깃허브 : [https://github.com/vuejs/vuepress](https://github.com/vuejs/vuepress)
