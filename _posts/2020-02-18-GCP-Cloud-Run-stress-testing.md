@@ -67,13 +67,13 @@ goto LOOP
 
 아래 이미지는 Agent 90에서 동시 21,420 요청을 5분간 전송한 결과입니다.  점점 요청에 적응을 하며 대응하는 모습을 볼 수 있었습니다.
 
-![images/2020-02-18-GCP-Cloud-Run-stress-testing/Untitled.png](images/2020-02-18-GCP-Cloud-Run-stress-testing/Untitled.png)
+![/images/2020-02-18-GCP-Cloud-Run-stress-testing/Untitled.png](/images/2020-02-18-GCP-Cloud-Run-stress-testing/Untitled.png)
 
 ## Cloud Run 과금 정책
 
 GCP는 사용한 만큼 과금되는 정책을 사용합니다. AWS의 Lambda와 비슷한 기능을 제공하지만 aws lambda는 자원사용한 만큼 과금이 되기 때문에 cloud run은 컨테이너 사용량 만큼 과금을 할 줄 알았는데 요청에 따라 과금을 한다는 문서를 찾았습니다. cloud run에서는 요청이 발생하면 100ms 단위로 과금이 되고, 중복된 요청 시간에 대해서는 1회 과금이 됩니다. 일시적으로 많은 요청을 할수록 유리하다는 걸 알게 되었습니다.
 
-![images/2020-02-18-GCP-Cloud-Run-stress-testing/Untitled%201.png](images/2020-02-18-GCP-Cloud-Run-stress-testing/Untitled%201.png)
+![/images/2020-02-18-GCP-Cloud-Run-stress-testing/Untitled%201.png](/images/2020-02-18-GCP-Cloud-Run-stress-testing/Untitled%201.png)
 
 ## 정리
 
