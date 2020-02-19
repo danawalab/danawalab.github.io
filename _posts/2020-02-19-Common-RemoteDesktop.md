@@ -15,10 +15,10 @@ categories: Common
 
 ## 사전준비사항
 
-- [ ] 회사 컴퓨터에 크롬 브라우저가 설치되어 있나요?
-- [ ] 회사 컴퓨터의 크롬 브라우저에 구글 계정으로 로그인 되어 있나요?
-- [ ] 집 컴퓨터에 크롬 브라우저가 설치되어 있나요?
-- [ ] 집 컴퓨터의 크롬 브라우저에 동일한 구글 계정으로 로그인 되어 있나요?
+- 회사 컴퓨터에 크롬 브라우저가 설치되어 있나요?
+- 회사 컴퓨터의 크롬 브라우저에 구글 계정으로 로그인 되어 있나요?
+- 집 컴퓨터에 크롬 브라우저가 설치되어 있나요?
+- 집 컴퓨터의 크롬 브라우저에 동일한 구글 계정으로 로그인 되어 있나요?
 
 
 ## 회사 컴퓨터 설정
@@ -71,7 +71,7 @@ categories: Common
 
 1. 크롬 데스크탑으로 이동
 
-https://remotedesktop.google.com/access/
+<https://remotedesktop.google.com/access/>
 
 2. 크롬에 원격 데스크톱을 설치/추가합니다.
 
@@ -101,7 +101,7 @@ PIN 번호는 나중에 원격에서 접속할때 물어보게 되는 비밀번�
 
 1. 크롬 데스크탑으로 이동
 
-https://remotedesktop.google.com/access/
+<https://remotedesktop.google.com/access/>
 
 회사 컴퓨터와 동일한 구글 계정으로 로그인 해야합니다.
 
@@ -126,5 +126,5 @@ https://remotedesktop.google.com/access/
 
 ### 참고 자료
 
-- https://support.google.com/chrome/answer/1649523?co=GENIE.Platform%3DDesktop&hl=ko
-- https://dkathrhwlq.tistory.com/259
+- <https://support.google.com/chrome/answer/1649523?co=GENIE.Platform%3DDesktop&hl=ko>
+- <https://dkathrhwlq.tistory.com/259>
