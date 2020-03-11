@@ -1,5 +1,11 @@
-# GitLab 도커를 활용하여 CI/CD 사용하기
-
+---
+layout: post
+title:  "GitLab CI/CD 사용하기"
+description: "GitLab에서 제공하는 Runner를 사용하여 저장소에 Push를 하게 되면 자동으로 프로젝트를 빌드, 배포하는 과정을 포스팅하였습니다. "
+date:   2020.03.11.
+writer: "김준우"
+categories: GitLab
+---
 ## 소개
 
 GitLab에서 제공하는 Runner를 사용하여 저장소에 Push를 하게 되면 자동으로 프로젝트를 빌드, 배포하는 과정을 포스팅하였습니다. 
