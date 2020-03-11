@@ -14,18 +14,13 @@ GitLab에서 제공하는 Runner를 사용하여 저장소에 Push를 하게 되
 
 ## Gitlab 기본 구성
 
-GitLab, Docker, Kubernetes 설치과정은 생략하고 진행하겠습니다.    
+GitLab, Docker, Kubernetes 설치과정은 생략하고 진행하겠습니다.
 
 ### 설치 버전
 
 - gitlab: 12.8.5
 - Docker 19.03.7
 - kubernetes: 1.16.4
-
-참고링크
-[Download and install GitLab]([https://about.gitlab.com/install/](https://about.gitlab.com/install/))
-[Install Docker]([https://docs.docker.com/install/](https://docs.docker.com/install/))
-[install-kubeadm]([https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/))
 
 ### GitLab과 Kubernetes 연동
 
