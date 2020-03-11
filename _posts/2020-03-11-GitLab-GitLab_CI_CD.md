@@ -22,10 +22,9 @@ GitLab, Docker, Kubernetes 설치과정은 생략하고 진행하겠습니다.
 - Docker 19.03.7
 - kubernetes: 1.16.4
 
+참고링크
 [Download and install GitLab]([https://about.gitlab.com/install/](https://about.gitlab.com/install/))
-
 [Install Docker]([https://docs.docker.com/install/](https://docs.docker.com/install/))
-
 [install-kubeadm]([https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/))
 
 ### GitLab과 Kubernetes 연동
@@ -101,10 +100,10 @@ Runner까지 설치가 되었으면 Runners 메뉴를 접속하여 Runner가 생
 
 CI/CD를 테스트 해보기위해선 샘플 프로젝트가 필요합니다. Simple Spring Boot으로 Hello World 출력하는 프로젝트를 생성하겠습니다. 
 
-[ExampleController.java](http://examplecontroller.java) 
+ExampleController.java
 
     @RestController
-    public class exampleController {
+    public class ExampleController {
     
         @GetMapping("/")
         public ResponseEntity<?> helloWorld(@RequestParam(defaultValue = "world") String foo) {
