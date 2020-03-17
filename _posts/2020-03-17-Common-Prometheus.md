@@ -84,6 +84,7 @@ networks:
 #### 부가 설명
 
 - 도커에서 노드 익스포터를 실행하는 것은 권장하지 않는다고 합니다. 이유는 도커는 머신의 내부동작과 컨테이너를 격리시키려고 하기 때문에 노드 익스포터에서 내부 동작 결과가 잘동작하지 않을 수 있기 때문입니다.
+  
 ```
 - #node:
   #  image: prom/node-exporter
@@ -96,6 +97,7 @@ networks:
 
   
 - 기존 구성 환경에서는 이미 기본포트가 쓰이고 있기 때문에 별도 설정을 통해 포트를 변경하였으며 config 파일 경로를 지정하였습니다.
+  
 ```
 command:
       - '--web.listen-address=0.0.0.0:9099'
@@ -103,18 +105,19 @@ command:
 ```
 
 - 컨테이너 종료시에 데이터가 삭제될 수 있으므로 HOST의 볼륨 경로를 지정하였습니다. 
+  
 ```
 volumes:
       - /data/prometheus:/etc/prometheus
       - /data/prometheus/data:/prometheus
 ```
 
-
 ### 3. prometheus.config 작성
 - 환경설정 파일을 작성합니다
 
 
 - 매트릭 수집 주기 설정
+  
 ```
 # my global config
 global:
@@ -123,6 +126,7 @@ global:
 
 - 익스포터 설정 
 - 추가 될 때 마다 해당 형식으로 설정 파일내에 추가합니다.
+  
 ```
 # Exporter 설정
   - job_name: 'kube1'    # 사용할 이름
