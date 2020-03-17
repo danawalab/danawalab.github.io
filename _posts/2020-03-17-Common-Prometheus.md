@@ -44,6 +44,7 @@ services:
   prometheus:
     image: prom/prometheus:v2.16.0
     container_name: prometheus
+    network_mode: "host" 
     command:
       - '--web.listen-address=0.0.0.0:9099'
       - '--config.file=/etc/prometheus/prometheus.yml'
@@ -95,7 +96,12 @@ networks:
   #    - prometheus-network
 ```
 
+- 컨테이너에서 호스트에 떠있는 프로세스로 접근이 안되어 NETWORK MODE를 HOST로 설정하였습니다.
   
+```
+network_mode: "host" 
+```
+
 - 기존 구성 환경에서는 이미 기본포트가 쓰이고 있기 때문에 별도 설정을 통해 포트를 변경하였으며 config 파일 경로를 지정하였습니다.
   
 ```
@@ -112,9 +118,9 @@ volumes:
       - /data/prometheus/data:/prometheus
 ```
 
+
 ### 3. prometheus.config 작성
 - 환경설정 파일을 작성합니다
-
 
 - 매트릭 수집 주기 설정
   
@@ -132,7 +138,7 @@ global:
   - job_name: 'kube1'    # 사용할 이름
     scrape_interval: 10s # 주기
     static_configs:      # 익스포트 프로세스 설정
-    - targets: ['{host}:{port}','{host}:{port}']
+    - targets: ['prom1.danawa.com:9110','prom1.danawa.com:9111']
 ```
 
 prometheus.config
@@ -166,20 +172,20 @@ scrape_configs:
     - targets: ['127.0.0.1:9099']
 
   # Exporter 설정
-  - job_name: 'kube1'
+  - job_name: 'prom1'
     scrape_interval: 10s
     static_configs:
-    - targets: ['{host}:{port}','{host}:{port}']
+    - targets: ['prom1.danawa.com:9110','prom1.danawa.com:9111']
 
-  - job_name: 'kube2'
-
-    static_configs:
-    - targets: ['{host}:{port}']
-
-  - job_name: 'kube3'
+  - job_name: 'prom2'
 
     static_configs:
-    - targets: ['{host}:{port}']
+    - targets: ['prom2.danawa.com:9110']
+
+  - job_name: 'prom3'
+
+    static_configs:
+    - targets: ['prom3.danawa.com:9110']
 
 ```
 
@@ -210,22 +216,27 @@ Creating grafana       ... done
 
 4. /usr/local/bin/node_exporter --web.listen-address=:9110
 ```
-- 확인 : http://{host}:9110/metrics - 기본포트 9100
+
+- 확인 : http://prom1.danawa.com:9110/metrics - 기본포트 9100
+
 ![/images/2020-03-17-Common-Prometheus/node_exporter.PNG](/images/2020-03-17-Common-Prometheus/node_exporter.PNG)   
   
 ### 6. prometheus 확인
-http://{host}:9099 - 기본포트 9090
+
+http://prom1.danawa.com:9099 - 기본포트 9090
 - 익스포터로 수집된 메트릭정보를 조회해 볼 수 있습니다.
 - PROMQL을 사용해 데이터를 집계 할 수 있습니다.
   
 ![/images/2020-03-17-Common-Prometheus/prometheus1.PNG](/images/2020-03-17-Common-Prometheus/prometheus1.PNG)   
 
-http://{host}:9099/targets
+http://prom1.danawa.com:9099/targets
 - 익스포터의 상태를 확인 할 수 있습니다.
   
 ![/images/2020-03-17-Common-Prometheus/prometheus1_2.PNG](/images/2020-03-17-Common-Prometheus/prometheus1_2.PNG) 
+
 ### 6. grafana 확인 
-http://{host}:9900 - 기본포트 3000
+
+http://prom1.danawa.com:9900 - 기본포트 3000
 ![/images/2020-03-17-Common-Prometheus/grafana.PNG](/images/2020-03-17-Common-Prometheus/grafana.PNG)   
 
 ![/images/2020-03-17-Common-Prometheus/grafana2.PNG](/images/2020-03-17-Common-Prometheus/grafana2.PNG) 
