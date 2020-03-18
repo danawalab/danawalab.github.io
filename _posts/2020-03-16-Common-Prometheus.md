@@ -11,7 +11,7 @@ categories: Common
 
 - 프로메테우스는 오픈소스기반의 모니터링 솔루션이며 모니터링 대상이 되는 metric 정보를 pull 방식으로 수집합니다. 공식적으로 제공하는 exporter뿐만 아니라 여러 Third-pary exporter를 통하여 다양한 플랫폼을 모니터링 할 수 있는 장점이 있습니다.
   
-![/images/2020-03-17-Common-Prometheus/architecture.PNG](/images/2020-03-17-Common-Prometheus/architecture.PNG)   
+![/images/2020-03-16-Common-Prometheus/architecture.PNG](/images/2020-03-16-Common-Prometheus/architecture.PNG)   
 
 - 여기서는 도커 컴포즈를 통하여 프로메테우스와 그라파나를 설치하고 Node-Exporter를 통해 받아온 Metric 정보로 그라파나 대시보드를 구성해보겠습니다.
 
@@ -219,7 +219,7 @@ Creating grafana       ... done
 
 - 확인 : http://prom1.danawa.com:9110/metrics - 기본포트 9100
 
-![/images/2020-03-17-Common-Prometheus/node_exporter.PNG](/images/2020-03-17-Common-Prometheus/node_exporter.PNG)   
+![/images/2020-03-16-Common-Prometheus/node_exporter.PNG](/images/2020-03-16-Common-Prometheus/node_exporter.PNG)   
   
 ### 6. prometheus 확인
 
@@ -227,19 +227,19 @@ http://prom1.danawa.com:9099 - 기본포트 9090
 - 익스포터로 수집된 메트릭정보를 조회해 볼 수 있습니다.
 - PROMQL을 사용해 데이터를 집계 할 수 있습니다.
   
-![/images/2020-03-17-Common-Prometheus/prometheus1.PNG](/images/2020-03-17-Common-Prometheus/prometheus1.PNG)   
+![/images/2020-03-16-Common-Prometheus/prometheus1.PNG](/images/2020-03-16-Common-Prometheus/prometheus1.PNG)   
 
 http://prom1.danawa.com:9099/targets
 - 익스포터의 상태를 확인 할 수 있습니다.
   
-![/images/2020-03-17-Common-Prometheus/prometheus1_2.PNG](/images/2020-03-17-Common-Prometheus/prometheus1_2.PNG) 
+![/images/2020-03-16-Common-Prometheus/prometheus1_2.PNG](/images/2020-03-16-Common-Prometheus/prometheus1_2.PNG) 
 
 ### 6. grafana 확인 
 
 http://prom1.danawa.com:9900 - 기본포트 3000
-![/images/2020-03-17-Common-Prometheus/grafana.PNG](/images/2020-03-17-Common-Prometheus/grafana.PNG)   
+![/images/2020-03-16-Common-Prometheus/grafana.PNG](/images/2020-03-16-Common-Prometheus/grafana.PNG)   
 
-![/images/2020-03-17-Common-Prometheus/grafana2.PNG](/images/2020-03-17-Common-Prometheus/grafana2.PNG) 
+![/images/2020-03-16-Common-Prometheus/grafana2.PNG](/images/2020-03-16-Common-Prometheus/grafana2.PNG) 
 
 
 
