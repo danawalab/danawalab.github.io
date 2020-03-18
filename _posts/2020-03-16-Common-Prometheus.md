@@ -2,7 +2,7 @@
 layout: post
 title:  "도커 컴포즈를 이용한 프로메테우스 설치"
 description: "도커 컴포즈로 프로메테우스 및 UI 대시보드인 그라파나 설치 "
-date:   2020.03.17.
+date:   2020.03.16.
 writer: "하선호"
 categories: Common
 ---
