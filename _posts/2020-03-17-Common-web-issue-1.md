@@ -15,9 +15,9 @@ categories: Common
 
 <br/><br/>
 
-## 1. 서드파티 쿠키(Third-Party Cookie) 2년내로 사용불가.
+# 1. 서드파티 쿠키(Third-Party Cookie) 2년내로 사용불가.
 
-![web-issue-1-image-2](https://k.kakaocdn.net/dn/nucjr/btqCy4EKoje/K6WT7NG9p6asq6WAkg1JAk/img.png){: .image-center}
+![web-issue-1-image-2](https://k.kakaocdn.net/dn/nucjr/btqCy4EKoje/K6WT7NG9p6asq6WAkg1JAk/img.png){: .image-center width="60%"}
 
 서드파티 쿠키(Third-Party Cookie)란 사용자가 방문한 웹사이트가 아닌 다른 웹사이트에서 발행한 쿠키를 말합니다. 구글 크롬은 2년안에 서드파티 쿠키지원을 중단한다고 발표했습니다.
 
@@ -31,7 +31,7 @@ categories: Common
 
 <br/><br/>
 
-## 2. 크롬 80, SameSite 쿠키 이슈
+# 2. 크롬 80, SameSite 쿠키 이슈
 
 ![web-issue-1-image-3](https://k.kakaocdn.net/dn/pXk1t/btqCylUflyD/qyZ4MzU0rCLnzkQfmEOqe0/img.png){: .image-center width="40%"}
 
@@ -55,7 +55,7 @@ categories: Common
 
 <br/><br/>
 
-## 3. 크롬, HTTPS 아닌 다운로드 점진적으로 차단
+# 3. 크롬, HTTPS 아닌 다운로드 점진적으로 차단
 
 ![web-issue-1-image-4](https://k.kakaocdn.net/dn/lmdMA/btqCyl7Nsqo/yqWDoChXfuailDy82cC3z0/img.png){: .image-center}
 
@@ -63,6 +63,7 @@ categories: Common
 
 > TIP : TLS(Transport Layer Security)이란 SSL(Secure Sockets Layer)의 기술을 기반으로 만들어진 표준으로 SSL로 많이 불리지만 정식 명칭은 TLS이 맞습니다.
 
+<br/>
 구글에서 공개한 HTTP 다운로드 차단 일정은 다음과 같습니다.
 
 | 날짜 | 크롬 버전 | 처리 내역 |
@@ -78,10 +79,11 @@ categories: Common
 - <https://www.zdnet.com/article/google-to-block-some-http-file-downloads-starting-with-chrome-83>
 - <https://nakedsecurity.sophos.com/2020/02/10/google-chrome-to-start-blocking-downloads-served-via-http>
 
+<br/><br/>
 
-## 4. User-Agent 크롬 점진적으로 제거
+# 4. User-Agent 크롬 점진적으로 제거
 
-![web-issue-1-image-5](https://k.kakaocdn.net/dn/bumarr/btqCRzyKqVL/hNwvDQJkLlbPYDi6jlGBJ0/img.png){: .image-center}
+![web-issue-1-image-5](https://k.kakaocdn.net/dn/bumarr/btqCRzyKqVL/hNwvDQJkLlbPYDi6jlGBJ0/img.png){: .image-center width="90%"}
 
 구글은 올해 초 크롬 브라우저 User-Agent를 점진적으로 중지할 계획이라며 크롬 85까지 지원 중단 계획을 발표했습니다. 
 User-Agent엔 불필요한 정보들이 많이 있어 개인정보에 취약하다는 명분으로, 크롬 81, 83, 85 버전 업그래이드를 통해 점진적으로 중지할 것이라 발표 했습니다.
@@ -92,7 +94,7 @@ User-Agent란 사용자가 HTTP 프로토콜 안에서 동작할 때 자신의 �
 구글에서 발표한 버전별 일정과 과정은 다음과 같습니다.
 
 | 날짜 | 크롬 버전 | 처리 내역 |
-| :---: | :---: | :---: |
+| :---: | :----: | :---: |
 | 2020.03 | Chrome 81 | User-Agent 문자열을 읽는 웹페이지에 대해 크롬 콘솔에 경고를 표시할 계획이며, 이를 통해 개발자들은 웹사이트 코드를 조정할 수 있도록 유도 |
 | 2020.06 | Chrome 83 | User-Agent 문자열에서 Chrome 브라우저 버전을 동결하고 OS 버전을 통합 |
 | 2020.09 | Chrome 85 | User-Agent 데스크톱 OS 문자열을 데스크톱 브라우저의 공통 값으로 통합, 모바일 OS/기기 문자열을 비슷한 공통의 값으로 통합한다. |
@@ -110,6 +112,5 @@ User-Agent란 사용자가 HTTP 프로토콜 안에서 동작할 때 자신의 �
 <br/><br/>
 
 ### 기타 이슈
-
-1. 크롬 2020년 12월 이후 Adobe flash player 지원 중단.
-2. 유투브 Internet Explorer 지원 중단, Chromium 기반 Microsoft Edge 출시로 Internet Explorer의 점유율 큰 폭으로 하락 예상.
+- 크롬 2020년 12월 이후 Adobe flash player 지원 중단.
+- 유투브 Internet Explorer 지원 중단, Chromium 기반 Microsoft Edge 출시로 Internet Explorer의 점유율 큰 폭으로 하락 예상.
