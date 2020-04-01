@@ -1,5 +1,11 @@
-# 이벤트 서비스 GCP VM Instance 배포
-
+---
+layout: post
+title:  "이벤트 서비스 GCP VM Instance 배포"
+description: "얼마전에 이벤트 서비스를 GCP의 Cloud Run에 배포하여 서비스예정이였지만, 최종 변경방식은 GCP의 Compute Engine을 통해 배포하는방식으로 진행하기로 하였습니다. 이벤트 서비스를 Compute Engine으로 배포하고 Compute Engine에 로드밸런서를 연결하여 블루/그린 방식의 배포 과정을 포스팅 하도록 하겠습니다. 추가로 다나와에서는 GitLab의 Runner 사용이 증가하고 있어 이번 배포 과정에서도 Runner를 통해 배포하도록 하겠습니다."
+date:   2020.04.01.
+writer: "김준우"
+categories: GCP
+---
 ## 소개
 
 얼마전에 이벤트 서비스를 GCP의 Cloud Run에 배포하여 서비스예정이였지만, 최종 변경방식은 GCP의 Compute Engine을 통해 배포하는방식으로 진행하기로 하였습니다. 이벤트 서비스를 Compute Engine으로 배포하고 Compute Engine에 로드밸런서를 연결하여 블루/그린 방식의 배포 과정을 포스팅 하도록 하겠습니다. 추가로 다나와에서는 GitLab의 Runner 사용이 증가하고 있어 이번 배포 과정에서도 Runner를 통해 배포하도록 하겠습니다.
