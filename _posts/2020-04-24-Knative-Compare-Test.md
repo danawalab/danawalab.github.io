@@ -42,7 +42,7 @@ categories: Kubernetes
 
 |30|50|70|
 |:---:|:---:|:---:|
-|![/images/2020-04-24-Knative-Compare-Test/springboot-th30.PNG](/images/2020-04-24-Knative-Compare-Test/springboot-th30.PNG)|![/images/2020-04-24-Knative-Compare-Test/springboot-th50.PNG](/images/2020-04-24-Knative-Compare-Test/springboot-th50.PNG)|![/images/2020-04-24-Knative-Compare-Test/springboot-th70.PNG](/images/2020-04-24-Knative-Compare-Test/springboot-th70.PNG)
+|![/images/2020-04-24-Knative-Compare-Test/springboot-th30.png](/images/2020-04-24-Knative-Compare-Test/springboot-th30.png)|![/images/2020-04-24-Knative-Compare-Test/springboot-th50.png](/images/2020-04-24-Knative-Compare-Test/springboot-th50.png)|![/images/2020-04-24-Knative-Compare-Test/springboot-th70.png](/images/2020-04-24-Knative-Compare-Test/springboot-th70.png)
 
 
 ### Knative
@@ -56,7 +56,7 @@ categories: Kubernetes
 
 |30|50|70|
 |:---:|:---:|:---:|
-|![/images/2020-04-24-Knative-Compare-Test/knative-th30.PNG](/images/2020-04-24-Knative-Compare-Test/knative-th30.PNG)|![/images/2020-04-24-Knative-Compare-Test/knative-th50.PNG](/images/2020-04-24-Knative-Compare-Test/knative-th50.PNG)|![/images/2020-04-24-Knative-Compare-Test/knative-th70.PNG](/images/2020-04-24-Knative-Compare-Test/knative-th70.PNG)
+|![/images/2020-04-24-Knative-Compare-Test/knative-th30.png](/images/2020-04-24-Knative-Compare-Test/knative-th30.png)|![/images/2020-04-24-Knative-Compare-Test/knative-th50.png](/images/2020-04-24-Knative-Compare-Test/knative-th50.png)|![/images/2020-04-24-Knative-Compare-Test/knative-th70.png](/images/2020-04-24-Knative-Compare-Test/knative-th70.png)
 
 ### Ingress+Deployment
 - Deployment를 직접 생성하여 배포 후 테스트를 진행하였습니다.
@@ -69,7 +69,7 @@ categories: Kubernetes
 
 |30|50|70|
 |:---:|:---:|:---:|
-|![/images/2020-04-24-Knative-Compare-Test/ingress-th30.PNG](/images/2020-04-24-Knative-Compare-Test/ingress-th30.PNG)|![/images/2020-04-24-Knative-Compare-Test/ingress-th50.PNG](/images/2020-04-24-Knative-Compare-Test/ingress-th50.PNG)|![/images/2020-04-24-Knative-Compare-Test/ingress-th70.PNG](/images/2020-04-24-Knative-Compare-Test/ingress-th70.PNG)
+|![/images/2020-04-24-Knative-Compare-Test/ingress-th30.png](/images/2020-04-24-Knative-Compare-Test/ingress-th30.png)|![/images/2020-04-24-Knative-Compare-Test/ingress-th50.png](/images/2020-04-24-Knative-Compare-Test/ingress-th50.png)|![/images/2020-04-24-Knative-Compare-Test/ingress-th70.png](/images/2020-04-24-Knative-Compare-Test/ingress-th70.png)
 
 ### Kubeless
 - 로직 코드를 Kubeless를 통해 배포 후 테스트를 진행하였습니다.
@@ -82,12 +82,13 @@ categories: Kubernetes
 
 |30|50|70|
 |:---:|:---:|:---:|
-|![/images/2020-04-24-Knative-Compare-Test/kubeless-th30.PNG](/images/2020-04-24-Knative-Compare-Test/kubeless-th30.PNG)|![/images/2020-04-24-Knative-Compare-Test/kubeless-th50.PNG](/images/2020-04-24-Knative-Compare-Test/kubeless-th50.PNG)|![/images/2020-04-24-Knative-Compare-Test/kubeless-th70.PNG](/images/2020-04-24-Knative-Compare-Test/kubeless-th70.PNG)
+|![/images/2020-04-24-Knative-Compare-Test/kubeless-th30.png](/images/2020-04-24-Knative-Compare-Test/kubeless-th30.png)|![/images/2020-04-24-Knative-Compare-Test/kubeless-th50.png](/images/2020-04-24-Knative-Compare-Test/kubeless-th50.png)|![/images/2020-04-24-Knative-Compare-Test/kubeless-th70.png](/images/2020-04-24-Knative-Compare-Test/kubeless-th70.png)
 
 ## 결과
 - 각 테스트 결과를 종합하면 다음과 같습니다.
   
 THREAD 30
+
 |타입|평균 CPU(%)|TPS|평균 응답시간(ms)|
 |:------:|:---:|:---:|:---:|
 |On-Prem|37|9578|3|
@@ -96,6 +97,7 @@ THREAD 30
 |Kubeless|12|717|40|
 
 THREAD 50
+
 |타입|평균 CPU(%)|TPS|평균 응답시간(ms)|
 |:------:|:---:|:---:|:---:|
 |On-Prem|38|9589|5|
@@ -104,6 +106,7 @@ THREAD 50
 |Kubeless|12|1194|41|
 
 THREAD 70
+
 |타입|평균 CPU(%)|TPS|평균 응답시간(ms)|
 |:------:|:---:|:---:|:---:|
 |On-Prem|38|9605|7|
@@ -118,7 +121,7 @@ THREAD 70
 - Knative 보다 Ingress에서 응답속도가 빠른 이유는 Knative의 경우 Istio-proxy에서 소요되는 시간이 줄어든 것으로 보입니다.
 
   - knative.dev/docs/serving/debugging-performance-issues \
- ![/images/2020-04-24-Knative-Compare-Test/knative-performance-issues.PNG](/images/2020-04-24-Knative-Compare-Test/knative-performance-issues.PNG)\
+ ![/images/2020-04-24-Knative-Compare-Test/knative-performance-issues.png](/images/2020-04-24-Knative-Compare-Test/knative-performance-issues.png)\
 
 
 - Kubeless의 경우 CPU 사용량이 테스트중 가장 낮을뿐더러 일정하였지만 응답시간은 가장 높았습니다. 그 이유로는 Kubeless에서 java-runtime시 구현되는 handler.java 내 코드에서 쓰레드 수가 고정으로 설정되어 있어 CPU 사용량이 과도하게 증가하지 않는 것 같습니다.
