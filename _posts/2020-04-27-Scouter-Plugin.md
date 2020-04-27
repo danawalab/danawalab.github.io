@@ -223,8 +223,8 @@ synchronized (this) {
 ```
 
 ### 구글 시트
-다음으로 복사된 HashMap 데이터로 구글 시트를 작성합니다. 구글 시트를 생성하고 작성하기 위한 API를 사용하려면 별도의 인증 절차가 필요한데 Service_Account 방식을 이용하였습니다.\
-Service Account에 대해서는 아래 링크를 참고해주세요.\
+다음으로 복사된 HashMap 데이터로 구글 시트를 작성합니다. 구글 시트를 생성하고 작성하기 위한 API를 사용하려면 별도의 인증 절차가 필요한데 Service_Account 방식을 이용하였습니다.
+Service Account에 대해서는 링크를 참고해주세요.
 [서비스 어카운트 방식](https://cloud.google.com/iam/docs/understanding-service-accounts?hl=ko)
 
 pom.xml에 관련 디펜던시를 추가해줍니다.
@@ -278,8 +278,8 @@ pom.xml에 관련 디펜던시를 추가해줍니다.
         </dependency>
 ```
 
-### 구글 시트 생성
-복제한 HASHMAP 이용하여 구글 시트를 작성합니다.
+### 구글 시트 작성
+위에 스케쥴러가 일정 시간마다 복제한 HASHMAP 이용하여 구글 시트 작성 메소드를 호출합니다.
 여기서는 Google Sheet, Driver에 대한 서비스 객체를 생성하고 HashMap의 데이터로 구글 시트를 작성합니다.
 ```
     public void makeGoogleSheet(HashMap<Object,ArrayList<Object[]>> logMap) {
@@ -362,7 +362,7 @@ GCP에서 서비스 계정 키를 생성하면 인증정보가 담긴 JSON파일
     }
 ```
 
-### 구글 시트 생성
+### 시트 생성
 위에서 생성한 서비스 객체로 구글 시트를 생성할 수 있습니다. 다음은 간단한 구글 시트 생성 예제입니다.
 ```
 Spreadsheet request = new Spreadsheet().setProperties(new SpreadsheetProperties().setTitle("SHEET TITLE"));
@@ -409,15 +409,12 @@ Spreadsheet response = sheetService.spreadsheets().create(request).execute();
 
                 @Override
                 public void onSuccess(Permission permission, HttpHeaders httpHeaders) throws IOException {
-                    //Logger.println("Permission ID: " + permission.getId());
-                    System.out.println("Permission ID: " + permission.getId());
-
+                    Logger.println("Permission ID: " + permission.getId());
                 }
             });
             batch.execute();
             Logger.println(response.getSpreadsheetUrl());
-            //System.out.println(response.getSpreadsheetUrl());
-
+            
             return spreadsheetId;
 
         }catch (Exception e) {
@@ -430,7 +427,7 @@ Spreadsheet response = sheetService.spreadsheets().create(request).execute();
 ```
 
 ### 시트 쓰기
-시트에 실제 데이터를 입력하기 위해서는 범위를 지정해야합니다.\
+시트에 실제 데이터를 입력하기 위해서는 범위를 지정해야합니다.
 기본적으로 A1:A5 처럼 :를 구분자로 범위를 설정하면 되고 특정탭에 작성하고 싶으면 !를 구분자로하여 탭명!A1:A5 형태로 지정하면 됩니다.
 입력하려는 데이터는 List 내부에 배열형태로 만들어야 합니다.
 ```
@@ -461,6 +458,6 @@ public void writeSheet(Sheets sheetService, String spreadsheetId, List<List<Obje
 
 
 ## 참고 자료
-1. https://developers.google.com/sheets/api/guides
-2. https://github.com/scouter-project/scouter/blob/master/scouter.document/main/Plugin-Guide_kr.md
-3. https://m.blog.naver.com/PostView.nhn?blogId=occidere&logNo=221071278283&proxyReferer=https:%2F%2Fwww.google.com%2F
+- https://developers.google.com/sheets/api/guides
+- https://github.com/scouter-project/scouter/blob/master/scouter.document/main/Plugin-Guide_kr.md
+- https://m.blog.naver.com/PostView.nhn?blogId=occidere&logNo=221071278283&proxyReferer=https:%2F%2Fwww.google.com%2F
