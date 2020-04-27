@@ -115,10 +115,12 @@ THREAD 70
 
 평균적인 CPU 사용량은 모든 THREAD에서 Ingress 방식이 평균 75%로 가장 높았고 그 다음으로 knative가 약 69%로 높았습니다. 둘 모두 컨테이너에서 사용되는 CPU 사용량이 있어 높은 것 같습니다.
 
-또한 Knative 보다 Ingress에서 응답속도가 빠른 이유는 Knative의 경우 Istio-proxy에서 소요되는 시간이 줄어든 것으로 보입니다. 
+또한 Knative 보다 Ingress에서 응답속도가 빠른 이유는 Knative의 경우 Istio-proxy에서 소요되는 시간이 줄어든 것으로 보입니다.
+
  ![/images/2020-04-24-Knative-Compare-Test/knative-performance-issues.png](/images/2020-04-24-Knative-Compare-Test/knative-performance-issues.png)\
 
 Kubeless의 경우 CPU 사용량이 테스트중 가장 낮을뿐더러 일정하였지만 응답시간은 가장 높았습니다. 그 이유로는 Kubeless에서 java-runtime시 구현되는 handler.java 내 코드에서 쓰레드 수가 고정으로 설정되어 있어 CPU 사용량이 과도하게 증가하지 않는 것 같습니다.
+
   ```
   kubeless/runtimes - Handler.java 
   line - 75
