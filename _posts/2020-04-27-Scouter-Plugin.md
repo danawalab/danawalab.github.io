@@ -7,33 +7,35 @@ writer: "하선호"
 categories: Common
 ---
 
-## 개요
+## 1. 개요
 현재 다나와에서는 JAVA WAS에 대한 APM으로 스카우터를 사용하고 있습니다.
 그 중 스카우터의 XLOG 차트는 해당 WAS의 상황을 바로 알 수 있는데요.
-하지만 XLOG 차트를 계속 보고 있을 수는 없고 일일히 XLOG를 조회해서 보기도 불편할 것 같습니다.
+하지만 XLOG 차트를 계속 보고 있을 수는 없고 일일히 XLOG를 조회해서 보기도 불편한 것 같습니다.
 그래서 XLOG 정보를 수집하고 문서화 하는 플러그인을 만들어보았습니다.
 
 [스카우터 XLOG]
 ![/images/2020-04-27-Scouter-Plugin/Xlog.png](/images/2020-04-27-Scouter-Plugin/Xlog.png)
 
-## 스카우터 서버 플러그인
+
+
+## 2. Built-in Plugin 작성하기
+
+### 2-1. 스카우터 서버 플러그인
 스카우터 서버 플러그인은 Scripting plugin과 Built-in Plugin으로 나눠지는데 
 Scripting plugin은 수집데이터가 DB에 저장되기 전 호출되며 코드 변경이 동적으로 반영되어 운영중인 서버에 즉시 반영할 수 있지만 간단한 전처리 기능정도만 활용이 가능합니다.
 Built-in Plugin은 Scouter에서 미리 제공하는 annotation을 사용하여 더 많은 기능들을 구현할 수 있습니다.
 여기서는 Built-in Plugin 방식으로 개발하였습니다.
 
-## Built-in Plugin 작성하기
-
-### 주의점
+### 2-2. 주의점
 - Annotation scan은 scouter.plugin.server 패키지 하위에서 수행하므로 scouter.plugin.server 하위에 작성되어야 합니다.
 - Scouter server의 configuration을 이용할 수 있으며 이때 ext_plugin_xxx 로 시작되어야 합니다.
 
-### 목표
-1. 에러와 N초 이상이 걸린 요청들을 수집한 후 특정 주기마다 구글 시트로 작성합니다.
-2. 구글시트는 각 서비스별로 탭이 생성되고 시간, 에러여부 타입, 요청된 URL, 응답시간, 페이퍼링크가 기록됩니다.
+### 2-3. 목표
+- 에러와 N초 이상이 걸린 요청들을 수집한 후 특정 주기마다 구글 시트로 작성합니다.
+- 구글시트는 각 서비스별로 탭이 생성되고 시간, 에러여부 타입, 요청된 URL, 응답시간, 페이퍼링크가 기록됩니다.
 
 
-### 플러그인 기본 구조
+### 2-4. 플러그인 기본 구조
 기본적으로 scouter.common, scouter.server가 dependency되어야 합니다.
 
 ```
@@ -67,8 +69,9 @@ public class NullPlugin {
         }
     }
 ```
+## 3. 로그 수집기
 
-### 스케쥴러
+### 3-1. 스케쥴러
 스카우터 서버에서 플러그인 클래스 생성시 별도의 스케쥴러 쓰레드를 생성하도록 작성하였습니다.
 해당 스케쥴러 쓰레드는 일정 주기마다 전역 HASHMAP에 담긴 XLOG를 다른 HASHMAP에 복사하고 구글 시트 작성클래스의 메소드를 호출합니다.
 
@@ -107,7 +110,7 @@ public class NullPlugin {
     }
 ```
 
-### 로그 수집
+### 3-2. 로그 수집
 XLOG 수집을 위해 annotation value는 PLUGIN_SERVER_XLOG을 사용하였습니다.
 스카우터 서버에서 XLOG가 수집될때마다 플러그인 클래스 내에 XLOG 메소드도 호출됩니다.
 XLogPack 클래스에는 수집된 XLOG에 대한 정보가 담겨있는데 필요한 정보를 뽑아 HASHMAP에 담을 데이터로 정제하였습니다.
@@ -154,8 +157,8 @@ XLogPack 클래스에는 수집된 XLOG에 대한 정보가 담겨있는데 필�
     }
 ```
 
-### HASHMAP 입력
-XLOG가 수집되어 HASHMAP에 입력될 때 해당 KEY가 있을 경우와 없을 경우에 따라 분기처리를 하였습니다. 그러다보니 수시로 GET 과 PUT 작업이 수행되어 동기화 처리가 필요했습니다. Thread-Safe한 ConcurrentHashMap를 사용해도 되지만  ConcurrentHashMap를 사용하더라도 [ hash.get(key) == null ] 와 [ hash.put(key,list) ] 사이에서 동기화 문제가 발생할 수 있어 synchronized 메소드로 작성하였습니다. 
+### 3-3. HASHMAP 입력
+XLOG가 수집되어 HASHMAP에 입력될 때 해당 KEY가 있을 경우와 없을 경우에 따라 분기처리를 하였습니다. 그러다보니 수시로 GET 과 PUT 작업이 수행되어 동기화 처리가 필요했습니다. Thread-Safe한 ConcurrentHashMap를 사용해도 되지만  ConcurrentHashMap를 사용하더라도 `hash.get(key)==null` 와 `hash.put(key,list)` 사이에서 동기화 문제가 발생할 수 있어 synchronized 메소드로 작성하였습니다. 
 
 ```
     protected synchronized void pushHash(Object key, Object[] element) {
@@ -182,7 +185,7 @@ synchronized (this) {
 }
 ```
 
-## 동기화 테스트
+### 3-4. 동기화 테스트
 
 멀티 쓰레드 환경에서 HashMap의 동기화가 잘 수행되는지 검증이 필요하여 테스트 코드를 작성했습니다.
 데이터를 계속 HashMap에 적재하고 또 다른 쓰레드는 일정 주기마다 해당 HashMap을 복사합니다.
@@ -196,18 +199,23 @@ synchronized (this) {
 
         Random random = new Random();
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+
+        //테스트용 임의 데이터
         String[] objNameArray = new String[]{"PAS","MAS","AUTH","M","EVENT"};
         String[] typeArray = new String[]{"NOMAL","ERROR"};
         String[] serviceArray = new String[]{"/product/category/{GET}", "/event/random/{GET}","/product/maker/{GET}","/product/brand/{GET}"};
 
         TestConfigure conf = new TestConfigure(0,500);
 
-        for(int i=3; i < 10; i+=3) {
+
+        for(int i=30; i < 100; i+=30) {
 
             TestSheetMaker maker = new TestSheetMaker();
             XlogCollector xlog = new XlogCollector(conf, maker);
 
             while(cnt < SAMPLE_SIZE) {
+
+                //Hash Push
                 xlog.pushHash(objNameArray[random.nextInt(5)],new Object[]{sdf.format(new Date().getTime()),typeArray[random.nextInt(2)],serviceArray[random.nextInt(4)],(int)Math.random(),(int)Math.random()});
                 //Thread.sleep(random.nextInt(1));
                 Thread.sleep(i);
@@ -221,8 +229,10 @@ synchronized (this) {
         }
     }
 ```
+-----------------------------
+## 4. 구글 시트 생성기
 
-### 구글 시트
+### 4-1. 구글 시트
 다음으로 복사된 HashMap 데이터로 구글 시트를 작성합니다. 구글 시트를 생성하고 작성하기 위한 API를 사용하려면 별도의 인증 절차가 필요한데 Service_Account 방식을 이용하였습니다.
 Service Account에 대해서는 링크를 참고해주세요.
 [서비스 어카운트 방식](https://cloud.google.com/iam/docs/understanding-service-accounts?hl=ko)
@@ -278,7 +288,7 @@ pom.xml에 관련 디펜던시를 추가해줍니다.
         </dependency>
 ```
 
-### 구글 시트 작성
+### 4-2. 구글 시트 작성
 위에 스케쥴러가 일정 시간마다 복제한 HASHMAP 이용하여 구글 시트 작성 메소드를 호출합니다.
 여기서는 Google Sheet, Driver에 대한 서비스 객체를 생성하고 HashMap의 데이터로 구글 시트를 작성합니다.
 ```
@@ -321,7 +331,7 @@ pom.xml에 관련 디펜던시를 추가해줍니다.
 
 ```
 
-### 서비스 객체 생성
+### 4-3. 서비스 객체 생성
 Google Sheet API 사용을 위한 서비스 객체를 생성합니다.
 API를 실제 사용하려면 인증 권한을 가져와야 합니다. 
 
@@ -330,6 +340,7 @@ public Sheets getSheetsService(AuthMode authMode) throws IOException{
     ServiceAccountCredentials credential = null;
 
     if (authMode == AuthMode.SERVICE_ACCOUNT) {
+        //인증 권한을 가져옴
         credential = getServiceAccountAuthorize();
     }
 
@@ -341,14 +352,16 @@ public Sheets getSheetsService(AuthMode authMode) throws IOException{
 }
 ```
 
-### 인증 권한 가져오기
+### 4-4. 인증 권한 가져오기
 GCP에서 서비스 계정 키를 생성하면 인증정보가 담긴 JSON파일을 만들 수 있습니다. 아래 클래스는 JSON 파일에서 엑세스 토큰을 얻어 서비스 이용 범위를 지정한 뒤 반환합니다. 
 ```
     public ServiceAccountCredentials getServiceAccountAuthorize() throws IOException{
 
+        //서비스 어카운트 JSON 가져옴
         ServiceAccountCredentials sourceCredentials = ServiceAccountCredentials
                 .fromStream(GoogleSheetMaker.class.getResourceAsStream("/service.json"));
 
+        //서비스 이용 범위 설정
         sourceCredentials = (ServiceAccountCredentials) sourceCredentials
                 .createScoped(
                         "https://www.googleapis.com/auth/spreadsheets",
@@ -362,7 +375,7 @@ GCP에서 서비스 계정 키를 생성하면 인증정보가 담긴 JSON파일
     }
 ```
 
-### 시트 생성
+### 4-5. 시트 생성
 위에서 생성한 서비스 객체로 구글 시트를 생성할 수 있습니다. 다음은 간단한 구글 시트 생성 예제입니다.
 ```
 Spreadsheet request = new Spreadsheet().setProperties(new SpreadsheetProperties().setTitle("SHEET TITLE"));
@@ -426,7 +439,7 @@ Spreadsheet response = sheetService.spreadsheets().create(request).execute();
     }
 ```
 
-### 시트 쓰기
+### 4-6. 시트 쓰기
 시트에 실제 데이터를 입력하기 위해서는 범위를 지정해야합니다.
 기본적으로 A1:A5 처럼 :를 구분자로 범위를 설정하면 되고 특정탭에 작성하고 싶으면 !를 구분자로하여 탭명!A1:A5 형태로 지정하면 됩니다.
 입력하려는 데이터는 List 내부에 배열형태로 만들어야 합니다.
@@ -455,6 +468,10 @@ public void writeSheet(Sheets sheetService, String spreadsheetId, List<List<Obje
         Logger.println("[XLOG COLLECTOR PLUGIN]" + result.getUpdatedRows() + " rows update.");
     }
 ```
+
+## 5. 결론
+지금까지 스카우터 XLOG를 수집하고 수집한 데이터를 문서화 하는 플러그인에 대한 설명을 하였습니다. 스카우터 클라이언트에서도 XLOG에 대한 데이터를 조회해 볼 순 있지만 조회되는 항목이 고정되어 있어 필요한 데이터를 한번에 보기에는 어렵고 여러 통합 서비스들이 섞여 있을 경우에 필터를 통한 조회가 번거로웠습니다.
+이렇게 플러그인을 통해 필요한 항목, 조건으로 로그 정보를 문서화 해놓음으로써 사내 개발자들이 맡은 서비스에 대한 상태나 문제점을 확인하기 쉽고 이를 통해 서비스 개선과 문제 해결에 많은 도움이 될 것 같습니다.
 
 
 ## 참고 자료
