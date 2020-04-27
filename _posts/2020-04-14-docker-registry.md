@@ -197,10 +197,10 @@ http://<레지스트리 아이피>:<80으로 할당받은 노드 포트> 접근�
 
 ## 참고링크
 
-[certbot 서치]([https://certbot.eff.org/lets-encrypt/centosrhel7-apache.html](https://certbot.eff.org/lets-encrypt/centosrhel7-apache.html))
+[certbot 서치](https://certbot.eff.org/lets-encrypt/centosrhel7-apache.html)
 
-[habor demo]([https://demo.goharbor.io/](https://demo.goharbor.io/)) 
+[habor demo](https://demo.goharbor.io/)
 
 harbor 샘플계정: sample / Test1234
 
-[GitLab Registry]([https://docs.gitlab.com/ee/user/packages/container_registry/](https://docs.gitlab.com/ee/user/packages/container_registry/))
+[GitLab Registry](https://docs.gitlab.com/ee/user/packages/container_registry/)
