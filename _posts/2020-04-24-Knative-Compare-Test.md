@@ -114,10 +114,9 @@ THREAD 70
 위에 표를 보면 응답속도는 직접설치 방식, Knative, Ingress, Kubeless가 각각 3ms, 7ms, 2ms, 40ms로 Ingress, 직접설치, Knative, Kubeless 순으로 측정이 되었습니다.
 
 평균적인 CPU 사용량은 모든 THREAD에서 Ingress 방식이 평균 75%로 가장 높았고 그 다음으로 knative가 약 69%로 높았습니다. 둘 모두 컨테이너에서 사용되는 CPU 사용량이 있어 높은 것 같습니다.
-
 또한 Knative 보다 Ingress에서 응답속도가 빠른 이유는 Knative의 경우 Istio-proxy에서 소요되는 시간이 줄어든 것으로 보입니다.
 
- ![/images/2020-04-24-Knative-Compare-Test/knative-performance-issues.png](/images/2020-04-24-Knative-Compare-Test/knative-performance-issues.png)\
+ ![/images/2020-04-24-Knative-Compare-Test/knative-performance-issues.png](/images/2020-04-24-Knative-Compare-Test/knative-performance-issues.png)
 
 Kubeless의 경우 CPU 사용량이 테스트중 가장 낮을뿐더러 일정하였지만 응답시간은 가장 높았습니다. 그 이유로는 Kubeless에서 java-runtime시 구현되는 handler.java 내 코드에서 쓰레드 수가 고정으로 설정되어 있어 CPU 사용량이 과도하게 증가하지 않는 것 같습니다.
 
@@ -131,7 +130,7 @@ Kubeless의 경우 CPU 사용량이 테스트중 가장 낮을뿐더러 일정�
 ## 결론
 
 구조만 보면 외부와 직접 통신하는 직접설치 방식보다 컨테이너 방식의 서비스들이 더 낮은 TPS를 가지게 될 것 같았지만 의외로 INGRESS+DEPLOYMENT로 테스트 하였을 때 높은 수치가 나왔습니다. 이 부분은 원인 파악이나 추가적으로 더 테스트가 필요할 것 같아 보입니다.
-성능을 떠나서 Knative는 개발자가 신경써야 할 관리요소들을 많이 줄일 수 있습니다. Knative를 사용하기에 참고가 되는 테스트를 진행한 것 같습니다.
+성능을 떠나서 Knative를 사용하기에 참고가 되는 테스트를 진행한 것 같습니다.
 
   
 ## 참고 자료
