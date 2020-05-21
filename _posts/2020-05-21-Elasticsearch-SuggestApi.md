@@ -18,7 +18,11 @@ categories: Elastic
 ## 2. 구성 작업
 ### 2-1. ICU Analysis Plugin 설치
 분석 플러그인으로는 ICU 플러그인을 사용하겠습니다. 
-설치는 하단 링크를 통해 간단하게 설치 방법을 알 수 있습니다.
+
+```
+sudo bin/elasticsearch-plugin install analysis-icu
+```
+더 자세한 내용은 하단 링크를 참조해주세요
 
 [ICU Ananlysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-icu.html)
 
@@ -30,7 +34,7 @@ csv형태의 키워드 파일과 키바나에 Machine Learning탭의 Data Visual
 1. Machine Learning 탭을 선택합니다.
 ![/images/2020-05-21-Elasticsearch-SuggestApi/kibana_1.png](/images/2020-05-21-Elasticsearch-SuggestApi/kibana_1.png)
 
-2. Upload File을 선택합니다.
+1. Upload File을 선택합니다.
 ![/images/2020-05-21-Elasticsearch-SuggestApi/kibana_2.png](/images/2020-05-21-Elasticsearch-SuggestApi/kibana_2.png)
 
 3. 아래 버튼을 눌러 파일을 불러옵니다. 불러오려는 파일은 ',' 로 구분된 CSV 파일을 사용하였습니다.
@@ -82,7 +86,7 @@ index settings
   }
 ```
 인덱스 맵핑 셋팅입니다. 
-'title' 컬럼 하위의 fields 셋팅중 spell이란 필드는 분석기로 ndf_analyzer로 설정합니다. 이 필드는 아래 검색에서 사용됩니다.
+`title` 컬럼 하위의 `fields` 셋팅중 `spell` 필드는 분석기로 ndf_analyzer로 설정합니다. 이 필드는 아래 검색에서 사용됩니다.
 
 index mappings
 ```
@@ -112,10 +116,12 @@ index mappings
 인덱스가 생성됬으니 검색을 통해 교정된 키워드를 확인해 보겠습니다.
 검색API의 suggesters를 사용하겠습니다.
 
+엘라스틱서치의 suggesters는 아래 링크를 참조해주세요
+
 [Suggesters](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters.html#search-suggesters)
 
 검색 쿼리 예시입니다.
-위에 맵핑에서 분석기를 설정한 'title.spell' 를 필드로 지정합니다.
+위에 맵핑에서 분석기를 설정한 `title.spell` 를 필드로 지정합니다.
 ```
 POST /spell_check/_search
 {
@@ -131,7 +137,7 @@ POST /spell_check/_search
 }
 ```
 
-검색 결과입니다. my-suggestion 하위의 options에서 검색한 키워드의 교정된 결과를 얻을 수 있습니다.
+검색 결과입니다. `my-suggestion` 하위의 `options`에서 검색한 키워드의 교정된 결과를 얻을 수 있습니다.
 ```
 {
   "took" : 3,
@@ -199,7 +205,7 @@ POST /spell_check/_search
 
 ### 3-1. 성능 테스트
 결과는 나오는것 같고.. 성능적인 부분도 측정해보고자 jmetter를 사용하여 테스트를 진행해봤습니다. 그럴려면 오타 키워드들이 필요한대요. 기존에 인덱스를 생성할 때 사용한 키워드에서 자음이나 모음을 바꿔서 동일한 수의 오타 키워드 SET을 만들었습니다.  
-오타생성에 사용한 PYTHON 코드입니다.
+오타 생성에 사용한 PYTHON 코드입니다.
 ```
 from jamo import h2j, j2hcj, j2h, get_jamo_class
 import random
@@ -273,7 +279,7 @@ ex)
 ### 3-2 테스트 결과
 
 오타 키워드들을 가지고 각각 3분동안 호출 했을 때의 결과입니다.
-쓰레드 2 기준으로 응답시간이 3ms, TPS는 220/s가 나왔고 쓰레드 쓰레드 수가 점점 증가함에 따라 TPS, CPU 사용 모두 증가하였고 TPS의 경우 5->10개 이후로는 증가폭이 높진 않았습니다. 
+쓰레드 2 기준으로 응답시간이 3ms, TPS는 220/s가 나왔고 쓰레드 수가 점점 증가함에 따라 TPS, CPU 사용 모두 증가하였습니다. TPS의 경우 5->10개 이후로는 증가폭이 높진 않았습니다. 
 서버 성능에 따라 알맞는 수치를 정해야 할 것 같습니다.
 
 |쓰레드 수|호출 수|평균 응답시간(ms)|TPS|평균 CPU(%)|
