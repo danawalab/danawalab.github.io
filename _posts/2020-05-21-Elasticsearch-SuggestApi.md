@@ -39,10 +39,9 @@ csv형태의 키워드 파일과 키바나에 Machine Learning탭의 Data Visual
 4. Override setting에서 컬럼명을 정해줍니다.
 ![/images/2020-05-21-Elasticsearch-SuggestApi/kibana_44.png](/images/2020-05-21-Elasticsearch-SuggestApi/kibana_44.png)
 
-5. Override setting에서 컬럼명을 정해줍니다.
 ![/images/2020-05-21-Elasticsearch-SuggestApi/kibana_55.png](/images/2020-05-21-Elasticsearch-SuggestApi/kibana_55.png)
 
-6. 인덱스명, 인덱스 셋팅과 맵핑을 각각 설정합니다.
+5. 인덱스명, 인덱스 셋팅과 맵핑을 각각 설정합니다.
 ![/images/2020-05-21-Elasticsearch-SuggestApi/kibana_66.png](/images/2020-05-21-Elasticsearch-SuggestApi/kibana_66.png)
 
 사용한 셋팅 및 맵핑입니다.
