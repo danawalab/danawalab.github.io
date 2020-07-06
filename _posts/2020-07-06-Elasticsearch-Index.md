@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "FASTCAT-ELASTICSEARCH 테스트 - 색인과 배포"
-description: "ELASTICSEARCH과 FASTCAT의 색인 및 배포 성능에 대한 테스트."
+title:  "FASTCAT-ElasticSearch 테스트 - 색인과 배포"
+description: "ElasticSearch과 FASTCAT의 색인 및 배포 성능에 대한 테스트."
 date:   2020.07.06.
 writer: "하선호"
 categories: Elastic
@@ -9,8 +9,8 @@ categories: Elastic
 
 ## 1. 개요
 현재 다나와는 검색엔진을 FASTCAT에서 ElasticSearch로 변경할 준비를 하고 있습니다. 
-하지만 무턱대고 변경할 수는 없고 변경하였을 때 어떤 효과가 있을지 확인이 필요할 것 같습니다. 따라서
- 변경하기 앞서 두 검색엔진의 성능에 대한 테스트가 필요하였고 이를 4단계로 나눠 테스트를 진행했습니다.
+하지만 먼저 변경하였을 때 어떤 효과가 있을지 확인이 필요할 것 같습니다. 따라서
+ 두 검색엔진의 성능에 대한 비교 테스트가 필요하였고 이를 4단계로 나눠 테스트를 진행했습니다.
 
 **1) 색인 및 배포**  
 2) 검색  
@@ -202,7 +202,7 @@ PUT /_cluster/settings
 
 #### 트래픽 
 
-아웃바운트 트래픽량은 5분간 10GB 이를 BPS로 계산하면 (31Gb/300) * 8 = **0.82Gbps**
+아웃바운트 트래픽량은 5분간 31GB 이를 BPS로 계산하면 (31Gb/300) * 8 = **0.82Gbps**
 
 - 색인 노드
 
