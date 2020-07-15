@@ -20,13 +20,22 @@ categories: Elastic
 이렇게 4단계로 나눠 테스트를 진행하였고 이번 블로그에서는 색인과 배포에 대한 두 검색엔진의 성능을 비교한 결과를 알아보겠습니다.
 
 
-## 2. 색인 테스트
+## 2. 테스트 구성
 
 먼저 비교를 해야하기에 운영중에 있는 검색엔진 구성과 유사한 환경을 테스트의 기준으로 잡았습니다. 또한 ElasticSearch용으로 개발한 상품분석기를 사용하여 기존 FASTCAT과 동일하게 상품 데이터가 색인되게 됩니다.
 
 테스트 구성은 다음과 같습니다.
 
+[서버 사양]
+
+|인스턴스명|노드명|CPU|MEMORY|
+|:---:|:---:|:---:|:---:|
+|M5.8xlarge|INDEX|3.1Ghz * 32Core|128G
+|M5.8xlarge|호출용 노드|3.1Ghz * 32Core|128G
+
+
 [색인 테스트 구성도]
+
 ![/images/2020-07-06-Elasticsearch-Index/index-test-diagram.png](/images/2020-07-06-Elasticsearch-Index/index-test-diagram.png)
 
 먼저 색인노드는 AWS EC2의 M5.8xlarge로 CPU는 32코어 메모리는 128GB입니다. 각각의 검색엔진 HEAP 설정은 기존 사용하는 FASTCAT과 동일하게 32GB로 설정하였고
