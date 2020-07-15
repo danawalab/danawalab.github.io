@@ -16,9 +16,17 @@ categories: Elastic
 4) 동적색인과 검색  
 
 
-## 2. 동적 색인 테스트
+## 2. 테스트 구성
 
 구성은 검색테스트와 동일합니다. 테스트 구성은 다음과 같습니다.
+
+[서버 사양]
+
+|인스턴스명|노드명|CPU|MEMORY|
+|:---:|:---:|:---:|:---:|
+|M5.8xlarge|호출용 노드|3.1Ghz * 32Core|128G
+|M5.12xlarge|Node1(data)|3.1Ghz * 48Core|196G
+|M5.12xlarge|Node2(data)|3.1Ghz * 48Core|196G
 
 [동적색인 테스트 구성도]
 
