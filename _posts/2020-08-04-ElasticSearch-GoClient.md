@@ -11,6 +11,8 @@ categories: Elastic
 검색엔진이 ElasticSearch로 변경되면 기존에 FASTCAT을 연동한 검색API에서도 ElasticSearch으로 적용을 해야합니다. ElasticSearch 공식홈을 확인해보면 다양한 언어에 대한 클라이언트를 제공하고 있는데요
 다나와 검색 API는 Go언어로 작성되었고 Go 언어에 대한 클라이언트도 제공하고 있어서 사용하면 될 것 같습니다.
 
+[제공하는 언어들]
+
 ![/images/2020-08-04-ElasticSearch-GoClient/elasticsearch-client.png](/images/2020-08-04-ElasticSearch-GoClient/elasticsearch-client.png)
 
 ## 2. Go API - ElasticSearch Client
@@ -56,11 +58,14 @@ map 안에 구문을 계속 넣는 방식으로 쿼리식을 생성하는 방식
 
 그래서 다른 client가 있는지 찾아봤습니다. 공식적으로 제공하는 것 외에 사용자들이 만들어 제공하는 client가 있어서 확인해봤습니다.
 
+
+[Community Contributed Clients - Golang]
+
 ![/images/2020-08-04-ElasticSearch-GoClient/community-elasticsearch-client.png](/images/2020-08-04-ElasticSearch-GoClient/community-elasticsearch-client.png)
 
 그 중 사용해볼 것은 2번째 링크입니다. 사실 나머지 2개는 커밋이력이 몇년 전으로 관리되고 있지 않았습니다...
 
-https://github.com/olivere/elastic
+[https://github.com/olivere/elastic](https://github.com/olivere/elastic)
 
 ```
 // Search with a term query
@@ -155,7 +160,7 @@ return
 ```
 
 각각 must, should 등에 들어갈 match, term 쿼리를 생성하고 BoolQuery에 넣어주면 됩니다. 
-파라메터 유무에 따라 필요한 쿼리들을 생성해주면 되니 구현 및 관리가 편할 것 같단 생각이 듭니다.
+파라메터 유무에 따라 필요한 쿼리들을 생성하면 되니 구현 및 관리가 편할 것 같단 생각이 듭니다.
 
 ```
 func makeQuery() {
@@ -193,7 +198,7 @@ func makeQuery() {
 
 ```
 
-쿼리 스트링을 확인해보니 순서가 조금 변경되었지만 위에 쿼리와 동일하게 생성된 것을 확인했습니다.
+쿼리 스트링을 확인해보니 순서나 must,must_not 안의 항목 갯수로 인해 배열로 묶이지 않은 것 외에 위와 동일한 쿼리가 생성된 것을 확인했습니다.
 
 ```
 {
