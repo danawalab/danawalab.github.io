@@ -219,4 +219,4 @@ OUTPUT
 
 Left Join Plugin GitHub
 
-[https://github.com/danawalab/join-plugin](https://github.com/danawalab/join-plugin)
+[https://github.com/danawalab/left-join-plugin](https://github.com/danawalab/left-join-plugin)
