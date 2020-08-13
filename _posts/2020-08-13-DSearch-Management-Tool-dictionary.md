@@ -2,7 +2,7 @@
 layout: post
 title:  "디서치 관리도구 사용법  #2 - 사전"
 description: "디서치 관리도구 사전에 대해 소개하고 사용하는 방법에 대해 설명 하도록 하겠습니다." 
-date:   2020.08.13. 
+date:   2020.08.13. 13:00:00
 writer: "선지호"  
 categories: Elastic 
 ---
@@ -59,7 +59,7 @@ categories: Elastic
 
 #### 단어매칭 
 
-- 클릭 전
+클릭 전
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/7.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/7.png)
 
 
@@ -99,7 +99,7 @@ categories: Elastic
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/15.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/15.png)
 
-- 삭제 된 이후 
+삭제 된 이후 
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/16.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/16.png)
 

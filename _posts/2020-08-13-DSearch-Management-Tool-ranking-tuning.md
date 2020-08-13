@@ -2,7 +2,7 @@
 layout: post
 title:  "디서치 관리도구 사용법  #4 - 랭킹튜닝"
 description: "디서치 관리도구 랭킹튜닝 대해 소개하고 사용하는 방법에 대해 설명 하도록 하겠습니다." 
-date:   2020.08.13. 
+date:   2020.08.13. 16:00:00
 writer: "선지호"  
 categories: Elastic 
 ---
