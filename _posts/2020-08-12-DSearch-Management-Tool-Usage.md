@@ -21,7 +21,7 @@ categories: Elastic
 - [사전](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-dictionary.html)
 - [분석도구](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-analysis-tool.html)
 - [랭킹튜닝](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-ranking-tuning.html)
-- 클러스터
+- [클러스터](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-cluster.html)
 - 컬렉션
 - 템플릿
 - 인덱스
@@ -51,7 +51,7 @@ categories: Elastic
 
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/ranking-tuning-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/ranking-tuning-1.png)
 
-#### 클러스터
+#### [클러스터](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-cluster.html)
 
 현재 엘라스틱서치 클러스터에 생성된 인덱스에 대하여 현재 레플리카 및 샤드가 어디에 위치해 있는지 볼 수 있습니다.
 
