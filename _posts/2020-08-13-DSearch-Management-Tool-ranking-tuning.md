@@ -18,14 +18,14 @@ categories: Elastic
 
 ## 랭킹튜닝 메뉴 사용법 
 
-1. 처음 화면
+### 처음 화면
 
 처음 메뉴를 눌렀을 때 나오는 화면입니다.
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/1.png](/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/1.png)
 
 
-3. 인덱스 입력
+### 인덱스 입력
 
 인덱스는 총 두가지 방식으로 입력 할 수 있습니다.
 
@@ -39,7 +39,7 @@ categories: Elastic
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/3.png](/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/3.png)
 
 
-4. 쿼리 입력
+### 쿼리 입력
 
 쿼리가 정상적으로 입력된다면 아래와 같이 나옵니다.
 
@@ -49,7 +49,7 @@ categories: Elastic
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/5.png](/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/5.png)
 
-5. 점수 펼치기 / 접기
+### 점수 펼치기 / 접기
 
 쿼리로 나온 결과에 점수(explain)가 있다면, 점수 펼치기 및 접기를 통해 간편하게 모든 점수들을 펼쳐보고 접을 수 있습니다.
 
@@ -61,5 +61,7 @@ categories: Elastic
 ## 정리
 
 이번에는 다나와에서 개발한 디서치 관리도구-랭킹튜닝 메뉴에 대해 설명하고, 사용하는 방법에 대하여 포스팅 해보았습니다.
+
 디서치를 한번도 안 써본 개발자의 입장이 되어 작성해 보았습니다.
+
 이 포스팅이 나중에 사용하시는 분들께 많은 도움이 되었으면 좋겠습니다.
