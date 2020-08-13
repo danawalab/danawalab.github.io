@@ -43,13 +43,13 @@ categories: Elastic
 
 현재 엘라스틱서치 인덱스에 등록된 분석기를 통해 입력한 내용을 분석하여 결과를 받아볼 수 있습니다.
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/analysis.png](/images/2020-08-12-DSearch-Management-Tool-Usage/analysis.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/analysis-tool.png](/images/2020-08-12-DSearch-Management-Tool-Usage/analysis-tool.png)
 
 - 랭킹튜닝
 
 현재 엘라스틱서치에 등록된 인덱스에 대해 검색 쿼리를 날려 결과를 테이블 형태로 받아 볼 수 있습니다. 
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/rankingtuning.png](/images/2020-08-12-DSearch-Management-Tool-Usage/rankingtuning.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/ranking-tuning.png](/images/2020-08-12-DSearch-Management-Tool-Usage/ranking-tuning.png)
 
 - 클러스터
 
@@ -103,7 +103,7 @@ categories: Elastic
 
 현재 엘라스틱서치에 관련한 클러스터 설정을 볼 수 있는 메뉴입니다.
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/clustersetting.png](/images/2020-08-12-DSearch-Management-Tool-Usage/clustersetting.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/cluster-setting.png](/images/2020-08-12-DSearch-Management-Tool-Usage/cluster-setting.png)
 
 ### 디서치 관리도구 콘솔 환경
 
