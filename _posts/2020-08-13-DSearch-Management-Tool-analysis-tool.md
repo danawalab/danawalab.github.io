@@ -18,7 +18,7 @@ categories: Elastic
 
 ## 분석도구 메뉴 사용법 
 
-1. 처음 화면 
+### 처음 화면 
 
 처음 메뉴를 눌렀을 때 나오는 화면입니다.
 
@@ -30,28 +30,28 @@ categories: Elastic
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-analysis-tool/2.png](/images/2020-08-13-DSearch-Management-Tool-Usage-analysis-tool/2.png)
 
-2. 간략 탭
+### 간략 탭
 
 간략탭에서는 간단하게 분석기가 어떤식으로 입력에 대해 다루고 있는지 알 수 있는 탭입니다.
 
-- 분석기 선택
+#### 분석기 선택
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-analysis-tool/3.png](/images/2020-08-13-DSearch-Management-Tool-Usage-analysis-tool/3.png)
 
-- 분석 버튼 클릭
+#### 분석 버튼 클릭
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-analysis-tool/4.png](/images/2020-08-13-DSearch-Management-Tool-Usage-analysis-tool/4.png)
 
-3. 상세 탭
+### 상세 탭
 
 상세탭에서는 디서치 플러그인 분석기가 어떤식으로 입력에 대해 다루고 있는지 알 수 있는 탭입니다.
 모델명 규칙, 단위명규칙, 형태소 분리 결과, 동의어 확장, 복합명사, 최종결과 로 총 6개의 단락이 있으며, 이를 통해 사용자에게 조금 더 편리한 분석기능을 제공합니다.
 
-- 분석기 선택
+#### 분석기 선택
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-analysis-tool/5.png](/images/2020-08-13-DSearch-Management-Tool-Usage-analysis-tool/5.png)
 
-- 분석 버튼 클릭
+#### 분석 버튼 클릭
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-analysis-tool/6.png](/images/2020-08-13-DSearch-Management-Tool-Usage-analysis-tool/6.png)
 

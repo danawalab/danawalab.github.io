@@ -18,11 +18,11 @@ categories: Elastic
 
 ## 사전 메뉴 사용법 
 
-1. 처음 화면 
+### 처음 화면 
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/1.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/1.png)
 
-2. 검색 
+### 검색 
 
 검색을 하게 되면 아래와 같이 값이 나오게 됩니다.
 
@@ -31,7 +31,7 @@ categories: Elastic
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/2.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/2.png)
 
-3. 개요 탭 
+### 개요 탭 
 
 개요 탭에서는 각 사전에 대한 작업 단어 갯수 및 적용된 단어 갯수, 토큰 타입 등등을 한눈에 볼 수 있습니다.
 
@@ -45,12 +45,11 @@ categories: Elastic
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/5.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/5.png)
 
-4. 각 사전 탭
+### 각 사전 탭
 
-- 기본 
+#### 사전 탭 UI
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/6.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/6.png)
 
-- 다른 유형의 사전 탭
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/6-1.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/6-1.png)
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/6-1.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/6-2.png)
@@ -58,18 +57,19 @@ categories: Elastic
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/6-1.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/6-3.png)
 
 
-- 단어매칭 클릭 안 했을 시
+#### 단어매칭 
+
+- 클릭 전
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/7.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/7.png)
 
-- 단어매칭 클릭 했을 시 
 
-기준이 되는 단어가 똑같을 때 찾아집니다.
+단어 매칭 기준이 되는 단어가 똑같을 때 찾아집니다.
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/8.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/8.png)
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/9.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/9.png)
 
-- 다운로드 
+#### 다운로드 
 
 다운로드를 클릭하게 되면 사전을 텍스트 파일로 다운 받을 수 있게 됩니다.
 
@@ -77,7 +77,7 @@ categories: Elastic
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/12.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/12.png)
 
-- 수정 클릭 시 변화 
+#### 수정 클릭 시 변화 
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/10.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/10.png)
 
@@ -85,7 +85,7 @@ categories: Elastic
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/13.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/13.png)
 
-- 추가 버튼 클릭시 
+#### 추가 버튼 클릭시 
 
 데이터를 새로 등록할 수 있습니다.
 
@@ -95,7 +95,7 @@ categories: Elastic
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/14-2.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/14-2.png)
 
-- 삭제 버튼 클릭시 (왼쪽의 체크박스 체크 필요)
+#### 삭제 버튼 클릭시 (왼쪽의 체크박스 체크 필요)
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/15.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/15.png)
 
