@@ -37,73 +37,73 @@ categories: Elastic
 
 현재 엘라스틱서치에 등록된 사전을 보여주는 메뉴입니다. 사전에 대해 검색을 할 수 있으며, 사전이 추가될때 마다 탭이 하나씩 생깁니다.
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/dictionary.png](/images/2020-08-12-DSearch-Management-Tool-Usage/dictionary.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/dictionary-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/dictionary-1.png)
 
 #### [분석도구](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-analysis-tool.html)
 
 현재 엘라스틱서치 인덱스에 등록된 분석기를 통해 입력한 내용을 분석하여 결과를 받아볼 수 있습니다.
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/analysis-tool.png](/images/2020-08-12-DSearch-Management-Tool-Usage/analysis-tool.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/analysis-tool-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/analysis-tool-1.png)
 
 #### [랭킹튜닝](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-ranking-tuning.html)
 
 현재 엘라스틱서치에 등록된 인덱스에 대해 검색 쿼리를 날려 결과를 테이블 형태로 받아 볼 수 있습니다. 
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/ranking-tuning.png](/images/2020-08-12-DSearch-Management-Tool-Usage/ranking-tuning.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/ranking-tuning-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/ranking-tuning-1.png)
 
 #### 클러스터
 
 현재 엘라스틱서치 클러스터에 생성된 인덱스에 대하여 현재 레플리카 및 샤드가 어디에 위치해 있는지 볼 수 있습니다.
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/cluster.png](/images/2020-08-12-DSearch-Management-Tool-Usage/cluster.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/cluster-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/cluster-1.png)
 
 #### 컬렉션
 
 두개의 인덱스를 묶어 하나의 인덱스처럼 사용하기 위하여 제공되는 기능입니다. 데이터 수집기능이 포함되어 있어 데이터를 수집하고 하나의 인덱스명으로 인덱스를 교체할 수 있습니다.
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/collection.png](/images/2020-08-12-DSearch-Management-Tool-Usage/collection.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/collection-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/collection-1.png)
 
 #### 템플릿
 
 현재 엘라스틱 서치에 등록되었던 인덱스에 대한 템플릿을 보여줍니다. 
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/template.png](/images/2020-08-12-DSearch-Management-Tool-Usage/template.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/template-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/template-1.png)
 
 #### 인덱스
 
 현재 엘라스틱서치에 등록된 인덱스에 대한 모든 설정 및 데이터 조회가 가능합니다.
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/index.png](/images/2020-08-12-DSearch-Management-Tool-Usage/index.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/index-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/index-1.png)
 
 #### JDBC
 
 컬렉션에 등록된 수집소스를 사용하기 위하여 데이터를 어떤 데이터베이스에서 가져올지 설정하는 곳입니다.
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/jdbc.png](/images/2020-08-12-DSearch-Management-Tool-Usage/jdbc.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/jdbc-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/jdbc-1.png)
 
 #### 레퍼런스UI
 
 자동완성기능 및 상단 검색시 노출되는 내용들에 대해 설정할 수 있는 메뉴입니다.
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/referenceui.png](/images/2020-08-12-DSearch-Management-Tool-Usage/referenceui.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/referenceui-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/referenceui-1.png)
 
 #### 서버
 
 현재 엘라스틱서치 클러스터의 각 노드에 대한 설정값을 볼 수 있는 메뉴입니다.
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/server.png](/images/2020-08-12-DSearch-Management-Tool-Usage/server.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/server-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/server-1.png)
 
 #### API
 
 현재 엘라스틱서치에서 제공하는 API를 한눈에 볼 수 있게 구성한 메뉴입니다.
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/api.png](/images/2020-08-12-DSearch-Management-Tool-Usage/api.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/api-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/api-1.png)
 
 #### 클러스터설정
 
 현재 엘라스틱서치에 관련한 클러스터 설정을 볼 수 있는 메뉴입니다.
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/cluster-setting.png](/images/2020-08-12-DSearch-Management-Tool-Usage/cluster-setting.png)
+![/images/2020-08-12-DSearch-Management-Tool-Usage/cluster-setting-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/cluster-setting-1.png)
 
 ### 디서치 관리도구 콘솔 환경
 
