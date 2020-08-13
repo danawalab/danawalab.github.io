@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "디서치 관리도구 사용법  #1 - 소개"  # 리스트에 보여질 제목
-description: "디서치 관리도구 사용법에 대해 전체적으로 메뉴를 소개하도록 하겠습니다. 하단에 링크를 첨부할 예정이니 좀 더 자세히 알고 싶으시다면 링크를 타고 이동하셔서 글을 읽어주시면 감사하겠습니다." 
+title:  "디서치 관리도구 사용법  #1 - 소개"  
+description: "디서치 관리도구 사용법에 대해 전체적으로 메뉴를 소개하도록 하겠습니다." 
 date:   2020.08.12. 
 writer: "선지호"  
 categories: Elastic 
@@ -11,9 +11,7 @@ categories: Elastic
 
 이번 포스팅 내용은 다나와에서 개발한 디서치 관리도구(엘라스틱서치 관리도구)를 소개하는 시간을 가지도록 하겠습니다.
 
-![/images/2020-08-12-DSearch-Management-Tool-Usage/Untitled.png](/images/2020-08-12-DSearch-Management-Tool-Usage/Untitled.png)
-
-## DSearch 관리도구 소개
+## 디서치 관리도구 소개
 
 엘라스틱서치를 조금 더 간편하게, 또 한눈에 알아볼 수 있게 사용하기 위해 다나와에서 개발한 엘라스틱서치 전용 관리도구입니다.
 
@@ -33,17 +31,79 @@ categories: Elastic
 - API
 - 클러스터설정
 
+### 목차 소개 
 
-### DSearch 관리도구 콘솔 환경
+- 사전
+
+현재 엘라스틱서치에 등록된 사전을 보여주는 메뉴입니다. 사전에 대해 검색을 할 수 있으며, 사전이 추가될때 마다 탭이 하나씩 생깁니다.
+![/images/2020-08-12-DSearch-Management-Tool-Usage/dictionary.png](/images/2020-08-12-DSearch-Management-Tool-Usage/dictionary.png)
+
+- 분석도구
+
+현재 엘라스틱서치 인덱스에 등록된 분석기를 통해 입력한 내용을 분석하여 결과를 받아볼 수 있습니다.
+![/images/2020-08-12-DSearch-Management-Tool-Usage/analysis.png](/images/2020-08-12-DSearch-Management-Tool-Usage/analysis.png)
+
+- 랭킹튜닝
+
+현재 엘라스틱서치에 등록된 인덱스에 대해 검색 쿼리를 날려 결과를 테이블 형태로 받아 볼 수 있습니다. 
+![/images/2020-08-12-DSearch-Management-Tool-Usage/rankingtuning.png](/images/2020-08-12-DSearch-Management-Tool-Usage/rankingtuning.png)
+
+- 클러스터
+
+현재 엘라스틱서치 클러스터에 생성된 인덱스에 대하여 현재 레플리카 및 샤드가 어디에 위치해 있는지 볼 수 있습니다.
+![/images/2020-08-12-DSearch-Management-Tool-Usage/cluster.png](/images/2020-08-12-DSearch-Management-Tool-Usage/cluster.png)
+
+- 컬렉션
+
+두개의 인덱스를 묶어 하나의 인덱스처럼 사용하기 위하여 제공되는 기능입니다. 데이터 수집기능이 포함되어 있어 데이터를 수집하고 하나의 인덱스명으로 인덱스를 교체할 수 있습니다.
+![/images/2020-08-12-DSearch-Management-Tool-Usage/collection.png](/images/2020-08-12-DSearch-Management-Tool-Usage/collection.png)
+
+- 템플릿
+
+현재 엘라스틱 서치에 등록되었던 인덱스에 대한 템플릿을 보여줍니다. 
+![/images/2020-08-12-DSearch-Management-Tool-Usage/template.png](/images/2020-08-12-DSearch-Management-Tool-Usage/template.png)
+
+- 인덱스
+
+현재 엘라스틱서치에 등록된 인덱스에 대한 모든 설정 및 데이터 조회가 가능합니다.
+![/images/2020-08-12-DSearch-Management-Tool-Usage/index.png](/images/2020-08-12-DSearch-Management-Tool-Usage/index.png)
+
+- JDBC
+
+컬렉션에 등록된 수집소스를 사용하기 위하여 데이터를 어떤 데이터베이스에서 가져올지 설정하는 곳입니다.
+![/images/2020-08-12-DSearch-Management-Tool-Usage/jdbc.png](/images/2020-08-12-DSearch-Management-Tool-Usage/jdbc.png)
+
+- 레퍼런스UI
+
+자동완성기능 및 상단 검색시 노출되는 내용들에 대해 설정할 수 있는 메뉴입니다.
+![/images/2020-08-12-DSearch-Management-Tool-Usage/referenceui.png](/images/2020-08-12-DSearch-Management-Tool-Usage/referenceui.png)
+
+- 서버
+
+현재 엘라스틱서치 클러스터의 각 노드에 대한 설정값을 볼 수 있는 메뉴입니다.
+![/images/2020-08-12-DSearch-Management-Tool-Usage/server.png](/images/2020-08-12-DSearch-Management-Tool-Usage/server.png)
+
+- API
+
+현재 엘라스틱서치에서 제공하는 API를 한눈에 볼 수 있게 구성한 메뉴입니다.
+![/images/2020-08-12-DSearch-Management-Tool-Usage/api.png](/images/2020-08-12-DSearch-Management-Tool-Usage/api.png)
+
+- 클러스터설정
+
+현제 엘라스틱서치에 관련한 클러스터 설정을 볼 수 있는 메뉴입니다.
+![/images/2020-08-12-DSearch-Management-Tool-Usage/clustersetting.png](/images/2020-08-12-DSearch-Management-Tool-Usage/clustersetting.png)
+
+### 디서치 관리도구 콘솔 환경
 
 nvm 버전: 1.1.7
 npm 버전: 6.14.4
 yarn 버전: 1.22.4
 
-### DSearch 관리도구 콘솔 설치 및 실행 방법
+### 디서치 관리도구 콘솔 설치 및 실행 방법
 
 ```jsx
-$ yum install git -y
+$ git clone https://gitlab.danawa.com/fastcatx/fastcatx-console.git
+$ cd fastcatx-console
 $ rm -rf yarn.lock
 $ rm -rf package-lock.json
 $ rm -rf node_modules
@@ -54,12 +114,12 @@ $ yarn build --reset-cache
 $ npm start
 ```
 
-### DSearch 관리도구 서버 환경
+### 디서치 관리도구 서버 환경
 
 자바 버전: 1.8 이상
 엘라스틱서치 버전: 7.6.2
 
-### DSearch 관리도구 서버 설치 및 실행 방법
+### 디서치 관리도구 서버 설치 및 실행 방법
 
 ```jsx
 $ git clone https://github.com/danawalab/dsearch.git
@@ -70,10 +130,9 @@ $ cd target
 $ java -jar fastcatx-server.jar
 ```
 
-
 ### 로그인 방법
 
-첫 화면은 이렇습니다.
+첫 화면 입니다.
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/2020-08-12_1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/2020-08-12_1.png)
 
 여기에 각 데이터를 입력하고, 로그인을 누릅니다. 
@@ -85,7 +144,7 @@ $ java -jar fastcatx-server.jar
 입니다
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/2020-08-12_2.png](/images/2020-08-12-DSearch-Management-Tool-Usage/2020-08-12_2.png)
 
-이렇게 엘라스틱서치 클러스터 등록 및 관리 페이지가 나옵니다.
+로그인 버튼을 누른 후 엘라스틱서치 클러스터 등록 및 관리 페이지가 나옵니다.
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/2020-08-12_3.png](/images/2020-08-12-DSearch-Management-Tool-Usage/2020-08-12_3.png)
 
 
@@ -98,6 +157,7 @@ $ java -jar fastcatx-server.jar
 여기에 이름, 엘라스틱서치 클러스터 접속 경로, 엘라스틱서치와 연결된 키바나의 접속경로를 입력(optional)하고 연결테스트를 클릭해 줍니다.
 연결테스트를 클릭하지 않는다면 추가 버튼이 활성화 되지 않습니다.
 만약 색상을 다른 색상으로 변경하고 싶다면 색상 버튼을 클릭하여 변화를 줄 수 있습니다.
+등록하는 동안 시간이 약 1초~2초정도 소요되므로 바로 등록이 안되더라도 기다려주세요.
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/2020-08-12_5.png](/images/2020-08-12-DSearch-Management-Tool-Usage/2020-08-12_5.png)
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/2020-08-12_6.png](/images/2020-08-12-DSearch-Management-Tool-Usage/2020-08-12_6.png)
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/2020-08-12_7.png](/images/2020-08-12-DSearch-Management-Tool-Usage/2020-08-12_7.png)
@@ -137,4 +197,4 @@ $ java -jar fastcatx-server.jar
 
 ## 정리
 
-이번에는 다나와에서 만든 디서치 관리도구를 설치하고, 사용하는 방법에 대해 포스팅 해보았습니다. 엘라스틱 서치를 사용하면서 느꼈던 여러 불편한 부분들이 키바나를 통해 많이 해소되었지만, 그럼에도 불구하고 해소되지 못한 부분이 있고, 직관적이지 않은 부분이 많았기에 디서치 관리도구를 사용하며 이를 최소화하려고 했습니다. 많은 분들이 이용하고, 피드백을 주셨으면 좋겠습니다.  
+이번에는 다나와에서 만든 디서치 관리도구를 설치하고, 사용하는 방법에 대해 포스팅 해보았습니다. 엘라스틱 서치를 사용하면서 불편한 부분이 많았기에 디서치 관리도구를 만들며 불편했던 부분을 최소화하려고 했습니다. 많은 분들이 이용하고, 피드백을 주셨으면 좋겠습니다.  
