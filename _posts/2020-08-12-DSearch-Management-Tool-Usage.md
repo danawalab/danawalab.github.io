@@ -18,9 +18,9 @@ categories: Elastic
 디서치는 각각 콘솔과 서버 두개의 파트로 나누어져 있으며, 이 관리도구를 통해 엘라스틱서치를 등록하고 사용하는 방법을 소개하고자 합니다.
 
 ## 목차
-- 사전
-- 분석도구
-- 랭킹튜닝
+- [사전](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-dictionary.html)
+- [분석도구](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-analysis-tool.html)
+- [랭킹튜닝](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-ranking-tuning.html)
 - 클러스터
 - 컬렉션
 - 템플릿
