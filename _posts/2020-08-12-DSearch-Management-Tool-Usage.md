@@ -22,7 +22,7 @@ categories: Elastic
 - [분석도구](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-analysis-tool.html)
 - [랭킹튜닝](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-ranking-tuning.html)
 - [클러스터](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-cluster.html)
-- 컬렉션
+- [컬렉션](https://danawalab.github.io/elastic/2020/08/14/DSearch-Management-Tool-collection.html)
 - 템플릿
 - 인덱스
 - JDBC
@@ -57,7 +57,7 @@ categories: Elastic
 
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/cluster-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/cluster-1.png)
 
-#### 컬렉션
+#### [컬렉션](https://danawalab.github.io/elastic/2020/08/14/DSearch-Management-Tool-collection.html)
 
 두개의 인덱스를 묶어 하나의 인덱스처럼 사용하기 위하여 제공되는 기능입니다. 데이터 수집기능이 포함되어 있어 데이터를 수집하고 하나의 인덱스명으로 인덱스를 교체할 수 있습니다.
 
