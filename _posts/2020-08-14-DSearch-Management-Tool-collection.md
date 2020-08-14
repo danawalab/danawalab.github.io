@@ -75,6 +75,7 @@ JDBC는 데이터베이스에서 데이터를 수집해 올 때, 필요한 데�
 크론주기에 익숙하시지 않은 분을 위해 예제를 옆에 두었습니다.
 
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6.png)
+
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-1.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-1.png)
 
 ### 히스토리
@@ -89,9 +90,7 @@ JDBC는 데이터베이스에서 데이터를 수집해 올 때, 필요한 데�
 
 ### CSV 데이터 가져오기 
 
-CSV로 저장된 데이터를 가져오는 방법을 보여드리겠습니다.
-
-여기서 진행된 내용은 전부 로컬에서 진행된 내용입니다.
+CSV로 저장된 데이터를 가져오는 방법을 보여드리겠습니다. 여기서 진행된 내용은 전부 로컬에서 진행된 내용입니다.
 
 아래의 이미지와 같이 저장된 CSV 파일이 있습니다.
 
