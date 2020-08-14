@@ -24,7 +24,7 @@ categories: Elastic
 - [클러스터](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-cluster.html)
 - [컬렉션](https://danawalab.github.io/elastic/2020/08/14/DSearch-Management-Tool-collection.html)
 - [템플릿](https://danawalab.github.io/elastic/2020/08/14/DSearch-Management-Tool-template.html)
-- 인덱스
+- [인덱스](https://danawalab.github.io/elastic/2020/08/14/DSearch-Management-Tool-index.html)
 - JDBC
 - 레퍼런스UI
 - 서버
@@ -69,7 +69,7 @@ categories: Elastic
 
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/template-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/template-1.png)
 
-#### 인덱스
+#### [인덱스](https://danawalab.github.io/elastic/2020/08/14/DSearch-Management-Tool-index.html)
 
 현재 엘라스틱서치에 등록된 인덱스에 대한 모든 설정 및 데이터 조회가 가능합니다.
 

@@ -17,7 +17,10 @@ categories: Elastic
 
 이 메뉴에서 인덱스를 생성할 수는 없지만, 인덱스 안의 내용을 조회하거나 수정하거나 인덱스를 삭제하거나 하는 기능 등등 여러 기능이 있습니다.
 
+
 ## 인덱스 메뉴 사용법 
+
+
 
 ### 처음 화면
 
@@ -32,6 +35,9 @@ categories: Elastic
 인덱스를 조회하면, 5개의 탭과 관리 버튼을 보실 수 있습니다.
 
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-index/3.png](/images/2020-08-14-DSearch-Management-Tool-Usage-index/3.png)
+
+
+
 
 #### 관리 버튼
 
@@ -73,9 +79,19 @@ categories: Elastic
 
 현재 인덱스를 삭제하는 기능입니다.
 
+
+
+
+
+
+
+
 #### 개요
 
 현재 인덱스의 상태 및 인덱스에 관련된 내용들 (사용중인 스토리지 용량, 삭제 문서 갯수, 현재 문서 갯수 등등)을 한눈에 볼 수 있게 한 탭입니다.
+
+
+
 
 #### 매핑
 
@@ -85,6 +101,9 @@ categories: Elastic
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-index/7.png](/images/2020-08-14-DSearch-Management-Tool-Usage-index/7.png)
 
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-index/8.png](/images/2020-08-14-DSearch-Management-Tool-Usage-index/8.png)
+
+
+
 
 #### 셋팅
 
@@ -98,6 +117,9 @@ categories: Elastic
 
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-index/11.png](/images/2020-08-14-DSearch-Management-Tool-Usage-index/11.png)
 
+
+
+
 #### 통계
 
 현재 인덱스의 통계 데이터를 볼 수 있습니다.
@@ -105,11 +127,17 @@ categories: Elastic
 
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-index/12.png](/images/2020-08-14-DSearch-Management-Tool-Usage-index/12.png)
 
+
+
+
 #### 데이터
 
 현재 인덱스에 저장된 데이터를 간단히 생성하고 삭제하고 읽고 변경하고를 가능하게 해주는 탭 입니다.
 
 기본 / 분석된 색인어  두가지 형태로 제공하고 있으며, 데이터에 대한 생성, 변경 및 삭제는 기본에서만 제공됩니다.
+
+
+
 
 #### 데이터 - 기본
 
@@ -151,6 +179,9 @@ categories: Elastic
 
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-index/25.png](/images/2020-08-14-DSearch-Management-Tool-Usage-index/25.png)
 
+
+
+
 #### 데이터 - 분석된 색인어
 
 이 곳은 데이터에 대해 분석을 한번 더 진행하여 어떤식으로 데이터가 쪼개지는지를 볼 수 있습니다.
@@ -170,6 +201,9 @@ categories: Elastic
 - 한 페이지에 보여지는 문서 수 변경
 
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-index/28.png](/images/2020-08-14-DSearch-Management-Tool-Usage-index/28.png)
+
+
+
 
 
 ## 정리
