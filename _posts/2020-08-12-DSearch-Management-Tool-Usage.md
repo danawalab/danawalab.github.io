@@ -23,7 +23,7 @@ categories: Elastic
 - [랭킹튜닝](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-ranking-tuning.html)
 - [클러스터](https://danawalab.github.io/elastic/2020/08/13/DSearch-Management-Tool-cluster.html)
 - [컬렉션](https://danawalab.github.io/elastic/2020/08/14/DSearch-Management-Tool-collection.html)
-- 템플릿
+- [템플릿](https://danawalab.github.io/elastic/2020/08/14/DSearch-Management-Tool-template.html)
 - 인덱스
 - JDBC
 - 레퍼런스UI
@@ -63,7 +63,7 @@ categories: Elastic
 
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/collection-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/collection-1.png)
 
-#### 템플릿
+#### [템플릿](https://danawalab.github.io/elastic/2020/08/14/DSearch-Management-Tool-template.html)
 
 현재 엘라스틱 서치에 등록되었던 인덱스에 대한 템플릿을 보여줍니다. 
 
