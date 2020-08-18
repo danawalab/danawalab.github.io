@@ -25,11 +25,12 @@ categories: Elastic
 - [컬렉션](https://danawalab.github.io/elastic/2020/08/14/DSearch-Management-Tool-collection.html)
 - [템플릿](https://danawalab.github.io/elastic/2020/08/14/DSearch-Management-Tool-template.html)
 - [인덱스](https://danawalab.github.io/elastic/2020/08/14/DSearch-Management-Tool-index.html)
-- JDBC
-- 레퍼런스UI
-- 서버
-- API
-- 클러스터설정
+- [JDBC](https://danawalab.github.io/elastic/2020/08/18/2020-08-18-DSearch-Management-Tool-JDBC.html)
+- [레퍼런스UI](https://danawalab.github.io/elastic/2020/08/18/2020-08-18-DSearch-Management-Tool-ReferenceUI.html)
+- [서버](https://danawalab.github.io/elastic/2020/08/18/2020-08-18-DSearch-Management-Tool-server.html)
+- [API](https://danawalab.github.io/elastic/2020/08/18/2020-08-18-DSearch-Management-Tool-API.html)
+- [클러스터설정](https://danawalab.github.io/elastic/2020/08/18/2020-08-18-DSearch-Management-Tool-ClusterSettings.html)
+
 
 ### 목차 소개 
 
@@ -75,31 +76,31 @@ categories: Elastic
 
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/index-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/index-1.png)
 
-#### JDBC
+#### [JDBC](https://danawalab.github.io/elastic/2020/08/18/2020-08-18-DSearch-Management-Tool-JDBC.html)
 
 컬렉션에 등록된 수집소스를 사용하기 위하여 데이터를 어떤 데이터베이스에서 가져올지 설정하는 곳입니다.
 
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/jdbc-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/jdbc-1.png)
 
-#### 레퍼런스UI
+#### [레퍼런스UI](https://danawalab.github.io/elastic/2020/08/18/2020-08-18-DSearch-Management-Tool-ReferenceUI.html)
 
 자동완성기능 및 상단 검색시 노출되는 내용들에 대해 설정할 수 있는 메뉴입니다.
 
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/referenceui-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/referenceui-1.png)
 
-#### 서버
+#### [서버](https://danawalab.github.io/elastic/2020/08/18/2020-08-18-DSearch-Management-Tool-server.html)
 
 현재 엘라스틱서치 클러스터의 각 노드에 대한 설정값을 볼 수 있는 메뉴입니다.
 
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/server-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/server-1.png)
 
-#### API
+#### [API](https://danawalab.github.io/elastic/2020/08/18/2020-08-18-DSearch-Management-Tool-API.html)
 
 현재 엘라스틱서치에서 제공하는 API를 한눈에 볼 수 있게 구성한 메뉴입니다.
 
 ![/images/2020-08-12-DSearch-Management-Tool-Usage/api-1.png](/images/2020-08-12-DSearch-Management-Tool-Usage/api-1.png)
 
-#### 클러스터설정
+#### [클러스터설정](https://danawalab.github.io/elastic/2020/08/18/2020-08-18-DSearch-Management-Tool-ClusterSettings.html)
 
 현재 엘라스틱서치에 관련한 클러스터 설정을 볼 수 있는 메뉴입니다.
 
