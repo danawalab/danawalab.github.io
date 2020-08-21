@@ -30,6 +30,8 @@ JDBC메뉴에서는 데이터베이스 접속 정보를 관리하게됩니다.  
 
 ![/images/2020-08-18-DSearch-Management-Tool-JDBC/Untitled%201.png](/images/2020-08-18-DSearch-Management-Tool-JDBC/Untitled%201.png)
 
+![/images/2020-08-18-DSearch-Management-Tool-JDBC/Untitled%201.png](/images/2020-08-18-DSearch-Management-Tool-JDBC/Untitled%201-1.png)
+
 ### JDBC 연결테스트
 
 입력란에 JDBC 정보를 입력 후 연결테스트 버튼을 누르게 되면 아래 연결 결과를 표시하게 됩니다.  
@@ -37,6 +39,10 @@ JDBC메뉴에서는 데이터베이스 접속 정보를 관리하게됩니다.  
 이미지에서는 연결테스트 실패를 하였지만, 정상적으로 연결이 되었을 경우, 연결테스트 성공 메시지가 표시 됩니다. 추가 버튼을 누르게 되면 정보가 저장되고, 팝업창이 사라지게 됩니다.
 
 ![/images/2020-08-18-DSearch-Management-Tool-JDBC/Untitled%202.png](/images/2020-08-18-DSearch-Management-Tool-JDBC/Untitled%202.png)
+
+또한, 페이지에 접속 했을 때 등록한 JDBC 데이터베이스 접속 정보를 통해 연결테스트를 할 수 있게 지원합니다.
+
+![/images/2020-08-18-DSearch-Management-Tool-JDBC/Untitled%202.png](/images/2020-08-18-DSearch-Management-Tool-JDBC/Untitled%202-1.png)
 
 ### JDBC 수정/삭제
 
