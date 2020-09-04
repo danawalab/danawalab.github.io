@@ -9,7 +9,7 @@ categories: Elastic
 
 ## 1. 개요
 ElasticSearch로 색인하다보면 필요에 따라 데이터를 가공해야할 필요가 있습니다. 예를 들어 구분값으로 나눠진 데이터를 집계해야 할 때, HTML 태그가 포함된 필드를 색인 할 때 등 그래서 이러한 데이터를 별도의 프로세스를 통해 가공하여 색인했었는데요. 인덱스 별로 가공해야 할 필드가 다르고 필드명 또한 달라서 매번 인덱스에 해당하는 프로세스를 만들고, 배포하는 작업이 매우 불편할 것 같았습니다. 그런 상태에서 `Pipeline` 의 `processor`에 대한 조언을 받아 알아보게 되었습니다. `Pipeline`은 아래 링크를 통해 확인 하실 수 있습니다.
-- https://www.elastic.co/guide/en/elasticsearch/reference/current/pipeline.html
+- [IngestNode - PipeLine](https://www.elastic.co/guide/en/elasticsearch/reference/current/pipeline.html)
 
 
 ## 2. PipeLine
