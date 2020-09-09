@@ -71,8 +71,7 @@ categories: Common
     - 모든 언어에 대해서 교정키워드를 제공합니다.
     - 분리단어, 브랜드 등 다양한 기능을 제공합니다.
 - 단점:
-    - 비용이 발생합니다.
-    - 최대 TPS는 250 입니다.
+    - TPS에 따른 비용이 발생합니다.
 
 ### Google Suggestqueries API
 
