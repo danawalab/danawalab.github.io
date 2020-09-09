@@ -38,7 +38,7 @@ categories: Common
 
 ![/images/2020-09-09-Common-suggest-search/Untitled%202.png](/images/2020-09-09-Common-suggest-search/Untitled%202.png)
 
-구글도 의도한 바비 인형 세로 결과가 나왔습니다.
+구글도 의도한 바비 인형 세트로 결과가 나왔습니다.
 
 ![/images/2020-09-09-Common-suggest-search/Untitled%203.png](/images/2020-09-09-Common-suggest-search/Untitled%203.png)
 
