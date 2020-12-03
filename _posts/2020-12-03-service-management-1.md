@@ -4,7 +4,7 @@ title:  "서비스 운영플랫폼 #1 - 소개"
 description: "서비스 운영플랫폼을 소개하도록 하겠습니다. 서비스 운영플랫폼은 도커 컴포즈 또는 프로세스를 cli 환경이 아닌 웹UI를 통해 관리할 수 있습니다." 
 date:   2020.12.03. 18:00:00
 writer: "김준우"  
-categories: Mangement
+categories: Management
 ---
 ## 소개
 
