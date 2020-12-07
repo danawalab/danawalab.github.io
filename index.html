@@ -6,7 +6,7 @@ image:
 ---
 
 <div class="content__list">
-    {% for post in site.posts limit:30 %}
+    {% for post in site.posts %}
     <div class="content__post">
         <a href="{{ site.baseurl }}{{ post.url }}" class="content__link">
             <h3 class="content__h3">{{ post.title }}</h3>
