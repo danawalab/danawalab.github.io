@@ -2,7 +2,7 @@
 layout: post
 title:  "서비스 운영플랫폼 #5 - 홈"
 description: "서비스 운영플랫폼의 홈메뉴는 시스템의 요약정보와 소속된 그룹의 정보를 표시합니다. " 
-date:   2020.12.04. 19:00:00
+date:   2020.12.04. 20:00:00
 writer: "김준우"  
 categories: Management
 ---
