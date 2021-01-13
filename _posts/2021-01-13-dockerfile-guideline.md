@@ -442,11 +442,14 @@ $ docker tag demo:latest <도커 허브 아이디>/demo:latest
 ```
 
 2. 확인해봅니다
+
 ```jsx
 $ docker images
 ```
 
+
 3. 변경한 이미지를 푸시 해줍니다
+
 ```jsx
 $ docker push dcr-ui.danawa.io/demo:latest
 
@@ -454,6 +457,7 @@ $ docker push <도커 허브 아이디>/<이미지 이름>:<태그>
 ```
 
 4. push한 도커 이미지를 받을때는 아래와 같이 사용하면 됩니다.
+
 ```jsx
 $ docker pull dcr-ui.danawa.io/demo:latest
 
