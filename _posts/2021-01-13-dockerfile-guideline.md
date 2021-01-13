@@ -439,7 +439,6 @@ $ docker rm <컨테이너 ID 혹은 컨테이너 이름>
 $ docker tag demo:latest dcr-ui.danawa.io/demo:latest
 
 $ docker tag demo:latest <도커 허브 아이디>/demo:latest
-
 ```
 
 2. 확인해봅니다
@@ -451,8 +450,7 @@ $ docker images
 ```jsx
 $ docker push dcr-ui.danawa.io/demo:latest
 
-$ docker push <도커 허브 아이디>/<이미지 이름>:<태그>
-
+$ docker push <도커 허브 아이디>/<이미지 이름>:<태그> 
 ```
 
 4. push한 도커 이미지를 받을때는 아래와 같이 사용하면 됩니다.
