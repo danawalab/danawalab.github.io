@@ -23,7 +23,7 @@ categories: Docker
 ## 예제 다운로드 및 실행
 
 예제 스프링부트 프로젝트는 아래 링크에서 받으실 수 있습니다.
-[https://github.com/zozond/dockerfile-demo/raw/master/Docker-compose-demo.zip](https://github.com/zozond/dockerfile-demo/raw/master/Docker-compose-demo.zip)
+[Docker-compose-demo.zip](https://github.com/zozond/dockerfile-demo/raw/master/Docker-compose-demo.zip)
 
 해당 docker-compose.yml 파일 위치에서 docker-compose up 을 하시면 정상적으로 동작하는 것을 확인 할 수 있습니다.
 
