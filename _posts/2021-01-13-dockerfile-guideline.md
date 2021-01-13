@@ -63,7 +63,7 @@ HEALTHCHECK NONE : 베이스 이미지에서 상속된 상태 확인을 비활�
 ### 도커 파일 생성
 
 예제 스프링부트 프로젝트는 아래 링크에서 받으실 수 있습니다.
-[https://github.com/zozond/dockerfile-demo/raw/master/Dockerfile_demo_project.zip](https://github.com/zozond/dockerfile-demo/raw/master/Dockerfile_demo_project.zip)
+[Dockerfile_demo_project.zip](https://github.com/zozond/dockerfile-demo/raw/master/Dockerfile_demo_project.zip)
 
 ```jsx
 # 자바 버전 8 이미지로부터 시작합니다.
