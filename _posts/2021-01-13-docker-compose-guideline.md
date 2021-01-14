@@ -177,12 +177,15 @@ app1_1      | 2021-01-12 06:44:26.969  INFO 1 --- [           main] com.example.
 이제, 도커 컴포즈로 생성한 컨테이너들을 확인해 보겠습니다.
 
 실행한 도커 컴포즈 컨테이너의 상태를 조회하면 아래와 같이 나옵니다.
+
 ![/images/2021-01-13-docker-compose-guideline/1.png](/images/2021-01-13-docker-compose-guideline/1.png)
 
 실행한 도커 컴포즈 컨테이너를 재시작 했을 시 나오는 로그입니다.
+
 ![/images/2021-01-13-docker-compose-guideline/2.png](/images/2021-01-13-docker-compose-guideline/2.png)
 
 실행한 도커 컴포즈 컨테이너를 종료 했을 시에 나오는 로그 입니다.
+
 ![/images/2021-01-13-docker-compose-guideline/3.png](/images/2021-01-13-docker-compose-guideline/3.png)
 
 ## 예제2) ELK-스택 
