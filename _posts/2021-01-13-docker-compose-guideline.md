@@ -7,13 +7,11 @@ writer: "선지호"
 categories: Docker
 ---
 ## 소개
-
 도커 컴포즈를 사용하여 여러개의 컨테이너를 같이 띄울 때, 쉽게 사용할 수 있도록 가이드라인을 작성해 보았습니다.
 
 간단한 예제를 통해 도커 컴포즈를 하실 수 있도록 진행해 보았으니, 부담 가지지 마시고 천천히 진행해 주시면 좋겠습니다.
 
 ## 도커 컴포즈 란?
-
 도커 컴포즈는 다중 컨테이너 도커 애플리케이션을 정의하고 실행하기위한 도구입니다.
 
 도커 컴포즈에서는 YAML 파일을 사용하여 애플리케이션의 서비스를 구성합니다. 
@@ -21,16 +19,13 @@ categories: Docker
 그런 다음 단일 명령으로 YAML 파일에 정의된 모든 서비스를 만들고 시작합니다. 
 
 ## 예제 다운로드 및 실행
-
 예제 스프링부트 프로젝트는 아래 링크에서 받으실 수 있습니다.
 - [Docker-compose-demo.zip](https://github.com/zozond/dockerfile-demo/raw/master/Docker-compose-demo.zip)
 
 해당 docker-compose.yml 파일 위치에서 docker-compose up 을 하시면 정상적으로 동작하는 것을 확인 할 수 있습니다.
 
 ## 예제 1) 일반적인 서버 - DB 구성 
-
 아래는 docker-compose.yaml 파일의 내용입니다.
-
 도커 컴포즈 YAML 파일에서는 탭이 인식되지 않기 때문에 하위 항목을 2칸씩 띄워서 구분할 수 있습니다.
 
 ```jsx
@@ -131,7 +126,6 @@ $ docker-compose -f docker-compose.yml -f docker-compose-test.yml up
 
 
 이제, 도커 컴포즈를 실행해 보겠습니다.
-
 아래로그는 위에서 작성한 docker-compose.yml 을 실행시켰을때 나오는 로그입니다. 
 
 ```jsx
@@ -190,21 +184,16 @@ app1_1      | 2021-01-12 06:44:26.969  INFO 1 --- [           main] com.example.
 이제, 도커 컴포즈로 생성한 컨테이너들을 확인해 보겠습니다.
 
 실행한 도커 컴포즈 컨테이너의 상태를 조회하면 아래와 같이 나옵니다.
-
 ![/images/2021-01-13-docker-compose-guideline/1.png](/images/2021-01-13-docker-compose-guideline/1.png)
 
 실행한 도커 컴포즈 컨테이너를 재시작 했을 시 나오는 로그입니다.
-
 ![/images/2021-01-13-docker-compose-guideline/2.png](/images/2021-01-13-docker-compose-guideline/2.png)
 
 실행한 도커 컴포즈 컨테이너를 종료 했을 시에 나오는 로그 입니다.
-
 ![/images/2021-01-13-docker-compose-guideline/3.png](/images/2021-01-13-docker-compose-guideline/3.png)
 
 ## 예제2) ELK-스택 
-
 이번 예제는 ELK-스택을 로컬에서 구동하기위한 docker-compose.yaml 입니다.
-
 대부분의 항목들은 위 예제에서 다루었기에, 여기서는 configs 항목에 대해서만 추가적으로 더 확인하면 될 것 같습니다.
 
 ```jsx
@@ -266,11 +255,8 @@ configs:
 ```
 
 ## 정리
-
 이번에는 도커 컴포즈에서 쓰이는 항목들과 간단한 예제를 통해 도커 컴포즈 파일을 어떻게 생성하고, 확인할지 알아 보았습니다.
-
 예제로는 간단한 서버-DB구성과 ELK스택에 대해서 작성을 해보았습니다. 
-
 만약 도커 컴포즈 파일을 어떻게 생성하고, 시작해야 할지 모르시는 분들께 이 예제와 설명이 도움이 많이 되었으면 좋겠습니다.
 
 ## 링크
