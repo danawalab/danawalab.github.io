@@ -17,7 +17,7 @@ categories: Elastic
 
 엘라스틱서치에서 검색기능을 제공하기 위해 데이터를 가져오는 기능과, 다른 레플리카로 전파하는 기능, 인덱스를 교체하는 기능이 들어가 있습니다.
 
-다른 저장소(DB 테이블 및 csv, ndjson) 에서 데이터를 가져오는 기능인 수집소스 기능을 사용하기 위해서는 디서치 인덱서가 필요합니다.
+다른 저장소(DB 테이블 및 csv, ndjson, file) 에서 데이터를 가져오는 기능인 수집소스 기능을 사용하기 위해서는 디서치 인덱서가 필요합니다.
 
 디서치 인덱서 URL : [https://github.com/danawalab/fastcatx-indexer.git](https://github.com/danawalab/fastcatx-indexer.git)
 
@@ -53,14 +53,14 @@ categories: Elastic
 
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/4.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/4.png)
 
-![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/5.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/5.png)
+![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/5-1.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/5-1.png)
 
 
 ### 수집소스
 
 수집소스는 디서치 인덱서를 이용하여 데이터베이스나 파일에서 데이터를 가져와 엘라스틱서치 인덱스에 넣을 수 있게 명세하는 곳입니다.
 
-자세한 YAML파일 내용은 디서치 인덱서를 참조해 주시면 되며, 나머지 내용에 대해 말씀드리겠습니다.
+자세한 YAML파일 내용은 디서치 인덱서를 참조해 주시면 되며 템플릿을 두어 사용하게 편리하게 바꾸어 두었으니, 나머지 내용에 대해 말씀드리겠습니다.
 
 이름은 이 컬렉션에서 테스트를 진행할 수집소스 정보 이름에 대해 적어주시면 됩니다.
 
@@ -77,6 +77,38 @@ JDBC는 데이터베이스에서 데이터를 수집해 올 때, 필요한 데�
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6.png)
 
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-1.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-1.png)
+
+컬렉션 이름 변경 옵션입니다. 이름을 잘못 적었을 때, 이 옵션을 통해 수정할 수 있습니다.
+
+![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-3.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-3.png)
+
+세그먼트 생성주기와 레플리카 갯수 설정 옵션입니다. 각 컬렉션별로 따로 설정할 수 있습니다.
+
+![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-4.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-4.png)
+
+템플릿 리스트 입니다. 기본적으로 아무런 내용이 없을 때, ndjson 템플릿이 선택됩니다.
+
+![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-5.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-5.png)
+
+ndjson 템플릿 내용 입니다. 
+
+![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-2.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-2.png)
+
+csv 템플릿 내용 입니다.
+
+![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-6.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-6.png)
+
+파일 템플릿 내용 입니다.
+
+![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-7.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-7.png)
+
+프로시저 템플릿 내용 입니다.
+
+![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-8.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-8.png)
+
+데이터베이스 템플릿 내용 입니다. 
+
+![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-9.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-9.png)
 
 ### 히스토리
 
