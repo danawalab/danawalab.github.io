@@ -55,6 +55,13 @@ categories: Elastic
 
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/5-1.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/5-1.png)
 
+컬렉션 이름 변경 옵션입니다. 이름을 잘못 적었을 때, 이 옵션을 통해 수정할 수 있습니다.
+
+![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/5-2.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/5-2.png)
+
+세그먼트 생성주기와 레플리카 갯수 설정 옵션입니다. 각 컬렉션별로 따로 설정할 수 있습니다.
+
+![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/5-3.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/5-3.png)
 
 ### 수집소스
 
@@ -77,14 +84,6 @@ JDBC는 데이터베이스에서 데이터를 수집해 올 때, 필요한 데�
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6.png)
 
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-1.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-1.png)
-
-컬렉션 이름 변경 옵션입니다. 이름을 잘못 적었을 때, 이 옵션을 통해 수정할 수 있습니다.
-
-![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-3.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-3.png)
-
-세그먼트 생성주기와 레플리카 갯수 설정 옵션입니다. 각 컬렉션별로 따로 설정할 수 있습니다.
-
-![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-4.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-4.png)
 
 템플릿 리스트 입니다. 기본적으로 아무런 내용이 없을 때, ndjson 템플릿이 선택됩니다.
 
