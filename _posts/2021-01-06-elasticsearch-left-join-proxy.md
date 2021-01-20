@@ -271,24 +271,55 @@ join을 정의할땐 아래 필드가 필수로 있어야합니다. 그리고 jo
 
 ### 테스트 쿼리
 테스트에서는 아래 표와 같이 SQL의 조인쿼리를 변환하여 사용하였습니다. 셀프조인방식을 사용하여 parent 문서 수 와 동일한 child 문서 수가 출력 되도록 하였습니다.
-|SQL 원본|변환된 Left 쿼리|Search 비교 쿼리|
-|---|---|---|
-|`SELECT * FROM TSIMPROD_MODEL_GROUP A <br/>LEFT OUTER JOIN TSIMPROD_MODEL_GROUP B <br/> ON A CMPNY_CATE_C = B.CMPNY_CATE_C limit 500`|`{ <br/>&nbsp;&nbsp;"query":{ "match_all": { } }, <br/> &nbsp;&nbsp;"size": 500, <br/>&nbsp;&nbsp;"join":{ <br/>&nbsp;&nbsp;&nbsp;&nbsp;"index":"tsimprod-model-group", <br/>&nbsp;&nbsp;&nbsp;&nbsp;"parent":"CMPNY_CATE_C", <br/> &nbsp;&nbsp;&nbsp;&nbsp;"child":"CMPNY_CATE_C", <br/>&nbsp;&nbsp;&nbsp;&nbsp;"query":{ <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"match_all": { } <br/>&nbsp;&nbsp;&nbsp;&nbsp;} <br/>&nbsp;&nbsp;} <br/>}`|`{<br/>&nbsp;&nbsp;"query": {<br/>&nbsp;&nbsp; "match_all": { } <br/>&nbsp;&nbsp;}, <br/>&nbsp;&nbsp;"size": 500 <br/>}`|
 
-<br/>
+
+#### SQL 원본
+```
+SELECT * FROM TSIMPROD_MODEL_GROUP A 
+  LEFT OUTER JOIN TSIMPROD_MODEL_GROUP B
+    ON A CMPNY_CATE_C = B.CMPNY_CATE_C
+ LIMIT 500
+```
+
+#### 변환된 Left 쿼리
+```
+{ 
+  "query": { 
+      "match_all": { } 
+  }, 
+  "size": 500, 
+  "join":{ 
+    "index":"tsimprod-model-group", 
+    "parent":"CMPNY_CATE_C", 
+    "child":"CMPNY_CATE_C", 
+    "query":{ 
+      "match_all": { } 
+    }
+  } 
+}
+```
+
+#### Search 비교 쿼리
+```
+{
+  "query": {
+    "match_all": { } 
+  }, 
+  "size": 500
+}
+```
+
 
 ### Search 테스트 결과
 
 Thread: 16   
 평균 TPS: 46.660533 
 |횟수|Label|Samples|Average|Min|Max|Std.Dev.|Error|Throughput|Received KB/sec|Sent KB/sec|Avg. Bytes|
-|---|---|---|---|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |1|HTTP Request|8435|340|96|5079|235.34|0.00%|46.74814|24596.19|11.69|538770|
 |2|HTTP Request|8457|339|94|3200|241.19|0.00%|46.88228|24666.76|11.72|538770|
 |3|HTTP Request|8351|344|94|30550|1264.47|0.02%|46.35118|24381.52|11.59|538641.6|
 
-   <br/>
-   
 Thread: 32   
 평균 TPS: 47.161833
 |횟수|Label|Samples|Average|Min|Max|Std.Dev.|Error|Throughput|Received KB/sec|Sent KB/sec|Avg. Bytes|
@@ -296,8 +327,6 @@ Thread: 32
 |1|HTTP Request|8461|679|98|10341|668.38|0.00%|46.90159|24676.92|11.73|538770|
 |2|HTTP Request|8489|677|102|16577|671.22|0.00%|46.987|24721.86|11.75|538770|
 |3|HTTP Request|8600|669|99|17694|660.89|0.00%|47.59691|25042.76|11.9|538770|
-   
-   <br/>
 
 CPU 사용량
 
@@ -306,8 +335,6 @@ Thread 32: 20%
 
 ![/images/2021-01-06-elasticsearch-left-join-proxy/search-CPU.png](/images/2021-01-06-elasticsearch-left-join-proxy/search-CPU.png)
 
-
-<br/>
 
 ### Left Join 테스트 결과
 
@@ -321,7 +348,6 @@ Thread: 16
 |2|HTTP Request|5076|566|421|1143|52.21|0.00%|28.12282|18933|11.4|689383|
 |3|HTTP Request|5051|569|443|990|55.57|0.00%|27.9778|18835.37|11.34|689383|
 
-<br/>
 
 Thread: 32   
 평균 TPS: 31.7492166
@@ -331,7 +357,6 @@ Thread: 32
 |2|HTTP Request|5773|998|460|4031|292.85|0.00%|31.87284|21457.61|12.92|689383|
 |3|HTTP Request|5730|1005|483|3826|302.45|0.00%|31.67286|21322.98|12.84|689383|
 
-<br/>
 
 CPU 사용량
 
