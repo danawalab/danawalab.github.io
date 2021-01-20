@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "디서치 관리도구 사용법  #14 - 파이프라인"
-description: "디서치 관리도구 템플릿 메뉴에 대해 소개하고 사용하는 방법에 대해 설명 하도록 하겠습니다." 
+description: "안녕하세요. 이번 포스팅 내용은 다나와에서 개발한 디서치 관리도구(엘라스틱서치 관리도구)에서 파이프라인 메뉴에 대해 소개하는 시간을 가지도록 하겠습니다." 
 date:   2021.01.20. 15:00:00
 writer: "선지호"  
 categories: Elastic 
@@ -74,7 +74,6 @@ categories: Elastic
 
 ![/images/2021-01-20-Dsearch-Management-Tool-pipeline/modify1.png](/images/2021-01-20-Dsearch-Management-Tool-pipeline/modify1.png)
 
-
 ![/images/2021-01-20-Dsearch-Management-Tool-pipeline/modify2.png](/images/2021-01-20-Dsearch-Management-Tool-pipeline/modify2.png)
 
 이번에는 field 안의 내용을 전부 소문자로 만든 후 html 태그를 제거해 보겠습니다.
@@ -85,15 +84,15 @@ categories: Elastic
 
 아까전에 테스트를 진행 했던대로, 테스트 할 파이프라인을 선택하고, 아까와 같은 테스트 할 내용을 입력해 줍니다.
 
-![/images/2021-01-20-Dsearch-Management-Tool-pipeline/test2.png](/images/2021-01-20-Dsearch-Management-Tool-pipeline/test2.png)
-
 ![/images/2021-01-20-Dsearch-Management-Tool-pipeline/test2-1.png](/images/2021-01-20-Dsearch-Management-Tool-pipeline/test2-1.png)
+
+![/images/2021-01-20-Dsearch-Management-Tool-pipeline/test2-2.png](/images/2021-01-20-Dsearch-Management-Tool-pipeline/test2-2.png)
 
 그리고 아래 테스트 버튼을 눌러 테스트를 진행하면 이번에는 저희가 의도했던대로 html 태그는 없어지면서 내용이 소문자로 나올수 있게 변환 했습니다.
 
 이제 자세히를 클릭해서 다시 테스트를 진행해 봅니다.
 
-![/images/2021-01-20-Dsearch-Management-Tool-pipeline/test2-2.png](/images/2021-01-20-Dsearch-Management-Tool-pipeline/test2-2.png)
+![/images/2021-01-20-Dsearch-Management-Tool-pipeline/test2-3.png](/images/2021-01-20-Dsearch-Management-Tool-pipeline/test2-3.png)
 
 각 프로세스별 단계에 따른 결과를 볼 수 있습니다.
 
