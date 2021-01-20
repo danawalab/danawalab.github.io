@@ -263,10 +263,10 @@ join을 정의할땐 아래 필드가 필수로 있어야합니다. 그리고 jo
 
 
 ### 테스트 방식
-1. jmeter 툴을 사용합니다.
-2. /_left API로 3분간 지속 요청합니다.
-3. 스래드 수치를 16/32 변경하여 측정합니다.
-4. 오차를 고려하여 동일 테스트를 3회씩 진행합니다.
+-  jmeter 툴을 사용합니다.
+-  /_left API로 3분간 지속 요청합니다.
+-  스래드 수치를 16/32 변경하여 측정합니다.
+-  오차를 고려하여 동일 테스트를 3회씩 진행합니다.
 
 
 ### 테스트 쿼리
@@ -314,6 +314,7 @@ SELECT * FROM TSIMPROD_MODEL_GROUP A
 
 Thread: 16   
 평균 TPS: 46.660533 
+
 |횟수|Label|Samples|Average|Min|Max|Std.Dev.|Error|Throughput|Received KB/sec|Sent KB/sec|Avg. Bytes|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |1|HTTP Request|8435|340|96|5079|235.34|0.00%|46.74814|24596.19|11.69|538770|
@@ -322,6 +323,7 @@ Thread: 16
 
 Thread: 32   
 평균 TPS: 47.161833
+
 |횟수|Label|Samples|Average|Min|Max|Std.Dev.|Error|Throughput|Received KB/sec|Sent KB/sec|Avg. Bytes|
 |---|---|---|---|---|---|---|---|---|---|---|---|
 |1|HTTP Request|8461|679|98|10341|668.38|0.00%|46.90159|24676.92|11.73|538770|
@@ -342,6 +344,7 @@ Left Join API에서 parent, child 쿼리를 각각 조회하기 때문에 약 50
 
 Thread: 16   
 평균 TPS: 28.0372033
+
 |횟수|Label|Samples|Average|Min|Max|Std.Dev.|Error|Throughput|Received KB/sec|Sent KB/sec|Avg. Bytes|
 |---|---|---|---|---|---|---|---|---|---|---|---|
 |1|HTTP Request|5058|568|446|1191|56.87|0.00%|28.01099|18857.71|11.35|689383|
@@ -351,6 +354,7 @@ Thread: 16
 
 Thread: 32   
 평균 TPS: 31.7492166
+
 |횟수|Label|Samples|Average|Min|Max|Std.Dev.|Error|Throughput|Received KB/sec|Sent KB/sec|Avg. Bytes|
 |---|---|---|---|---|---|---|---|---|---|---|---|
 |1|HTTP Request|5730|1004|450|3534|302.61|0.00%|31.70195|21342.56|12.85|689383|
