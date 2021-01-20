@@ -273,7 +273,7 @@ join을 정의할땐 아래 필드가 필수로 있어야합니다. 그리고 jo
 테스트에서는 아래 표와 같이 SQL의 조인쿼리를 변환하여 사용하였습니다. 셀프조인방식을 사용하여 parent 문서 수 와 동일한 child 문서 수가 출력 되도록 하였습니다.
 |SQL 원본|변환된 Left 쿼리|Search 비교 쿼리|
 |---|---|---|
-|SELECT * FROM TSIMPROD_MODEL_GROUP A <br/>LEFT OUTER JOIN TSIMPROD_MODEL_GROUP B <br/> ON A CMPNY_CATE_C = B.CMPNY_CATE_C limit 500|{ <br/>&nbsp;&nbsp;"query":{ "match_all": { } }, <br/> &nbsp;&nbsp;"size": 500, <br/>&nbsp;&nbsp;"join":{ <br/>&nbsp;&nbsp;&nbsp;&nbsp;"index":"tsimprod-model-group", <br/>&nbsp;&nbsp;&nbsp;&nbsp;"parent":"CMPNY_CATE_C", <br/> &nbsp;&nbsp;&nbsp;&nbsp;"child":"CMPNY_CATE_C", <br/>&nbsp;&nbsp;&nbsp;&nbsp;"query":{ <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"match_all": { } <br/>&nbsp;&nbsp;&nbsp;&nbsp;} <br/>&nbsp;&nbsp;} <br/>}|{<br/>&nbsp;&nbsp;"query": {<br/>&nbsp;&nbsp; "match_all": { } <br/>&nbsp;&nbsp;}, <br/>&nbsp;&nbsp;"size": 500 <br/>}|
+|`SELECT * FROM TSIMPROD_MODEL_GROUP A <br/>LEFT OUTER JOIN TSIMPROD_MODEL_GROUP B <br/> ON A CMPNY_CATE_C = B.CMPNY_CATE_C limit 500`|`{ <br/>&nbsp;&nbsp;"query":{ "match_all": { } }, <br/> &nbsp;&nbsp;"size": 500, <br/>&nbsp;&nbsp;"join":{ <br/>&nbsp;&nbsp;&nbsp;&nbsp;"index":"tsimprod-model-group", <br/>&nbsp;&nbsp;&nbsp;&nbsp;"parent":"CMPNY_CATE_C", <br/> &nbsp;&nbsp;&nbsp;&nbsp;"child":"CMPNY_CATE_C", <br/>&nbsp;&nbsp;&nbsp;&nbsp;"query":{ <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"match_all": { } <br/>&nbsp;&nbsp;&nbsp;&nbsp;} <br/>&nbsp;&nbsp;} <br/>}`|`{<br/>&nbsp;&nbsp;"query": {<br/>&nbsp;&nbsp; "match_all": { } <br/>&nbsp;&nbsp;}, <br/>&nbsp;&nbsp;"size": 500 <br/>}`|
 
 <br/>
 
@@ -310,7 +310,9 @@ Thread 32: 20%
 <br/>
 
 ### Left Join 테스트 결과
-   
+
+Left Join API에서 parent, child 쿼리를 각각 조회하기 때문에 약 50% TPS 낮아진 현상을 확인 할 수 있습니다. 그리고 CPU 사용률이 search 검색 대비 40~60% 높게 사용하고 있습니다.
+
 Thread: 16   
 평균 TPS: 28.0372033
 |횟수|Label|Samples|Average|Min|Max|Std.Dev.|Error|Throughput|Received KB/sec|Sent KB/sec|Avg. Bytes|
@@ -337,14 +339,14 @@ Thread 16: 60%
 Thread 32: 80%
 
 
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `child 결과를 parent의 innertHit 에 조합을하다보니, 중첩 반복문사용으로 CPU 사용률이 높아졌습니다.`
+`CPU 사용률이 높아진걸 확인 할 수 있습니다.`
 
 ![/images/2021-01-06-elasticsearch-left-join-proxy/left-join-1-CPU.png](/images/2021-01-06-elasticsearch-left-join-proxy/left-join-1-CPU.png)
 
 
 ## 정리
 
-엘라스틱서치의 Left 조인 기능을 플러그인 방식에서 확장 API 서버 방식으로 변경해보았습니다. 기존에 사용하던 플러그인 방식과 다르게 확장성이 높아진거 같습니다. 엘라스틱서치에서 미지원하던 검색을 자유롭게 개발할 수 있고, 엘라스틱서치에 종속적이지 않아 버전과 무관하게 사용할 수 있는 장점이 있는거 같습니다. 하지만 성능 테스트 결과를 보아 엘라스틱서치로 요청을 여러번 호출과 결과를 조합하기 위한 비용이 발생하는걸 확인할 수 있습니다. Left Join API 성능개선하여 추가 포스팅하도록 하겠습니다.
+엘라스틱서치의 Left 조인 기능을 플러그인 방식에서 확장 API 서버 방식으로 변경해보았습니다. 기존에 사용하던 플러그인 방식과 다르게 확장성이 높아진거 같습니다. 엘라스틱서치에서 미지원하던 검색을 자유롭게 개발할 수 있고, 엘라스틱서치에 종속적이지 않아 버전과 무관하게 사용할 수 있는 장점이 있는거 같습니다. 하지만 성능 테스트 결과를 보아 엘라스틱서치로 요청을 2회 호출과 parent, child 결과를 조합하기 위한 비용이 발생하는걸 확인할 수 있습니다. Left Join API 성능개선하여 추가 포스팅하도록 하겠습니다.
 
 ## 링크
 
