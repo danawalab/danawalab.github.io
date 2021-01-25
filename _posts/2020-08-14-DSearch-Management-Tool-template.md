@@ -25,7 +25,11 @@ categories: Elastic
 
 템플릿 메뉴를 클릭 했을 때의 화면입니다.
 
-![/images/2020-08-14-DSearch-Management-Tool-Usage-template/1.png](/images/2020-08-14-DSearch-Management-Tool-Usage-template/1.png)
+기본적으로 매핑과 셋팅에 대한 템플릿이 입력되어 있습니다.
+
+![/images/2020-08-14-DSearch-Management-Tool-Usage-template/new1.png](/images/2020-08-14-DSearch-Management-Tool-Usage-template/new1.png)
+
+![/images/2020-08-14-DSearch-Management-Tool-Usage-template/new2.png](/images/2020-08-14-DSearch-Management-Tool-Usage-template/new2.png)
 
 ### 템플릿 생성 
 
@@ -58,7 +62,6 @@ categories: Elastic
     "refresh_interval": "-1"
 }
 ```
-![/images/2020-08-14-DSearch-Management-Tool-Usage-template/2.png](/images/2020-08-14-DSearch-Management-Tool-Usage-template/2.png)
 
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-template/3.png](/images/2020-08-14-DSearch-Management-Tool-Usage-template/3.png)
 
