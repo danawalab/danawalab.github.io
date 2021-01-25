@@ -23,7 +23,9 @@ categories: Elastic
 
 처음 메뉴를 눌렀을 때 나오는 화면입니다.
 
-![/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/1.png](/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/1.png)
+기본적으로 엘라스틱서치 쿼리 템플릿이 입력되어 있습니다.
+
+![/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/new1.png](/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/new1.png)
 
 
 ### 인덱스 입력
@@ -44,7 +46,7 @@ categories: Elastic
 
 쿼리가 정상적으로 입력된다면 아래와 같이 나옵니다.
 
-![/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/4.png](/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/4.png)
+![/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/new2.png](/images/2020-08-13-DSearch-Management-Tool-Usage-ranking-tuning/new2.png)
 
 그러나 쿼리가 정상적으로 입력되지 않았다면, 오류메시지를 보여줍니다.
 
