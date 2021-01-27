@@ -15,6 +15,7 @@ categories: Common
 
 ### 1. 알람 채널 추가
 - Alerting > Notification channels 메뉴를 선택합니다.
+  
   ![/images/2021-01-26-Common-Grafana-Alert/alert_01.png](/images/2021-01-26-Common-Grafana-Alert/alert_01.png) 
 
 
@@ -23,6 +24,7 @@ categories: Common
 
 
 - Type 을 Telegram 으로 선택합니다.
+  
   ![/images/2021-01-26-Common-Grafana-Alert/alert_03.png](/images/2021-01-26-Common-Grafana-Alert/alert_03.png)  
 
   ![/images/2021-01-26-Common-Grafana-Alert/alert_04.png](/images/2021-01-26-Common-Grafana-Alert/alert_04.png) 
@@ -31,6 +33,7 @@ categories: Common
   - Disable Resolve Message : 해결 알람 받지 않기
   - Send reminders : 알림 상기시키기
   - Telegram API settings (BOT API Token, Chat ID) : 텔레그램에 봇을 추가하여 해당 토큰과 사용자의 챗 ID를 기입
+  
   설정하고 Save 버튼을 눌러서 저장합니다.
 
 
@@ -60,22 +63,31 @@ categories: Common
 
 
 - 알람 이름과 규칙을 정합니다.
+
   Evaluate every 10s For 30s
+
   30초 동안 10초 마다 체크 
 
 - Conditions은 여러개를 추가 할 수 있습니다.
+
   WHEN avg () OF query (A, 10s, now) IS ABOVE 400
+
   패널에 추가된 쿼리 A 수치가 10초 전부터 현재까지 평균 값이 400을 넘는 상태
   ![/images/2021-01-26-Common-Grafana-Alert/alert_09.png](/images/2021-01-26-Common-Grafana-Alert/alert_09.png)
 
 
 
 - 평균 응답속도에 대해서도 알람을 설정하겠습니다.
+
   Evaluate every 10s For 0
+
   10초 마다 체크 하도록 설정했습니다.
 
+
   WHEN max () OF query (B, 10s, now) IS ABOVE 0.03
+
   OR max () OF query (C, 10s, now) IS ABOVE 0.03
+
   쿼리 B, C 중에서 10초 전부터 현재까지 최대값이 0.03초를 넘는 상태에 대해서 알람 설정을 했습니다.
   ![/images/2021-01-26-Common-Grafana-Alert/alert_10.png](/images/2021-01-26-Common-Grafana-Alert/alert_10.png)
 
@@ -99,14 +111,17 @@ categories: Common
 
 - Telegram 알람 확인
   앞서 Notification Channel 에서 Include image 를 설정하였기 때문에 이미지와 함께 알람이 오게 됩니다.
+
   초당 요청량은 'Evaluate every 10s For 30s' 30초 동안 10초 마다 확인 하도록 설정 하였기 때문에 
   PENDING(보류중) 알람이 오지않고 보류 상태가 됩니다.
+
   평균 응답 속도에는 'Evaluate every 10s For 0' 10초 마다 상태를 확인해서 보내도록 설정하여 
   보류하지 않고 바로 알람이 오게 됩니다.
 
-  초록색 : OK
-  주황색 : PENDING
-  빨간색 : ALERTING
+  - 초록색 : OK
+  - 주황색 : PENDING
+  - 빨간색 : ALERTING
+  
   ![/images/2021-01-26-Common-Grafana-Alert/alert_14.png](/images/2021-01-26-Common-Grafana-Alert/alert_14.png)
 
 
@@ -125,8 +140,11 @@ categories: Common
 
 ## 결론
 그라파나를 통해서 모니터링에 사용하고 있었습니다.
-추가적으로 알람 설정 기능을 통해서 특이사항이 발생할 경우
+
+추가적으로 알람 설정 기능을 통해서 특이사항이 발생할 경우,
+
 담당자에게 보다 신속하게 전달하여 위험한 상황을 미리 대비하여 안정적인 서비스를 운영할 수 있습니다.
+
 알람과 함께 현재 상태 이미지를 함께 볼 수 있어서 더욱 좋습니다.
 
 
