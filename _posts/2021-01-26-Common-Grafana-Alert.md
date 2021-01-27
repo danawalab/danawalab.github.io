@@ -18,19 +18,19 @@ categories: Common
 ### 1. 알람 채널 추가
 - Alerting > Notification channels 메뉴를 선택합니다.
 
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_01.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_01.PNG) 
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_01.png](/images/2021-01-26-Common-Grafana-Alert/alert_01.png) 
 
 
 - New channel 을 클릭합니다.
 
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_02.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_02.PNG)  
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_02.png](/images/2021-01-26-Common-Grafana-Alert/alert_02.png)  
 
 
 - Type 을 Telegram 으로 선택합니다.
 
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_03.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_03.PNG)  
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_03.png](/images/2021-01-26-Common-Grafana-Alert/alert_03.png)  
 
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_04.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_04.PNG) 
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_04.png](/images/2021-01-26-Common-Grafana-Alert/alert_04.png) 
   - Name, Default : 모든 알람 받기
   - Include image : 이미지 포함 여부
   - Disable Resolve Message : 해결 알람 받지 않기
@@ -42,7 +42,7 @@ categories: Common
 
 - 추가된 Channel 입니다.
 
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_05.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_05.PNG) 
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_05.png](/images/2021-01-26-Common-Grafana-Alert/alert_05.png) 
 
 
 
@@ -52,7 +52,7 @@ categories: Common
 
 - 초당 요청량과 평균 응답속도 패널에 특정 수치로 알람을 설정 해보겠습니다.
   
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_06.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_06.PNG) 
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_06.png](/images/2021-01-26-Common-Grafana-Alert/alert_06.png) 
 
 
 
@@ -60,13 +60,13 @@ categories: Common
 
   하단의 Alert 설정에서 Create Alert 버튼을 누릅니다.
   
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_07.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_07.PNG)
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_07.png](/images/2021-01-26-Common-Grafana-Alert/alert_07.png)
 
 
 
 - 그래프 오른쪽 하트를 위 아래로 드래그하여 알람수치를 조정 할 수 있습니다.
   
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_08.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_08.PNG)
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_08.png](/images/2021-01-26-Common-Grafana-Alert/alert_08.png)
 
 
 
@@ -82,7 +82,7 @@ categories: Common
 
   패널에 추가된 쿼리 A 수치가 10초 전부터 현재까지 평균 값이 400을 넘는 상태
 
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_09.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_09.PNG)
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_09.png](/images/2021-01-26-Common-Grafana-Alert/alert_09.png)
 
 
 
@@ -98,11 +98,11 @@ categories: Common
 
   쿼리 B, C 중에서 10초 전부터 현재까지 최대값이 0.03초를 넘는 상태에 대해서 알람 설정을 했습니다.
 
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_10.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_10.PNG)
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_10.png](/images/2021-01-26-Common-Grafana-Alert/alert_10.png)
 
   Conditions 에는 다양한 값으로 조건을 설정 할 수 있습니다. 
 
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_10_1.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_10_1.PNG)
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_10_1.png](/images/2021-01-26-Common-Grafana-Alert/alert_10_1.png)
 
 
 
@@ -112,13 +112,13 @@ categories: Common
 
 - 알림 리스트를 대시보드에 패널로 추가할 수 있습니다. 
 
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_11.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_11.PNG)
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_11.png](/images/2021-01-26-Common-Grafana-Alert/alert_11.png)
 
 
 
 - 대시보드에 알람 및 리스트가 추가된 모습입니다.
 
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_13.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_13.PNG)
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_13.png](/images/2021-01-26-Common-Grafana-Alert/alert_13.png)
 
 
 - Telegram 알람 확인
@@ -139,19 +139,19 @@ categories: Common
 
   빨간색 : ALERTING
 
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_14.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_14.PNG)
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_14.png](/images/2021-01-26-Common-Grafana-Alert/alert_14.png)
 
 
 
 - 알람 설정에서 State history 버튼을 눌러서 
   상태 히스토리를 확인 할 수 있습니다.
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_15.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_15.PNG)
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_15.png](/images/2021-01-26-Common-Grafana-Alert/alert_15.png)
 
 
 
 - Alerting 메뉴에서 Alert Rules 을 선택하면
   알람 설정 수정으로 바로가거나 시작 및 일시중지 제어 할 수 있습니다.
-  ![/images/2021-01-26-Common-Grafana-Alert/alert_16.PNG](/images/2021-01-26-Common-Grafana-Alert/alert_16.PNG)
+  ![/images/2021-01-26-Common-Grafana-Alert/alert_16.png](/images/2021-01-26-Common-Grafana-Alert/alert_16.png)
 
 
 
