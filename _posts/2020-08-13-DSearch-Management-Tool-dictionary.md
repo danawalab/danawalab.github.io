@@ -13,26 +13,45 @@ categories: Elastic
 
 ## 사전 메뉴란?
 
-디서치에서는 기본적으로 사용자 사전을 지원합니다. 
+디서치에서는 기본적으로 사용자 사전을 지원합니다. 동적으로 사전 구조를 만들고, 생성된 사전에 단어를 입력하여 색인 또는 검색에 활용할 수 있습니다. 
 
-지원하는 사용자 사전을 조금더 간편하게 볼수 있게, 또는 간편하게 사용 및 검색 할 수 있게 도와주는 메뉴입니다.
 
 ## 사전 메뉴 사용법 
 
 ### 처음 화면 
 
-![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/1.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/1.png)
+메뉴를 선택하게 되면 처음나오는 화면 입니다. 처음에는 탭으로 검색, 개요, 등록된 사전 들이 탭으로 나열되게 됩니다.
+![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/2021-02-15_12h43_06.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/2021-02-15_12h43_06.png)
+
+
+### 사전 설정 화면
+설정 버튼을 클릭하게 되면 사전구조를 관리하는 설정화면으로 전환 됩니다.
+![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/2021-02-15_12h25_32.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/2021-02-15_12h25_32.png)
+
+
+
+### 사전 추가
+사전 설정화면에서 사전추가버튼을 클릭하면 아래 이미지처럼 모달이 표시됩니다.
+```
+아이디: 프로그램 내부적으로 사용하는 아이디입니다. 
+이름: 사전탭에 표시되는 이름입니다.
+타입: 사전 데이터의 구조입니다.(선택에 따라 필드가 변경됩니다)
+토큰타입: 형태소 분석에 사용하는 타입 값입니다.
+대/소문자 무시: 대/소문자를 무시할지 선택합니다.
+```
+
+![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/2021-02-15_12h30_22.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/2021-02-15_12h30_22.png)
+
 
 ### 검색 
 
 검색을 하게 되면 아래와 같이 값이 나오게 됩니다.
 
-
 단어의 형태소 분석결과 : 값
 
 각 사전 이름 : 검색된 결과 
 
-![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/2.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/2.png)
+![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/2021-02-15_12h51_32.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/2021-02-15_12h51_32.png)
 
 ### 개요 탭 
 
@@ -108,7 +127,7 @@ categories: Elastic
 
 ## 정리
 
-이번에는 다나와에서 개발한 디서치 관리도구-사전 메뉴에 대해 설명하고, 사용하는 방법에 대하여 포스팅 해보았습니다.
+이번에는 다나와에서 개발한 디서치 관리도구-사전 메뉴에 대해 설명하고, 사용하는 방법에 대하여 포스팅 해보았습니다. 사전의 구조를 생성하고, 생성된 사전에 데이터를 입력하였습니다. 실제 분석에는 인덱스의 analyzer에는 영향이 없지만 전용인덱서 또는 엘라스틱서치의 플러그인 등에서 사용할 수 있습니다.
 
 디서치를 한번도 안 써본 개발자의 입장이 되어 작성해 보았습니다.
 
