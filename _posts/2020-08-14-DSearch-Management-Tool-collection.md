@@ -86,7 +86,7 @@ JDBC는 데이터베이스에서 데이터를 수집해 올 때, 필요한 데�
 다만 입력해주시지 않으면 저장이 되지 않기 때문에 크론주기를 꼭 입력해 주셔야 합니다.
 크론주기에 익숙하시지 않은 분을 위해 예제를 제공하고 있습니다.
 
-![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6.png)
+![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/2021-02-15_13h06_07.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/2021-02-15_13h06_07.png)
 
 ![/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-1.png](/images/2020-08-14-DSearch-Management-Tool-Usage-collection/6-1.png)
 
