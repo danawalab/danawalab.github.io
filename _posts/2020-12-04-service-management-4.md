@@ -30,29 +30,47 @@ categories: Management
 
 - 이름: 서비스 식별 이름
 - 서버: 어드민 사용자가 할당 해준 서버 중 하나를 선택
+- 스케줄 주기: 스케줄 동작시 cron 주기
 - 타입: 도커 컴포즈 방식, 프로세스 타입 선택
 - 변수: yaml내용에서 키위치에 값 내용을 맵핑
 - yaml: 도커 컴포즈 내용
 
-![/images/2020-12-04-service-management-4/Untitled%203.png](/images/2020-12-04-service-management-4/Untitled%203.png)
+![/images/2020-12-04-service-management-4/2021-02-22_15h12_08.png](/images/2020-12-04-service-management-4/2021-02-22_15h12_08.png)
 
 프로세스 타입의 서비스를 등록하는 화면입니다. 
 
 - 이름: 서비스 식별 이름
 - 서버: 어드민 사용자가 할당 해준 서버 중 하나를 선택
+- 스케줄 주기: 스케줄 동작시 cron 주기
 - 타입: 도커 컴포즈 방식, 프로세스 타입 선택
 - PID: 프로세스 PID 조회하는 명령어
 - 시작스크립트:  프로세스 시작하는 스크립트
 - 종료스크립트: 프로세스 종료하는 스크립트
 - 로그: 로그 수집할 경로
 
-![/images/2020-12-04-service-management-4/Untitled%204.png](/images/2020-12-04-service-management-4/Untitled%204.png)
+![/images/2020-12-04-service-management-4/2021-02-22_15h13_56.png](/images/2020-12-04-service-management-4/2021-02-22_15h13_56.png)
 
 ![/images/2020-12-04-service-management-4/Untitled%205.png](/images/2020-12-04-service-management-4/Untitled%205.png)
 
 서비스를 추가하고 나면 아래 이미지 처럼 설정한 정보가 표시되고, 프로세스 상태를 조회하여 각 정보를 표시 합니다. 실행 버튼을 통해 시작, 종료를 할 수있습니다. 컨테이너 타입은 업데이트 후 재시작 기능 까지 지원합니다.
 
-![/images/2020-12-04-service-management-4/Untitled%206.png](/images/2020-12-04-service-management-4/Untitled%206.png)
+### 스케줄 기능)
+명령어 중 스케줄 시작을 하게되면 스케줄 동작 중/정지 상태로 표시가 되고, 스케줄 주기가 표시 되게 됩니다.
+
+### 컨테이너 원격 배포)
+다나와에서는 깃랩CI/CD 기능을 활용하여 빌드/배포를 진행하고 있습니다. 깃랩에서 스크립트를 사용하여 배포를 할 수 있지만 운영관리 플랫폼을 사용하여 배포를 진행하게 되면 불필요한 포트 오픈을 줄일수 있고, 배포 스크립트를 따로 추가하지 않아도 되는 장점이 있습니다. 
+
+사용방법)   
+API와 토큰을 기반으로 API 호출할때 마다 자동으로 이미지를 풀받고 푸시하게 됩니다. 
+
+ex)   
+이미지에 표시되는 서비스를 API 호출방법
+```
+curl -H "x-auth-token=a134d5e191" -XPUT http://<운영관리플랫폼>/api/groups/7/services/30/update
+```
+
+
+![/images/2020-12-04-service-management-4/2021-02-22_15h29_35.png](/images/2020-12-04-service-management-4/2021-02-22_15h29_35.png)
 
 ### 서버탭
 
