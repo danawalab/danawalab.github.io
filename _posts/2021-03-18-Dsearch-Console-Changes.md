@@ -28,16 +28,22 @@ categories: Dsearch
 
 ### 2. 분석 #사전 - 사전 순서 변경 기능 추가
 ![/images/2021-03-18-Dsearch-Console-Changes/2-1.png](/images/2021-03-18-Dsearch-Console-Changes/2-1.png)
+
 ![/images/2021-03-18-Dsearch-Console-Changes/2-2.png](/images/2021-03-18-Dsearch-Console-Changes/2-2.png)
+
 ![/images/2021-03-18-Dsearch-Console-Changes/2-3.png](/images/2021-03-18-Dsearch-Console-Changes/2-3.png)
+
 ![/images/2021-03-18-Dsearch-Console-Changes/2-4.png](/images/2021-03-18-Dsearch-Console-Changes/2-4.png)
+
 ![/images/2021-03-18-Dsearch-Console-Changes/2-5.png](/images/2021-03-18-Dsearch-Console-Changes/2-5.png)
 
 사전 탭을 눌렀을 때 나오는 사전 리스트의 순서를 변경 가능 하게 했습니다.
 
 ### 3. 분석 #사전 - 사전 추가 시 엔터 타이핑으로 추가 및 해당 창에서 여러번 추가 가능하게 변경
 ![/images/2021-03-18-Dsearch-Console-Changes/3-1.png](/images/2021-03-18-Dsearch-Console-Changes/3-1.png)
+
 ![/images/2021-03-18-Dsearch-Console-Changes/3-2.png](/images/2021-03-18-Dsearch-Console-Changes/3-2.png)
+
 ![/images/2021-03-18-Dsearch-Console-Changes/3-3.png](/images/2021-03-18-Dsearch-Console-Changes/3-3.png)
 
 사전에 대한 내용을 추가할때 기존에는 추가 했을 때 추가창이 사라졌지만, 현재는 변경하여 남아 있을 수 있게 바꾸었습니다.
@@ -56,6 +62,7 @@ categories: Dsearch
 
 ### 6. 분석 #사전 - 사전 수정 시 적용 버튼과 삭제버튼 여백 추가
 ![/images/2021-03-18-Dsearch-Console-Changes/6-1.png](/images/2021-03-18-Dsearch-Console-Changes/6-1.png)
+
 ![/images/2021-03-18-Dsearch-Console-Changes/6-2.png](/images/2021-03-18-Dsearch-Console-Changes/6-2.png)
 
 사전 데이터 수정 시 적용버튼과 삭제버튼이 가까이 있어, 두 버튼 사이에 여백을 추가 했습니다.
