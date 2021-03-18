@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "디서치 관리도구 변경사항"
+title:  "디서치 관리도구 변경사항 - 1"
 description: 디서치 관리도구 변경사항에 대해 포스팅합니다
 date:   2021.03.18.
 writer: "선지호"
