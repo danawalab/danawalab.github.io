@@ -22,6 +22,8 @@ categories: Dsearch
 ## 변경사항
 
 ### 1. 클러스터 관리 - 클러스터 접속 팝업창 제거
+![/images/2021-03-18-Dsearch-Console-Changes/1-2.png](/images/2021-03-18-Dsearch-Console-Changes/1-2.png)
+
 ![/images/2021-03-18-Dsearch-Console-Changes/1.png](/images/2021-03-18-Dsearch-Console-Changes/1.png)
 
 기존에 노드 부분에 있던 팝업창을 띄울 수 있게 버튼이 있었는데, 이를 제거했습니다.
@@ -53,14 +55,14 @@ categories: Dsearch
 ### 4. 분석 #사전 - 최근 등록한 사전 순서로 노출
 ![/images/2021-03-18-Dsearch-Console-Changes/4.png](/images/2021-03-18-Dsearch-Console-Changes/4.png)
 
-기존에는 정렬순서가 먼저 등록한 순서 였지만, 최근에 등록한 사전 순서로 노출 시킬수 있도록 변경하였습니다.
+기존에는 정렬순서가 먼저 등록한 순서 였지만, 최근에 등록한 사전 순서로 노출 시킬 수 있도록 변경하였습니다.
 
 ### 5. 분석 #사전 - 사전 추가 시 자동으로 추가된 키워드 입력 동작 제거
 ![/images/2021-03-18-Dsearch-Console-Changes/5.png](/images/2021-03-18-Dsearch-Console-Changes/5.png)
 
 기존에는 사전에 데이터를 추가 하게되면 추가 창이 사라지고, 사전에 정상적으로 등록되었다는 것을 나타내기 위해 자동으로 추가된 키워드를 입력 후 조회 해서 보여주었습니다.
 
-하지만 이 동작을 삭제하고 단순히 전체 사전에 대해 다시 조회할 수 있도록 변경 했습니다.
+하지만 이 동작을 삭제하고 전체 사전에 대해 다시 조회할 수 있도록 변경 했습니다.
 
 ### 6. 분석 #사전 - 사전 수정 시 적용 버튼과 삭제버튼 여백 추가
 ![/images/2021-03-18-Dsearch-Console-Changes/6-1.png](/images/2021-03-18-Dsearch-Console-Changes/6-1.png)
@@ -78,4 +80,5 @@ categories: Dsearch
 ![/images/2021-03-18-Dsearch-Console-Changes/8.png](/images/2021-03-18-Dsearch-Console-Changes/8.png)
 
 기존에는 분석도구 내용을 입력한 뒤에 버튼을 클릭해야만 분석이 되었다면, 이제는 엔터를 눌렀을때도 분석이 되게 변경했습니다.
+
 또한 기존에는 엔터로 개행문자까지 포함을 시켜 분석을 했다면 개행문자 입력을 입력을 제거 하였습니다.
