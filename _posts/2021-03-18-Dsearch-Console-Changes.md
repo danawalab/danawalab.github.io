@@ -36,9 +36,7 @@ categories: Dsearch
 ### 2. 아이콘 드래그로 사전 순서 변경 기능 추가 
 ![/images/2021-03-18-Dsearch-Console-Changes/2-1.png](/images/2021-03-18-Dsearch-Console-Changes/2-1.png)
 
-![/images/2021-03-18-Dsearch-Console-Changes/2-2.png](/images/2021-03-18-Dsearch-Console-Changes/2-2.png)
-
-![/images/2021-03-18-Dsearch-Console-Changes/2-3.png](/images/2021-03-18-Dsearch-Console-Changes/2-3.png)
+![/images/2021-03-18-Dsearch-Console-Changes/2-6.png](/images/2021-03-18-Dsearch-Console-Changes/2-6.png)
 
 ![/images/2021-03-18-Dsearch-Console-Changes/2-4.png](/images/2021-03-18-Dsearch-Console-Changes/2-4.png)
 
