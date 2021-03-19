@@ -49,9 +49,7 @@ categories: Dsearch
 이제는 사전 탭을 눌렀을 때 나오는 사전 리스트의 순서를 변경 하실 수 있습니다.
 
 ### 3. 엔터키 입력으로 사전 추가
-![/images/2021-03-18-Dsearch-Console-Changes/3-1.png](/images/2021-03-18-Dsearch-Console-Changes/3-1.png)
-
-![/images/2021-03-18-Dsearch-Console-Changes/3-2.png](/images/2021-03-18-Dsearch-Console-Changes/3-2.png)
+![/images/2021-03-18-Dsearch-Console-Changes/3-1.png](/images/2021-03-18-Dsearch-Console-Changes/3-1.png) => ![/images/2021-03-18-Dsearch-Console-Changes/3-2.png](/images/2021-03-18-Dsearch-Console-Changes/3-2.png)
 
 ![/images/2021-03-18-Dsearch-Console-Changes/3-3.png](/images/2021-03-18-Dsearch-Console-Changes/3-3.png)
 
