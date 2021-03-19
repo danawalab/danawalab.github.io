@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "디서치 관리도구 변경사항 - 1"
+title:  "디서치 관리도구 변경사항 - 20210318"
 description: 디서치 관리도구 변경사항에 대해 포스팅합니다
 date:   2021.03.18.
 writer: "선지호"
@@ -34,8 +34,6 @@ categories: Dsearch
 기존에 노드 부분에 있던 팝업창을 띄울 수 있게 버튼이 있었는데, 이 버튼이 사라졌습니다.
 
 ### 2. 아이콘 드래그로 사전 순서 변경 기능 추가 
-![/images/2021-03-18-Dsearch-Console-Changes/2-1.png](/images/2021-03-18-Dsearch-Console-Changes/2-1.png)
-
 ![/images/2021-03-18-Dsearch-Console-Changes/2-6.png](/images/2021-03-18-Dsearch-Console-Changes/2-6.png)
 
 ![/images/2021-03-18-Dsearch-Console-Changes/2-4.png](/images/2021-03-18-Dsearch-Console-Changes/2-4.png)
@@ -44,17 +42,16 @@ categories: Dsearch
 
 기존에는 사전 탭의 사전리스트 순서를 변경할 수 없었습니다.
 
-이제는 사전 탭을 눌렀을 때 나오는 사전 리스트의 순서를 변경 하실 수 있습니다.
+이제는 사전 탭을 눌렀을 때 나오는 사전 리스트의 순서를 변경 할 수 있습니다.
 
 ### 3. 엔터키 입력으로 사전 추가
 ![/images/2021-03-18-Dsearch-Console-Changes/3-1.png](/images/2021-03-18-Dsearch-Console-Changes/3-1.png) 
 ![/images/2021-03-18-Dsearch-Console-Changes/3-2.png](/images/2021-03-18-Dsearch-Console-Changes/3-2.png)
-
 ![/images/2021-03-18-Dsearch-Console-Changes/3-3.png](/images/2021-03-18-Dsearch-Console-Changes/3-3.png)
 
 기존에는 사전에 대한 내용을 추가할때 추가창이 사라졌고, 엔터로 사전 내용 추가가 불가능 했습니다.
 
-하지만 이제는 추가 창이 사라지지 않고, 엔터 입력으로 사전 내용을 추가 하실 수 있습니다
+하지만 이제는 추가 창이 사라지지 않고, 엔터 입력으로 사전 내용을 추가 할 수 있습니다
 
 ### 4. 최근 등록된 사전 데이터 순서로 정렬 변경
 ![/images/2021-03-18-Dsearch-Console-Changes/4.png](/images/2021-03-18-Dsearch-Console-Changes/4.png)
