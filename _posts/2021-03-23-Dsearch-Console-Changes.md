@@ -18,16 +18,16 @@ DSearch 콘솔과 서버에 기능이 추가 되었습니다.
 
 ### 1. 원격 사전 
 
-사전 소스 클러스터 선택)
-
+사전 소스 클러스터 선택)   
+선택안함을 선택하면 원격 사전을 사용하지 않습니다.
 ![/images/2021-03-23-Dsearch-Console-Changes/2021-03-23_17h55_50.png](/images/2021-03-23-Dsearch-Console-Changes/2021-03-23_17h55_50.png)
 
-사전 소스 확인)
-
+사전 소스 확인)   
+사용중인 사전 소스 정보가 표시되고, 사용하지 않을땐 사용안함으로 표시 됩니다.
 ![/images/2021-03-23-Dsearch-Console-Changes/2021-03-23_17h46_48.png](/images/2021-03-23-Dsearch-Console-Changes/2021-03-23_17h46_48.png)
 
-사전에 표시된 사전 소스 정보)
-
+사전에 표시된 사전 소스 정보)   
+사용 중인 사전 소스 정보가 표시 됩니다. 사용하지 않을땐 표시되지 않습니다.
 ![/images/2021-03-23-Dsearch-Console-Changes/2021-03-23_17h49_05.png](/images/2021-03-23-Dsearch-Console-Changes/2021-03-23_17h49_05.png)
 
 
