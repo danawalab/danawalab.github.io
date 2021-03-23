@@ -121,6 +121,7 @@ categories: Elastic
 
 ![/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/16.png](/images/2020-08-13-DSearch-Management-Tool-Usage-dictionary/16.png)
 
+
 ## 정리
 
 이번에는 다나와에서 개발한 관리도구-사전 메뉴에 대해 설명하고, 사용하는 방법에 대하여 포스팅 해보았습니다. 사전의 구조를 생성하고, 생성된 사전에 데이터를 입력하였습니다. 실제 분석에는 인덱스의 analyzer에는 영향이 없지만 전용인덱서 또는 엘라스틱서치의 플러그인 등에서 사용할 수 있습니다.
@@ -128,3 +129,4 @@ categories: Elastic
 관리도구를 한번도 안 써본 개발자의 입장이 되어 작성해 보았습니다.
 
 이 포스팅이 나중에 사용하시는 분들께 많은 도움이 되었으면 좋겠습니다.
+
