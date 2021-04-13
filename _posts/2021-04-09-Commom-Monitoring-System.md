@@ -52,6 +52,7 @@ categories: Common
     logs[]는 수집할 로그의 단위입니다.
     type은 로그의 parser를 구분하는 설정값 입니다.
     path, file은 경로와 파일명이며, unit은 API로 가공하고 제공될 시간의 단위 데이터입니다.
+
 ```jsx
 {
   "port": 9000,
