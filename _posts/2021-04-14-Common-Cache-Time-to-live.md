@@ -16,7 +16,7 @@ categories: Common
 계산된 시간의 차를 집계하여 캐시 TTL에 따른 HIT율을 예상할 수 있습니다.
 
 ### 구성도
-![/images/2021-04-14-Commom-Cache-Time-to-live/2021-04-14_system.PNG](/images/2021-04-14-Commom-Cache-Time-to-live/2021-04-14_system.PNG)
+![/images/2021-04-14-Commom-Cache-Time-to-live/2021-04-14_system.png](/images/2021-04-14-Commom-Cache-Time-to-live/2021-04-14_system.png)
 
 ### 검색 로그 분석하기
 로그 예시) 09:30:15 /product/search?keyword=apple&option=fruit&page=1&sort=popularity
@@ -99,7 +99,7 @@ hitTimeBucket에 시간별 hit-time count를 저장합니다.
 데이터는 4월 6일 다나와 통합검색 로그 기준임을 알려 드리며 초 단위로 집계된 데이터를 분 단위로 가공하여 정리하였습니다.
 
 |TTL|캐시-hit 누적비율|
-|------|----|
+|:---:|:---:|
 |1분|22.42%|
 |2분|29.44%|
 |3분|33.45%|
