@@ -25,7 +25,7 @@ categories: Common
 - parameter = {"keyword":"apple", "option":"fruit", "page":"1", "sort":"popularity"} 
 
 parameter의 key-value 값이 일치하면 순서와 관계없이 같은 uri 로 요청됩니다.
-uri를 로그를 집계하는 키로 사용하기 위해 parameter의 순서를 정렬합니다. 
+uri를 집계하는 키로 사용하기 위해 parameter의 순서를 정렬합니다. 
 TreeMap은 이진트리를 기반으로 한 Map 컬렉션으로, 객체를 저장하면 자동으로 정렬됩니다.(sort-by-key)
 ```jsx
 String uriString = URLDecoder.decode(logString.split(" ")[1], "UTF-8");
