@@ -63,6 +63,7 @@ for (String key : uriMap.keySet()) {
 }
 sortedUriString = sortedUriString.substring(0, sortedUriString.length() - 1);
 ```
+sortedUriString에 정렬된 uri값을 저장하였습니다. 
 
 ### 캐시 hit-hime 집계하기
 같은 uri로 캐시에 hit되는 시간을 계산하고 집계하는 과정입니다.
@@ -88,6 +89,7 @@ if (keywordMap.containsKey(sortedUriString)) {
     keywordMap.put(sortedUriString, timeString);
 }
 ```
+hitTimeBucket에 시간별 hit-time count를 저장합니다.
 
 ### 캐시 TTL에 따른 HIT율 계산하기
 집계된 결과를 바탕으로 캐시 TTL에 따른 HIT을 계산해보겠습니다. 
