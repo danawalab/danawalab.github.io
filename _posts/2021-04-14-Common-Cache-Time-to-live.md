@@ -77,7 +77,6 @@ if (keywordMap.containsKey(sortedUriString)) {
     Date time1 = transFormat.parse(keywordMap.get(sortedUriString).toString());
     Date time2 = transFormat.parse(timeString);
     Long timeDiff = (time2.getTime() - time1.getTime()) / 1000;
-    String line = System.lineSeparator();
     if (hitTimeBucket.containsKey(timeDiff)) {
         hitTimeBucket.replace(timeDiff, hitTimeBucket.get(timeDiff) + 1);
     } else {
