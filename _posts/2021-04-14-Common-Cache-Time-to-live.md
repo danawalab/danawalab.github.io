@@ -102,6 +102,10 @@ hitTimeBucket에 시간별 hit-time count를 저장합니다.
 
 캐시-hit 누적비율 = (해당 시간 내에 캐시-hit된 횟수) / (전체 캐시-hit된 횟수) * 100
 
+![/images/2021-04-14-Common-Cache-Time-to-live/2021-04-14_table2.png](/images/2021-04-14-Common-Cache-Time-to-live/2021-04-14_table2.png)
+
+캐시-hit-rate = (해당 시간 내에 캐시-hit된 횟수) / (전체 검색 횟수) * 100
+
 ## 정리
 이번에 검색 로그 분석 및 집계를 통해 캐시 TTL에 따른 HIT율을 계산해 보았습니다. 
 같은 키워드로 얼마나 검색되고 어느정도 시간 사이에 다시 검색되는지 알 수 있었습니다. 
