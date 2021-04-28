@@ -12,8 +12,8 @@ DSearch 콘솔과 서버에 기능이 추가 되었습니다.
 
 - 사전 초기화 기능이 추가 되었습니다.
 - 사전파일로 업로드 기능이 추가 되었습니다.
-- 클러스터 점검 시작 시 스케줄이 정지 되고, 클러스터 점검 완료 시 자동으로 스케줄이 등록 됩니다.
-- 관리도구에서 사용되는 데이터에 대한 백업과 복구가 가능해 졌습니다.
+- 클러스터 점검 시작 시 스케줄이 정지 되고, 클러스터 점검 완료 시 자동으로 스케줄을 등록합니다.
+- 관리도구에서 사용되는 데이터에 대한 백업과 복구가 가능합니다.
 
 ## 변경사항
 
@@ -43,7 +43,7 @@ DSearch 콘솔과 서버에 기능이 추가 되었습니다.
 
 ![/images/2021-04-28-Dsearch-Console-Changes/restore1.png](/images/2021-04-28-Dsearch-Console-Changes/restore1.png)
 
-삭제 한 내용을 이전에 다운로드 하여 파일로 저장해 두었다면, 정상적으로 사전파일이 복구 됩니다.
+삭제 한 내용을 이전에 다운로드 하여 파일로 저장해 두었다면, 정상적으로 사전 데이터를 복구 합니다.
 
 ![/images/2021-04-28-Dsearch-Console-Changes/restore2.png](/images/2021-04-28-Dsearch-Console-Changes/restore2.png)
 
@@ -53,11 +53,11 @@ DSearch 콘솔과 서버에 기능이 추가 되었습니다.
 
 ![/images/2021-04-28-Dsearch-Console-Changes/check1.png](/images/2021-04-28-Dsearch-Console-Changes/check1.png)
 
-시작 버튼을 클릭하게 되면 아래와 같은 화면이 나오게 됩니다.
+시작 버튼을 클릭하게 되면 아래와 같은 화면이 나옵니다.
 
 ![/images/2021-04-28-Dsearch-Console-Changes/check2.png](/images/2021-04-28-Dsearch-Console-Changes/check2.png)
 
-이때, 아래와 같이 스케줄이 설정되어 있는 컬렉션의 스케줄 색인이 중지가 됩니다.
+이때, 아래와 같이 스케줄이 설정되어 있는 컬렉션의 스케줄 색인은 관리도구 서버에서 중지합니다.
 
 ![/images/2021-04-28-Dsearch-Console-Changes/check4.png](/images/2021-04-28-Dsearch-Console-Changes/check4.png)
 
@@ -78,7 +78,7 @@ DSearch 콘솔과 서버에 기능이 추가 되었습니다.
 ![/images/2021-04-28-Dsearch-Console-Changes/migration2.png](/images/2021-04-28-Dsearch-Console-Changes/migration2.png)
 
 정상적으로 다운로드가 된다면, 아래와 같은 화면이 나옵니다.
-다운로드한 내용이 간단하게 표시됩니다.
+다운로드한 내용이 간단하게 표시되어 보여집니다.
 
 ![/images/2021-04-28-Dsearch-Console-Changes/migration3.png](/images/2021-04-28-Dsearch-Console-Changes/migration3.png)
 
@@ -91,7 +91,7 @@ DSearch 콘솔과 서버에 기능이 추가 되었습니다.
 
 ![/images/2021-04-28-Dsearch-Console-Changes/migration5.png](/images/2021-04-28-Dsearch-Console-Changes/migration5.png)
 
-만약 정상적인 데이터가 아니라면, 아래와 같은 내용이 표시 됩니다.
+만약 정상적인 데이터가 아니라면, 아래와 같은 에러 메시지가 보여집니다.
 아래 내용은 nori 플러그인에서 사용하는 사전파일이 정상적인 위치에 놓여져 있지 않아 생기는 에러 메시지 입니다.
 
 ![/images/2021-04-28-Dsearch-Console-Changes/migration6.png](/images/2021-04-28-Dsearch-Console-Changes/migration6.png)
