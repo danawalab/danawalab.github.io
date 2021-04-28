@@ -92,6 +92,6 @@ DSearch 콘솔과 서버에 기능이 추가 되었습니다.
 ![/images/2021-04-28-Dsearch-Console-Changes/migration5.png](/images/2021-04-28-Dsearch-Console-Changes/migration5.png)
 
 만약 정상적인 데이터가 아니라면, 아래와 같은 내용이 표시 됩니다.
-아래 내용은 nori 플러그인에서 사용하는 사전파일이 정상적으로 등록되어 있지 않다는 에러 메시지 입니다.
+아래 내용은 nori 플러그인에서 사용하는 사전파일이 정상적인 위치에 놓여져 있지 않다는 에러 메시지 입니다.
 
 ![/images/2021-04-28-Dsearch-Console-Changes/migration6.png](/images/2021-04-28-Dsearch-Console-Changes/migration6.png)
