@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "디서치 관리도구 변경사항 - 4월 업데이트"
+title:  "디서치 관리도구 4월 업데이트"
 description: DSearch 콘솔과 서버에 기능이 추가 되었습니다.
 date:   2021.04.28.
 writer: "선지호"
