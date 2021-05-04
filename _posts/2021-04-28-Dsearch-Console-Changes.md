@@ -14,6 +14,8 @@ DSearch 콘솔과 서버에 기능이 추가 되었습니다.
 - 사전파일로 업로드 기능이 추가 되었습니다.
 - 클러스터 점검 시작 시 스케줄이 정지 되고, 클러스터 점검 완료 시 자동으로 스케줄을 등록합니다.
 - 관리도구에서 사용되는 데이터에 대한 백업과 복구가 가능합니다.
+- 관리도구 템플릿에 접기 기능이 추가 되었습니다.
+- 관리도구 템플릿 매핑에 코멘트 기능이 추가 되었습니다.
 
 ## 변경사항
 
@@ -95,3 +97,25 @@ DSearch 콘솔과 서버에 기능이 추가 되었습니다.
 아래 내용은 nori 플러그인에서 사용하는 사전파일이 정상적인 위치에 놓여져 있지 않아 생기는 에러 메시지 입니다.
 
 ![/images/2021-04-28-Dsearch-Console-Changes/migration6.png](/images/2021-04-28-Dsearch-Console-Changes/migration6.png)
+
+### 5. 관리도구 템플릿 접기 기능
+
+템플릿 접기 기능이 추가 되었습니다.
+
+템플릿에 대한 매핑 내용을 볼 때 표의 항목이 많았습니다.
+
+이를 개선하여 접기 버튼을 추가하여 표에서 중요한 부분만 눈에 잘 들어올 수 있게 변경하였습니다.
+
+![/images/2021-04-28-Dsearch-Console-Changes/fold1.png](/images/2021-04-28-Dsearch-Console-Changes/fold1.png)
+
+![/images/2021-04-28-Dsearch-Console-Changes/fold2.png](/images/2021-04-28-Dsearch-Console-Changes/fold2.png)
+
+### 6. 관리도구 템플릿 매핑 코멘트 기능 추가
+
+매핑에 대한 설명을 입력 할 수 있도록 기능이 추가 되었습니다.
+
+매핑에 대한 설명을 입력한 이후, 엔터를 누르면 입력된 내용으로 다음번에 템플릿을 조회할 때 설명을 볼 수 있습니다.
+
+![/images/2021-04-28-Dsearch-Console-Changes/comment1.png](/images/2021-04-28-Dsearch-Console-Changes/comment1.png)
+
+![/images/2021-04-28-Dsearch-Console-Changes/comment2.png](/images/2021-04-28-Dsearch-Console-Changes/comment2.png)
