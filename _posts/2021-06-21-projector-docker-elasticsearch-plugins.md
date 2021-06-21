@@ -20,8 +20,8 @@ categories: Common
 
 구성방법은 2가지로 소개합니다.
 
-1. Projector를 도커 컨테이너 구축방법
-2. 엘라스틱서치를 Projector IDE 실행방법
+- Projector를 도커 컨테이너 구축방법
+- 엘라스틱서치를 Projector IDE 실행방법
 
 
 ### 1. Projector 구축
