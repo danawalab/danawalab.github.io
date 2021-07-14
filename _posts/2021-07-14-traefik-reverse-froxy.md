@@ -105,7 +105,7 @@ docker run -l traefik.frontend.rule=PathPrefixStrip:/ -l traefik.backend=/ -l tr
 
 간단한 방법으로 다음의 명령어를 bash에서 실행하여 nginx 이미지를 실행하고 어떻게 나오는지 확인해보겠습니다.
 
-위의 명령어는 -v 옵션에서 html 파일 하나를 마운트하고 -l 옵션에서 경로, 포트, 적용 여부와 네트워크 명을 작성합니다.
+명령어의 -l 옵션에서 경로, 포트, 적용 여부와 네트워크 명을 작성합니다.
 
 이때 포트는 위에서 설정한 Traefik의 포트여야 합니다. 이제 명령어를 실행하겠습니다.
 
