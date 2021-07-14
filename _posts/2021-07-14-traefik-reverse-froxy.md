@@ -93,10 +93,10 @@ logLevel = "INFO"
 
 [도커 컴포즈 항목들]
 
-labels: 컨테이너 연결부, 적용 여부, 연결할 포트
-volumes: 도커로 연결할때는 다음과 같이 작성, Traefik 환경설정 파일 추가
-ports: 80은 Traefik, 8080은 대시보드가 기본포트. 여기선 3333으로 묶임
-networks: 네트워킹은 브릿지 모드 web (create network web으로 미리 생성) 
+- __labels__ : 컨테이너 연결부, 적용 여부, 연결할 포트
+- __volumes__ : 도커로 연결할때는 다음과 같이 작성, Traefik 환경설정 파일 추가
+- __ports__ : 80은 Traefik, 8080은 대시보드가 기본포트. 여기선 3333으로 묶임
+- __networks__ : 네트워킹은 브릿지 모드 web (create network web으로 미리 생성)
 
 ## Traefik 동작과 대시보드 화면
 
