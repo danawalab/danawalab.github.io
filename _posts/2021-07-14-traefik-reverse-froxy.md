@@ -32,8 +32,7 @@ categories: Common
 
 ![/images/2021-07-14-Traefik/Traefik_process.PNG](/images/2021-07-14-Traefik/Traefik_process.PNG)
 
-흐름도를 그려본다면 이런 모습입니다. 요청자가 컨테이너 생성 명령을 하면 생성되고, Trafik으로 묶입니다. 
-이를 위해 우선 다음과 같이 도커 컴포즈 파일을 작성합니다.
+컨테이너 생성를 하고, 다시 Traefik으로 묶입니다. 이를 위해 우선 다음과 같이 도커 컴포즈 파일을 작성합니다.
 
 ```jsx
 #docker-compose.yml
