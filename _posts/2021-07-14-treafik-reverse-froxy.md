@@ -135,4 +135,4 @@ Reverse Froxy라는 개념이 생소하게 다가오기도 했지만 Traefik이�
 좋겠다는 생각이 들었습니다. 혹시 Traefik을 통해 프로젝트를 개발하고 계신다면 이 문서가 도움이 되었으면 좋겠습니다. 
 
 ## 참고 자료
-- https://nx.dev/latest/react/cypress/overview
+- https://doc.traefik.io/traefik/
