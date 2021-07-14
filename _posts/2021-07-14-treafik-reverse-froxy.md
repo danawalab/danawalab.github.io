@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Treafik과 Docker를 활용한 Reverse Proxy 구축"
-description: Treafik 기술을 적용하여 도커 컨테이너간의 Reverse Proxy 네트워크를 효율적으로 구축합니다.
+title:  "Traefik과 Docker를 활용한 Reverse Proxy 구축"
+description: Traefik 기술을 적용하여 도커 컨테이너간의 Reverse Proxy 네트워크를 효율적으로 구축합니다.
 date:   2021.07.14. 
 writer: "반윤성"
 categories: Common
@@ -20,7 +20,7 @@ categories: Common
 ![/images/2021-07-14-Traefik/Traefik_proxy.png](/images/2021-07-14-Traefik/Traefik_proxy.png)
  
 이렇게 네트워크가 통신하는 개념은 알수있었는데, 이것만으로는 복잡한 컨테이너를 관리하고 개념을 적용할만한 기술적인 난이도가 존재했습니다.
-따라서 가능한 가시적이며 효율적인 도구를 찾게되었고 그 결과가 바로 Traefik입니다. 이 오픈소스 프로젝트는 탄생부터 시스템을 대신하여 요청을
+따라서 가능한 가시적이며 효율적인 도구를 찾게되었고 그것이 바로 Traefik이었습니다. 이 오픈소스 프로젝트는 탄생부터 시스템을 대신하여 요청을
 수신하고, 구성 요소를 찾아내는 기술로 출발했습니다. Docker, AWS, Kubernetes와 같은 다양한 클러스터 기술들과 함께 사용할 수 있을 뿐만 아니라
 별도의 제어가 필요없이 실행중에 실시간으로 통신되는 요소끼리 찾아서 연결해준다는 기능이 특징입니다.
 
@@ -32,7 +32,7 @@ categories: Common
 
 ![/images/2021-07-14-Traefik/Traefik_process.PNG](/images/2021-07-14-Traefik/Traefik_process.PNG)
 
-흐름도를 그려본다면 이런 느낌입니다. 요청자가 컨테이너 생성 명령을 하면 생성되고, Trafik으로 묶입니다. 
+흐름도를 그려본다면 이런 모습입니다. 요청자가 컨테이너 생성 명령을 하면 생성되고, Trafik으로 묶입니다. 
 이를 위해 우선 다음과 같이 도커 컴포즈 파일을 작성합니다.
 
 ```jsx
@@ -123,7 +123,7 @@ docker run -l traefik.frontend.rule=PathPrefixStrip:/ -l traefik.backend=/ -l tr
 
 한눈에 Traefik 작동 현황을 파악할 수 있어서 유용하게 사용할 수 있을것으로 보입니다.
 
-![/images/2021-07-14-Traefik/dashboard.PNG](/images/2021-07-14-Traefik/dashboard.PNG)
+![/images/2021-07-14-Traefik/Traefik_dashboard.PNG](/images/2021-07-14-Traefik/Traefik_dashboard.PNG)
 
 
 ## 정리
