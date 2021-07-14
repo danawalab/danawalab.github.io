@@ -29,7 +29,7 @@ categories: Common
 
 ![/images/2021-07-14-Traefik/Traefik_process.PNG](/images/2021-07-14-Traefik/Traefik_process.PNG)
 
-컨테이너 생성를 하고, 다시 Traefik으로 묶입니다. 이를 위해 우선 다음과 같이 도커 컴포즈 파일을 작성합니다.
+컨테이너 생성을 하고, 다시 Traefik으로 묶입니다. 이를 위해 우선 다음과 같이 도커 컴포즈 파일을 작성합니다.
 
 ```jsx
 #docker-compose.yml
