@@ -20,7 +20,7 @@ Cypress는 주로 프론트엔드의 E2E(End to End, 종단간 테스트) 시나
 표현되는 모든 화면의 테스트를 수행하고 브라우저를 통해 결과를 확인할 수 있습니다.
 
 ## 사용 방법
-Cypress 설치 후 프로젝 테스트를 진행해 보겠습니다.
+Cypress 설치 후 프로젝트 테스트를 진행해 보겠습니다.
 
 우선 리액트 프로젝트가 존재하는 곳에 다음의 명령어로 패키지를 설치합니다.
 
@@ -36,7 +36,6 @@ npm install --save-dev cypress
 $(.class) 형태로 수월하게 작성할 수 있을 것입니다.
 
 ```jsx
-
 # App.e2e.test.js
 
 context("화면 테스트", () => {
@@ -64,7 +63,6 @@ context("화면 테스트", () => {
     cy.get(".navigate-right-button").should("be.visible");
   });
 });
-
 ```
 
 화면 출력 테스트 파일입니다. 코드 흐름을 살펴보면 visit()는 실제 도메인에 접근하여 각 정의된 클래스와 
@@ -76,7 +74,6 @@ context("화면 테스트", () => {
 ```jsx
 
 # package.json
-
 "scripts": {
   ...
   "test:unit": "mocha --require babel-core/register --require ./test/helpers.js --require ./test/dom.js --require ignore-styles 'src/**/*.spec.js'",
@@ -85,13 +82,11 @@ context("화면 테스트", () => {
   "test:snapshot:watch": "npm run test:snapshot -- --watch",
   "test:cypress": "cypress open"
 }
-
 ```
 
 이어서 작성된 스크립트에 대해 실행할 명령어가 필요하기 때문에 package.json 부분을 수정하겠습니다.
 
 테스트를 수행할때는 "npm run test:cypress"과 같이 명령어를 실행해주면 작성했던 테스트 파일이 실행됩니다. 
-
 
 ![/images/2021-07-14-Cypress/cypress-test.png](/images/2021-07-14-Cypress/cypress-test.png)
 
