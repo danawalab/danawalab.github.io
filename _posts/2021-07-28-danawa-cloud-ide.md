@@ -7,9 +7,10 @@ writer: "반윤성"
 categories: Common
 ---
 
-<!-- | Danawa Cloud IDE 메인 | Danawa Cloud IDE 터미널 |
+| Danawa Cloud IDE 메인 | Danawa Cloud IDE 터미널 |
 |--------|--------|
-|![/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG](/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG)|![/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG)| -->
+|![/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG](/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG)|![/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG)|
+
 ## 소개 : Danawa Cloud IDE
 개발하면서 종종 `가상 IDE`가 필요한 경우가 있습니다. 주로 로컬 시스템과 격리된 공간에서 작업을 해야할 때, 현재 시스템과 다른 운영체제를 사용하여 개발할 때 보통 가상화 도구를 사용하기도 합니다. 하지만 번거롭기도 하고 원인모를 오류가 생기기도 합니다.
    
@@ -145,7 +146,7 @@ traefik은 최근에 부상한 모던 HTTP 리버스 프록시 기술입니다. 
 
 또한 자체적으로 대시보드를 제공하고 있어서 네트워크가 어떻게 연결되어있는지 한눈에 파악할 수 있어서 개발 과정마다 상태를 파악하기 수월하다는 특징이 있습니다.
 
-이를 구현하기 위한 방법은 도커 컴포즈 파일과 약간의 코드 수정입니다.
+아래와 같이 도커 컴포즈와 약간의 코드 수정으로 구현할 수 있습니다.
 
 ```yml
 #docker-compose.yml(Traefik용)
@@ -223,7 +224,7 @@ Labels: {
 
 초기에는 단순히 웹페이지를 통해 가상 환경을 제공하는 서비스로 시작했습니다. 현재는 꽤 프로젝트가 커져서 회원가입과 로그인을 하기도 하고 traefik과 리버스 프록시를 적용해서 서브도메인과 연결하는 기능도 추가되었습니다. 프로젝트를 개발하면서 사용자에게 어떤 기능이 필요할지도 생각해보게 되었고 의미있는 시간이 되었던것 같습니다.
 
-현재 ES2 테스트 서버에 CI/CD가 완료된 상태입니다. 코드는 깃랩과 팀 깃허브에 오픈되어서 언제든지 사용 가능합니다. 사용시 문의사항 있으시면 언제든지 slack으로 문의해주시기 바랍니다.
+현재 ES2 테스트 서버에 CI/CD가 완료된 상태입니다. 코드는 깃랩과 팀 깃허브에 오픈되어서 언제든지 사용 가능합니다. 사용시 문의사항 있으시면 언제든지 slack으로 문의해주시기 바랍니다. 감사합니다.
 
 ## 참고 자료
 - https://docs.docker.com/engine/api/v1.41
