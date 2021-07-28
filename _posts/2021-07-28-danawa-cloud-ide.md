@@ -7,10 +7,8 @@ writer: "반윤성"
 categories: Common
 ---
 
-| Danawa Cloud IDE 로그인 | Danawa Cloud IDE 터미널 |
-|--------|--------|
-|![/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG](/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG)|![/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG)|
-|
+![/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG)|
+
 
 ## 소개 : Danawa Cloud IDE
 개발하면서 종종 `가상 IDE`가 필요한 경우가 있습니다. 주로 로컬 시스템과 격리된 공간에서 작업을 해야할 때, 현재 시스템과 다른 운영체제를 사용하여 개발할 때 보통 가상화 도구를 사용하기도 합니다. 하지만 번거롭기도 하고 원인모를 오류가 생기기도 합니다.
