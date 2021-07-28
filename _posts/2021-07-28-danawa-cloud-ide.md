@@ -9,25 +9,23 @@ categories: Common
 
 | Danawa Cloud IDE 메인 | Danawa Cloud IDE 터미널 |
 |--------|--------|
-|![/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_main.PNG)|![/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG)|
+|![/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG](/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG)|![/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG)|
 
 #
 
 ## Danawa Cloud IDE
-개발을 하면서 종종 `가상 IDE`가 필요한 경우가 있습니다. 보통 로컬 시스템과 격리된 공간에서 작업을 해야할 때라던지 현재 시스템과 다른 운영체제를 사용하여 개발할 때 보통 가상화 도구를 사용하기도 하지만 번거롭기도 하고 원인모를 오류가 생기기도 합니다.
+개발 하면서 종종 `가상 IDE`가 필요한 경우가 있습니다. 보통 로컬 시스템과 격리된 공간에서 작업을 해야할 때라던지 현재 시스템과 다른 운영체제를 사용하여 개발할 때 보통 가상화 도구를 사용하기도 하지만 번거롭기도 하고 원인모를 오류가 생기기도 합니다.
    
 마이크로소프트에서 개발한 `코드 서버(code-server)`가 있습니다. 비주얼 스튜디오 코드를 통째로 오픈 소스로 만들어 제공한것으로 개발사에서 지속적으로 유지보수도 제공하는 유용한 도구입니다. 이 기술을 웹 서버에 올려서 사용한다면, 언제 어디서든지 사용자가 원하는 개발 공간을 제공할 수 있습니다.
 
 `Danawa Cloud IDE`는 여기서 출발했습니다. 어떤 웹페이지 안에서 코드를 만들고 고치는 작업 공간입니다. 이곳에서 내 환경과 독립적으로 개발환경을 운용하여 편리하게 사용할 수 있습니다. 최종적으로 개발자들의 편리성을 도모하기 위해 개발되었습니다.  
-  
-<br>
 
 ## 어떻게 만들었을까?
 
 DANAWA-CLOUD-IDE의 시스템 구성은 다음과 같습니다.
 
 
-![/images/2021-07-27-Danawa-Cloud-Ide/Ide_system.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_system.PNG)
+![/images/2021-07-27-Danawa-Cloud-Ide/Ide_system.png](/images/2021-07-27-Danawa-Cloud-Ide/Ide_system.png)
 
 ##### DANAWA-CLOUD-IDE 시스템 구성도
 
@@ -58,15 +56,11 @@ WORKDIR /home/danawa
 CMD ["/bin/bash", "-c", "& /home/danawa/.code-server/code-server --port 3333 --host 0.0.0.0 --auth none"]
 ```
 
-<br>
-
 코드서버(3.2.0 버전 기준)를 받아서 실행하는 내용입니다.
 
 추가적으로, 오픈하고 바로 JAVA 패키지를 실행할 수 있게 설정합니다.
 
 이를 위해 아래 내용을 수정 및 추가해줍니다.
-
-<br>
 
 ```dockerfile
 ...
@@ -77,11 +71,8 @@ CMD ["/bin/bash", "-c", "/home/danawa/.code-server/code-server --install-extensi
 ```
 
 이제 JDK와 플러그인이 탑재된 IDE를 사용할 수 있습니다.  
-<br>
 
 여기까지 진행하면 터미널을 오픈할 수 있지만, 클릭 한 번으로 생성할 수 있도록 다음과 같은 코드를 작성합니다. Docker Api를 통해 URL로 호출하는 방식을 사용합니다.
-
-<br>
 
 ```jsx
 // 신규 터미널 컨테이너 생성 기능입니다.
@@ -143,15 +134,13 @@ async function createContainer(user_id, key, state) {
 
 정리해보면 생성 버튼 클릭 -> create api 호출 → 컨테이너 생성 → 컨테이너 실행 → DB에 값 저장순으로 진행됩니다. 이제 서비스에서 필요한 기능인 가상 IDE 생성 기능을 사용할 수 있습니다.
 
-<br>
-
 ## 리버스 프록시도 같이 적용해보기
 
 가상 IDE를 만들고 사용하는 것은 위에서 설명드렸던 내용으로도 충분히 가능합니다. 하지만 리버스 프록시를 적용하면 포트 관리를 효율적으로 할 수 있고, 서브도메인, 터미널에서 구동한 프로젝트 실행 확인을 해볼 수 있어서 좋습니다. 전에 작성했던 내용을 참고 했습니다. [Traefik과 Docker를 활용한 Reverse Proxy 구축](https://danawalab.github.io/common/2021/07/14/traefik-reverse-froxy.html)
 
 우선 기능 구현을 위해 traefik이 필요합니다.
 
-![/images/2021-07-27-Danawa-Cloud-Ide/Ide_traefik.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_traefik.PNG)
+![/images/2021-07-27-Danawa-Cloud-Ide/ide_traefik.PNG](/images/2021-07-27-Danawa-Cloud-Ide/ide_traefik.PNG)
 
 ##### traefik 시스템
 
@@ -218,7 +207,7 @@ logLevel = "INFO"
   address = ":5555"
 ```
 
-간단하게도, 트래픽 이미지를 통해 도커 컴포즈를 실행하고 트래픽과 같은 포트에서 IDE를 사용할 포트를 도커 커테이너 라벨링을 통해 연결해주면 됩니다. 라벨이 쓰여있으면 traefik 쪽에서 이를 인식하여 리버스 프록시가 연결되고 동일한 포트에 자동으로 묶입니다.
+트래픽 이미지를 통해 도커 컴포즈를 실행하고 트래픽과 같은 포트에서 IDE를 사용할 포트를 도커 커테이너 라벨링을 통해 연결해주면 됩니다. 라벨이 쓰여있으면 traefik 쪽에서 이를 인식하여 리버스 프록시가 연결되고 동일한 포트에 자동으로 묶입니다.
 
 이를 위해 서비스 쪽에서는 컨테이너를 생성할 때 라벨부분에 다음과 같이 설정해주면 됩니다. 지정 포트에서 연결되고 traefik을 적용한다는 옵션 값이 들어있습니다. 이때 주소는 임의로 지정한 것인데 서비스에서는 [유저 아이디]-[고유 해시값].es2.danawa.io 패턴으로 구성되어 있습니다.
 
@@ -238,7 +227,7 @@ Labels: {
 
 
 
-## 정리해보기
+## 정리하기
 코드서버(code-server)라는 유용한 오픈소스와 도커를 활용하여 가상 IDE환경을 개발해봤습니다. IDE 안에서 내 로컬 환경에 구애받지않고 원하는 작업을 할 수 있다는 것은 매우 매력적인 일이라는 생각이 들었고 추가적으로 다른 기술과 접목하면 서비스를 개발하는데 있어서 효율적인 도구가 될것이라고 생각합니다.   
 
 초기에는 단순히 웹페이지를 통해 가상 환경을 제공하는 서비스로 시작했습니다. 현재는 꽤 프로젝트가 커져서 회원가입과 로그인을 하기도 하고 traefik과 리버스 프록시를 적용해서 서브도메인과 연결하는 기능도 추가되었습니다. 프로젝트를 개발하면서 사용자에게 어떤 기능이 필요할지도 생각해보게 되었고 의미있는 시간이 되었던것 같습니다.
