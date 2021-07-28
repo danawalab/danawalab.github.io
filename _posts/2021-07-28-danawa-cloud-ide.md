@@ -7,7 +7,7 @@ writer: "반윤성"
 categories: Common
 ---
 
-![/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG)|
+![/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG)
 
 
 ## 소개 : Danawa Cloud IDE
