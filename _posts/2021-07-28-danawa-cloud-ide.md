@@ -7,10 +7,9 @@ writer: "반윤성"
 categories: Common
 ---
 
-| Danawa Cloud IDE 메인 | Danawa Cloud IDE 터미널 |
+<!-- | Danawa Cloud IDE 메인 | Danawa Cloud IDE 터미널 |
 |--------|--------|
-|![/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG](/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG)|![/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG)|
-|
+|![/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG](/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG)|![/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG)| -->
 
 ## Danawa Cloud IDE
 개발하면서 종종 `가상 IDE`가 필요한 경우가 있습니다. 보통 로컬 시스템과 격리된 공간에서 작업을 해야할 때, 현재 시스템과 다른 운영체제를 사용하여 개발할 때 보통 가상화 도구를 사용하기도 합니다. 하지만 번거롭기도 하고 원인모를 오류가 생기기도 합니다.
@@ -153,7 +152,7 @@ async function createContainer(user_id, key, state) {
 
 우선 기능 구현을 위해 traefik이 필요합니다.
 
-![/images/2021-07-27-Danawa-Cloud-Ide/ide_traefik.PNG](/images/2021-07-27-Danawa-Cloud-Ide/ide_traefik.PNG)
+![/images/2021-07-27-Danawa-Cloud-Ide/ide_traefik.png](/images/2021-07-27-Danawa-Cloud-Ide/ide_traefik.png)
 
 ##### traefik 시스템
 
@@ -220,10 +219,8 @@ logLevel = "INFO"
   address = ":5555"
 ```
 
+
 트래픽 이미지를 통해 도커 컴포즈를 실행하고 트래픽과 같은 포트에서 IDE를 사용할 포트를 도커 커테이너 라벨링을 통해 연결해주면 됩니다. 라벨이 쓰여있으면 traefik 쪽에서 이를 인식하여 리버스 프록시가 연결되고 동일한 포트에 자동으로 묶입니다.
-
-이를 위해 서비스 쪽에서는 컨테이너를 생성할 때 라벨부분에 다음과 같이 설정해주면 됩니다. 지정 포트에서 연결되고 traefik을 적용한다는 옵션 값이 들어있습니다. 이때 주소는 임의로 지정한 것인데 서비스에서는 [유저 아이디]-[고유 해시값].es2.danawa.io 패턴으로 구성되어 있습니다.
-
 
 ```jsx
 async function createContainer(user_id, key, state) {
@@ -238,6 +235,7 @@ Labels: {
 }
 ```
 
+이를 위해 서비스 쪽에서는 컨테이너를 생성할 때 라벨부분에 다음과 같이 설정해주면 됩니다. 지정 포트에서 연결되고 traefik을 적용한다는 옵션 값이 들어있습니다. 이때 주소는 임의로 지정한 것인데 서비스에서는 [유저 아이디]-[고유 해시값].es2.danawa.io 패턴으로 구성되어 있습니다.
 
 
 ## 정리하기
