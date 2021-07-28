@@ -10,8 +10,7 @@ categories: Common
 <!-- | Danawa Cloud IDE 메인 | Danawa Cloud IDE 터미널 |
 |--------|--------|
 |![/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG](/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG)|![/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG)| -->
-
-## Danawa Cloud IDE
+## 소개 : Danawa Cloud IDE
 개발하면서 종종 `가상 IDE`가 필요한 경우가 있습니다. 보통 로컬 시스템과 격리된 공간에서 작업을 해야할 때, 현재 시스템과 다른 운영체제를 사용하여 개발할 때 보통 가상화 도구를 사용하기도 합니다. 하지만 번거롭기도 하고 원인모를 오류가 생기기도 합니다.
    
 마이크로소프트에서 개발한 `코드 서버(code-server)`가 있습니다. 비주얼 스튜디오 코드를 통째로 오픈 소스로 만들어 제공한것으로 개발사에서 지속적으로 유지보수도 제공하는 유용한 도구입니다. 이 기술을 웹 서버에 올려서 사용한다면, 언제 어디서든지 사용자가 원하는 개발 공간을 제공할 수 있습니다.
@@ -22,7 +21,7 @@ categories: Common
 
 ![/images/2021-07-27-Danawa-Cloud-Ide/Ide_system.png](/images/2021-07-27-Danawa-Cloud-Ide/Ide_system.png)
 
-##### DANAWA-CLOUD-IDE 시스템 구성도
+##### DANAWA CLOUD IDE 시스템 구성도
 
 본 시스템은 기본적으로 자바스크립트 라이브러리 React와 Node.js 서버 환경에서 구동됩니다. 추가적으로 다양한 오픈소스 라이브러리를 활용하여 제작되었습니다. 패키지 매니저인 Yarn을 사용하여 이러한 라이브러리를 관리하며, Express나 mysql, 도커와 같은 도구도 사용합니다.
 
@@ -31,9 +30,9 @@ categories: Common
 ![/images/2021-07-27-Danawa-Cloud-Ide/IDE_component.PNG](/images/2021-07-27-Danawa-Cloud-Ide/IDE_component.PNG)
 
 
-##### DANAWA-CLOUD-IDE 컴포넌트 구성도
+##### DANAWA CLOUD IDE 컴포넌트 구성도
 
-- Goorm IDE 초기 화면 구조입니다. 접속한 유저의 플랜 정보와 사용중인 컨테이너 및 이미지에 대한 정보를 볼 수 있습니다. 이 곳에 새로운 컨테이너를 생성하는 버튼이 존재합니다.
+-  IDE 초기 화면 구조입니다. 접속한 유저의 플랜 정보와 사용중인 컨테이너 및 이미지에 대한 정보를 볼 수 있습니다. 이 곳에 새로운 컨테이너를 생성하는 버튼이 존재합니다.
 
 - 우측은 신규 컨테이너를 생성하는 화면입니다. 이 화면에서 유저가 컨테이너 이름, 설명, 지역, 공개범위, 템플릿 등을 작성하고 소프트웨어 스택을 선택해서 사용할 수 있습니다.
 
@@ -43,7 +42,7 @@ categories: Common
 
 ![/images/2021-07-27-Danawa-Cloud-Ide/IDE_schema.PNG](/images/2021-07-27-Danawa-Cloud-Ide/IDE_schema.PNG)
 
-##### DANAWA-CLOUD-IDE 데이터베이스 스키마
+##### DANAWA CLOUD IDE 데이터베이스 스키마
 
 - 데이터 베이스 스키마 구조입니다. 한 명의 유저가 N개의 컨테이너를 가질 수 있으므로 1:N 관계로 테이블을 연결합니다.
 
@@ -142,7 +141,7 @@ async function createContainer(user_id, key, state) {
 }
 ```
 
-이 길다란(?) createContainer() 메소드는 docker create api를 호출하기위한 메소드입니다. POST방식으로 컨테이너 생성에 필요한 인자(이미지, 네트워크 구성, 호스트)를 도커에게 전달하면 컨테이너가 만들어지고, 고유한 값인 컨테이너 ID를 반환받습니다.
+createContainer() 메소드는 docker create api를 호출하기위한 메소드입니다. POST방식으로 컨테이너 생성에 필요한 인자(이미지, 네트워크 구성, 호스트)를 도커에게 전달하면 컨테이너가 만들어지고, 고유한 값인 컨테이너 ID를 반환받습니다.
 
 정리해보면 생성 버튼 클릭 -> create api 호출 → 컨테이너 생성 → 컨테이너 실행 → DB에 값 저장순으로 진행됩니다. 이제 서비스에서 필요한 기능인 가상 IDE 생성 기능을 사용할 수 있습니다.
 
