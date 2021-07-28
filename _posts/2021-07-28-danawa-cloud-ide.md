@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "DANAWA CLOUDE IDE 알아보기"
+title:  "DANAWA CLOUD IDE 알아보기"
 description: 독립된 가상 환경에서 개발할 수 있는 IDE를 제공합니다.
 date:   2021.07.27. 
 writer: "반윤성"
 categories: Common
 ---
 
-| Danawa Cloud IDE 메인 | Danawa Cloud IDE 터미널 |
+| Danawa Cloud IDE 로그인 | Danawa Cloud IDE 터미널 |
 |--------|--------|
 |![/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG](/images/2021-07-27-Danawa-Cloud-Ide/ide_main.PNG)|![/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG](/images/2021-07-27-Danawa-Cloud-Ide/Ide_container.PNG)|
 |
@@ -17,7 +17,7 @@ categories: Common
    
 마이크로소프트에서 개발한 `코드 서버(code-server)`가 있습니다. 비주얼 스튜디오 코드를 통째로 오픈 소스로 만들어 제공한것으로 개발사에서 지속적으로 유지보수도 제공하는 유용한 도구입니다. 이 기술을 웹 서버에 올려서 사용한다면, 언제 어디서든지 사용자가 원하는 개발 공간을 제공할 수 있습니다.
 
-`Danawa Cloud IDE`는 어떤 웹페이지 안에서 코드를 만들고 고치는 작업 공간입니다. 이곳에서 내 환경과 독립적으로 개발환경을 운용하여 편리하게 사용할 수 있습니다. 최종적으로 개발자들의 편리성을 돕고자 개발되었습니다.  
+`Danawa Cloud IDE`는 어떤 웹페이지 안에서 코드를 만들고 고치는 작업 공간입니다. 이곳에서 내 환경과 독립적으로 개발환경을 운용하여 편리하게 사용할 수 있습니다. 최종적으로 개발자들의 편리성을 돕기위해 개발되었습니다.  
 
 ## 시스템 구성도
 
