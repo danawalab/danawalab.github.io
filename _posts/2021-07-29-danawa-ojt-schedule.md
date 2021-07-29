@@ -40,7 +40,7 @@ OPS 과정의 경우 검색 시스템과 모니터링 시스템을 구축하는 
 새로운 스택을 직접 구축해보면서 시스템이 어떻게 동작하고 있는지 파악할 수 있는 과정입니다. 이렇게 DEV 과정과 OPS 과정을 완료하면 OJT 과정이 종료됩니다.
 
 
-## OJT 관련 기술
+## OJT Devtools
 
 ![/images/2021-07-29-OJT/ojt_images.PNG](/images/2021-07-29-OJT/ojt_images.PNG)
 
