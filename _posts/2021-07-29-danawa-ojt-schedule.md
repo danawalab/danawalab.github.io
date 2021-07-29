@@ -27,7 +27,8 @@ OJT란 직무중에 실시하는 일련의 교육 과정을 의미합니다. 저
 | Week 9      | DEV 3차     | IDE 프로젝트 고도화 <br> Reverse froxy 적용 <br> 사용자별 환경설정 셋팅 구현      |
 | Week 10     | DEV 3차     | IDE 프로젝트 고도화 <br> cypress E2E test 진행 <br> 프로젝트 개선 <br> 코드 및 프로젝트 리뷰    |
 | Week 11     | OPS 2차     | Grafana, Prometheus 활용 <br> 모니터링 시스템 구축 <br> 커스텀 메트릭 작성 <br> OJT Project 연동      |
-| Week 12     | OPS 2차     | InfluxDB 활용 <br> 로그 수집 및 분석 <br> 대시보드 구성 <br> 프로젝트 리뷰 및 마무리      | 
+| Week 12     | OPS 2차     | InfluxDB 활용 <br> 로그 수집 및 분석 <br> 대시보드 구성 <br> 프로젝트 리뷰 및 마무리      |
+| 
 
 
 ## 주요 과정 설명과 목표
@@ -54,9 +55,12 @@ OJT 참가자는 OJT를 진행하면서 여러 기술을 접하게 됩니다. �
 실제 OJT 과정에서 개발했던 내용들을 정리했습니다. 작성 코드는 팀 깃허브에 공유되어 있습니다. 아래의 내용을 참고하여 OJT 기간동안 어떤 내용이 다뤄지고 있는지 참고하면 좋겠습니다.
 
 <strong>(1) OJT IDE</strong>
+
+<br>
+
 ![/images/2021-07-29-OJT/ojt_component.png](/images/2021-07-29-OJT/ojt_component.png)
 <p align="center">
-OJT IDE #1
+OJT IDE - 1
 <br/>
 
 OJT-IDE의 화면 레이아웃은 다음과 같습니다.  이 페이지에서는 기존 생성된 컨테이너를 선택해 IDE 터미널에 접속할 수 있습니다. 또한 컨테이너를 삭제하거나 생성 페이지로 이동하여 새로운 가상환경을 만들 수 있습니다. 신규 컨테이너 생성 화면은 컨테이너에 필요한 이름, 내용, 리전의 위치, 템플릿, 소프트웨어 스택과 같은 다양한 값을 입력하는 화면으로 구성됩니다.
@@ -68,7 +72,7 @@ React의 특징중 하나는 컴포넌트를 통해 구현된다는 점입니다
 
 ![/images/2021-07-29-OJT/ojt_terminal.png](/images/2021-07-29-OJT/ojt_terminal.png)
 <p align="center">
-OJT IDE #2
+OJT IDE - 2
 <br/>
 
 IDE는 별도의 가상 공간을 제공하여 개발자가 언제 어디서든 개발할 수 있도록 가상의 컨테이너를 제공합니다. 터미널을 실행하면 작업 환경에 코드서버가 설치되어 있고 내 로컬 컴퓨터와 독립된 가상환경에서 코드를 작성할 수 있습니다.
@@ -81,6 +85,8 @@ IDE는 별도의 가상 공간을 제공하여 개발자가 언제 어디서든 
 터미널 오픈 시 브라우저를 통해 터미널이 오픈되고 GIT 프로젝트를 클론하거나, 새로 파일을 만들어서 프로젝트를 시작할 수 있습니다. 컨테이너를 사용하다가 정지를 하더라도 삭제하지 않는 이상 내용은 보존됩니다. 만약 작성한 코드를 실행해보고 싶다면, 생성시 최대 4개 까지 컨테이너와 연결된 포트를 추가 제공하고 있어서 해당 포트를 이용하여 결과를 확인할 수 있습니다.
 
 <strong>(2) OJT SEARCH PAGE</strong>
+
+<br>
 
 ![/images/2021-07-29-OJT/ojt_search2.PNG](/images/2021-07-29-OJT/ojt_search2.PNG)
 
@@ -109,6 +115,8 @@ OJT 검색페이지
 
 <strong>(3) OJT monitor</strong>
 
+<br>
+
 ![/images/2021-07-29-OJT/ojt_monitor.png](/images/2021-07-29-OJT/ojt_monitor.png)
 
 <p align="center">
@@ -122,6 +130,8 @@ OJT 모니터링
 
 
 <strong>(4) OJT indexing</strong>
+
+<br>
 
 ![/images/2021-07-29-OJT/ojt_elk.png](/images/2021-07-29-OJT/ojt_elk.png)
 
