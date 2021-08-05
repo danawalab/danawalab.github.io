@@ -94,7 +94,7 @@ $ npm run local
 
 저는 위의 countbapp을 수정해서 사칙 연산 또한 가능할 수 있도록 수정해 보았습니다.
 
-먼저, contracts 폴더에 있는 Count.sol 파일을 아래 내용으로 바꾸어주었습니다.
+먼저, contracts 폴더에 있는 Count.sol 파일을 아래 내용으로 바꾸어 주었습니다.
 
 모두 klaytn Docs에 있는 내용이니 Docs를 한번 자세히 보시면 충분히 따라하실수 있습니다.
 
