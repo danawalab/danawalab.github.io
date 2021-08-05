@@ -66,7 +66,7 @@ $ docker run -d --name blockchain -p 10000:10000 -p 8888:8888 blockchain-dev-ser
 
 이제 환경 구축이 되었으니, 샘플 프로젝트를 실행해 보겠습니다.
 
-제일 먼저, klaytn 계정을 하나 만들어주세요. 그리고 facet에 가서 토큰을 발급받으세요.
+제일 먼저, klaytn 계정을 하나 만들어주세요. 그리고 faucet에 가서 토큰을 발급 받으시면 준비는 끝납니다.
 
 (관련 url: [계정 생성 URL](https://baobab.wallet.klaytn.com/, "계정 생성") )
 
