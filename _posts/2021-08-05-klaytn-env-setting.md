@@ -66,7 +66,11 @@ $ docker run -d --name blockchain -p 10000:10000 -p 8888:8888 blockchain-dev-ser
 
 이제 환경 구축이 되었으니, 샘플 프로젝트를 실행해 보겠습니다.
 
-countbapp으로 이동합니다. 그리고 터미널을 열어 아래 내용을 입력해줍니다.
+제일 먼저, klaytn 계정을 하나 만들어주세요. 그리고 facet에 가서 토큰을 발급받으세요.
+
+(관련 url: [계정 생성 URL](https://baobab.wallet.klaytn.com/, "계정 생성") )
+
+이 후, countbapp으로 이동합니다. 그리고 터미널을 열어 아래 내용을 입력해줍니다.
 
 아래 내용은 truffle을 이용하여 klaytn 테스트넷인 baobab 네트워크에 contracts 폴더 안에 솔리디티 언어로 작성한 컨트랙트를 배포하는 내용입니다.
 
