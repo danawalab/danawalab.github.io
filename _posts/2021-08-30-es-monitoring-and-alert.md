@@ -25,11 +25,12 @@ categories: Elastic
 
 ## 1. 새 이메일 생성
 
-기존에 사용하던 이메일을 사용하셔도 무방하나, Trial 라이센스를 사용하여 진행하였기에 저는 새로 이메일을 생성하였습니다.
+기존에 사용하던 이메일을 사용하셔도 무방하나, 저는 새로 이메일을 생성하였습니다.
 
 ## 2. 해당 이메일로 Elasticsearch Cloud에 가입
 
-https://cloud.elastic.co/login 
+[Elastic Cloud](https://cloud.elastic.co/login, "Elastic Cloud")
+
 
 위의 링크로 접속하여 Elasticsearch Cloud에 가입을 합니다.
 
@@ -232,8 +233,7 @@ GET metricbeat-7.14.0/_search
 공식 사이트를 이용하여 수집되는 필드가 무엇이 있는지 확인해 보는 것이 좋습니다.
 ![/images/2021-08-30-es-monitoring-and-alert/17.png](/images/2021-08-30-es-monitoring-and-alert/17.png)
 
-※ 공식 사이트 링크 : https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-modules.html
-
+※ 공식 사이트 링크 : [링크](https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-modules.html, "Metricbeat 공식 사이트")
 
 Job의 이름을 입력해 줍니다.
 ![/images/2021-08-30-es-monitoring-and-alert/18.png](/images/2021-08-30-es-monitoring-and-alert/18.png)
