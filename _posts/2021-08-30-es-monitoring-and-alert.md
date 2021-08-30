@@ -91,7 +91,7 @@ $ cd metricbeat
 그리고, 압축을 푼 폴더 안의 yml 파일을 수정합니다.
 
 - metricbeat.yml
-```yml
+```jsx
 metricbeat.config.modules:
   path: ${path.config}/modules.d/*.yml
   reload.enabled: false
