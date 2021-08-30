@@ -91,28 +91,7 @@ $ cd metricbeat
 그리고, 압축을 푼 폴더 안의 yml 파일을 수정합니다.
 
 - metricbeat.yml
-```jsx
-metricbeat.config.modules:
-  path: ${path.config}/modules.d/*.yml
-  reload.enabled: false
 
-setup.template.settings:
-  index.number_of_shards: 1
-  index.codec: best_compression
-
-setup.kibana.host: "부여받은 kibana endpoint"
-setup.kibana.protocol: "https"
-setup.dashboards.enabled: true
-
-dashboards.enabled: true
-output.elasticsearch:
-  username: "elastic"
-  password: "부여받은 패스워드"
-  hosts: ["부여받은 elasticsearch endpoint"]
-  protocol: "https"
-```
-
-- metricbeat.yml
 ```jsx
 metricbeat.config.modules:
   path: ${path.config}/modules.d/*.yml
@@ -135,6 +114,7 @@ output.elasticsearch:
 ```
 
 - modules.d/system.yml
+
 ```jsx
 - module: system
   period: 10s
