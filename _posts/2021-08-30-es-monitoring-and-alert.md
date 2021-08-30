@@ -113,7 +113,7 @@ output.elasticsearch:
 ```
 
 - metricbeat.yml
-```yml
+```jsx
 metricbeat.config.modules:
   path: ${path.config}/modules.d/*.yml
   reload.enabled: false
@@ -135,7 +135,7 @@ output.elasticsearch:
 ```
 
 - modules.d/system.yml
-```yml
+```jsx
 - module: system
   period: 10s
   metricsets:
