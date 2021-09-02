@@ -17,12 +17,14 @@ categories: Common
 이번에 소개할 레디스 모니터링 툴은 아래 두가지 입니다
 
 1) Redis-Stat
+
 2) Grafana Plugin
 
 ## Redis-Stat
 
 Redis-Stat은 대표적인 오픈소스 Redis 모니터링 도구입니다.
-[Redis-Stat](https://github.com/junegunn/redis-stat, "Redis-Stat")
+
+[Redis-Stat 링크](https://github.com/junegunn/redis-stat, "Redis-Stat")
 
 
 적용방법은 굉장히 간단합니다.
@@ -83,12 +85,13 @@ services:
 
 ![/images/2021-09-02-redis-monitoring-tools/5.png](/images/2021-09-02-redis-monitoring-tools/5.png)
 
-![/images/2021-09-02-redis-monitoring-tools/6.png](/images/2021-09-02-redis-monitoring-tools/6.png)
-
 작성한 뒤, 미리 정의된 대시보드를 가져옵니다.
-[Grafana Redis Dashboard](https://grafana.com/grafana/dashboards/12776, "Grafana Redis Dashboard")
+
+[Grafana Redis Dashboard 링크](https://grafana.com/grafana/dashboards/12776, "Grafana Redis Dashboard")
 
 json 파일을 다운받으셔서 import하시거나 ID를 넣어 진행해주시면 됩니다
+
+![/images/2021-09-02-redis-monitoring-tools/6.png](/images/2021-09-02-redis-monitoring-tools/6.png)
 
 ![/images/2021-09-02-redis-monitoring-tools/7.png](/images/2021-09-02-redis-monitoring-tools/7.png)
 
