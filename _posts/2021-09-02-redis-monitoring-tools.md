@@ -85,6 +85,10 @@ services:
 
 ![/images/2021-09-02-redis-monitoring-tools/5.png](/images/2021-09-02-redis-monitoring-tools/5.png)
 
+모두 등록이 되면 data source에 아래와 같이 나옵니다.
+
+![/images/2021-09-02-redis-monitoring-tools/7.png](/images/2021-09-02-redis-monitoring-tools/7.png)
+
 작성한 뒤, 미리 정의된 대시보드를 가져옵니다.
 
 [Grafana Redis Dashboard 링크](https://grafana.com/grafana/dashboards/12776, "Grafana Redis Dashboard")
@@ -92,8 +96,6 @@ services:
 json 파일을 다운받으셔서 import하시거나 ID를 넣어 진행해주시면 됩니다
 
 ![/images/2021-09-02-redis-monitoring-tools/6.png](/images/2021-09-02-redis-monitoring-tools/6.png)
-
-![/images/2021-09-02-redis-monitoring-tools/7.png](/images/2021-09-02-redis-monitoring-tools/7.png)
 
 그러면 그라파나 대시보드에 아래와 같은 깔끔한 UI가 나오게 됩니다.
 
