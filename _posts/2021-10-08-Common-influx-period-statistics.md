@@ -26,11 +26,13 @@ collection 은 상품수,
 index 는 동적색인,
 api는 검색api 호출량 입니다.
 서비스를 구분하기 위해서 name으로 tag를 추가했습니다.
-|db|measurement|field|tag|
-|------|---|---|---|
-|search|collection|count|name|
-|search|index|count|name|
-|search|api|count|name|
+
+| db | measurement | field | tag |
+| :---: | :---: | :---: | :---: | 
+| search | collection | count | name |
+| search | index | count | name |
+| search | api | count | name |
+
 
 ### A. 일간 상품수 그래프 만들기
 ```jsx
