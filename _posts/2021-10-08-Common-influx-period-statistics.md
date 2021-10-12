@@ -137,6 +137,7 @@ measurement를 api 서버별로 저장을 하기 때문에 or 를 사용하여 �
 ```
 
 기간 별 대시보드를 구분하여 구성하였습니다.
+
 ![/images/2021-10-08-Common-influx-period-statistics/influx7.png](/images/2021-10-08-Common-influx-period-statistics/influx7.png)
 
 
