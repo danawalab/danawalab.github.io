@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "엘라스틱 서치에서 색인된 문서의 사전 분석 내용 업데이트"
+title:  "엘라스틱 서치에서 색인된 문서의 사전 분석 내용 업데이트 하는 방법"
 description: "엘라스틱 서치에서 색인된 문서의 사전 업데이트 기능으로 update_by_query를 사용하는 방법을 소개합니다"
 date:   2021.12.06. 10:00:00
 writer: "선지호"
@@ -16,7 +16,9 @@ Elasticsearch는 이미 색인된 문서에 대해서는 사전에 관련 단어
 - 2) reindex
 - 3) update_by_query
 
-update_by_query를 사용하여 사전 업데이트를 진행하는 방법과, update_by_query를 사용하는 방법을 상세히 설명해보겠습니다.
+update_by_query를 사용하는 방법과 update_by_query를 사용하여 사전 업데이트를 진행하는 방법을 상세히 설명해보겠습니다.
+
+
 
 이번에 포스팅할 내용은 다음과 같습니다.
 
@@ -26,6 +28,10 @@ update_by_query를 사용하여 사전 업데이트를 진행하는 방법과, u
 ### 공식문서
 
 [Elasticsearch update-by-query](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update-by-query.html, "update-by-query")
+
+
+
+
 
 ## 쿼리로 매칭된 문서 업데이트
 
@@ -66,6 +72,8 @@ POST accounts-a/_update_by_query
 
 ### 셋팅
 ![/images/2021-12-06-Elasticsearch-update-by-query/2.png](/images/2021-12-06-Elasticsearch-update-by-query/2.png)
+
+
 
 현재 나이가 30세 미만인 사람을 검색해보겠습니다.
 
