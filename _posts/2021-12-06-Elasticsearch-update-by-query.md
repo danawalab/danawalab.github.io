@@ -6,7 +6,7 @@ date:   2021.12.06. 10:00:00
 writer: "선지호"
 categories: Elastic
 ---
-## 소개
+# 소개
 
 Elasticsearch는 이미 색인된 문서에 대해서는 사전에 관련 단어를 업데이트 하더라도 적용이 되지 않았습니다.
 
@@ -25,13 +25,13 @@ update_by_query를 사용하는 방법과 update_by_query를 사용하여 사전
 - 쿼리로 매칭된 문서 업데이트
 - 이미 색인된 문서의 분석 내용 업데이트  
 
+--- 
+
 ### 공식문서
 
 [Elasticsearch update-by-query](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update-by-query.html, "update-by-query")
 
-
-
-
+---
 
 ## 쿼리로 매칭된 문서 업데이트
 
@@ -73,7 +73,7 @@ POST accounts-a/_update_by_query
 ### 셋팅
 ![/images/2021-12-06-Elasticsearch-update-by-query/2.png](/images/2021-12-06-Elasticsearch-update-by-query/2.png)
 
-
+---
 
 현재 나이가 30세 미만인 사람을 검색해보겠습니다.
 
@@ -126,6 +126,7 @@ POST accounts-a/_update_by_query
 
 성공적으로 업데이트가 완료된 것을 확인 할 수 있었습니다.
 
+---
 
 ## 이미 색인된 문서의 분석 내용 업데이트 
 
@@ -205,10 +206,12 @@ POST accounts-a/_termvectors/KK1kjX0BA-W2OvAgr90z
   "fields": ["made"]
 }
 ```
+
 ![/images/2021-12-06-Elasticsearch-update-by-query/12.png](/images/2021-12-06-Elasticsearch-update-by-query/12.png)
 
 업데이트 된 텀 분석 내용으로 바뀐것을 확인 할 수 있습니다.
 
+---
 
 ## 정리
 
