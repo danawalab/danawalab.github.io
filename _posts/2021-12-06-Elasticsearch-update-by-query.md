@@ -17,13 +17,11 @@ Elasticsearch는 이미 색인된 문서에 대해서는 사전에 관련 단어
 - **3) update_by_query**
 
 이 포스팅에서는 update_by_query를 사용하는 방법과 update_by_query를 사용하여 사전 업데이트를 진행하는 방법을 상세히 설명해보겠습니다.
-
-
-
+---
 이번에 포스팅할 내용은 다음과 같습니다.
-
 - **_쿼리로 매칭된 문서 업데이트_**
 - **_이미 색인된 문서의 분석 내용 업데이트_**
+
 
 ## 쿼리로 매칭된 문서 업데이트
 
@@ -61,9 +59,7 @@ POST accounts-a/_update_by_query
 
 ### 셋팅
 ![/images/2021-12-06-Elasticsearch-update-by-query/2.png](/images/2021-12-06-Elasticsearch-update-by-query/2.png)
-
 ---
-
 먼저, 현재 나이가 30세 미만인 사람을 검색해보겠습니다.
 
 ```
@@ -112,9 +108,7 @@ POST accounts-a/_update_by_query
 ![/images/2021-12-06-Elasticsearch-update-by-query/5.png](/images/2021-12-06-Elasticsearch-update-by-query/5.png)
 
 총 365건이 조회 되었습니다. 성공적으로 업데이트가 완료된 것을 확인 할 수 있었습니다.
-
 ---
-
 ## 이미 색인된 문서의 분석 내용 업데이트 
 
 이번에는 색인된 문서의 내용을 업데이트 하는 법을 알아보겠습니다.
@@ -201,9 +195,7 @@ POST accounts-a/_termvectors/KK1kjX0BA-W2OvAgr90z
 ![/images/2021-12-06-Elasticsearch-update-by-query/12.png](/images/2021-12-06-Elasticsearch-update-by-query/12.png)
 
 업데이트 된 텀 분석 내용으로 바뀐것을 확인 할 수 있습니다.
-
 ---
-
 ## 정리
 
 엘라스틱서치에서 update-by-query를 사용하여 문서를 업데이트 하는 방법 및 분석기만 따로 업데이트 하는 내용을 확인했습니다.
@@ -213,7 +205,6 @@ POST accounts-a/_termvectors/KK1kjX0BA-W2OvAgr90z
 하지만 앞으로 사전의 분석 내용을 변경 할 경우 update-by-query를 사용하여 새로 색인을 하지 않는 방법으로 진행하면 리소스 측면에서 많은 절약을 할 수 있을 것 같습니다.
 
 감사합니다.
-
 --- 
 ## 출처
 [Elasticsearch update-by-query](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update-by-query.html)
