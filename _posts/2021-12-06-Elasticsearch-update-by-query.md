@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "엘라스틱 서치의 update_by_query의 기능"
-description: "엘라스틱 서치의 update_by_query의 기능"
+title:  "엘라스틱 서치에서 색인된 문서의 사전 분석 내용 업데이트"
+description: "엘라스틱 서치에서 색인된 문서의 사전 업데이트 기능으로 update_by_query를 사용하는 방법을 소개합니다"
 date:   2021.12.06. 10:00:00
 writer: "선지호"
 categories: Elastic
@@ -62,10 +62,10 @@ POST accounts-a/_update_by_query
 인덱스에 넣은 매핑과 셋팅은 아래 이미지와 같습니다.
 
 ### 매핑
-![/images/2021-12-06-Elasticsearch-update-by-query/1.jpg](/images/2021-12-06-Elasticsearch-update-by-query/1.jpg)
+![/images/2021-12-06-Elasticsearch-update-by-query/1.png](/images/2021-12-06-Elasticsearch-update-by-query/1.png)
 
 ### 셋팅
-![/images/2021-12-06-Elasticsearch-update-by-query/2.jpg](/images/2021-12-06-Elasticsearch-update-by-query/2.jpg)
+![/images/2021-12-06-Elasticsearch-update-by-query/2.png](/images/2021-12-06-Elasticsearch-update-by-query/2.png)
 
 현재 나이가 30세 미만인 사람을 검색해보겠습니다.
 
@@ -82,7 +82,7 @@ POST accounts-a/_search
 }
 ```
 
-![/images/2021-12-06-Elasticsearch-update-by-query/1.jpg](/images/2021-12-06-Elasticsearch-update-by-query/3.jpg)
+![/images/2021-12-06-Elasticsearch-update-by-query/3.png](/images/2021-12-06-Elasticsearch-update-by-query/3.png)
 
 총 451건이 나옵니다.
 
@@ -108,11 +108,11 @@ POST accounts-a/_update_by_query
 
 실행 결과로 이전에 검색한 갯수인 451건이 업데이트가 되었습니다.
 
-![/images/2021-12-06-Elasticsearch-update-by-query/4.jpg](/images/2021-12-06-Elasticsearch-update-by-query/4.jpg)
+![/images/2021-12-06-Elasticsearch-update-by-query/4.png](/images/2021-12-06-Elasticsearch-update-by-query/4.png)
 
 한번 내용을 확인해 보겠습니다. 
 
-![/images/2021-12-06-Elasticsearch-update-by-query/5.jpg](/images/2021-12-06-Elasticsearch-update-by-query/5.jpg)
+![/images/2021-12-06-Elasticsearch-update-by-query/5.png](/images/2021-12-06-Elasticsearch-update-by-query/5.png)
 
 이번에는 365건이 조회가 됩니다.
 
@@ -137,7 +137,7 @@ POST accounts-a/_update_by_query
   }
 }
 ```
-![/images/2021-12-06-Elasticsearch-update-by-query/6.jpg](/images/2021-12-06-Elasticsearch-update-by-query/6.jpg)
+![/images/2021-12-06-Elasticsearch-update-by-query/6.png](/images/2021-12-06-Elasticsearch-update-by-query/6.png)
 
 문서에 어떻게 분석이 되어 들어가있는지 확인해보겠습니다.
 
@@ -148,16 +148,16 @@ POST accounts-a/_termvectors/KK1kjX0BA-W2OvAgr90z
 }
 ```
 
-![/images/2021-12-06-Elasticsearch-update-by-query/7.jpg](/images/2021-12-06-Elasticsearch-update-by-query/7.jpg)
+![/images/2021-12-06-Elasticsearch-update-by-query/7.png](/images/2021-12-06-Elasticsearch-update-by-query/7.png)
 
 '다나' / '다나와' 두개의 텀으로 분석이 되었습니다.
 
 이번에는 사전에 '다나다나와'를 추가해서 한번 확인해보겠습니다.
 (사전에 추가할 때에는 디서치 관리도구를 사용했습니다.)
 
-![/images/2021-12-06-Elasticsearch-update-by-query/8.jpg](/images/2021-12-06-Elasticsearch-update-by-query/8.jpg)
+![/images/2021-12-06-Elasticsearch-update-by-query/8.png](/images/2021-12-06-Elasticsearch-update-by-query/8.png)
 
-![/images/2021-12-06-Elasticsearch-update-by-query/9.jpg](/images/2021-12-06-Elasticsearch-update-by-query/9.jpg)
+![/images/2021-12-06-Elasticsearch-update-by-query/9.png](/images/2021-12-06-Elasticsearch-update-by-query/9.png)
 
 ```jsx
 POST accounts-a/_analyze
@@ -169,7 +169,7 @@ POST accounts-a/_analyze
 
 사전을 적용하니 의도 했던 대로 한개의 텀으로 나옵니다.
 
-![/images/2021-12-06-Elasticsearch-update-by-query/10.jpg](/images/2021-12-06-Elasticsearch-update-by-query/10.jpg)
+![/images/2021-12-06-Elasticsearch-update-by-query/10.png](/images/2021-12-06-Elasticsearch-update-by-query/10.png)
 
 하지만 다시 아래의 쿼리로 분석된 내용을 확인 해보아도 업데이트 되어 분석이 되지 않습니다.
 
@@ -180,7 +180,7 @@ POST accounts-a/_termvectors/KK1kjX0BA-W2OvAgr90z
 }
 ```
 
-![/images/2021-12-06-Elasticsearch-update-by-query/11.jpg](/images/2021-12-06-Elasticsearch-update-by-query/11.jpg)
+![/images/2021-12-06-Elasticsearch-update-by-query/11.png](/images/2021-12-06-Elasticsearch-update-by-query/11.png)
 
 update-by-query로 분석된 내용을 다시 한번 업데이트한 후 다시 텀 분석을 진행해 보겠습니다.
 
@@ -197,7 +197,7 @@ POST accounts-a/_termvectors/KK1kjX0BA-W2OvAgr90z
   "fields": ["made"]
 }
 ```
-![/images/2021-12-06-Elasticsearch-update-by-query/12.jpg](/images/2021-12-06-Elasticsearch-update-by-query/12.jpg)
+![/images/2021-12-06-Elasticsearch-update-by-query/12.png](/images/2021-12-06-Elasticsearch-update-by-query/12.png)
 
 업데이트 된 텀 분석 내용으로 바뀐것을 확인 할 수 있습니다.
 
