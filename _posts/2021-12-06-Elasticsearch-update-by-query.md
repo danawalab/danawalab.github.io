@@ -216,5 +216,5 @@ POST accounts-a/_termvectors/KK1kjX0BA-W2OvAgr90z
 
 --- 
 ## 출처
-[Elasticsearch update-by-query](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update-by-query.html, "update-by-query")
+[Elasticsearch update-by-query](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update-by-query.html)
 ---
