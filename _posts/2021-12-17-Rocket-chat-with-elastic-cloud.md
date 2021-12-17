@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "엘라스틱 클라우드를 이용하여 로켓 챗으로 알람 받기"
-description: "엘라스틱 클라우드를 이용하여 로켓 챗으로 알람 받기"
+title:  "엘라스틱 클라우드를 이용하여 로켓챗으로 알람 받기"
+description: "엘라스틱 클라우드를 이용하여 로켓챗으로 알람 받기"
 date:   2021.12.17. 10:00:00
 writer: "선지호"
 categories: Elastic
