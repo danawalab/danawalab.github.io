@@ -2,7 +2,7 @@
 layout: post
 title:  "elasticsearch Circuit breaker exception 알람 구성 사례"
 description: "이번 포스팅은 Elasticsearch 운영 중에 circuit breaker exception 발생시 알림을 구성하는 방법을 알아보도록 하겠습니다. 다나와는 일정 주기로 상품 인덱스를 다시 생성하는 과정, 그리고 상품의 변경사항만 문서를 업데이트하는 과정의 반복으로 인덱스를 운영하고 있습니다. 전체색인이 진행 중 서킷브레이크가 발생하였고, 전체 색인하는 클라이언트에서는  서킷브레이크에러에 처리가 누락이 존재하였고, 전체색인이 정상종료로 진행하는 바람에 운영되어 장애가 발생한 사례입니다. 대응방안중 하나로 알림구성에 포스팅합니다." 
-date:   2021.12.17. 12:00:00
+date:   2021.12.17.
 writer: "김준우"  
 categories: Elastic 
 ---
