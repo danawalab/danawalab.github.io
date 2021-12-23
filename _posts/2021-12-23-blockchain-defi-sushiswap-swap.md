@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "sushiswap 분석해보기 (스왑 편)"
-description: "이번에 포스팅 내용은 blockchain DeFi 중에서 다양한 서비스가 있지만, ethereum Network를 기반으로 하는 분산형 거래소(Decentralized Exchange) 스시스왑(sushiswap)의 주요기능을 알아보겠습니다. 스시스왑은 A Token과 B Token 있을때 A Token으로 B Token으로 교환해주는 기능을 제공합니다. 이 기능은 화폐에서 환전 기능을 동일하다고 볼 수 있습니다. 그리고 Token을 스시스왑 예치 풀에 입금하게 되면 네트워크 블럭생성마다 이자를 발생하게 됩니다. 이것은 화폐에서 예금과 동일할 수 있십낟. 이렇게 주요 두 기능을 스왑, 스테이킹이라는 주제로 solidity의 contract를 분석해보며, truffle을 사용하여 컨트렉트 배포하여 알아보도록 하겠습니다."
+description: "이번에 포스팅 내용은 blockchain DeFi 중에서 다양한 서비스가 있지만, ethereum Network를 기반으로 하는 분산형 거래소(Decentralized Exchange) 스시스왑(sushiswap)의 주요기능을 알아보겠습니다. 스시스왑은 A Token과 B Token 있을때 A Token으로 B Token으로 교환해주는 기능을 제공합니다. 이 기능은 화폐에서 환전 기능을 동일하다고 볼 수 있습니다. 그리고 Token을 스시스왑 예치 풀에 입금하게 되면 네트워크 블럭생성마다 이자를 발생하게 됩니다. 이것은 화폐에서 예금과 동일합니다. 이렇게 주요 두 기능 스왑, 스테이킹이라는 주제로 solidity의 contract를 분석해보며, truffle을 사용하여 실습해보도록 하겠습니다."
 date:   2021-12-23
 writer: "김준우"
 categories: BlockChain
 ---
 ## 소개
 
-이번에 포스팅 내용은 blockchain DeFi 중에서 다양한 서비스가 있지만, ethereum Network를 기반으로 하는 분산형 거래소(Decentralized Exchange) 스시스왑(sushiswap)의 주요기능을 알아보겠습니다. 스시스왑은 A Token과 B Token 있을때 A Token으로 B Token으로 교환해주는 기능을 제공합니다. 이 기능은 화폐에서 환전 기능을 동일하다고 볼 수 있습니다. 그리고 Token을 스시스왑 예치 풀에 입금하게 되면 네트워크 블럭생성마다 이자를 발생하게 됩니다. 이것은 화폐에서 예금과 동일할 수 있십낟. 이렇게 주요 두 기능을 스왑, 스테이킹이라는 주제로 solidity의 contract를 분석해보며, truffle을 사용하여 컨트렉트 배포하여 알아보도록 하겠습니다.
+이번에 포스팅 내용은 blockchain DeFi 중에서 다양한 서비스가 있지만, ethereum Network를 기반으로 하는 분산형 거래소(Decentralized Exchange) 스시스왑(sushiswap)의 주요기능을 알아보겠습니다. 스시스왑은 A Token과 B Token 있을때 A Token으로 B Token으로 교환해주는 기능을 제공합니다. 이 기능은 화폐에서 환전 기능을 동일하다고 볼 수 있습니다. 그리고 Token을 스시스왑 예치 풀에 입금하게 되면 네트워크 블럭생성마다 이자를 발생하게 됩니다. 이것은 화폐에서 예금과 동일합니다. 이렇게 주요 두 기능 스왑, 스테이킹이라는 주제로 solidity의 contract를 분석해보며, truffle을 사용하여 실습해보도록 하겠습니다.
 
 ## 컨트렉트 분석
 
