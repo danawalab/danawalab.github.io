@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "2021-12-27-Github-Package-(Container-Registry)-사용법"
-description: "github에서 Container, RubyGems, npm, Apache Maven, Gradle, NuGet package registry를 제공하고 있습니다.
-저희는 Container Registry만 알아보도록 하겠습니다."
+title:  "Github Package (Container-Registry) 사용법"
+description: "github에서 Container, RubyGems, npm, Apache Maven, Gradle, NuGet package registry를 제공하고 있습니다. 저희는 Container Registry를 알아보도록 하겠습니다."
 date:   2021-12-27
 writer: "김준우"
 categories: Common
