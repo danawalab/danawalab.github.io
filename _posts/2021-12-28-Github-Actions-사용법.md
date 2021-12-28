@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Github Actions 사용법"
-description: "github actions를 사용하여 지속적인 빌드방법에 대해 알아보겠습니다. 다나와에서는 오픈소스로 dsearch 시리즈, service-management 등 범용적인 소프트웨어를 오픈소스로 공개하고 있습니다. 지금까지는 오픈소스를 CI/CD는 사내 Gitlab CI/CD를 통해 github의 소스를 다운받아 빌드 후 이미지를 사내 저장소에 저장하였습니다.  이슈가 있던건 아니지만 프로젝트 브랜치 전략, CI/CD 개선을 시작하며 오픈소스의  이미지도 github package로 오픈하기로 결정하였습니다. 이전 포스팅을 통해 package로 이미지 배포 방법에 대해 알아보았고, 이번에는 github actions를 통해 프로젝트 빌드, 이미지 빌드 후 package로 저장하는 방법에 대해 알아보도록 하겠습니다."
+description: "github actions를 사용하여 지속적인 빌드방법에 대해 알아보겠습니다. 다나와에서는 오픈소스로 dsearch 시리즈, service-management 등 범용적인 소프트웨어를 오픈소스로 공개하고 있습니다. 지금까지는 오픈소스를 CI/CD는 사내 Gitlab CI/CD를 통해 github의 소스를 다운받아 빌드 후 이미지를 사내 저장소에 저장하였습니다.  이번에 프로젝트 브랜치 전략, CI/CD 개선을 시작하며 오픈소스의  이미지도 github package로 오픈하기로 결정하였습니다. 이전 포스팅을 통해 package로 이미지 배포 방법에 대해 알아보았고, 이번에는 github actions를 통해 프로젝트 빌드, 이미지 빌드 후 package로 저장하는 방법에 대해 알아보도록 하겠습니다."
 date:   2021-12-28
 writer: "김준우"
 categories: Common
 ---
 ## 개요
 
-github actions를 사용하여 지속적인 빌드방법에 대해 알아보겠습니다. 다나와에서는 오픈소스로 dsearch 시리즈, service-management 등 범용적인 소프트웨어를 오픈소스로 공개하고 있습니다. 지금까지는 오픈소스를 CI/CD는 사내 Gitlab CI/CD를 통해 github의 소스를 다운받아 빌드 후 이미지를 사내 저장소에 저장하였습니다.  이슈가 있던건 아니지만 프로젝트 브랜치 전략, CI/CD 개선을 시작하며 오픈소스의  이미지도 github package로 오픈하기로 결정하였습니다. 이전 포스팅을 통해 package로 이미지 배포 방법에 대해 알아보았고, 이번에는 github actions를 통해 프로젝트 빌드, 이미지 빌드 후 package로 저장하는 방법에 대해 알아보도록 하겠습니다.
+github actions를 사용하여 지속적인 빌드방법에 대해 알아보겠습니다. 다나와에서는 오픈소스로 dsearch 시리즈, service-management 등 범용적인 소프트웨어를 오픈소스로 공개하고 있습니다. 지금까지는 오픈소스를 CI/CD는 사내 Gitlab CI/CD를 통해 github의 소스를 다운받아 빌드 후 이미지를 사내 저장소에 저장하였습니다.  이번에 프로젝트 브랜치 전략, CI/CD 개선을 시작하며 오픈소스의  이미지도 github package로 오픈하기로 결정하였습니다. 이전 포스팅을 통해 package로 이미지 배포 방법에 대해 알아보았고, 이번에는 github actions를 통해 프로젝트 빌드, 이미지 빌드 후 package로 저장하는 방법에 대해 알아보도록 하겠습니다.
 
 ## workflow 추가 방법
 
