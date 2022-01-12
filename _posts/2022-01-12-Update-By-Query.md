@@ -8,7 +8,13 @@ writer: "반윤성"
 categories: Elastic
 ---
 
-![/images/2022-01-11-Update-by-query/image_1.jpg](/images/2022-01-11-Update-by-query/image_1.jpg)
+<p align="center">
+<img src="/images/2022-01-11-Update-by-query/image_1.jpg">
+</p>
+<p align="center">
+Update_by_query 진행 과정
+</p>
+
 
 ## 소개 : Update_By_Query ?
 Elasticsearch(이하 es)에서 기존에 색인된 내용을 변경하고자 할 때, ``Update_By_Query`` 기능을 사용할 수 있습니다. 이 기능은 단순히 업데이트를 수행하는것 뿐만 아니라 쿼리를 통한 질의 후에 해당하는 조건에 맞는 필드를 탐색하여 업데이트를 진행합니다.
@@ -81,6 +87,9 @@ java.net.SocketTimeoutException: 5,000 milliseconds timeout on connection http-o
 ## TroubleShooting
 
 ![/images/2022-01-11-Update-by-query/image_2.jpg](/images/2022-01-11-Update-by-query/image_2.jpg)
+<p align="center">
+wait_for_completion 설정은 7.10 버전부터 가능 
+</p>
 
 원인을 찾기 위해 elastic의 변경사항을 찾아봤습니다. 사실 필요한 부분은  wait_for_completion 설정 방법이었습니다. updateByQuery는 해당 옵션을 통해 작업이 완전히 완료될때까지 대기하도록 하는 옵션입니다. 그런데 7.8.1 기준으로는 이 값을 false로 설정할 수 있는 방법이 없었습니다.
 
@@ -132,6 +141,9 @@ Response response = restClient.performRequest(request);
 <br>es의 conflicts란 업데이트 진행시 대상 Document의 버전이 다른 작업의 진행으로 인해 업데이트 전 버전과 달라져서 발생합니다.
 
 ![/images/2022-01-11-Update-by-query/image_3.jpg](/images/2022-01-11-Update-by-query/image_3.jpg)
+<p align="center">
+conflict 발생 
+</p>
 
 `Update_By_Query`의 request 파라미터인 conflicts 옵션은 디폴트 값은 'abort'로 충돌이 발생시 그 상태에서 중지하게 되고, 'proceed'로 옵션을 설정하면 충돌이 발생 시 멈추지 않고 변경하려는 내용으로 업데이트하게 됩니다.
 
@@ -140,7 +152,12 @@ Response response = restClient.performRequest(request);
 
 테스트 환경인 3개의 노드로 구성되어 10개의 샤드가 있는 인덱스에 대해 `Update_By_Query` 작업을 처리할 때, slice 갯수에 따라 업데이트 속도가 빨라지는 것을 확인할 수 있었습니다. 사용자 환경마다 다르겠지만 테스트 수행 시 10개의 slice 처리시 약 41초동안 32만건의 데이터를 처리했습니다. 
 
-![/images/2022-01-11-Update-by-query/image_4.jpg](/images/2022-01-11-Update-by-query/image_4.jpg)
+<p align="center">
+<img src="/images/2022-01-11-Update-by-query/image_4.jpg">
+</p>
+<p align="center">
+업데이트 수행시 CPU 사용량
+</p>
 
 업데이트 시 CPU 사용량입니다. (1)은 slice 설정없이 기본값으로 사용했을때 결과입니다. (2), (3)은 모두 slice를 10으로 설정했을때 결과입니다. 모두 20~30% 사이의 CPU 사용률을 보여주고 있습니다.
 
