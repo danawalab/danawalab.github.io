@@ -3,7 +3,7 @@ layout: post
 title:  "Elasticsearch Update_By_Query 적용기"
 description: Elasticsearch에서 제공하는 Update_By_Query의 개념과 적용 방법을 살펴보고
 적용시 주의해야할 사항과 성능에 대해 알아봅니다.
-date:   2022.01.11. 
+date:   2022-01-12
 writer: "반윤성"
 categories: Elastic
 ---
@@ -153,4 +153,4 @@ Update_By_Query의 request 파라미터인 conflicts 옵션은 디폴트 값은 
 최적화된 Update-by-query 처리를 시도해봐야할 것으로 보입니다.
 
 ## 참고 자료
-- https://nx.dev/latest/react/cypress/overview
+- https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update-by-query.html
