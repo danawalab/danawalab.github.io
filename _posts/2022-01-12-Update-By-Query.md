@@ -11,12 +11,12 @@ categories: Elastic
 ![/images/2022-01-11-Update-by-query/image_1.jpg](/images/2022-01-11-Update-by-query/image_1.jpg)
 
 ## 소개 : Update_By_Query ?
-Elasticsearch(이하 es)에서 기존에 색인된 내용을 변경하고자 할 때, 'Update_By_Query' 기능을 사용할 수 있습니다. 이 기능은 단순히 업데이트를 수행하는것 뿐만 아니라 쿼리를 통한 질의 후에 해당하는 조건에 맞는 필드를 탐색하여 업데이트를 진행합니다.
+Elasticsearch(이하 es)에서 기존에 색인된 내용을 변경하고자 할 때, ``Update_By_Query`` 기능을 사용할 수 있습니다. 이 기능은 단순히 업데이트를 수행하는것 뿐만 아니라 쿼리를 통한 질의 후에 해당하는 조건에 맞는 필드를 탐색하여 업데이트를 진행합니다.
 
-취급하는 데이터의 양이 많다보니 일괄적으로 값을 변경해주는 기능이 필요했고, 기존 데이터 업데이트시 bulk api를 사용하고 있었지만 id를 통해 업데이트되는 방식이었습니다. 그래서 es에서 제공하는 Update_By_Query기능을 사용하게 되었습니다.
+취급하는 데이터의 양이 많다보니 일괄적으로 값을 변경해주는 기능이 필요했고, 기존 데이터 업데이트시 bulk api를 사용하고 있었지만 id를 통해 업데이트되는 방식이었습니다. 그래서 es에서 제공하는 `Update_By_Query`기능을 사용하게 되었습니다.
 
 ## 도입 시작
-다나와에서는 하루에도 무수히 많은 상품 데이터를 분석, 수집, 처리하고 있습니다. 이렇게 많은 양의 데이터를 처리하는 동안에도 특정 필드의 값을 업데이트하는 로직을 정상적으로 수행 할 수 있어야 했습니다. 우선 7.8.1 버전의 기준에서 제공하는 HighLevelClient를 사용하여 Update_By_Query를 호출하는 방법을 검토했습니다. 
+다나와에서는 하루에도 무수히 많은 상품 데이터를 분석, 수집, 처리하고 있습니다. 이렇게 많은 양의 데이터를 처리하는 동안에도 특정 필드의 값을 업데이트하는 로직을 정상적으로 수행 할 수 있어야 했습니다. 우선 7.8.1 버전의 기준에서 제공하는 HighLevelClient를 사용하여 `Update_By_Query`를 호출하는 방법을 검토했습니다. 
 
 작성한 내용은 다음과 같습니다.
 1) 우선 UpdateByQueryRequest의 요청을 생성합니다.
@@ -37,7 +37,7 @@ updateRequest.setScript(new Script(
 ```java
 @Async
 ...
-// Update_By_Query
+// `Update_By_Query`
 BulkByScrollResponse response = restHighLevelClient.updateByQuery(updateRequest, RequestOptions.DEFAULT);
 
 // Listen to Response
@@ -52,7 +52,7 @@ if(response.getBulkFailures().size() > 0){
 
 updateByQuery() 메소드를 사용했습니다. request와 마찬가지로 디폴트 옵션을 사용했으며 결과 값을 리턴받으면 실패한 건에 대해 로그를 남기고, 몇 건이 업데이트되었는지 확인합니다.
 
-요청 후 처리 결과를 살펴보겠습니다. 테스트 데이터는 es에서 기본으로 가지고 있는 Sample flight data 인덱스를 사용합니다.
+요청 후 처리 결과를 살펴보겠습니다. 테스트 데이터는 es에서 기본으로 가지고 있는 Sample_flight_data 인덱스를 사용합니다.
 
 ```
   weather : sunny, 4631 UPDATED
@@ -75,9 +75,7 @@ java.net.SocketTimeoutException: 5,000 milliseconds timeout on connection http-o
 
 이유는 데이터 양이 적은(약 4천건) 로컬 테스트 환경과 달리 실제 작업시 약 32만건의 데이터를 업데이트하는데 이 작업을 동기식으로 진행하고 있었습니다.
 
-정해진 스케쥴의 시간동안 비동기식으로 진행해야하는 작업이었기에 @Async 어노테이션을 붙여주거나 updateByQueryAsync라는 다른 메소드를 사용하여 비동기식으로 호출하는 방법을 테스트해 보았습니다만, 
-
-어째선지 모두 같은 이유로 동기식으로 작동하고 있었습니다.
+정해진 스케쥴의 시간동안 비동기식으로 진행해야하는 작업이었기에 @Async 어노테이션을 붙여주거나 updateByQueryAsync라는 다른 메소드를 사용하여 비동기식으로 호출하는 방법을 테스트해 보았습니다만, 어째선지 모두 같은 이유로 동기식으로 작동하고 있었습니다.
 
 
 ## TroubleShooting
@@ -92,7 +90,7 @@ java.net.SocketTimeoutException: 5,000 milliseconds timeout on connection http-o
 RestClient restClient = restHighLevelClient.getLowLevelClient();
 Request request = new Request(
         "POST",
-        "/" + index + "/_update_by_query");
+        "/" + index + "/_`Update_By_Query`");
 request.addParameter("wait_for_completion", "false");
 request.addParameter("scroll_size", "100");
 request.addParameter("timeout", "3m");
@@ -127,20 +125,20 @@ Response response = restClient.performRequest(request);
 
 ## Update_By_Query의 특이 사항
 
-(1) 작업 중간에 실패하더라도 이미 UPDATE된 내용은 롤백하지 않는다.
+#### (1) 작업 중간에 실패하더라도 이미 UPDATE된 내용은 롤백하지 않는다.
 <br>RDBMS의 경우 업데이트시 중간에 오류가 발생하면 업데이트 되던 내용은 모두 롤백됩니다. 하지만 ES의 경우 오류가 발생하면 업데이트된 내용은 남겨둡니다. 이어서 작업을 즉시 중지하고 이후의 작업도 중지됩니다.
 
-(2) CONFLICTS
+#### (2) CONFLICTS
 <br>es의 conflicts란 업데이트 진행시 대상 Document의 버전이 다른 작업의 진행으로 인해 업데이트 전 버전과 달라져서 발생합니다.
 
 ![/images/2022-01-11-Update-by-query/image_3.jpg](/images/2022-01-11-Update-by-query/image_3.jpg)
 
-Update_By_Query의 request 파라미터인 conflicts 옵션은 디폴트 값은 'abort'로 충돌이 발생시 그 상태에서 중지하게 되고, 'proceed'로 옵션을 설정하면 충돌이 발생 시 멈추지 않고 변경하려는 내용으로 업데이트하게 됩니다.
+`Update_By_Query`의 request 파라미터인 conflicts 옵션은 디폴트 값은 'abort'로 충돌이 발생시 그 상태에서 중지하게 되고, 'proceed'로 옵션을 설정하면 충돌이 발생 시 멈추지 않고 변경하려는 내용으로 업데이트하게 됩니다.
 
-(3) SLICES
-<br> Update_By_Query의 request 파라미터인 slices 옵션은 작업을 분할하여 처리하는 것을 의미합니다. 공식문서에서는 최적의 갯수로 샤드의 갯수 만큼을 추천하고 있습니다.
+#### (3) SLICES
+<br> `Update_By_Query`의 request 파라미터인 slices 옵션은 작업을 분할하여 처리하는 것을 의미합니다. 공식문서에서는 최적의 갯수로 샤드의 갯수 만큼을 추천하고 있습니다.
 
-테스트 환경인 3개의 노드로 구성되어 10개의 샤드가 있는 인덱스에 대해 Update_By_Query 작업을 처리할 때, slice 갯수에 따라 업데이트 속도가 빨라지는 것을 확인할 수 있었습니다. 사용자 환경마다 다르겠지만 테스트 수행 시 10개의 slice 처리시 약 41초동안 32만건의 데이터를 처리했습니다. 
+테스트 환경인 3개의 노드로 구성되어 10개의 샤드가 있는 인덱스에 대해 `Update_By_Query` 작업을 처리할 때, slice 갯수에 따라 업데이트 속도가 빨라지는 것을 확인할 수 있었습니다. 사용자 환경마다 다르겠지만 테스트 수행 시 10개의 slice 처리시 약 41초동안 32만건의 데이터를 처리했습니다. 
 
 ![/images/2022-01-11-Update-by-query/image_4.jpg](/images/2022-01-11-Update-by-query/image_4.jpg)
 
