@@ -2,7 +2,7 @@
 layout: post
 title:  "도커 컴포즈 가이드라인"
 description: "도커 컴포즈를 사용할 때 가이드라인이 필요하다고 생각하여 작성하여 공유 합니다." 
-date:   2021.01.13. 16:00:00
+date:   2021.01.13.
 writer: "선지호"  
 categories: Docker
 ---

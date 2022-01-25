@@ -2,7 +2,7 @@
 layout: post
 title:  "서비스 운영플랫폼 #6 - 파일 전송"
 description: "서비스 운영플랫폼의 파일 탐색기를 통해 파일 업로드/다운로드를 진행합니다"
-date:   2021.10.08. 14:30:00
+date:   2021.10.08.
 writer: "반윤성"
 categories: Management
 ---

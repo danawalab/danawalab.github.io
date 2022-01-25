@@ -2,7 +2,7 @@
 layout: post
 title:  "엘라스틱서치 Left Join API 개선사항"
 description: "지난번 엘라스틱서치 API방식으로 전환이 후 CPU 사용률이 높아 성능개선한 부분에 대해 공유합니다. 그리고 추가된 밀터필드 조건 기능도 소개드립니다. Left Join API의 구성 및 사용법은 아래 링크를 통해 확인 부탁드립니다." 
-date:   2021.01.20. 13:00:00
+date:   2021.01.20.
 writer: "김준우"  
 categories: Elastic
 ---

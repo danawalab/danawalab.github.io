@@ -2,7 +2,7 @@
 layout: post
 title:  "디서치 관리도구 사용법  #5 - 클러스터"
 description: "디서치 관리도구 클러스터 메뉴에 대해 소개하고 사용하는 방법에 대해 설명 하도록 하겠습니다." 
-date:   2020.08.13. 18:00:00
+date:   2020.08.13.
 writer: "선지호"  
 categories: Elastic 
 ---

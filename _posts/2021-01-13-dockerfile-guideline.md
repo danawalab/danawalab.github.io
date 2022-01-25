@@ -2,7 +2,7 @@
 layout: post
 title:  "도커 파일 가이드라인"
 description: "도커 파일을 생성함에 있어서 가이드라인이 필요하다고 생각하여 작성하여 공유를 합니다." 
-date:   2021.01.13. 15:00:00
+date:   2021.01.13.
 writer: "선지호"  
 categories: Docker
 ---

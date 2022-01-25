@@ -2,7 +2,7 @@
 layout: post
 title:  "디서치 관리도구 사용법  #7 - 템플릿"
 description: "디서치 관리도구 템플릿 메뉴에 대해 소개하고 사용하는 방법에 대해 설명 하도록 하겠습니다." 
-date:   2020.08.14. 14:00:00
+date:   2020.08.14.
 writer: "선지호"  
 categories: Elastic 
 ---

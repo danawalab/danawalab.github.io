@@ -2,7 +2,7 @@
 layout: post
 title:  "디서치 관리도구 사용법 #9 - JDBC"
 description: "이번 포스팅 내용은 다나와에서 개발한 디서치 관리도구(엘라스틱서치 관리도구)에서 JDBC 메뉴에 대해 소개하는 시간을 가지도록 하겠습니다." 
-date:   2020.08.18. 14:00:00
+date:   2020.08.18.
 writer: "김준우"  
 categories: Elastic 
 ---
