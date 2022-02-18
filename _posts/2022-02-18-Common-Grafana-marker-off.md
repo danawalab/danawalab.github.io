@@ -15,15 +15,8 @@ categories: Common
 
 그런데, 어떤 때에는 아래처럼 게이지 테두리가 전체적으로 녹색일 때가 있고 비슷한 수치인데도 테두리가 빨간색으로 보일때가 있습니다. 수치는 비슷한데 말이죠. 
 
-테두리가 빨간 게이지
-
 ![Untitled](/images/2022-02-18-Common-Grafana-marker-off/threshold-red.png)
-
-테두리가 녹색인 게이지
-
 ![Untitled](/images/2022-02-18-Common-Grafana-marker-off/threshold-green.png)
-
-
 
 
 그 이유는 게이지의 특성때문입니다. 테두리는 Threshold의 마킹을 의미합니다. 그리고 최근의 최대값을 기반으로 그려지기 때문에, 최대값이 크면 클수록 빨간 테두리는 커질수 있습니다.
