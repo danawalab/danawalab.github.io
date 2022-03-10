@@ -33,10 +33,10 @@ Visualization을 보시면 아래 사진과 같이 Service Dependency Graph Pane
 **여기서 제일 중요한 게 있습니다, 아래 사진을 보시면 Format 옆을 보면 Table로 설정되어 있습니다.  
 초기 설정은 Time series로 설정돼있는데 Table로 설정을 변경하지 않으면 노바택 패널이 매트릭 데이터를 제대로 못 읽어
 패널을 그리지 못합니다.**  
-![노바택패널2](/images/2022-03-10-Grafana-Novatec-Plugin/6.PNG)
+![노바택패널3](/images/2022-03-10-Grafana-Novatec-Plugin/6.PNG)
 
 그러면 아래의 사진과 같이 매트릭 데이터를 불러오게 됩니다.
-아래 사진에 job과 url 그리고 Value #B가 나온 것을 볼 수 있습니다.
+아래 사진에 job과 url 그리고 Value #B가 나온 것을 볼 수 있습니다.  
 ![노바택패널3](/images/2022-03-10-Grafana-Novatec-Plugin/7.PNG)
 
 패널을 그리기 위해 노바택 패널에 Connection Mapping을 확인해 보면 6개의 칸을 볼 수 있습니다.  
@@ -60,7 +60,7 @@ Request Rate Column에 Value #B를 매핑해 주겠습니다.
 ![노바택패널8](/images/2022-03-10-Grafana-Novatec-Plugin/9.PNG)
 
 위 사진처럼 원 안과 테두리에 초록색과 빨간색을 볼 수 있는데  
-아래 Data Mapping에 Response Time Baseline (Upper) 한계치를 설정해 사진과 같이 Show Baselines 켜주시면  
+Data Mapping에 Response Time Baseline (Upper) 한계치를 설정하고 아래 사진과 같이 Show Baselines 켜주시면  
 Response Time Health를 확인 할 수 있습니다.  
 ![노바택패널9](/images/2022-03-10-Grafana-Novatec-Plugin/4.PNG)
 
@@ -75,5 +75,6 @@ Response Time Health를 확인 할 수 있습니다.
 Node graph panel은 아직 베타 버전이라 aws에 x-ray를 통해서 사용이 가능해 당장 사용하기에는 제한적이라 생각합니다.
 
 참고자료:
+
 - https://github.com/NovatecConsulting/novatec-service-dependency-graph-panel
 - https://grafana.com/grafana/plugins/novatec-sdg-panel/
