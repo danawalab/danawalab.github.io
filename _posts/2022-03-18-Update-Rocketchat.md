@@ -23,22 +23,23 @@ Rocket.Chat 은 HipChat, Slack 형태의 중소규모 그룹을 위한 오픈소
 stand alone 으로 설치하는 것이 아닌 docker를 이용하여 설치를 진행하겠습니다.
 아래 내용은 최신 버전으로 사용하는 법으로 기술하겠습니다.
 
-1. curl -k -L https://go.rocket.chat/i/docker-compose.yml -O
+#### 1. curl -k -L https://go.rocket.chat/i/docker-compose.yml -O
 
-2. docker-compose 파일 안에서 mongodb의 버전을 변경합니다
+#### 2. docker-compose 파일 안에서 mongodb의 버전을 변경합니다
 - mongo:4.0 -> mongo:4.4
 
-3. docker-compose 파일 안에서 mongodb의 command를 변경합니다
+#### 3. docker-compose 파일 안에서 mongodb의 command를 변경합니다
 - 기존: "command: mongod --smallfiles --oplogSize 128 --replSet rs0 --storageEngine=mmapv1"
 - 변경: "command: mongod --oplogSize 128 --replSet rs0 --storageEngine=wiredTiger"
 
 (주의, mongo-init-replica 가 아니라 mongo 서비스 여야만 합니다.)
 
-4. docker-compose를 실행합니다
+#### 4. docker-compose를 실행합니다
 
-5. 아래 이미지 처럼 나오면 성공입니다.
+#### 5. 아래 이미지 처럼 나오면 성공입니다.
 
 ![/images/2022-03-18-Update-Rocketchat/image1.png](/images/2022-03-18-Update-Rocketchat/image1.png)
+
 
 ## 로켓챗 기존 데이터 마이그레이션
 
