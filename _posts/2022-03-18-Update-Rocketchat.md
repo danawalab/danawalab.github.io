@@ -38,7 +38,7 @@ stand alone 으로 설치하는 것이 아닌 docker를 이용하여 설치를 �
 
 5. 아래 이미지 처럼 나오면 성공입니다.
 
-![/images/2022-03-18-Update-Rocketchat/image1.jpg](/images/2022-03-18-Update-Rocketchat/image1)
+![/images/2022-03-18-Update-Rocketchat/image1.png](/images/2022-03-18-Update-Rocketchat/image1.png)
 
 ## 로켓챗 기존 데이터 마이그레이션
 
@@ -54,16 +54,16 @@ storageEngine이 wiredTiger로 되었다면 아래 8번부터 12번까지만 수
 
 ### 마이그레이션 
 
-1. 기존 데이터를 백업
+#### 1. 기존 데이터를 백업
 기존에 있던 데이터들이 삭제가 되면 안되기 때문에 백업을 합니다
 
-2. git clone https://github.com/RocketChat/docker-mmap-to-wiredtiger-migration ~/rocketchat-migration
+#### 2. git clone https://github.com/RocketChat/docker-mmap-to-wiredtiger-migration ~/rocketchat-migration
 
-3. cd  ~/rocketchat-migration
+#### 3. cd  ~/rocketchat-migration
 
-4. cp -R docker (rocketchat 경로)
+#### 4. cp -R docker (rocketchat 경로)
 
-5. 기존의 도커 컴포즈 파일을 수정
+#### 5. 기존의 도커 컴포즈 파일을 수정
 
 ```
 version: '2'
@@ -133,15 +133,15 @@ services:
     depends_on:
       - mongo
 ```
-6. 로켓챗 재시작
+#### 6. 로켓챗 재시작
 
-7. docker logs -f rocketchat_mongo_1
+#### 7. docker logs -f rocketchat_mongo_1
 
 mongodb가 정상적으로 잘 실행 되었는지 확인합니다.
 
 정상적으로 실행이 되지 않았으면 원인을 찾아 수정합니다
 
-8. docker exec -it rocketchat_mongo_1 mongo
+#### 8. docker exec -it rocketchat_mongo_1 mongo
 
 setFeatureCompatibilityVersion 같은 경우에는 올릴 버전보다 한 단계 전 버전을 입력해주시면 됩니다.
 
@@ -155,9 +155,9 @@ $ db.adminCommand( { getParameter: 1, featureCompatibilityVersion: 1 } )
 $ db.adminCommand( { setFeatureCompatibilityVersion: "4.0" } ) 
 ```
 
-9. 정상적으로 실행이 다 된 것을 확인 한 이후에 docker-compose down을 하여 컨테이너를 내립니다
+#### 9. 정상적으로 실행이 다 된 것을 확인 한 이후에 docker-compose down을 하여 컨테이너를 내립니다
 
-10. docker-compose 파일을 수정합니다.
+#### 10. docker-compose 파일을 수정합니다.
 
 ```
 version: '2'
@@ -217,13 +217,13 @@ services:
       - mongo
 ```
 
-11. docker-compose up -d 를 입력하여 재 시작합니다
+#### 11. docker-compose up -d 를 입력하여 재시작합니다
 
-12. 정상적으로 동작 및 데이터가 손실 되었는지 확인합니다.
+#### 12. 정상적으로 동작 및 데이터가 손실 되었는지 확인합니다.
 
-13. 관리자 계정으로 접속하여 관리탭으로 이동, 정상적으로 업데이트가 진행되었는지 확인하여 주세요
+#### 13. 관리자 계정으로 접속하여 관리탭으로 이동, 정상적으로 업데이트가 진행되었는지 확인하여 주세요
 
-![/images/2022-03-18-Update-Rocketchat/image2.jpg](/images/2022-03-18-Update-Rocketchat/image2)
+![/images/2022-03-18-Update-Rocketchat/image2.png](/images/2022-03-18-Update-Rocketchat/image2.png)
 
 ## 정리
 
