@@ -18,7 +18,6 @@ Rocket.Chat 은 zulip, slack과 비슷한 오픈소스 메신저 서버/클라�
 ## 다나와에서는..
 
 다나와 Devops/검색 팀에서는 메신저로 로켓챗 서버를 구축해서 사용중입니다.
-
 진행했던 이슈들에 대한 대화내역과 이미지, URL 등 저장을 위해 따로 서버를 구축하여 사용하고 있습니다.
 
 ## 로켓챗 설치 
@@ -49,17 +48,14 @@ stand alone 으로 설치하는 것이 아닌 docker를 이용하여 설치를 �
 ### 마이그레이션을 해야 하는 이유
 
 기존에 로켓챗이 설치 되어 있을 경우에는 마이그레이션이 필요할 수도 있습니다.
-
-기존 로켓챗은 mongodb 버전이 4.0 버전 이하를 사용할 수도 있습니다.
-
-하지만, mongodb 4.2 버전 부터는 storageEngine이 mmapv1이 아닌 storageEngine이 wiredTiger로 변경 되었기 때문에 이를 변경해 주어야 합니다.
-
-storageEngine이 wiredTiger로 되었다면 아래 8번부터 12번까지만 수행하시면 됩니다.
+그 이유는 기존 로켓챗은 mongodb 버전이 4.0 버전 이하를 사용할 수도 있고, 또한 4.0 버전 이하를 사용하게 된다면 storageEngine이 mmapv1으로 되어 있을 수도 있기 때문입니다.
+또한, mongodb 에서는 mongodb 4.2 버전부터는 storageEngine이 wiredTiger로 변경 되었기 때문에 이를 변경해 주어야 합니다.
+만약, 기존 로켓챗에 storageEngine이 wiredTiger로 되었다면 아래 8번부터 12번까지만 수행하시면 됩니다.
 
 ### 마이그레이션 
 
 #### 1. 기존 데이터를 백업
-기존에 있던 데이터들이 삭제가 되면 안되기 때문에 백업을 합니다
+기존에 있던 데이터들이 삭제가 되면 안되기 때문에 백업을 진행합니다. 백업을 따로 gz 형태로 압축을 해둔다면 더 좋습니다.
 
 #### 2. git clone https://github.com/RocketChat/docker-mmap-to-wiredtiger-migration ~/rocketchat-migration
 
