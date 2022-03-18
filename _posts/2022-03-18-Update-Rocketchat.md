@@ -9,7 +9,7 @@ categories: Common
 
 ## 로켓챗 이란 ?
 
-Rocket.Chat 은 slack과 비슷한 오픈소스 메신저 서버/클라이언트 프로그램입니다. 
+Rocket.Chat 은 zulip, slack과 비슷한 오픈소스 메신저 서버/클라이언트 프로그램입니다. 
 
 실시간 채팅을 할 수 있고, 음성과 화상채팅도 가능합니다. 
 
