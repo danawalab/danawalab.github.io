@@ -13,6 +13,10 @@ Kubernetes cluster 인증서의 수명은 1년입니다.
 
 Kubernetes 인증서가 만료되면, 결과적으로 kubelet 서비스가 실패합니다.
 
+실제로 현재 운영중인 gitlab-runner가 정상적으로 작동하지 않았던 현상이 있습니다.
+
+`ERROR: Build failed (system failure): timedout waiting for pod to start`
+
 또한 kubectl 명령어 수행 시 `Unable to connect to the server: x509: certificate has expired or is not yet valid.` 과 같은 메시지가 출력되기도합니다.
 
 ## Kubernetes expired ?
