@@ -7,7 +7,7 @@ writer: "반윤성"
 categories: Elastic
 ---
 
-<iframe src="https://giphy.com/embed/ZIOC4ISWRJXX6BBQvy" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/fall-down-climbing-ZIOC4ISWRJXX6BBQvy">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/nK0YXe7YrFNb390uZc" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 ## Elasticsearch Snapshot ?
 
