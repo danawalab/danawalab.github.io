@@ -6,6 +6,9 @@ date:   2022.03.28.
 writer: "반윤성"
 categories: Elastic
 ---
+
+<iframe src="https://giphy.com/embed/ZIOC4ISWRJXX6BBQvy" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/fall-down-climbing-ZIOC4ISWRJXX6BBQvy">via GIPHY</a></p>
+
 ## Elasticsearch Snapshot ?
 
 중요한 자료의 소실을 막기 위해서 백업 파일을 만드는 것은 중요합니다. 또한, 백업 파일들을 항상 최신(혹은 최신에 가깝게)으로 유지하는 것은 언제 일어날지 모르는 상황에 대비하여 반드시 필요한 작업이 될 것 입니다. 
