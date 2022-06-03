@@ -2,7 +2,7 @@
 layout: post
 title:  "엘라스틱서치 스냅샷의 5가지 특징"
 description: "Elasticsearch snapshot의 특징을 파악해봅니다"
-date:   2022.03.28.
+date:   2022.06.03.
 writer: "반윤성"
 categories: Elastic
 ---
