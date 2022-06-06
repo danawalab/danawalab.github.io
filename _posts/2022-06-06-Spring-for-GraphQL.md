@@ -11,23 +11,26 @@ categories: Common
 안녕하세요 이번에는 최근에 Spring에서 공식 릴리즈한 Spring for GraphQL에 대해 알아보도록 하겠습니다.
 ![Spring-for-GraphQL](/images/2022-06-06-Spring-for-GraphQL/40.PNG)
 
-- [graphql-java/graphql-java-spring](https://github.com/graphql-java/graphql-java-spring)
-- [graphql-java-kickstart/graphql-spring-boot](https://github.com/graphql-java-kickstart/graphql-spring-boot)
-- [Netflix/dgs-framework](https://github.com/Netflix/dgs-framework)
+- [graphql-java / graphql-java-spring](https://github.com/graphql-java/graphql-java-spring)
+- [graphql-java-kickstart / graphql-spring-boot](https://github.com/graphql-java-kickstart/graphql-spring-boot)
+- [Netflix / dgs-framework](https://github.com/Netflix/dgs-framework)
 
 기존 Java 진영에서 Spring과 함께 GraphQL을 사용하기 위해서는
-위 3개가 대표적인 라이브러리/프레임워크로 3개 중 1개를 선택해 사용했다고 생각합니다.
+위 3개가 대표적인 라이브러리/프레임워크로 3개 중 1개를 선택해 스프링에서 graphql을 사용했다고 생각합니다.
 
-위 3개는 [graphql-java/graphql-java](https://github.com/graphql-java/graphql-java) 를 기반으로 개발되었습니다.   
-또한 이번에 알아볼 Spring for GraphQL은 공식적으로 [graphql-java/graphql-java](https://github.com/graphql-java/graphql-java)
+위 3개는 [graphql-java / graphql-java](https://github.com/graphql-java/graphql-java) 를 기반으로 개발되었습니다.   
+또한 이번에 알아볼 Spring for GraphQL은 공식적으로 graphql-java
 의 후속 프로젝트라 소개 하고 있습니다.
 
+앞서 설명한 라이브러리/프레임워크를 사용하면 Resolver를 개발하고 별도의 설정 등 필요했지만      
+Spring for GraphQL은 graphql-java의 단순 후속 프로젝트뿐 아니라 graphql-java 개발팀이 개발을 하여서
+Spring이 추구하는 방향답게 추가적인 코드 없이 기존 MVC 개발하듯 개발하면 됩니다.
 ### 환경
 
 - JAVA 11
 - SpringBoot 2.7.0
 
-**Spring-for-GraphQL은 SpringBoot 2.7.0 버전 이상부터 지원합니다.**   
+**Spring for GraphQL은 SpringBoot 2.7.0 버전 이상부터 지원합니다.**   
 
 ### 시작
 Spring for GraphQL은 JPA 환경에서 쉽게 사용 가능하게 지원하고 있습니다,   
@@ -317,11 +320,7 @@ application.yml 파일에 아래 코드를 추가하면 됩니다.
 ```
 
 ### 마무리
-앞서 설명한 라이브러리/프레임워크를 사용하면 Resolver를 개발하고 별도의 설정 등 필요했지만      
-Spring for GraphQL은 앞서 소개했듯 graphql-java의 단순 후속 프로젝트뿐 아니라 graphql-java 개발팀이 개발을 하여서
-Spring이 추구하는 방향답게 추가적인 코드 없이 기존 MVC 개발하면 됩니다.
-
-저는 개발하면서 Spring-for-GraphQL에서 제공하는 샘플과 공식 문서를 참고했는데,      
+저는 개발하면서 Spring for GraphQL에서 제공하는 샘플과 공식 문서를 참고했는데,      
 개발 당시 1.0.0 M3 버전이여서 당시 @Validate 어노테이션을 지원 안했습니다.
 저는 @Valid 보단 @Validate 어노테이션을 선호하는데 빈 값을 넘길 경우 그대로 Valid가 안되고 저장되는 경우도 있었고
 
@@ -330,7 +329,7 @@ Spring이 추구하는 방향답게 추가적인 코드 없이 기존 MVC 개발
 또한 GraphQL을 처음 사용하는 만큼 익숙해지는 데 시간도 걸렸습니다,
 그러나 지금은 개발 속도가 빨라졌고 GraphQL을 장점을 살려 개발하고 있습니다.
 
-여러분들도 다음 프로젝트에 GraphQL을 사용한다면
+여러분들도 다음 프로젝트에 스프링 부트와 함께 GraphQL을 사용하셔야 한다면
 Spring for GraphQL을 사용해 보시는 거는 어떨까요?
 
 ----
