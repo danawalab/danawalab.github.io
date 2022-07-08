@@ -55,7 +55,7 @@ stand alone 으로 설치하는 것이 아닌 docker를 이용하여 설치를 �
 ### 마이그레이션 
 
 #### 1. 기존 데이터를 백업
-기존에 있던 데이터들이 삭제가 되면 안되기 때문에 백업을 진행합니다. 백업을 따로 gz 형태로 압축을 해둔다면 더 좋습니다.
+기존에 있던 데이터들이 삭제가 되면 안되기 때문에 백업을 진행합니다. 백업하는 방법까지는 기술하지 않겠습니다.
 
 #### 2. git clone https://github.com/RocketChat/docker-mmap-to-wiredtiger-migration ~/rocketchat-migration
 
