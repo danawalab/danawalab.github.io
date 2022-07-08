@@ -211,7 +211,7 @@ from keras_preprocessing import image
 ## 테스트 
 
 테스트 할 이미지는 아래와 같습니다.
-- [이미지](https://img.danawa.com/prod_img/500000/093/416/img/10416093_1.jpg)
+![이미지](https://img.danawa.com/prod_img/500000/093/416/img/10416093_1.jpg)
 
 약 12만건의 데이터를 학습시켜 유사한 이미지 10개를 뽑아보겠습니다.
 
@@ -229,13 +229,13 @@ from keras_preprocessing import image
 ![이미지1](http://img.danawa.com/prod_img/500000/406/564/img/13564406_1.jpg)
 ![이미지2](http://img.danawa.com/prod_img/500000/088/904/img/15904088_1.jpg)
 ![이미지3](http://img.danawa.com/prod_img/500000/896/903/img/15903896_1.jpg)
-![이미지4](http://img.danawa.com/prod_img/500000/855/260/img/15260855_1.jpg)
-![이미지5](http://img.danawa.com/prod_img/500000/345/218/img/6218345_1.jpg)
-![이미지6](http://img.danawa.com/prod_img/500000/669/976/img/13976669_1.jpg)
-![이미지7](http://img.danawa.com/prod_img/500000/321/844/img/6844321_1.jpg)
-![이미지8](http://img.danawa.com/prod_img/500000/871/169/img/12169871_1.jpg)
-![이미지9](http://img.danawa.com/prod_img/500000/925/354/img/13354925_1.jpg)
-![이미지10](http://img.danawa.com/prod_img/500000/032/390/img/6390032_1.jpg)
+- [이미지4](http://img.danawa.com/prod_img/500000/855/260/img/15260855_1.jpg)
+- [이미지5](http://img.danawa.com/prod_img/500000/345/218/img/6218345_1.jpg)
+- [이미지6](http://img.danawa.com/prod_img/500000/669/976/img/13976669_1.jpg)
+- [이미지7](http://img.danawa.com/prod_img/500000/321/844/img/6844321_1.jpg)
+- [이미지8](http://img.danawa.com/prod_img/500000/871/169/img/12169871_1.jpg)
+- [이미지9](http://img.danawa.com/prod_img/500000/925/354/img/13354925_1.jpg)
+- [이미지10](http://img.danawa.com/prod_img/500000/032/390/img/6390032_1.jpg)
 
 ## 마무리
 
