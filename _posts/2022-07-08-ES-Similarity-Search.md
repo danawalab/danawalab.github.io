@@ -3,8 +3,8 @@ layout: post
 title: "엘라스틱서치 유사 이미지 검색"
 description: "엘라스틱서치로 유사 이미지 검색하는 방법을 소개합니다."
 date: 2022.07.08.
-writer: "장민규"
-categories: Common
+writer: "선지호"
+categories: Elastic
 ---
 
 ## 소개
