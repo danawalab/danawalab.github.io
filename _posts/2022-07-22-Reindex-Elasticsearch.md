@@ -54,9 +54,7 @@ POST _reindex?wait_for_completion=false&slices=auto
 
 ##### - 서버 스펙 : Intel(R) Xeon(R) Gold 6244 CPU @ 3.60GHz , 32 코어, 메모리 약 263GB
 
-샤드 수가 reindex의 속도에 미치는 영향이 생각보다 강했습니다. 진행 상황을 다시 kibana stack mornitoring을 통해 확인해보면
-
-I/O Operation Rates, CPU나 LOAD등 속도와 부하를 확연하게 확인할 수 있었습니다.
+샤드 수가 reindex의 속도에 미치는 영향이 생각보다 강했습니다. 진행 상황을 다시 kibana stack mornitoring을 통해 확인해보면 I/O Operation Rates, CPU나 LOAD등 속도와 부하가 증가한 것을 알 수 있었습니다.
 정리해보면 샤드 수가 늘어날수록 속도가 증가하다고 볼 수 있습니다.
 
 ![/images/2022-07-22-Reindex-Elasticsearch/image1.png](/images/2022-07-22-Reindex-Elasticsearch/image1.png)
@@ -85,9 +83,8 @@ replica는 엘라스틱서치에서 샤드의 고가용성 및 장애 시 복원
 
 앞서 진행했던 내용으로 reindex 정책을 규정해본다면, 다음과 같습니다.
 
-##### 1) 샤드 수는 많을수록 빠르다. 하지만 그만큼 부하가 커진다.
-
-##### 2) 시작 레플리카는 0으로 셋팅한다.
+- 1) 샤드 수는 많을수록 빠르다. 하지만 그만큼 부하가 커진다.
+- 2) 시작 레플리카는 0으로 셋팅한다.
 
 
 속도를 빠르게 올리는 방법은 알았는데, 얼만큼의 속도가 적정할까요? 여기에선 azure에서 다음과 같이 테스트한 내용을 참고했습니다. (Tuning data ingestion performance for Elasticsearch on Azure)
