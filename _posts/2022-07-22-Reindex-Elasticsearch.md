@@ -7,7 +7,7 @@ writer: "반윤성"
 categories: Elastic
 ---
 
-<iframe src="https://giphy.com/embed/nK0YXe7YrFNb390uZc" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<iframe src="https://giphy.com/embed/feoIvi3j0MxcFTazV8" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 ## Elasticsearch Reindex ?
 
