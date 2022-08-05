@@ -4,12 +4,12 @@ title: "Spring for GraphQL"
 description: "Spring for GraphQL에 대해 알아보도록 하겠습니다."
 date: 2022.06.06.
 writer: "장민규"
-categories: Spring
+categories: Common
 ---
 
 ## 소개
-안녕하세요 이번에는 최근에 Spring에서 공식 릴리즈한 Spring for GraphQL에 대해 알아보도록 하겠습니다.
-![Spring-for-GraphQL](/images/2022-06-06-Spring-for-GraphQL/40.PNG)
+안녕하세요 이번에는 최근에 Spring에서 공식 릴리즈한 Spring for GraphQL에 대해 알아보도록 하겠습니다.   
+![Spring-for-GraphQL](/images/2022-06-06-Spring-for-GraphQL/40.PNG)   
 
 - [graphql-java / graphql-java-spring](https://github.com/graphql-java/graphql-java-spring)
 - [graphql-java-kickstart / graphql-spring-boot](https://github.com/graphql-java-kickstart/graphql-spring-boot)
