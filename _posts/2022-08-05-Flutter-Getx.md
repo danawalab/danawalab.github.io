@@ -8,7 +8,7 @@ writer: "선요한"
 categories: Flutter
 ---
 
-<iframe src="https://mblogthumb-phinf.pstatic.net/20130628_109/boonsuck_1372409471077z3rza_GIF/%AC%D4%AC%DA%AC%E6%AC%DC%AC%DA-%AC%DC%AC%E0%AC%E4%AC%EF-%AC%A5%AC%D1%AC%DB-%AC%E1%AC%F1%AC%E4%AC%EE-539490.gif?type=w2" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<iframe src="https://mblogthumb-phinf.pstatic.net/20130628_109/boonsuck_1372409471077z3rza_GIF/%AC%D4%AC%DA%AC%E6%AC%DC%AC%DA-%AC%DC%AC%E0%AC%E4%AC%EF-%AC%A5%AC%D1%AC%DB-%AC%E1%AC%F1%AC%E4%AC%EE-539490.gif?type=w2" height="300" width="500" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 ## Flutter란
 
@@ -20,7 +20,11 @@ Flutter의 상태관리에 대한 설명에 앞서 Flutter가 무엇인지 알�
 
 그렇다면 Flutter에서 상태관리가 필요한 배경이 무엇인지 알아보겠습니다. Flutter는 모든 것이 'Widget'으로 이루어져 있습니다. Java에서 모든 객체가 Object라는 클래스를 상속받듯이 Flutter에서 UI와 관련된 모든 것은 Widget입니다. 화면 역시 두가지의 Widget으로 분류할 수 있습니다. 
 
-![1](/images/2022-08-05-Flutter-Getx/1.jpg)
+![1](/images/2022-08-05-Flutter-Getx/1.JPG)
+
+```html
+<img src="/images/2022-08-05-Flutter-Getx/1.JPG" alt="drawing" width="800"/>
+```
 
 1. StatelessWidget
 2. StatefulWidget
@@ -93,6 +97,8 @@ StatelessWidget은 클래스 내에 생성자와 build() 함수 하나만 있습
 
 ![1](/images/2022-08-05-Flutter-Getx/3.gif)
 
+<img src="/images/2022-08-05-Flutter-Getx/3.gif" alt="drawing" width="500"/>
+
 
 
 ## 상태 관리란
@@ -100,6 +106,8 @@ StatelessWidget은 클래스 내에 생성자와 build() 함수 하나만 있습
 상태관리는 UI에서 실시간으로 변하는 여러 데이터들의 상태를 효율적으로 관리하기 위한 개념입니다. 예시를 들어 설명해보겠습니다. 
 
 ![2](/images/2022-08-05-Flutter-Getx/2.jpg)
+
+
 
 위의 화면을 보면 여러 데이터를 확인할 수 있습니다. 
 
@@ -132,6 +140,8 @@ Flutter가 디폴트로 제공하는 StatefulWidget을 통해서도 기능은 �
 Flutter에서 상태관리의 필요성에 대해 알아보았으니 이제 상태관리를 적용하는 방법을 알아보겠습니다. React에서 대표적인 상태관리 라이브러리가 Redux가 있다면 Flutter에서는 [GetX](https://pub.dev/packages/get/install)를 주로 사용합니다. 
 
 ![1](/images/2022-08-05-Flutter-Getx/4.jpg)
+
+<img src="/images/2022-08-05-Flutter-Getx/4.JPG" alt="drawing" width="800"/>
 
 #### 라이브러리 사용 설정
 
@@ -238,6 +248,8 @@ class MyHomePage extends StatelessWidget {
 
 ![1](/images/2022-08-05-Flutter-Getx/5.gif)
 
+<img src="/images/2022-08-05-Flutter-Getx/5.gif" alt="drawing" width="500"/>
+
 
 
 
@@ -331,6 +343,8 @@ class MyHomePage extends StatelessWidget {
 
 ![1](/images/2022-08-05-Flutter-Getx/6.gif)
 
+<img src="/images/2022-08-05-Flutter-Getx/6.gif" alt="drawing" width="500"/>
+
 
 
 #### 반응형 상태 관리의 추가 기능 - worker
@@ -389,6 +403,8 @@ class ReactiveController extends GetxController {
 
 ![1](/images/2022-08-05-Flutter-Getx/7.gif)
 
+<img src="/images/2022-08-05-Flutter-Getx/7.gif" alt="drawing" width="500"/>
+
 
 
 #### Get.find() 를 보다 간단하게 사용하는 방법
@@ -443,11 +459,17 @@ SSOK앱에 GetX를 적용한 코드의 일부분입니다.
 
 ![1](/images/2022-08-05-Flutter-Getx/8.jpg)
 
+<img src="/images/2022-08-05-Flutter-Getx/8.JPG" alt="drawing" width="800"/>
+
 - 달력 페이지의 데이터를 관리하는 controller입니다.
 
 ![1](/images/2022-08-05-Flutter-Getx/9.jpg)
 
+<img src="/images/2022-08-05-Flutter-Getx/8.JPG" alt="drawing" width="800"/>
+
 ![1](/images/2022-08-05-Flutter-Getx/10.jpg)
+
+<img src="/images/2022-08-05-Flutter-Getx/8.JPG" alt="drawing" width="800"/>
 
 - 달력 페이지에서 controller를 구독하고 있는 모습입니다. 
 
@@ -457,12 +479,14 @@ SSOK앱에 GetX를 적용한 코드의 일부분입니다.
 
 ![1](/images/2022-08-05-Flutter-Getx/11.gif)
 
+<img src="/images/2022-08-05-Flutter-Getx/11.gif" alt="drawing" width="500"/>
+
 
 
 
 ## 정리
 
-Flutter에서 GetX 라이브러리를 통한 상태관리에 대해서 알아보았습니다. Flutter로 어느 애플리케이션을 개발해도 상태관리는 중요한 부분이기 때문에 정리해보았습니다. GetX말고도 Provider나 Bloc 패턴이 존재하지만 현재 시점에서 GetX가 가장 문법이 단순해서 사용하기 편하고 상태관리 이외의 페이지 간의 네비게이션이나 API 기능 등을 가지고 있어서 인기가 많은 것 같습니다. 
+Flutter에서 GetX 라이브러리를 통한 상태관리에 대해서 알아보았습니다. GetX말고도 Provider나 Bloc 패턴이 존재하지만 현재 시점에서 GetX가 간단한 문법과 여러가지 기능들을 가지고 있어서 가장 인기가 많은 것 같습니다. 
 
 
 
