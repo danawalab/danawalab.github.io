@@ -4,7 +4,7 @@ title: "Spring for GraphQL"
 description: "Spring for GraphQL에 대해 알아보도록 하겠습니다."
 date: 2022.06.06.
 writer: "장민규"
-categories: Common
+categories: Spring
 ---
 
 ## 소개
@@ -337,3 +337,8 @@ Spring for GraphQL을 사용해 보시는 거는 어떨까요?
 참고:
 - https://docs.spring.io/spring-graphql/docs/current/reference/html/
 - https://fe-developers.kakaoent.com/2022/220113-designing-graphql-mutation/
+
+----
+
+카테고리 변경 시 댓글이 사라져서 이렇게 남깁니다, 댓글 감사합니다!   
+![comment](/images/2022-06-06-Spring-for-GraphQL/comment.PNG)
