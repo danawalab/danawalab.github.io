@@ -30,7 +30,7 @@ Hibernate ORM에서 지원하지 않는 추가 유형 및 범용 유틸리티를
 
 ### 사용법
 
-![application.yml](../images/2022-08-05-Jpa_Json-Type/1.PNG)   
+![application.yml](/images/2022-08-05-Jpa_Json-Type/1.PNG)   
 application.yml에서 jpa 설정은 위와 같이 지정하고 설명하겠습니다
 
 **해당 라이브러리에서 JSON Type은 공식적으로 MySQL과 PostgreSQL 그리고 Oracle 3개만 지원하고 있습니다.**   
