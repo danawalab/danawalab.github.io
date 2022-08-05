@@ -4,7 +4,7 @@ title: "Spring for GraphQL"
 description: "Spring for GraphQL에 대해 알아보도록 하겠습니다."
 date: 2022.06.06.
 writer: "장민규"
-categories: Spring
+categories: Common
 ---
 
 ## 소개
