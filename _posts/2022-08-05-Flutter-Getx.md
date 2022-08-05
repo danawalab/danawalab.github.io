@@ -22,10 +22,6 @@ Flutter의 상태관리에 대한 설명에 앞서 Flutter가 무엇인지 알�
 
 ![1](/images/2022-08-05-Flutter-Getx/1.JPG)
 
-```html
-<img src="/images/2022-08-05-Flutter-Getx/1.JPG" alt="drawing" width="800"/>
-```
-
 1. StatelessWidget
 2. StatefulWidget
 
@@ -95,8 +91,6 @@ StatelessWidget은 클래스 내에 생성자와 build() 함수 하나만 있습
 
 ##### Stateful Widget 코드예시 결과
 
-![1](/images/2022-08-05-Flutter-Getx/3.gif)
-
 <img src="/images/2022-08-05-Flutter-Getx/3.gif" alt="drawing" width="500"/>
 
 
@@ -105,9 +99,7 @@ StatelessWidget은 클래스 내에 생성자와 build() 함수 하나만 있습
 
 상태관리는 UI에서 실시간으로 변하는 여러 데이터들의 상태를 효율적으로 관리하기 위한 개념입니다. 예시를 들어 설명해보겠습니다. 
 
-![2](/images/2022-08-05-Flutter-Getx/2.jpg)
-
-
+<img src="/images/2022-08-05-Flutter-Getx/2.JPG" alt="drawing" width="500"/>
 
 위의 화면을 보면 여러 데이터를 확인할 수 있습니다. 
 
@@ -139,9 +131,7 @@ Flutter가 디폴트로 제공하는 StatefulWidget을 통해서도 기능은 �
 
 Flutter에서 상태관리의 필요성에 대해 알아보았으니 이제 상태관리를 적용하는 방법을 알아보겠습니다. React에서 대표적인 상태관리 라이브러리가 Redux가 있다면 Flutter에서는 [GetX](https://pub.dev/packages/get/install)를 주로 사용합니다. 
 
-![1](/images/2022-08-05-Flutter-Getx/4.jpg)
-
-<img src="/images/2022-08-05-Flutter-Getx/4.JPG" alt="drawing" width="800"/>
+<img src="/images/2022-08-05-Flutter-Getx/4.JPG" alt="drawing" width="900"/>
 
 #### 라이브러리 사용 설정
 
@@ -246,8 +236,6 @@ class MyHomePage extends StatelessWidget {
 
 #### 결과
 
-![1](/images/2022-08-05-Flutter-Getx/5.gif)
-
 <img src="/images/2022-08-05-Flutter-Getx/5.gif" alt="drawing" width="500"/>
 
 
@@ -341,8 +329,6 @@ class MyHomePage extends StatelessWidget {
 
 #### 결과
 
-![1](/images/2022-08-05-Flutter-Getx/6.gif)
-
 <img src="/images/2022-08-05-Flutter-Getx/6.gif" alt="drawing" width="500"/>
 
 
@@ -401,9 +387,7 @@ class ReactiveController extends GetxController {
 
 #### 결과
 
-![1](/images/2022-08-05-Flutter-Getx/7.gif)
-
-<img src="/images/2022-08-05-Flutter-Getx/7.gif" alt="drawing" width="500"/>
+<img src="/images/2022-08-05-Flutter-Getx/7.gif" alt="drawing" width="400"/>
 
 
 
@@ -457,19 +441,13 @@ controller.increase();
 
 SSOK앱에 GetX를 적용한 코드의 일부분입니다.
 
-![1](/images/2022-08-05-Flutter-Getx/8.jpg)
-
-<img src="/images/2022-08-05-Flutter-Getx/8.JPG" alt="drawing" width="800"/>
+<img src="/images/2022-08-05-Flutter-Getx/8.JPG" alt="drawing" width="600"/>
 
 - 달력 페이지의 데이터를 관리하는 controller입니다.
 
-![1](/images/2022-08-05-Flutter-Getx/9.jpg)
+<img src="/images/2022-08-05-Flutter-Getx/9.JPG" alt="drawing" width="600"/>
 
-<img src="/images/2022-08-05-Flutter-Getx/8.JPG" alt="drawing" width="800"/>
-
-![1](/images/2022-08-05-Flutter-Getx/10.jpg)
-
-<img src="/images/2022-08-05-Flutter-Getx/8.JPG" alt="drawing" width="800"/>
+<img src="/images/2022-08-05-Flutter-Getx/10.JPG" alt="drawing" width="600"/>
 
 - 달력 페이지에서 controller를 구독하고 있는 모습입니다. 
 
@@ -477,9 +455,7 @@ SSOK앱에 GetX를 적용한 코드의 일부분입니다.
 
 #### 결과
 
-![1](/images/2022-08-05-Flutter-Getx/11.gif)
-
-<img src="/images/2022-08-05-Flutter-Getx/11.gif" alt="drawing" width="500"/>
+<img src="/images/2022-08-05-Flutter-Getx/11.gif" alt="drawing" width="400"/>
 
 
 
