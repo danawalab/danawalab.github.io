@@ -28,7 +28,8 @@ public class JwtInterceptor implements WebGraphQlInterceptor {
     public Mono<WebGraphQlResponse> intercept(WebGraphQlRequest request, Chain chain) {
         
         log.info("request = {}". request);
-        log.info("request Header = {}", request.getHeaders());
+        log.info("request getDocument = {}". request.getDocument());
+        log.info("request getHeaders = {}", request.getHeaders());
         
         return chain.next(request);
     }
