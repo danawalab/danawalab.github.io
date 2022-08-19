@@ -101,7 +101,7 @@ Reject가 발생하지 않는다면 0의 값으로 일정합니다.
 
 difference 값이 0보다 커진다는 것은 최근 1분간 Reject exception의 발생을 의미합니다.
 
-![/images/2022-08-19-Elasticsearch-Search-Reject-Monitoring/2.png](/images/2022-08-19-Elasticsearch-Search-Reject-Monitoring/2.png)
+![/images/2022-08-19-Elasticsearch-Search-Reject-Monitoring/3.png](/images/2022-08-19-Elasticsearch-Search-Reject-Monitoring/3.png)
 
 alert 조건을 0.5 이상으로 설정하였습니다. Reject Exception이 1건이라도 발생하면 텔레그램으로 메시지를 전송합니다. 
 
