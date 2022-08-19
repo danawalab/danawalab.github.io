@@ -2,7 +2,7 @@
 layout: post
 title:  "Elasticsearch Reject Exception 모니터링"
 description: "다나와의 ES Reject Exception 모니터링 방법을 소개합니다."
-date:   2022.08.19.
+date:   2022.08.19
 writer: "김윤기"
 categories: Elastic
 ---
