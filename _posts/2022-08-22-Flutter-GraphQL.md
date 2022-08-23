@@ -21,7 +21,7 @@ categories: Flutter
 dependencies:
   flutter:
     sdk: flutter
-  graphql_flutter: ^3.0.0						
+  graphql_flutter: ^5.1.0
 ```
 
 다른 라이브러리들과 동일하게 pubspec.yaml 파일에 추가해줍니다. 
@@ -135,7 +135,7 @@ static String fetchUsers = """
 
 Widget 방식은 `Query`, `Mutation`, `Subscription` 위젯을 사용해 구현하는 방식입니다.
 
-1. Query
+- Query
 
 ```dart
 Widget build(BuildContext context) {
@@ -162,7 +162,7 @@ option 인자에 들어오는 QueryOption은 document와 variables이라는 두�
 
 
 
-2. Mutation
+- Mutation
 
 ```dart
 Widget build(BuildContext context) {
@@ -198,7 +198,7 @@ Mutation 위젯도 option과 builder라는 두개의 필수 인자를 갖고 있
 
 
 
-3. Subscription
+- Subscription
 
 ```dart
  final WebSocketLink websocketLink = WebSocketLink(
@@ -246,7 +246,7 @@ Subscription 위젯도 option과 builder라는 두개의 필수 인자를 갖고
 
 Method 방식은 `query()`, `muate()`, `subscribe()` 함수를 사용해 구현하는 방식입니다.
 
-1. Query
+- Query
 
 ```dart
 var queryResult = graphQLClient.query(QueryOptions(
@@ -264,7 +264,7 @@ GraphQL 클라이언트의 query() 함수를 통해 결과를 반환합니다.
 
 
 
-2. Mutation
+- Mutation
 
 ```dart
 graphQLClient.mutate(MutationOptions(
@@ -292,7 +292,7 @@ GraphQL 클라이언트의 mutate() 함수를 통해 결과를 반환합니다. 
 
 
 
-3. Subscription
+- Subscription
 
 ```dart
 Stream<dynamic> _logStream = graphQLClient.subscribe(SubscriptionOptions(
