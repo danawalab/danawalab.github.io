@@ -6,6 +6,8 @@ description: "GetX를 이용한 Flutter 상태관리에 대해 알아보겠습�
 date:   2022.08.05.
 writer: "선요한"
 categories: Flutter
+toc: true
+toc_label: "목차"
 ---
 
 <iframe src="https://mblogthumb-phinf.pstatic.net/20130628_109/boonsuck_1372409471077z3rza_GIF/%AC%D4%AC%DA%AC%E6%AC%DC%AC%DA-%AC%DC%AC%E0%AC%E4%AC%EF-%AC%A5%AC%D1%AC%DB-%AC%E1%AC%F1%AC%E4%AC%EE-539490.gif?type=w2" height="300" width="500" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
@@ -471,6 +473,6 @@ Flutter에서 GetX 라이브러리를 통한 상태관리에 대해서 알아보
 
 
 ## 참고 자료
-- https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9F%AC%ED%84%B0
-- https://joooosan.tistory.com/entry/Flutter-3%ED%83%84-Flutter%EC%9D%98-UI%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC?category=391758
-- https://fl0wering.tistory.com/84
+- <https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9F%AC%ED%84%B0>
+- <https://joooosan.tistory.com/entry/Flutter-3%ED%83%84-Flutter%EC%9D%98-UI%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC?category=391758>
+- <https://fl0wering.tistory.com/84>
