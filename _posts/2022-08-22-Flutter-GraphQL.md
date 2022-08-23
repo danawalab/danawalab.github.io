@@ -5,9 +5,6 @@ description: "Flutter에서 GraphQL 사용하는 방법에 대해 알아보겠�
 date:   2022.08.22.
 writer: "선요한"
 categories: Flutter
-toc: true
-toc_sticky: true
-toc_label: "목차"
 ---
 
 ## GraphQL이란	
