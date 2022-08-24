@@ -9,7 +9,7 @@ categories: Common
 
 ## Self-hosted Runner란 	
 
-Self-hosted Runner란 Github Action에서 사용자가 지정하는 로컬 컴퓨팅 자원으로 빌드를 수행하도록 설정하는 기능입니다. 주로 배포작업이 많아 배포가 지체되거나 서버 비용이 부담되는 경우 유용한 기능입니다. 쏙 프로젝트의 경우 macOS 기반의 Github-Hosted Runner의 비용이 부담이 되었기 때문에 iOS앱을 배포하는 목적으로 맥북을 Self-hosted Runner로 등록하여 사용하게 되었습니다.
+Self-hosted Runner란 Github Action에서 사용자가 지정하는 로컬 컴퓨팅 자원으로 빌드를 수행하도록 설정하는 기능입니다. 주로 배포작업이 많아 배포가 지체되거나 서버 비용이 부담되는 경우 유용한 기능입니다. 쏙 프로젝트의 경우 macOS 기반의 Github-Hosted Runner의 비용이 부담이 되었기 때문에 iOS앱을 배포하는 목적으로 맥북을 Self-hosted Runner로 등록하여 사용했습니다.
 
  
 
@@ -102,6 +102,10 @@ develop 브랜치에 #all 혹은 #ios라는 메세지를 포함한 커밋메세�
 
 
 
+등록한 self-hosted runner가 잘 동작하하는 것을 확인할 수 있습니다. 
+
+
+
 
 ## 정리
 
@@ -112,6 +116,5 @@ Self-Hosted Runner의 장점으로는 Github-hosted Runner와 달리 사용 비�
 
 ## 참고 자료
 - <https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners>
-- <https://github.com/syh39/syh39.github.io/settings/actions/runners/new>
 - <https://mildwhale.github.io/2021-04-24-build-machine-with-m1-macmini/>
 - <https://www.hahwul.com/2022/07/05/macos-github-action-runner/>
