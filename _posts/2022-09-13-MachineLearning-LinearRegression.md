@@ -232,7 +232,54 @@ x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 y = [11, 22, 33, 44, 53, 66, 77, 87, 95]
 
-## 3.1 keras를 이용한 선형 회귀 구현
+## 3.1 TensorFlow를 이용한 선형 회귀 구현
+
+- 임의의 w와 b의 초기값을 정합니다.
+- 학습률을 0.01로 지정합니다.
+- 훈련 횟수를 300으로 지정합니다.
+- tensorflow의 GradientTape을 통해 지속적인 변수의 값의 변화를 저장합니다.
+- 결과로 나온 w와 b값을 통한 가설을 세워 예측을 해봅니다.
+
+```python
+import tensorflow as tf
+ 
+x = [1, 2, 3, 4, 5, 6, 7, 8, 9]  # 공부하는 시간
+y = [11, 22, 33, 44, 53, 66, 77, 87, 95]  # 각 공부하는 시간에 맵핑되는 성적
+ 
+# w와 b의 초기값을 임의로 지정
+w = tf.Variable(10.0)
+b = tf.Variable(1.0)
+ 
+learning_rate = 0.01 # 학습률
+# 훈련 횟수는 300번으로 지정했습니다.
+for i in range(300):
+    # GradientTape은 보통 with와 같이 쓰이는데
+    # with 안의 변수들의 변화되는 정보를 tape에 기록하고
+    # 이후에 tape의 gradient 메서드를 호출하여 경사도(미분)값을 구합니다.
+    with tf.GradientTape() as tape:
+        hypothesis = w * x + b  # 가설
+        cost = tf.reduce_mean(tf.square(hypothesis - y))    # 비용
+ 
+    W_grad, b_grad = tape.gradient(cost, [w, b])
+    # assign_sub() 메서드는 해당 값을 빼서 다시 할당 해줍니다.
+    # python의 A -= B와 동일합니다.
+    w.assign_sub(learning_rate * W_grad)
+    b.assign_sub(learning_rate * b_grad)
+ 
+print(f"w: {w.numpy()} | b: {b.numpy()} | cost: {cost:.6f}")
+# w: 10.669668197631836 | b: 0.8915395140647888 | cost: 1.061446
+ 
+# 예측 함수
+def predict(w, b, x):
+    return w * x + b
+ 
+print(predict(w.numpy(), b.numpy(), 9.5))
+# 102.25338739156723
+```
+
+
+
+## 3.2 keras를 이용한 선형 회귀 구현
 
 케라스로 모델을 만드는 기본적인 형식은 다음과 같습니다.
 
@@ -286,7 +333,7 @@ plt.plot(x, model.predict(x), 'b', x, y, 'k.')
 
 
 
-## 3.2 사이킷런(scikit-learn)을 이용한 선형 회귀 구현
+## 3.3 사이킷런(scikit-learn)을 이용한 선형 회귀 구현
 
 사이킷런을 이용해 구현하는 방법은 단순합니다.
 
