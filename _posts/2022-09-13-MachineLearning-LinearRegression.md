@@ -10,7 +10,7 @@ categories: MachineLearning
 
 # 1. 선형 회귀(Linear Regression)의 개념
 
-![image-20220913103545466](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913103545466.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103545466.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103545466.png)
 
 출처: 나무위키
 
