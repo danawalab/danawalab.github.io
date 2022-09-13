@@ -24,7 +24,7 @@ categories: MachineLearning
 
 ### 1.1 단순 선형 회귀 분석
 
-![image-20220913103456210](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913103456210.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103456210.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103456210.png)
 
 단순 선형 회귀 분석은 독립 변수가 x 한 개인 경우를 말합니다.
 
@@ -33,7 +33,7 @@ categories: MachineLearning
 
 ### 1.2 다중 선형 회귀 분석
 
-![image-20220913103448893](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913103448893.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103448893.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103448893.png)
 
 다중 선형 회귀 분석은 독립 변수 x가 여러개인 경우를 말합니다.
 
@@ -48,7 +48,7 @@ categories: MachineLearning
 
 - 어떤 학생의 공부 시간에 따라서 다음과 같은 점수를 얻었다는 데이터가 있을 때, 해당 데이터를 이용해서 이 학생이 6시간, 7시간, 8시간을 공부하였을 때의 성적을 예측해 보는 문제입니다.
 
-![image-20220913103359429](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913103359429.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103359429.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103359429.png)
 
 
 
@@ -58,7 +58,7 @@ x와 y의 관계를 유추하기 위해서 수학적으로 식을 세워보게 �
 
 - **H(x) = wx + b**
 
-![image-20220913103659979](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913103659979.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103659979.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103659979.png)
 
 위의 그림은 w와 b의 값에 따라서 그려지는 직선의 모습을 보여줍니다.
 
@@ -85,7 +85,7 @@ x와 y의 관계를 유추하기 위해서 수학적으로 식을 세워보게 �
 
 ### 2.2.1 평균 제곱 오차(Mean Sqared Error, MSE)
 
-![image-20220913103710118](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913103710118.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103710118.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103710118.png)
 
 y와 x의 관계를 가장 잘 나타내는 직선을 그린다는 것은 위의 그림에서 모든 점들과 위치적으로 가장 가까운 직선을 그린다는 것과 같습니다.
 
@@ -105,7 +105,7 @@ y와 x의 관계를 가장 잘 나타내는 직선을 그린다는 것은 위의
 
 평균 제곱 오차를 w와 b에 의한 **비용 함수(Cost function)**로 재정의해보면 다음과 같습니다.
 
-![image-20220913103857949](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913103857949.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103857949.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103857949.png)
 
 모든 점들과의 오차가 클 수록 평균 제곱 오차는 커지며, 오차가 작아질 수록 평균 제곱 오차는 작아집니다.
 
@@ -129,7 +129,7 @@ y와 x의 관계를 가장 잘 나타내는 직선을 그린다는 것은 위의
 
 경사 하강법을 이해하기 위해서 cost와 기울기 w와의 관계를 이해해보겠습니다.
 
-![image-20220913104111394](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913104111394.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104111394.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104111394.png)
 
 그림에서 주황색선은 y= 20x, 초록색선은 y=x 에 해당되는 직선입니다.
 
@@ -141,7 +141,7 @@ y와 x의 관계를 가장 잘 나타내는 직선을 그린다는 것은 위의
 
 이에 따라 w와 cost의 관계를 그래프로 표현하면 다음과 같습니다.
 
-![image-20220913104122678](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913104122678.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104122678.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104122678.png)
 
 기울기 w가 무한대로 커지면 커질 수록 cost의 값 또한 무한대로 커지고, 반대로 기울기 w가 무한대로 작아져도 cost의 값은 무한대로 커집니다.
 
@@ -153,13 +153,13 @@ y와 x의 관계를 가장 잘 나타내는 직선을 그린다는 것은 위의
 
 ### 2.3.1 경사 하강법(Gradient descent)
 
-![image-20220913104133676](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913104133676.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104133676.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104133676.png)
 
 기계는 임의의 랜덤값 w값을 정한 뒤에, 맨 아래의 볼록한 부분을 향해 점차 w의 값을 수정해나갑니다.
 
 경사 하강법은 미분의 개념인 한 점에서의 순간 변화율 또는 다른 표현으로는 접선의 기울기의 개념을 사용합니다.
 
-![image-20220913104148091](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913104148091.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104148091.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104148091.png)
 
 위의 그림에서 초록색 선은 w가 임의의 값을 가지게 되는 네 가지의 경우에 대해서, 그래프 상으로 접선의 기울기를 보여줍니다.
 
@@ -181,7 +181,7 @@ y와 x의 관계를 가장 잘 나타내는 직선을 그린다는 것은 위의
 
 비용(cost)를 최소화하는 w를 구하기 위해 w를 업데이트하는 식은 다음과 같습니다.
 
-![image-20220913104440402](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913104440402.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104440402.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104440402.png)
 
 - α(알파)는 learning rate(학습률)을 나타냅니다
   - 주로 0.01, 0.001등과 같이 작은 수를 통해 W의 변화량을 조절하는 목적으로 사용됩니다.
@@ -192,29 +192,29 @@ y와 x의 관계를 가장 잘 나타내는 직선을 그린다는 것은 위의
 
 현재 w에서 현재 w에서의 접선의 기울기를 빼는 행위가 어떤 의미가 있는지 알아보겠습니다.
 
-![image-20220913104509139](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913104509139.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104509139.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104509139.png)
 
 위의 그림은 접선의 기울기가 음수일 때, 0일 때, 양수일 때를 보여줍니다.
 
-![image-20220913104522166](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913104522166.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104522166.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104522166.png)
 
 '음수를 빼는 것'은 곧 '해당 값을 양수로 바꾸고 더하는 것'과 같습니다.
 
 결국 음수 기울기를 빼면 w의 값이 증가하게 되는데 이는 결과적으로 접선의 기울기가 0인 방향으로 w의 값이 조정됩니다.
 
-![image-20220913104534048](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913104534048.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104534048.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104534048.png)
 
 기울기가 양수면 w의 값이 감소하게 되는데 이는 결과적으로 기울기가 0인 방향으로 w의 값이 조정됩니다.
 
 결국, 아래의 수식은 접선의 기울기가 음수거나, 양수일 때 모두 접선의 기울기가 0인 방향으로 w의 값을 조정합니다.
 
-![image-20220913104440402](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913104440402.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104440402.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104440402.png)
 
 학습률(learning rate, α)는 w의 값을 변경할 때, 얼마나 크게 변경할지를 결정하며 0과 1사이의 값을 가지도록 합니다.
 
 학습률은 w를 그래프의 한 점으로 보고 얼마나 큰 폭으로 이동할지를 결정합니다.
 
-![image-20220913104612186](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913104612186.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104612186.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104612186.png)
 
 위의 그림은 학습률 α가 지나치게 높은 값을 가질 때, w의 값이 발산하는 상황을 보여줍니다.
 
@@ -282,7 +282,7 @@ print(model.predict([9.5]))
 plt.plot(x, model.predict(x), 'b', x, y, 'k.')
 ```
 
-![image-20220913104739275](../images/2022-09-13-MachineLearning-LinearRegression/image-20220913104739275.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104739275.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104739275.png)
 
 
 
