@@ -335,3 +335,4 @@ print(model.predict([[9.5]]))
 
 - https://wikidocs.net/21669
 - https://www.boostcourse.org/ai212/joinLectures/25072
+
