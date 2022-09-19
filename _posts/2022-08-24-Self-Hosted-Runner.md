@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Github Actions에 Self-hosted Runner 등록하기" 
-description: "Github Action에 Self-hosted Runner를 등록하는 방법에 대해 알아보겠습니다"
+description: "Github Actions에 Self-hosted Runner를 등록하는 방법에 대해 알아보겠습니다"
 date:   2022.08.24.
 writer: "선요한"
 categories: Common
@@ -9,13 +9,13 @@ categories: Common
 
 ## Self-hosted Runner란 	
 
-Self-hosted Runner란 Github Action에서 사용자가 지정하는 로컬 컴퓨팅 자원으로 빌드를 수행하도록 설정하는 기능입니다. 주로 배포작업이 많아 배포가 지체되거나 서버 비용이 부담되는 경우 유용한 기능입니다. 쏙 프로젝트의 경우 macOS 기반의 Github-Hosted Runner의 비용이 부담이 되었기 때문에 iOS앱을 배포하는 목적으로 맥북을 Self-hosted Runner로 등록하여 사용했습니다.
+Self-hosted Runner란 Github Actions에서 사용자가 지정하는 로컬 컴퓨팅 자원으로 빌드를 수행하도록 설정하는 기능입니다. 주로 배포작업이 많아 배포가 지체되거나 서버 비용이 부담되는 경우 유용한 기능입니다. 쏙 프로젝트의 경우 macOS 기반의 Github-Hosted Runner의 비용이 부담이 되었기 때문에 iOS앱을 배포하는 목적으로 맥북을 Self-hosted Runner로 등록하여 사용했습니다.
 
  
 
 ## 설정 방법
 
-Github Action을 사용하고자 하는 저장소에서 Settings - Actions - Runners로 이동합니다.
+Github Actions을 사용하고자 하는 저장소에서 Settings - Actions - Runners로 이동합니다.
 
 ![image](https://user-images.githubusercontent.com/54565079/186301036-88316be4-d540-4fd2-ad9f-447ae04fc4ed.png)
 
@@ -65,7 +65,7 @@ Github가 로컬머신에 접속하는 방식이 아닌 로컬머신에서 githu
 ./run.sh
 ```
 
-이제 workflows 디렉토리 안에 action 사용시 해당 self-hosted runner를 통해 빌드되도록 yaml 파일을 만들어주면 됩니다.  
+이제 workflows 디렉토리 안에 actions 사용시 해당 self-hosted runner를 통해 빌드되도록 yaml 파일을 만들어주면 됩니다.  
 
 ![image](https://user-images.githubusercontent.com/54565079/186335727-bc9a4d4e-a30b-4d84-8f88-126722b5fa32.png)
 
