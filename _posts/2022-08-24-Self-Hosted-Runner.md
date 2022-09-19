@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Github Action에 Self-hosted Runner 등록하기" 
+title:  "Github Actions에 Self-hosted Runner 등록하기" 
 description: "Github Action에 Self-hosted Runner를 등록하는 방법에 대해 알아보겠습니다"
 date:   2022.08.24.
 writer: "선요한"
