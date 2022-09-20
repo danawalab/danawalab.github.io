@@ -10,7 +10,7 @@ categories: MachineLearning
 
 # 1. 선형 회귀(Linear Regression)의 개념
 
-![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103545466.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103545466.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/regression1.png](/images/2022-09-13-MachineLearning-LinearRegression/regression1.png)
 
 출처: 나무위키
 
@@ -24,7 +24,7 @@ categories: MachineLearning
 
 ### 1.1 단순 선형 회귀 분석
 
-![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103456210.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103456210.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/simple-linear-regression.png](/images/2022-09-13-MachineLearning-LinearRegression/simple-linear-regression.png)
 
 단순 선형 회귀 분석은 독립 변수가 x 한 개인 경우를 말합니다.
 
@@ -33,7 +33,7 @@ categories: MachineLearning
 
 ### 1.2 다중 선형 회귀 분석
 
-![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103448893.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103448893.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/linear-regression.png](/images/2022-09-13-MachineLearning-LinearRegression/linear-regression.png)
 
 다중 선형 회귀 분석은 독립 변수 x가 여러개인 경우를 말합니다.
 
@@ -42,15 +42,9 @@ categories: MachineLearning
 
 # 2. 선형 회귀(Linear Regression) 분석의 과정
 
-단순 선형 회귀 예제를 통해서 문제를 풀어보며 분석에 필요한 개념들에 대해 설명하겠습니다.
+- 아래와 같은 데이터를 보면서 선형 회귀 분석에 필요한 개념들에 대해 설명하겠습니다.
 
-문제
-
-- 어떤 학생의 공부 시간에 따라서 다음과 같은 점수를 얻었다는 데이터가 있을 때, 해당 데이터를 이용해서 이 학생이 6시간, 7시간, 8시간을 공부하였을 때의 성적을 예측해 보는 문제입니다.
-
-![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103359429.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103359429.png)
-
-
+![/images/2022-09-13-MachineLearning-LinearRegression/regression2.png](/images/2022-09-13-MachineLearning-LinearRegression/regression2.png)
 
 ## 2.1 가설(Hypothesis)
 
@@ -58,7 +52,7 @@ x와 y의 관계를 유추하기 위해서 수학적으로 식을 세워보게 �
 
 - **H(x) = wx + b**
 
-![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103659979.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103659979.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/hypothesis1.png](/images/2022-09-13-MachineLearning-LinearRegression/hypothesis1.png)
 
 위의 그림은 w와 b의 값에 따라서 그려지는 직선의 모습을 보여줍니다.
 
@@ -72,8 +66,6 @@ x와 y의 관계를 유추하기 위해서 수학적으로 식을 세워보게 �
 
 머신 러닝은 w(가중치)와 b(편향)를 찾기 위해서 실제 값과 가설로부터 얻은 예측 값의 오차를 계산하는 식을 세우고, 이 값을 최소화하는 최적의 w와 b를 찾아냅니다.
 
-
-
 이때 실제 값과 예측 값에 대한 오차에 대한 식을 **목적 함수(Objective function)** 또는 **비용 함수(Cost function)** 또는 **손실 함수(Loss function)** 라고 부릅니다.
 
 - 엄밀히 말하면 함수의 값을 최소화하거나, 최대화하거나 하는 목적을 가진 함수를 목적 함수라고 합니다.
@@ -85,23 +77,29 @@ x와 y의 관계를 유추하기 위해서 수학적으로 식을 세워보게 �
 
 ### 2.2.1 평균 제곱 오차(Mean Sqared Error, MSE)
 
-![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103710118.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913103710118.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/cost1.png](/images/2022-09-13-MachineLearning-LinearRegression/cost1.png)
 
-y와 x의 관계를 가장 잘 나타내는 직선을 그린다는 것은 위의 그림에서 모든 점들과 위치적으로 가장 가까운 직선을 그린다는 것과 같습니다.
+w = 15, b = -10 의 그래프 입니다.
 
-오차는 주어진 데이터에서 각 x에서의 실제값 y와 위의 직선에서 예측하고 있는 H(x)값의 차이를 말합니다.
-
-즉 위의 그림에서 ↕는 각 점에서의 오차의 크기를 보여줍니다.
-
-오차를 줄여가면서 w와 b의 값을 찾아내기 위해서는 전체 오차의 크기를 구해야 합니다.
+- 오차는 주어진 데이터에서 각 x에서의 실제값 y와 위의 직선에서 예측하고 있는 H(x)값의 차이를 말합니다.
+- 즉, 위의 그림에서 빨간선은 각 점에서의 오차의 크기를 보여줍니다.
+- 오차를 줄여가면서 w와 b의 값을 찾아내기 위해서는 전체 오차의 크기를 구해야 합니다.
 
 오차의 크기를 측정하기 위한 가장 기본적인 방법은 각 오차를 모두 더하는 방법이 있습니다.
 
-그런데 수식적으로 단순히 '오차 = 실제값 - 예측값' 이라고 정의한 후에 모든 오차를 더하면 음수 오차도 있고, 양수 오차도 있으므로 오차의 절대적인 크기를 구할 수가 없습니다.
+위의 y = 15x - 10 직선이 예측한 예측값을 각각 실제값으로부터 오차를 계산하여 표를 만들어보면 아래와 같습니다.
 
-그래서 모든 오차를 제곱하여 더하는 방법을 사용합니다.
+![/images/2022-09-13-MachineLearning-LinearRegression/cost2.png](/images/2022-09-13-MachineLearning-LinearRegression/cost2.png)
 
-이때 데이터의 개수인 n으로 나누면, 오차의 제곱합에 대한 평균을 구할 수 있는데 이를 **평균 제곱 오차(Mean Squered Error, MSE)**라고 합니다.
+- 수식적으로 단순히 '오차 = 실제값 - 예측값' 이라고 정의한 후에 모든 오차를 더하면 음수 오차도 있고, 양수 오차도 있으므로 오차의 절대적인 크기를 구할 수가 없습니다.
+- 그래서 모든 오차를 제곱하여 더하는 방법을 사용합니다.
+- 이때 데이터의 개수인 n으로 나누면, 오차의 제곱합에 대한 평균을 구할 수 있는데 이를 **평균 제곱 오차(Mean Squered Error, MSE)**라고 합니다.
+
+이를 수식으로 표현하면 아래와 같습니다.
+
+![/images/2022-09-13-MachineLearning-LinearRegression/cost3.png](/images/2022-09-13-MachineLearning-LinearRegression/cost3.png)
+
+
 
 평균 제곱 오차를 w와 b에 의한 **비용 함수(Cost function)**로 재정의해보면 다음과 같습니다.
 
@@ -119,21 +117,15 @@ y와 x의 관계를 가장 잘 나타내는 직선을 그린다는 것은 위의
 
 이때 사용되는 알고리즘을 **옵티마이저(Optimizer)** 또는 **최적화 알고리즘**이라고 부릅니다.
 
-
-
-그리고 이 옵티마이저를 통해 적절한 w와 b를 찾아내는 과정을 머신 러닝에서 훈련(training) 또는 학습(learning)이라고 부릅니다.
+옵티마이저를 통해 적절한 w와 b를 찾아내는 과정을 머신 러닝에서 훈련(training) 또는 학습(learning)이라고 부릅니다.
 
 여기서는 가장 기본적인 옵티마이저 알고리즘인 경사 하강법(Gradient Descent)에 대해서 설명합니다.
 
-
-
 경사 하강법을 이해하기 위해서 cost와 기울기 w와의 관계를 이해해보겠습니다.
 
-![/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104111394.png](/images/2022-09-13-MachineLearning-LinearRegression/image-20220913104111394.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/optimizer.png](/images/2022-09-13-MachineLearning-LinearRegression/optimizer.png)
 
-그림에서 주황색선은 y= 20x, 초록색선은 y=x 에 해당되는 직선입니다.
-
-↕는 각 점에서의 실제값과 두 직선의 예측값과의 오차를 보여줍니다.
+빨간선은 각 점에서의 실제값과 두 직선의 예측값과의 오차를 보여줍니다.
 
 기울기가 지나치게 크면 실제값과 예측값의 오차가 커지고, 기울기가 지나치게 작아도 실제값과 예측값의 오차가 커집니다.
 
