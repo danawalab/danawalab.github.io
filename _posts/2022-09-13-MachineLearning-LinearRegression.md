@@ -77,6 +77,8 @@ x와 y의 관계를 유추하기 위해서 수학적으로 식을 세워보게 �
 
 ### 2.2.1 평균 제곱 오차(Mean Sqared Error, MSE)
 
+![/images/2022-09-13-MachineLearning-LinearRegression/hypothesis1.png](/images/2022-09-13-MachineLearning-LinearRegression/hypothesis1.png)
+
 ![/images/2022-09-13-MachineLearning-LinearRegression/cost1.png](/images/2022-09-13-MachineLearning-LinearRegression/cost1.png)
 
 w = 15, b = -10 의 그래프 입니다.
@@ -89,7 +91,7 @@ w = 15, b = -10 의 그래프 입니다.
 
 위의 y = 15x - 10 직선이 예측한 예측값을 각각 실제값으로부터 오차를 계산하여 표를 만들어보면 아래와 같습니다.
 
-![/images/2022-09-13-MachineLearning-LinearRegression/cost2.png](/images/2022-09-13-MachineLearning-LinearRegression/cost2.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/cost2.PNG](/images/2022-09-13-MachineLearning-LinearRegression/cost2.PNG)
 
 - 수식적으로 단순히 '오차 = 실제값 - 예측값' 이라고 정의한 후에 모든 오차를 더하면 음수 오차도 있고, 양수 오차도 있으므로 오차의 절대적인 크기를 구할 수가 없습니다.
 - 그래서 모든 오차를 제곱하여 더하는 방법을 사용합니다.
@@ -97,7 +99,7 @@ w = 15, b = -10 의 그래프 입니다.
 
 이를 수식으로 표현하면 아래와 같습니다.
 
-![/images/2022-09-13-MachineLearning-LinearRegression/cost3.png](/images/2022-09-13-MachineLearning-LinearRegression/cost3.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/cost3.PNG](/images/2022-09-13-MachineLearning-LinearRegression/cost3.PNG)
 
 
 
@@ -123,7 +125,7 @@ w = 15, b = -10 의 그래프 입니다.
 
 경사 하강법을 이해하기 위해서 cost와 기울기 w와의 관계를 이해해보겠습니다.
 
-![/images/2022-09-13-MachineLearning-LinearRegression/optimizer.png](/images/2022-09-13-MachineLearning-LinearRegression/optimizer.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/optimizer.png](/images/2022-09-13-MachineLearning-LinearRegression/optimizer.PNG)
 
 빨간선은 각 점에서의 실제값과 두 직선의 예측값과의 오차를 보여줍니다.
 
