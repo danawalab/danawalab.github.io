@@ -44,7 +44,7 @@ categories: MachineLearning
 
 - 아래와 같은 데이터를 보면서 선형 회귀 분석에 필요한 개념들에 대해 설명하겠습니다.
 
-![/images/2022-09-13-MachineLearning-LinearRegression/regression2.png](/images/2022-09-13-MachineLearning-LinearRegression/regression2.png)
+![/images/2022-09-13-MachineLearning-LinearRegression/regression2.png](/images/2022-09-13-MachineLearning-LinearRegression/regression2.PNG)
 
 ## 2.1 가설(Hypothesis)
 
