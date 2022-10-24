@@ -474,7 +474,7 @@ class MainActivity : AppCompatActivity() {
 
 #### 5. 결과
 
-<iframe width="800" height="600" src="https://www.youtube.com/embed/9jtTzK8u9xc" title="Flutter Add-To-App (Android)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="900" height="500" src="https://www.youtube.com/embed/9jtTzK8u9xc" title="Flutter Add-To-App (Android)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## iOS 프로젝트 설정
 
@@ -640,7 +640,7 @@ class ViewController: UIViewController {
 
 #### 3. 결과
 
-<iframe width="800" height="600" src="https://www.youtube.com/embed/abJ3flg2nUc" title="Flutter Add-To-App (iOS)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="900" height="500" src="https://www.youtube.com/embed/abJ3flg2nUc" title="Flutter Add-To-App (iOS)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
