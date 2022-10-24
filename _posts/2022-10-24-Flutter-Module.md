@@ -207,7 +207,7 @@ android {
 
 
 
-#### 2. 모듈의 경로를 설정
+#### 2. 모듈의 경로 설정
 
 AAR을 빌드하고 나서 안내의 2~4번 대로 안드로이드 프로젝트에서 모듈을 인식할 수 있도록 경로를 설정합니다.
 
@@ -344,9 +344,7 @@ startActivity(
 
 #### 4. 모듈 실행하는 코드 작성
 
-안드로이드앱에서 플러터 모듈을 실행하는 코드를 작성합니다. 
-
-저의 경우 플러터 모듈내에 생성했던 3개의 페이지로 각각 메소드 채널을 통해 인자를 넘겨주는 방식의 코드를 작성하였습니다. 이때 FlutterActivity는 FlutterEngine을 사용하게 되는데 FlutterEngine은 생성되는데에 어느정도 시간이 걸리기 때문에 미리 생성을 하고 캐시로 등록하는 방법을 사용했습니다. 각각의 FlutterEngine은 모듈 내의 페이지의 경로를 가지게 되고 메소드 채널은 각각의 FlutterEngine위에서 모듈과 소통하게 됩니다. 
+안드로이드앱에서 플러터 모듈을 실행하는 코드를 작성합니다. 저의 경우 플러터 모듈내에 생성했던 3개의 페이지로 각각 메소드 채널을 통해 인자를 넘겨주는 방식의 코드를 작성하였습니다. 이때 FlutterActivity는 FlutterEngine을 사용하게 되는데 FlutterEngine은 생성되는데에 어느정도 시간이 걸리기 때문에 미리 생성을 하고 캐시로 등록하는 방법을 사용했습니다. 각각의 FlutterEngine은 모듈 내의 페이지의 경로를 가지게 되고 메소드 채널은 각각의 FlutterEngine위에서 모듈과 소통하게 됩니다. 
 
 ```kotlin
 package com.example.androidapp
@@ -476,13 +474,181 @@ class MainActivity : AppCompatActivity() {
 
 #### 5. 결과
 
-<iframe width="2543" height="1071" src="https://www.youtube.com/embed/9jtTzK8u9xc" title="Flutter Add-To-App (Android)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/9jtTzK8u9xc" title="Flutter Add-To-App (Android)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:block; width:100vw; height: 100vh"></iframe>
 
 
 
 ## iOS 프로젝트 설정
 
+#### 1. 모듈의 경로 설정
 
+프로젝트의 Podfile(없다면 생성)에 다음 코드를 입력합니다. 
+
+~~~
+flutter_application_path = '../../flutter_module'
+load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+
+target 'ios_module_test' do
+  install_all_flutter_pods(flutter_application_path)
+end
+
+post_install do |installer|
+  flutter_post_install(installer) if defined?(flutter_post_install)
+end
+
+~~~
+
+파일 저장 후 다음 커맨드를 입력합니다.
+
+~~~bash
+pod install
+~~~
+
+
+
+#### 2. 모듈 실행하는 코드 작성
+
+AppDelegate.swift 파일에 FlutterEngine을 생성하고 GeneratedPluginRegistrant에 등록합니다.
+
+~~~swift
+import UIKit
+import Flutter
+import FlutterPluginRegistrant
+
+@UIApplicationMain
+class AppDelegate: FlutterAppDelegate {
+    let engineGroup = FlutterEngineGroup(name: "my flutter engine group", project: nil)
+    var custom1Engine: FlutterEngine?
+    var custom2Engine: FlutterEngine?
+    var custom3Engine: FlutterEngine?
+  	// FlutterEngine 변수 생성
+
+
+  override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+   
+      custom1Engine = engineGroup.makeEngine(withEntrypoint: nil, libraryURI: nil, initialRoute: "/custom1")
+      custom2Engine = engineGroup.makeEngine(withEntrypoint: nil, libraryURI: nil, initialRoute: "/custom2")
+      custom3Engine = engineGroup.makeEngine(withEntrypoint: nil, libraryURI: nil, initialRoute: "/custom3")
+      // 각 FlutterEngine에 경로 설정
+              
+      GeneratedPluginRegistrant.register(with: custom1Engine!)
+      GeneratedPluginRegistrant.register(with: custom2Engine!)
+      GeneratedPluginRegistrant.register(with: custom3Engine!)
+      // 생성한 FlutterEngine들을 GeneratedPluginRegistrant에 등록
+          
+      return super.application(application, didFinishLaunchingWithOptions: launchOptions);
+  }
+}
+~~~
+
+
+
+ViewController.swift 파일에 모듈을 실행하는 코드를 추가합니다.
+
+~~~swift
+import UIKit
+import Flutter
+
+let channelName = "com.example.module-test/custom"
+
+class ViewController: UIViewController {
+    
+    @IBOutlet var textButton1: UIButton!
+    @IBOutlet var textButton2: UIButton!
+    @IBOutlet var textButton3: UIButton!
+  	// 각 모듈 페이지를 실행하게 될 버튼
+  
+    @IBOutlet var textField1: UITextField!
+    @IBOutlet var textField2: UITextField!
+    @IBOutlet var textField3: UITextField!
+  	// 각 모듈 페이지로 전달할 인자를 입력하는 텍스트필드
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+    
+    @IBAction func buttonTapped1(_ sender: UIButton) {
+      
+        let mText = textField1.text
+        
+        if let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).custom1Engine{
+            let flutterViewController = FlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil)
+            // 기존에 등록한 FlutterEngine으로 FlutterViewController를 생성
+            let newsChannel = FlutterMethodChannel(name:channelName, binaryMessenger: flutterViewController.binaryMessenger)
+            // 메소드채널 설정
+              
+          newsChannel.invokeMethod("getUserToken", arguments: mText, result: {
+                       (result) -> Void in
+              print("swift-to-flutter result: \(String(describing: result))")
+                   })
+
+              flutterViewController.modalPresentationStyle = .overCurrentContext
+              flutterViewController.isViewOpaque = false
+              present(flutterViewController, animated: false, completion: nil)
+              // FlutterViewController 실행
+          }
+    } // 1번 버튼이 눌렸을 때 텍스트 필드의 값을 메소드 채널을 통해 전달, custom1Engine에 등록된 모듈의 1번페이지 실행
+    
+    
+    @IBAction func buttonTapped2(_ sender: UIButton) {
+        let mText = textField2.text
+        
+        if let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).custom2Engine{
+            let flutterViewController = FlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil)
+            // 기존에 등록한 FlutterEngine으로 FlutterViewController를 생성
+            let newsChannel = FlutterMethodChannel(name:channelName, binaryMessenger: flutterViewController.binaryMessenger)
+            // 메소드채널 설정
+            
+            newsChannel.invokeMethod("getUserToken", arguments: mText, result: {
+                         (result) -> Void in
+                print("swift-to-flutter result: \(String(describing: result))")
+                     })
+            
+            flutterViewController.modalPresentationStyle = .overCurrentContext
+            flutterViewController.isViewOpaque = false
+            present(flutterViewController, animated: false, completion: nil)
+            // FlutterViewController 실행
+        }
+    } // 2번 버튼이 눌렸을 때 텍스트 필드의 값을 메소드 채널을 통해 전달, custom2Engine에 등록된 모듈의 2번페이지 실행
+    
+    
+    @IBAction func buttonTapped3(_ sender: UIButton) {
+        let mText = textField3.text
+        
+        if let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).custom3Engine{
+            let flutterViewController = FlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil)
+            // 기존에 등록한 FlutterEngine으로 FlutterViewController를 생성
+            let newsChannel = FlutterMethodChannel(name:channelName, binaryMessenger: flutterViewController.binaryMessenger)
+            // 메소드채널 설정
+            
+            newsChannel.invokeMethod("getUserToken", arguments: mText, result: {
+                         (result) -> Void in
+                print("swift-to-flutter result: \(String(describing: result))")
+                     })
+            
+            flutterViewController.modalPresentationStyle = .overCurrentContext
+            flutterViewController.isViewOpaque = false
+            present(flutterViewController, animated: true, completion: nil)
+            // FlutterViewController 실행
+        }
+    } // 3번 버튼이 눌렸을 때 텍스트 필드의 값을 메소드 채널을 통해 전달, custom3Engine에 등록된 모듈의 3번페이지 실행
+    
+    
+}
+
+~~~
+
+
+
+#### 3. 결과
+
+ <iframe src="https://www.youtube.com/embed/abJ3flg2nUc" title="Flutter Add-To-App (iOS)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:block; width:100vw; height: 100vh"></iframe>
+
+
+
+## 정리
+
+Android/iOS 앱에 Flutter 모듈을 화면 단위로 추가하는 방법을 알아보았습니다. 이미 존재하는 앱을 부분적으로 수정하거나 새로운 기능을 빠르게 구현해야 할 경우 매우 유용한 기능이라고 생각합니다. 
 
 
 
