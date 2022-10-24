@@ -295,7 +295,7 @@ dependencies {
 
 #### 3. FlutterActivity 추가
 
-AndroidManifest.xml 파일의   `<application> </application> ` 태그 내에 FlutterActivity를 추가합니다.
+AndroidManifest.xml 파일의   `<application> </application>` 태그 내에 FlutterActivity를 추가합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -344,7 +344,7 @@ startActivity(
 
 #### 4. 모듈 실행하는 코드 작성
 
-안드로이드앱에서 플러터 모듈을 실행하는 코드를 작성합니다. 저의 경우 플러터 모듈내에 생성했던 3개의 페이지로 각각 메소드 채널을 통해 인자를 넘겨주는 방식의 코드를 작성하였습니다. 이때 FlutterActivity는 FlutterEngine을 사용하게 되는데 FlutterEngine은 생성되는데에 어느정도 시간이 걸리기 때문에 미리 생성을 하고 캐시로 등록하는 방법을 사용했습니다. 각각의 FlutterEngine은 모듈 내의 페이지의 경로를 가지게 되고 메소드 채널은 각각의 FlutterEngine위에서 모듈과 소통하게 됩니다. 
+안드로이드앱에서 플러터 모듈을 실행하는 코드를 작성합니다. 저의 경우 플러터 모듈내에 생성했던 3개의 페이지로 각각 메소드 채널을 통해 인자를 넘겨주는 방식의 코드를 작성하였습니다. 이때 FlutterActivity는 FlutterEngine을 사용하게 되는데 FlutterEngine은 생성되는데에 어느정도 시간이 걸리기 때문에 미리 캐시로 등록하는 방법을 사용했습니다. 각각의 FlutterEngine은 모듈 내의 페이지의 경로를 가지게 되고 메소드 채널은 각각의 FlutterEngine 안에서 모듈과 소통하게 됩니다. 
 
 ```kotlin
 package com.example.androidapp
@@ -474,7 +474,7 @@ class MainActivity : AppCompatActivity() {
 
 #### 5. 결과
 
-<iframe src="https://www.youtube.com/embed/9jtTzK8u9xc" title="Flutter Add-To-App (Android)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:block; width:100vw; height: 100vh"></iframe>
+<iframe src="https://www.youtube.com/embed/9jtTzK8u9xc" title="Flutter Add-To-App (Android)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:block; width:100%; height: 100%"></iframe>
 
 
 
@@ -656,3 +656,4 @@ Android/iOS 앱에 Flutter 모듈을 화면 단위로 추가하는 방법을 알
 ## 참고 자료
 - <https://docs.flutter.dev/development/add-to-app>
 - <https://g-y-e-o-m.tistory.com/187?category=411699>
+- <https://minchanyoun.tistory.com/84?category=1013568#Arctic%--Fox%--%EB%B-%--%EC%A-%--%--%EC%-D%B-%ED%-B%--%EC%--%--%--%EC%--%-D%EC%--%B-%EB%--%-C%--%ED%--%--%EB%A-%-C%EC%A-%-D%ED%-A%B-%EB%-A%--%--build-gradle%EC%-D%B-%--%EC%--%--%EB%-B%-C%--settings-gradle%EC%--%--%--%EC%--%--%EB%-E%--%EC%--%--%EA%B-%--%EC%-D%B-%--allprojects%--%EB%A-%--%ED%-F%AC%EC%A-%--%ED%--%A-%EB%A-%AC%EB%A-%BC%--%EC%B-%--%EA%B-%-->
