@@ -162,6 +162,7 @@ func BinarySearch(array []model.MiniIndex, target string) (int, bool) {
 |renew|전체/갱신 여부|string|1 또는 2|
 
 #### Return Value
+
 - result : 검색 처리 결과 (success or fail)
 - date : 검색 일자
 - renew : 전체/갱신 여부
@@ -210,6 +211,8 @@ GET /search?shopCode=EE301&productId=2073143136&startDate=20220326&&endDate=2022
 ```
 
 ## 파일 서처 서비스 성능
+
+#### 모니터링 결과
 
 |서버|파일 크기|실 메모리 사용량|원본 대비 색인 효율|검색 속도|
 |:---:|:---:|:---:|:---:|:---:|
