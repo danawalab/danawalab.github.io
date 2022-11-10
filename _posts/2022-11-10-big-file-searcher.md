@@ -2,10 +2,15 @@
 layout: post
 title:  "1G 메모리를 사용하여 1초만에 2TB 텍스트파일을 검색하기"
 description: "디스크 기반 정렬을 통해 대용량 텍스트 파일의 내용을 검색하여 API로 제공하는 방법"
-date:   2022.07.22.
+date:   2022.11.10.
 writer: "반윤성"
-categories: Elastic
+categories: Common
 ---
+
+![/images/2022-11-10-big-file-searcher/books.avif](/images/2022-11-10-big-file-searcher/books.avif)
+<div>
+  Photo by nadi borodina on unsplash
+</div>
 
 ## 대용량 파일을 모두 뒤져서 검색할 때 문제점
 
@@ -18,7 +23,7 @@ categories: Elastic
 
 ![/images/2022-11-10-big-file-searcher/error.png](/images/2022-11-10-big-file-searcher/error.png)
 <div>
-  아무래도 노트패드가 감당하기엔 무리.
+  아무래도 Notepad++가 감당하기엔 무리.
 </div>
 <br>
 
@@ -28,7 +33,7 @@ categories: Elastic
 
 우리가 사전에서 원하는 내용을 찾는다면, 보통 맨 뒷 페이지에 있는 ``색인``부터 살펴봅니다. 기호와 활자로 정렬된 일련의 목록에서 특정 위치를 기록하고 있기에 위치를 기준으로 검색합니다. 이렇기에 맨 첫장부터 원하는 단어가 나올 때까지 검색하는 비용을 아낄 수 있습니다.
 
-기본적으로 컴퓨터에서 처음 큰 파일을 열때는 첫 줄부터 마지막 줄까지 읽어내립니다. 하지만 내가 찾는 키워드의 위치를 알고 있다면, 해당 포지션부터 읽을 수 있습니다. 단 색인📖이 존재해야겠지만요.
+기본적으로 컴퓨터에서 처음 큰 파일을 열때는 첫 줄부터 마지막 줄까지 읽어내립니다. 하지만 내가 찾는 키워드의 위치를 알고 있다면, 해당 포지션부터 읽을 수 있습니다. 단 색인📗이 존재해야겠지만요.
 
 #### 2. 색인 파일 만들기
 
@@ -140,7 +145,7 @@ func BinarySearch(array []model.MiniIndex, target string) (int, bool) {
 <br>
 
 ## 파일 서처 서비스
-![/images/2022-11-10-big-file-searcher/service_0.png](/images/2022-11-10-big-file-searcher/service_0.png)
+![/images/2022-11-10-big-file-searcher/service_1.png](/images/2022-11-10-big-file-searcher/service_1.png)
 
 현재 서비스 중인 파일 서처의 구조는 다음과 같습니다. 수집된 상품 데이터에 대해 디렉토리 감지를 통해 해당 파일에 대해 색인하여 메모리에 적재합니다. 검색 API를 통해 요청이 들어오면, 색인된 내용을 기반으로 탐색하고 요청된 데이터를 반환합니다.
 
@@ -159,7 +164,7 @@ func BinarySearch(array []model.MiniIndex, target string) (int, bool) {
 |productId|상품 아이디|string|2074042,7658077,2186943|
 |startDate|날짜 From|string (YYYYMMDD)|20221110|
 |endDate|날짜 To|string (YYYYMMDD)|20221111|
-|renew|전체/갱신 여부|string||
+|renew|전체/갱신 여부|string|1 또는 2|
 
 #### Return Value
 - result : 검색 처리 결과 (success or fail)
@@ -210,7 +215,6 @@ GET /search?shopCode=EE301&productId=2073143136&startDate=20220326&&endDate=2022
 ```
 
 ## 파일 서처 서비스 성능
-
 |서버|수집된 EP 파일 크기|실 메모리 사용량|원본 대비 색인 효율|검색 속도
 |:---:|:---:|:---:|:---:|:---:|
 |server1|607G|296M|0.048%|0.959초
@@ -225,7 +229,7 @@ GET /search?shopCode=EE301&productId=2073143136&startDate=20220326&&endDate=2022
 ## 정리
 큰 파일을 읽는것은 자원과 시간이 많이 소요되는 일이므로 가능한 파일 서처와 같은 검색 도구를 활용하여 검색하는 것이 바람직하다고 생각됩니다. 또한 개발 후 테스트를 통해 데이터 검증을 마쳤으므로 다양한 문서 포맷에 대해 색인/검색 가능 여부를 확인하는 것이 중요하다고 생각합니다.
 
-Github link :  https://github.com/danawalab/left-join-plugin
+Github link :  <https://github.com/danawalab/file-searcher/>
 
 ## 참고 자료
 - https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html
