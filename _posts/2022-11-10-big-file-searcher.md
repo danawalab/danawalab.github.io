@@ -152,7 +152,8 @@ func BinarySearch(array []model.MiniIndex, target string) (int, bool) {
 해당 업체 코드와 상품ID로 원본 파일의 내용을 조회합니다.
 
 #### Request Parameter
-|parameter|description|data type|example value
+
+|parameter|description|data type|example value|
 |:---:|:---:|:---:|:---:|
 |shopCode|업체 코드|string|TH201, ED302 , ..|
 |productId|상품 아이디|string|2074042,7658077,2186943|
@@ -209,17 +210,6 @@ GET /search?shopCode=EE301&productId=2073143136&startDate=20220326&&endDate=2022
 ```
 
 ## 파일 서처 서비스 성능
-|서버|수집된 EP 파일 크기|실 메모리 사용량|원본 대비 색인 효율|검색 속도
-|:---:|:---:|:---:|:---:|:---:|
-|server1|607G|296M|0.048%|0.959초
-|server2|757G|431M|0.056%|1.003초
-|server3|569G|419M|0.073%|0.8초
-|Total|1.9TB|1,029M|0.059%(평균)|0.9초(평균)
-
-|테스트 케이스|노드 수|인덱스 용량|처리 속도|실 소요시간
-|:---:|:---:|:---:|:---:|:---:|
-|shard 15|8|1.1T|35,164/s|10시간 1분
-|shard 20|8|1.1T|41,572/s|7시간 36분
 
 |서버|파일 크기|실 메모리 사용량|원본 대비 색인 효율|검색 속도|
 |:---:|:---:|:---:|:---:|:---:|
