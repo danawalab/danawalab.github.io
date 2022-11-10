@@ -171,43 +171,44 @@ func BinarySearch(array []model.MiniIndex, target string) (int, bool) {
 - source : 원본 데이터 내용
 
 
-```
+```JSON
 GET /search?shopCode=EE301&productId=2073143136&startDate=20220326&&endDate=20220329
-
+[
     {
-        result: success,
-        date: 20220926,
-        renew : 1,
-        data : [
+        "result": "success",
+        "date": 20220926,
+        "renew" : 1,
+        "data" : [
             {
-                timestamp: 1664171131
-                source :    "2073143136^이미용|화장품|메이크업(여성용)|볼터치/하이라이터^[현대백화점] [삼성카드7%할인~08/22]아워글래스 앰비언트 블러쉬 +무이자3개월^(주) 신세계인터네셔날^http://image.thehyundai.com/static/3/1/3/14/73/2073143136_0_600.jpg^http://www.thehyundai.com/front/pda/itemPtc.thd?       
+                "timestamp": 1664171131,
+                "source" :    "2073143136^이미용|화장품|메이크업(여성용)|볼터치/하이라이터^[현대백화점] [삼성카드7%할인~08/22]아워글래스 앰비언트 블러쉬 +무이자3개월^(주) 신세계인터네셔날^http://image.thehyundai.com/static/3/1/3/14/73/2073143136_0_600.jpg^http://www.thehyundai.com/front/pda/itemPtc.thd?       
                          ReferCode=030&utm_source=danawa&utm_medium=ep_price&slitmCd=2073143136^60000^0^^0개월^^^^^0^삼성카드^55800^^60000^N^^N^Y"
             },
             {
-                timestamp : 1661929118
-                source :    "2073143136^이미용|화장품|메이크업(여성용)|볼터치/하이라이터^[현대백화점] [삼성카드7%할인~08/22]아워글래스 앰비언트 블러쉬 +무이자3개월^(주) 신세계인터네셔날^http://image.thehyundai.com/static/3/1/3/14/73/2073143136_0_600.jpg^http://www.thehyundai.com/front/pda/itemPtc.thd?       
+                "timestamp" : 1661929118,
+                "source" :    "2073143136^이미용|화장품|메이크업(여성용)|볼터치/하이라이터^[현대백화점] [삼성카드7%할인~08/22]아워글래스 앰비언트 블러쉬 +무이자3개월^(주) 신세계인터네셔날^http://image.thehyundai.com/static/3/1/3/14/73/2073143136_0_600.jpg^http://www.thehyundai.com/front/pda/itemPtc.thd?       
                          ReferCode=030&utm_source=danawa&utm_medium=ep_price&slitmCd=2073143136^60000^0^^0개월^^^^^0^삼성카드^45800^^50000^N^^N^Y"
             }
         ]
     },
     {
-        result : success,
-        date : 20220925,
-        renew : 1,
-        data : [
+        "result" : "success",
+        "date" : 20220925,
+        "renew" : 1,
+        "data" : [
             {
-                timestamp : 1664171131
-                source :    "2073143136^이미용|화장품|메이크업(여성용)|볼터치/하이라이터^[현대백화점] [삼성카드7%할인~08/22]아워글래스 앰비언트 블러쉬 +무이자3개월^(주) 신세계인터네셔날^http://image.thehyundai.com/static/3/1/3/14/73/2073143136_0_600.jpg^http://www.thehyundai.com/front/pda/itemPtc.thd?       
+                "timestamp" : 1664171131,
+                "source" :    "2073143136^이미용|화장품|메이크업(여성용)|볼터치/하이라이터^[현대백화점] [삼성카드7%할인~08/22]아워글래스 앰비언트 블러쉬 +무이자3개월^(주) 신세계인터네셔날^http://image.thehyundai.com/static/3/1/3/14/73/2073143136_0_600.jpg^http://www.thehyundai.com/front/pda/itemPtc.thd?       
                          ReferCode=030&utm_source=danawa&utm_medium=ep_price&slitmCd=2073143136^60000^0^^0개월^^^^^0^삼성카드^55800^^60000^N^^N^Y"
             },
             {
-                timestamp : 1661929118
-                source :    "2073143136^이미용|화장품|메이크업(여성용)|볼터치/하이라이터^[현대백화점] [삼성카드7%할인~08/22]아워글래스 앰비언트 블러쉬 +무이자3개월^(주) 신세계인터네셔날^http://image.thehyundai.com/static/3/1/3/14/73/2073143136_0_600.jpg^http://www.thehyundai.com/front/pda/itemPtc.thd?       
+                "timestamp" : 1661929118,
+                "source" :    "2073143136^이미용|화장품|메이크업(여성용)|볼터치/하이라이터^[현대백화점] [삼성카드7%할인~08/22]아워글래스 앰비언트 블러쉬 +무이자3개월^(주) 신세계인터네셔날^http://image.thehyundai.com/static/3/1/3/14/73/2073143136_0_600.jpg^http://www.thehyundai.com/front/pda/itemPtc.thd?       
                          ReferCode=030&utm_source=danawa&utm_medium=ep_price&slitmCd=2073143136^60000^0^^0개월^^^^^0^삼성카드^45800^^50000^N^^N^Y"
             }
         ]
     }
+]
 ```
 
 ## 파일 서처 서비스 성능
