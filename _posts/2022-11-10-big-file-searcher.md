@@ -83,19 +83,13 @@ func QuickSortList(a []model.Index) []model.Index {
 ![/images/2022-11-10-big-file-searcher/index_0.png](/images/2022-11-10-big-file-searcher/index_0.png)
 
 ![/images/2022-11-10-big-file-searcher/index_6.png](/images/2022-11-10-big-file-searcher/index_6.png)
-<div>
-  원본 상품 데이터 파일 (무려 60GB)
-</div>
+원본 상품 데이터 파일 (무려 60GB)
 
 ![/images/2022-11-10-big-file-searcher/index_1.png](/images/2022-11-10-big-file-searcher/index_4.png)
-<div>
-  상품 아이디 기준으로 색인한다
-</div>
+상품 아이디 기준으로 색인한다
 
 ![/images/2022-11-10-big-file-searcher/index_1.png](/images/2022-11-10-big-file-searcher/index_5.png)
-<div>
-  최종적으로 메모리에 올릴 파일, 색인 파일을 한번 더 색인한다
-</div>
+최종적으로 메모리에 올릴 파일, 색인 파일을 한번 더 색인한다
 <br>
 
 #### 3. 검색하기
