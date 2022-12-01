@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+                    <title>로그인 - Confluence</title>
+    
+        
+
+                        
+    
+                        
+    
+                        
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://wiki.danawa.com">
+
+    <meta id="atlassian-token" name="atlassian-token" content="087a5686195e264a49b98fe8b5d554b76cee5b81">
+
+
+<script type="text/javascript">
+        var contextPath = '';
+</script>
+
+    
+
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="robots" content="noarchive">
+    <meta name="confluence-request-time" content="1669858028264">
+        
+    
+        
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-keyboardshortcut-hash" content="fd3be4dce0535498fc022ff7d6513ba7">
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="50000">
+            
+    
+    
+            <meta name="ajs-context-path" content="">
+            <meta name="ajs-base-url" content="https://wiki.danawa.com">
+            <meta name="ajs-version-number" content="7.1.0">
+            <meta name="ajs-build-number" content="8301">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-remote-user-key" content="">
+            <meta name="ajs-remote-user-has-licensed-access" content="false">
+            <meta name="ajs-remote-user-has-browse-users-permission" content="false">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-current-user-avatar-uri-reference" content="/images/icons/profilepics/anonymous.svg">
+            <meta name="ajs-static-resource-url-prefix" content="/s/-tilmnw/8301/8fa50d05398fea29bc3b44b63cde07d279fbe836/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="504857600">
+            <meta name="ajs-global-settings-quick-search-enabled" content="true">
+            <meta name="ajs-user-locale" content="ko_KR">
+            <meta name="ajs-enabled-dark-features" content="site-wide.shared-drafts,site-wide.synchrony,confluence.view.edit.transition,confluence-inline-comments-resolved,notification.plugin.api.enabled.com.atlassian.confluence.plugins.sharepage.api.ShareContentEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.mentions.api.ConfluenceMentionEvent,frontend.editor.v4.compatibility,atlassian.cdn.static.assets,notification.plugin.api.enabled.com.atlassian.confluence.event.events.security.ForgotPasswordEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.tasklist.event.SendTaskEmailEvent,file-annotations,confluence.efi.onboarding.rich.space.content,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.comment.CommentCreateEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.requestaccess.events.AccessGrantedEvent,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.page.PageMoveEvent,notification.plugin.api.enabled.com.atlassian.confluence.event.events.follow.FollowEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.inlinecomments.events.InlineCommentReplyEvent,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.blogpost.BlogPostCreateEvent,lucene.caching.filter,confluence.table.resizable,notification.batch,confluence-inline-comments-rich-editor,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.blogpost.BlogPostUpdateEvent,site-wide.synchrony.opt-in,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.page.async.PageCreatedEvent,mobile.supported.version,notification.plugin.api.enabled.com.atlassian.confluence.plugins.files.notifications.event.FileContentMentionUpdateEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.hipchat.api.events.HipChatUserMapped,quick-reload-inline-comments-flags,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.blogpost.BlogPostMovedEvent,clc.quick.create,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.page.PageUpdateEvent,cql.search.screen,frontend.editor.v4,nps.survey.inline.dialog,confluence.efi.onboarding.new.templates,pdf-preview,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.page.async.PageMovedEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.sharepage.api.ShareCustomEvent,previews.sharing,previews.versions,notification.plugin.api.enabled.com.atlassian.confluence.plugins.files.notifications.event.FileContentUpdateEvent,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.attachment.AttachmentBatchUploadCompletedEvent,collaborative-audit-log,notification.plugin.api.enabled.com.atlassian.confluence.efi.emails.events.OnboardingLessUsersEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.files.notifications.event.FileContentRemoveEvent,previews.conversion-service,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.comment.CommentUpdateEvent,editor.ajax.save,graphql,read.only.mode,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.page.async.PageEditedEvent,previews.trigger-all-file-types,notification.plugin.api.enabled.com.atlassian.confluence.plugins.inlinecomments.events.InlineCommentResolveEvent,notification.plugin.api.enabled.com.atlassian.confluence.event.events.like.LikeCreatedEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.inlinecomments.events.InlineCommentCreateEvent,attachment.extracted.text.extractor,notification.plugin.api.enabled.com.atlassian.confluence.plugins.requestaccess.events.AccessRequestedEvent,previews.sharing.pushstate,file-annotations.likes,v2.content.name.searcher,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.page.PageCreateEvent,notification.plugin.api.enabled.com.atlassian.confluence.efi.emails.events.OnboardingNoSpaceCreatedEvent,pulp,notification.plugin.api.enabled.com.atlassian.confluence.plugins.sharepage.api.ShareDraftEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.sharepage.api.ShareAttachmentEvent,confluence-inline-comments,confluence-inline-comments-dangling-comment">
+            <meta name="ajs-atl-token" content="087a5686195e264a49b98fe8b5d554b76cee5b81">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="yyyy. M. d">
+            <meta name="ajs-access-mode" content="READ_WRITE">
+            <meta name="ajs-render-mode" content="READ_WRITE">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    <link rel="shortcut icon" href="/s/-tilmnw/8301/8fa50d05398fea29bc3b44b63cde07d279fbe836/11/_/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/s/-tilmnw/8301/8fa50d05398fea29bc3b44b63cde07d279fbe836/11/_/favicon.ico">
+
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch/osd.action" title="Confluence"/>
+
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022\u0022";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-help-paths"]="{\u0022entries\u0022:{\u0022applinks.docs.root\u0022:\u0022https://confluence.atlassian.com/display/APPLINKS-060/\u0022,\u0022applinks.docs.diagnostics.troubleshoot.sslunmatched\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthsignatureinvalid\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthtimestamprefused\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.delete.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.adding.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administration.guide\u0022:\u0022Application+Links+Documentation\u0022,\u0022applinks.docs.oauth.security\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.troubleshoot.application.links\u0022:\u0022Troubleshoot+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownerror\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.trusted.apps\u0022:\u0022Configuring+Trusted+Applications+authentication+for+an+application+link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelunsupported\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.ssluntrusted\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownhost\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.delete.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.link.applications\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthproblem\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.migration\u0022:\u0022Update+application+links+to+use+OAuth\u0022,\u0022applinks.docs.relocate.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administering.entity.links\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.upgrade.application.link\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.connectionrefused\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.oauth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.insufficient.remote.permission\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.configuring.application.link.auth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics\u0022:\u0022Application+links+diagnostics\u0022,\u0022applinks.docs.configured.authentication.types\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.adding.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unexpectedresponse\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.basic\u0022:\u0022Configuring+Basic+HTTP+Authentication+for+an+Application+Link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelmismatch\u0022:\u0022OAuth+troubleshooting+guide\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-types"]="{\u0022crowd\u0022:\u0022Crowd\u0022,\u0022confluence\u0022:\u0022\ucee8\ud50c\ub8e8\uc5b8\uc2a4\u0022,\u0022fecru\u0022:\u0022Fisheye / Crucible\u0022,\u0022stash\u0022:\u0022Stash\u0022,\u0022jira\u0022:\u0022Jira\u0022,\u0022refapp\u0022:\u0022\ucc38\uc870 \uc751\uc6a9\ud504\ub85c\uadf8\ub7a8\u0022,\u0022bamboo\u0022:\u0022\ubc40\ubd80\u0022,\u0022generic\u0022:\u0022\uc77c\ubc18 \uc751\uc6a9\ud504\ub85c\uadf8\ub7a8\u0022}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.entity-types"]="{\u0022singular\u0022:{\u0022refapp.charlie\u0022:\u0022Charlie\u0022,\u0022fecru.project\u0022:\u0022Crucible \ud504\ub85c\uc81d\ud2b8\u0022,\u0022fecru.repository\u0022:\u0022FishEye \uc800\uc7a5\uc18c\u0022,\u0022stash.project\u0022:\u0022Stash \ud504\ub85c\uc81d\ud2b8\u0022,\u0022generic.entity\u0022:\u0022\uc77c\ubc18 \ud504\ub85c\uc81d\ud2b8\u0022,\u0022confluence.space\u0022:\u0022\ucee8\ud50c\ub8e8\uc5b8\uc2a4 \uacf5\uac04\u0022,\u0022bamboo.project\u0022:\u0022\ubc40\ubd80 \ud504\ub85c\uc81d\ud2b8\u0022,\u0022jira.project\u0022:\u0022Jira \ud504\ub85c\uc81d\ud2b8\u0022},\u0022plural\u0022:{\u0022refapp.charlie\u0022:\u0022Charlies\u0022,\u0022fecru.project\u0022:\u0022Crucible \ud504\ub85c\uc81d\ud2b8\u0022,\u0022fecru.repository\u0022:\u0022FishEye \uc800\uc7a5\uc18c\u0022,\u0022stash.project\u0022:\u0022Stash \ud504\ub85c\uc81d\ud2b8\u0022,\u0022generic.entity\u0022:\u0022\uc77c\ubc18 \uc0ac\uc5c5\u0022,\u0022confluence.space\u0022:\u0022\ucee8\ud50c\ub8e8\uc5b8\uc2a4 \uacf5\uac04\u0022,\u0022bamboo.project\u0022:\u0022\ubc40\ubd80 \ud504\ub85c\uc81d\ud2b8\u0022,\u0022jira.project\u0022:\u0022Jira \ud504\ub85c\uc81d\ud2b8\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.authentication-types"]="{\u0022com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider\u0022:\u0022\uae30\ubcf8 \uc811\uadfc\u0022,\u0022com.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider\u0022:\u0022\uc2e0\ub8b0\ud558\ub294 \uc751\uc6a9\ud504\ub85c\uadf8\ub7a8\u0022,\u0022com.atlassian.applinks.api.auth.types.CorsAuthenticationProvider\u0022:\u0022CORS\u0022,\u0022com.atlassian.applinks.api.auth.types.OAuthAuthenticationProvider\u0022:\u0022OAuth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthAuthenticationProvider\u0022:\u0022OAuth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthWithImpersonationAuthenticationProvider\u0022:\u0022OAuth\u0022}";
+WRM._unparsedData["com.atlassian.confluence.plugins.synchrony-interop:synchrony-status-banner-loader.synchrony-status"]="false";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-feature-discovery-plugin:confluence-feature-discovery-plugin-resources.test-mode"]="false";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-license-banner:confluence-license-banner-resources.license-details"]="{\u0022daysBeforeLicenseExpiry\u0022:0,\u0022daysBeforeMaintenanceExpiry\u0022:0,\u0022showLicenseExpiryBanner\u0022:false,\u0022showMaintenanceExpiryBanner\u0022:false,\u0022renewUrl\u0022:null,\u0022salesUrl\u0022:null}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-search-ui-plugin:confluence-search-ui-plugin-resources.i18n-data"]="{\u0022search.ui.recent.link.text\u0022:\u0022\ub354 \ucd5c\uadfc\uc5d0 \ubc29\ubb38\ud55c \ud56d\ubaa9 \ubcf4\uae30\u0022,\u0022search.ui.filter.space.category.input.label\u0022:\u0022\uc2a4\ud398\uc774\uc2a4 \ubc94\uc8fc \ucc3e\uae30...\u0022,\u0022search.ui.filter.clear.selected\u0022:\u0022\uc120\ud0dd\ub41c \ud56d\ubaa9 \uc9c0\uc6b0\uae30\u0022,\u0022search.ui.search.results.empty\u0022:\u0022\u005C\u0022{0}\u005C\u0022\uc5d0 \uc77c\uce58\ud558\ub294 \uac80\uc0c9 \uacb0\uacfc\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.button.text\u0022:\u0022\uc571 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30...\u0022,\u0022search.ui.filter.space.archive.label\u0022:\u0022\ubcf4\uad00\ub41c \uc2a4\ud398\uc774\uc2a4 \uac80\uc0c9\u0022,\u0022search.ui.filter.label\u0022:\u0022\ud544\ud130\u0022,\u0022search.ui.filter.contributor.button.text\u0022:\u0022\uae30\uc5ec\uc790\u0022,\u0022search.ui.filter.date.all.text\u0022:\u0022\uc5b8\uc81c\ub77c\ub3c4\u0022,\u0022search.ui.filter.space.current.label\u0022:\u0022\ud604\uc7ac\u0022,\u0022search.ui.clear.input.button.text\u0022:\u0022\ud14d\uc2a4\ud2b8 \uc9c0\uc6b0\uae30\u0022,\u0022help.search.ui.link.title\u0022:\u0022\uac80\uc0c9 \ub3c4\uc6c0\ub9d0\u0022,\u0022search.ui.search.results.clear.button\u0022:\u0022\ud544\ud130\ub97c \uc9c0\uc6b0\uc2ed\uc2dc\uc624.\u0022,\u0022search.ui.filter.date.hour.text\u0022:\u0022\uc9c0\ub09c \ub0a0\uc9dc\u0022,\u0022search.ui.filters.heading\u0022:\u0022\ud544\ud130\ub9c1 \uae30\uc900\u0022,\u0022search.ui.filter.label.input.label\u0022:\u0022\ub808\uc774\ube14 \ucc3e\uae30...\u0022,\u0022search.ui.filter.date.month.text\u0022:\u0022\uc9c0\ub09c \ub2ec\u0022,\u0022search.ui.recent.items.anonymous\u0022:\u0022\ud0d0\uc0c9\uc744 \uc2dc\uc791\ud569\ub2c8\ub2e4. \uac80\uc0c9 \uacb0\uacfc\uac00 \uc5ec\uae30\uc5d0 \ub098\ud0c0\ub0a9\ub2c8\ub2e4.\u0022,\u0022search.ui.input.label\u0022:\u0022\uac80\uc0c9\u0022,\u0022search.ui.search.result\u0022:\u0022{0,choice,1#{0}\uac1c \uac80\uc0c9 \uacb0\uacfc|1\u005Cu003c{0}\uac1c \uac80\uc0c9 \uacb0\uacfc}\u0022,\u0022search.ui.infinite.scroll.button.text\u0022:\u0022\ub354 \ub9ce\uc740 \uacb0\uacfc\u0022,\u0022search.ui.filter.date.button.text\u0022:\u0022\ub0a0\uc9dc\u0022,\u0022search.ui.filter.date.week.text\u0022:\u0022\uc9c0\ub09c \uc8fc\u0022,\u0022search.ui.filter.label.button.text\u0022:\u0022\ub808\uc774\ube14\u0022,\u0022search.ui.input.alert\u0022:\u0022Enter \ud0a4\ub97c \ub20c\ub7ec \uac80\uc0c9 \uc2dc\uc791\u0022,\u0022search.ui.filter.no.result.text\u0022:\u0022\uadc0\ud558\uc758 \uac80\uc0c9\uacfc \uc77c\uce58\ud558\ub294 \uacb0\uacfc\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.\u0022,\u0022search.ui.result.subtitle.calendar\u0022:\u0022\ud300 \uce98\ub9b0\ub354\u0022,\u0022search.ui.filter.date.heading\u0022:\u0022\ub2e4\uc74c \uae30\uac04 \uc911 \ucd5c\uc885 \uc218\uc815\u0022,\u0022search.ui.result.subtitle.user\u0022:\u0022\uc0ac\uc6a9\uc790 \ud504\ub85c\ud544\u0022,\u0022search.ui.filter.contributor.input.label\u0022:\u0022\uc0ac\ub78c \ucc3e\uae30...\u0022,\u0022search.ui.filter.content.type.button.text\u0022:\u0022\uc720\ud615\u0022,\u0022search.ui.filter.space.input.label\u0022:\u0022\uc2a4\ud398\uc774\uc2a4 \ucc3e\uae30...\u0022,\u0022search.ui.filter.date.year.text\u0022:\u0022\uc9c0\ub09c \ud574\u0022,\u0022search.ui.filter.space.button.text\u0022:\u0022\uc2a4\ud398\uc774\uc2a4\u0022,\u0022search.ui.advanced.search.link.text\u0022:\u0022\uace0\uae09 \uac80\uc0c9\u0022,\u0022search.ui.generic.error\u0022:\u0022\ubb38\uc81c\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4. \ubb38\uc81c\uac00 \uc9c0\uc18d\ub418\uba74 \ud398\uc774\uc9c0\ub97c \uc0c8\ub85c\uace0\uce68\ud558\uac70\ub098 \uad00\ub9ac\uc790\uc5d0\uac8c \ubb38\uc758\ud558\uc2ed\uc2dc\uc624.\u0022,\u0022search.ui.recent.spaces\u0022:\u0022\ucd5c\uadfc \uc2a4\ud398\uc774\uc2a4\u0022,\u0022search.ui.search.results.clear.line2\u0022:\u0022\ub2e4\ub978 \uac80\uc0c9\uc5b4\ub85c \uc2dc\ub3c4\ud558\uac70\ub098\u0022,\u0022search.ui.filter.space.category.button.text\u0022:\u0022\uc2a4\ud398\uc774\uc2a4 \ubc94\uc8fc\u0022,\u0022search.ui.search.results.clear.line1\u0022:\u0022\uadc0\ud558\uc758 \uac80\uc0c9\uacfc \uc77c\uce58\ud558\ub294 \uacb0\uacfc\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.admin.button.text\u0022:\u0022\uc124\uc815 \ubc0f \uc571 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30...\u0022,\u0022search.ui.recent.pages\u0022:\u0022\ucd5c\uadfc \ubc29\ubb38\u0022,\u0022search.ui.search.result.anonymous\u0022:\u0022{0,choice,1#{0}\uac1c \uac80\uc0c9 \uacb0\uacfc|1\u005Cu003c{0}\uac1c \uac80\uc0c9 \uacb0\uacfc}\uac00 \uc788\uc2b5\ub2c8\ub2e4. \uacc4\uc815\uc774 \uc788\uc73c\uc2ed\ub2c8\uae4c? {1}\ub85c\uadf8\uc778{2}\ud574\uc11c \uac80\uc0c9 \uacb0\uacfc\ub97c \ud655\uc7a5\ud558\uc2ed\uc2dc\uc624.\u0022,\u0022search.ui.recent.items.empty\u0022:\u0022\ud0d0\uc0c9\uc744 \uc2dc\uc791\ud569\ub2c8\ub2e4. \ucd5c\uadfc\uc5d0 \ubc29\ubb38\ud55c \ud398\uc774\uc9c0 \ubc0f \uc2a4\ud398\uc774\uc2a4\uac00 \uc5ec\uae30\uc5d0 \ub098\ud0c0\ub0a9\ub2c8\ub2e4.\u0022,\u0022search.ui.result.subtitle.space\u0022:\u0022\uc2a4\ud398\uc774\uc2a4\u0022,\u0022search.ui.filter.space.init.heading\u0022:\u0022\ucd5c\uadfc \uc2a4\ud398\uc774\uc2a4\u0022}";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="/s/d99ca38ec6b42c65537d11fdcc413d52-CDN/-tilmnw/8301/8fa50d05398fea29bc3b44b63cde07d279fbe836/365affbbb2d370639abe080abcba4e0e/_/download/contextbatch/css/_super/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/-tilmnw/8301/8fa50d05398fea29bc3b44b63cde07d279fbe836/667fa4d43fd44c2861e3fc059f417286/_/download/contextbatch/css/main,atl.general,-_super/batch.css?hostenabled=true" data-wrm-key="main,atl.general,-_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="/s/a9dbee887fb73a2aaf94313e9b57d429-CDN/-tilmnw/8301/8fa50d05398fea29bc3b44b63cde07d279fbe836/e5079d40e05feb4eff39438d901172ae/_/download/contextbatch/css/login,-_super/batch.css" data-wrm-key="login,-_super" data-wrm-batch-type="context" media="all">
+<script type="text/javascript" src="/s/1cc7677c68e13a05c5c8fa10b84f4759-CDN/-tilmnw/8301/8fa50d05398fea29bc3b44b63cde07d279fbe836/365affbbb2d370639abe080abcba4e0e/_/download/contextbatch/js/_super/batch.js?locale=ko-KR" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered></script>
+<script type="text/javascript" src="/s/b3e5ab7f342559488d9d9e9f5bee386f-CDN/-tilmnw/8301/8fa50d05398fea29bc3b44b63cde07d279fbe836/667fa4d43fd44c2861e3fc059f417286/_/download/contextbatch/js/main,atl.general,-_super/batch.js?hostenabled=true&amp;locale=ko-KR" data-wrm-key="main,atl.general,-_super" data-wrm-batch-type="context" data-initially-rendered></script>
+<script type="text/javascript" src="/s/3aaabffad167cb4854a68c22e01ec9ee-CDN/-tilmnw/8301/8fa50d05398fea29bc3b44b63cde07d279fbe836/1.0/_/download/batch/confluence.web.resources:login/confluence.web.resources:login.js?locale=ko-KR" data-wrm-key="confluence.web.resources:login" data-wrm-batch-type="resource" data-initially-rendered></script>
+
+    
+
+        
+    
+
+            
+            
+            
+            
+	    		    
+		    
+		
+            
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+
+    
+
+</head>
+
+<body      id="com-atlassian-confluence" class="theme-default login aui-layout aui-theme-default">
+    
+        
+            <div id='stp-licenseStatus-banner'></div>
+    <div id="page">
+    <div id="full-height-container">
+        <div id="header-precursor">
+            <div class="cell">
+                
+                                    </div>
+        </div>
+                                
+
+
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-before"><a class=" aui-dropdown2-trigger app-switcher-trigger" aria-controls="app-switcher" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">연결된 어플리케이션</span></a><div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" aria-hidden="true" data-is-switcher="true" data-environment="{&quot;isUserAdmin&quot;:false,&quot;isAppSuggestionAvailable&quot;:false,&quot;isSiteAdminUser&quot;:false}"><div role="application"><div class="app-switcher-loading">불러오는 중...</div></div></div></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-custom"><a href="/"><img src="/download/attachments/13205505/atl.site.logo?version=1&amp;modificationDate=1564456270000&amp;api=v2" alt="Confluence" /></a></h1><ul class="aui-nav">
+                                        <li class="aui-buttons">
+            </li>
+</ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="도움말">
+        <span class="aui-icon aui-icon-small aui-iconfont-question-filled">도움말</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                <ul  id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a  id="confluence-help-link" href="https://docs.atlassian.com/confluence/docs-71/" class="    "      title="컨플루언스 문서 홈 방문"  target="_blank"
+>
+        온라인 도움말
+</a>
+</li>
+                                            <li>
+    
+                
+<a  id="keyboard-shortcuts-link" href="#" class="    "      title="사용 가능한 키보드 단축키 보기" >
+        키보드 단축키
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="feed-builder-link" href="/dashboard/configurerssfeed.action" class="    "      title="사용자 지정 RSS 피드를 만들기." >
+        RSS 피드 빌더
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="whats-new-menu-link" href="https://confluence.atlassian.com/display/DOC/Confluence+7.1+Release+Notes" class="    "      title="" >
+        새 소식
+</a>
+</li>
+                                            <li>
+    
+                
+<a  id="gadget-directory-link" href="#" class="   user-item administration-link "      title="컨플루언스에서 제공하는 가젯을 찾아보기" >
+        사용 가능한 가젯
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="confluence-about-link" href="/aboutconfluencepage.action" class="    "      title="컨플루언스에 대한 더 많은 정보 얻기" >
+        컨플루언스에 관하여
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            <li>
+        
+            
+<a  id="login-link" href="/login.action" class="   user-item login-link "      title="" >
+        로그인
+</a>
+</li>
+                        
+    </li>
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+    
+                        <!-- \#header -->
+
+            
+        <div id="main" class=" aui-page-panel">
+            
+
+            <div id="sidebar-container">
+                                                                        </div><!-- \#sidebar-container -->
+
+            
+
+        
+		
+        <div id="login-container" >
+        			<div class="login-section ">
+                                                                                                                                                                
+    <form     name="loginform" method="POST" action="/dologin.action" class="aui login-form-container" >
+
+                                                                                                    
+                                            <h2>로그인</h2>
+                    
+
+                                        
+
+<div id="action-messages">
+                        </div>
+                    <fieldset class="compact-form-fields">
+                            
+
+    <legend class="assistive"><span>Confluence에 로그인</span></legend>
+                        
+
+<div class="field-group
+    "
+        >
+    <label id="os_username-label" for="os_username">
+    사용자 이름
+        </label>
+
+                <input type="text" name="os_username" id="os_username"                                   class="text   "               placeholder="사용자 이름"     data-focus="0"          />
+                      </div>                        
+
+<div class="field-group">
+    <label id="os_password-label" for="os_password">
+    비밀번호
+        </label>
+    <input type="password" name="os_password" id="os_password"                                   class="password "               placeholder="비밀 번호"          />
+                  </div>                        
+                                                    
+
+<div class="group">
+        
+<div class="checkbox">
+    <input type="checkbox" class="checkbox" value="true" name="os_cookie"
+                id="os_cookie">
+    <label for="os_cookie">내 컴퓨터에 로그인 정보 기록하기</label>
+    </div>
+</div>                                                <div class="field-group form-buttons compact-form-buttons ">
+                            <input id="loginButton" class="aui-button aui-style aui-button-primary" name="login" type="submit" value="로그인"/>
+                                                            <a id="forgot-password" class="aui-button aui-style aui-button-link" href="/forgotuserpassword.action">암호를 잊으셨나요?</a>
+                                                    </div>
+                        <input type="hidden" name="os_destination" value="/download/attachments/100771211/image2022-9-13_12-58-3.png?version=1&amp;modificationDate=1663041483000&amp;api=v2"/>
+                    </fieldset>
+                                    
+
+</form>                </div> 
+                            </div>
+                    
+        	
+        </div><!-- \#main -->
+    
+        
+                        
+            
+            
+
+<div id="footer" role="contentinfo">
+    <section class="footer-body">
+
+                                                    
+        
+                <ul id="login-language">
+                                            <li>
+                            <a href="/login.action?language=cs_CZ">Čeština</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=da_DK">Dansk</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=de_DE">Deutsch</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=et_EE">Eesti</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=en_GB">English (UK)</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=en_US">English (US)</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=es_ES">Español</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=fr_FR">Français</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=is_IS">Íslenska</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=it_IT">Italiano</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=hu_HU">Magyar</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=nl_NL">Nederlands</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=no_NO">Norsk</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=pl_PL">Polski</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=pt_BR">Português</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=ro_RO">Română</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=sk_SK">Slovenčina</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=fi_FI">Suomi</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=sv_SE">Svenska</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=ru_RU">Русский</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=zh_CN">中文</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=ja_JP">日本語</a>
+                        </li>
+                                            <li>
+                            <a href="/login.action?language=ko_KR">한국어</a>
+                        </li>
+                                    </ul>
+            
+
+        <ul id="poweredby">
+            <li class="noprint"><a href="http://www.atlassian.com/software/confluence" class="hover-footer-link" rel="nofollow">Atlassian Confluence</a>에 의해 제공 <span id='footer-build-information'>7.1.0</span></li>
+            <li class="print-only">Atlassian Confluence에 의해 인쇄됨 7.1.0</li>
+            <li class="noprint"><a href="https://support.atlassian.com/help/confluence" class="hover-footer-link" rel="nofollow">버그 신고</a></li>
+            <li class="noprint"><a href="https://www.atlassian.com/company" class="hover-footer-link" rel="nofollow">Atlassian 새 소식</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="http://www.atlassian.com/" rel="nofollow">Atlassian</a></div>
+
+                    
+        
+    </section>
+</div>
+
+        </div><!-- \#full-height-container -->
+</div><!-- \#page -->
+</body>
+</html>
