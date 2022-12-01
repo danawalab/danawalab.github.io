@@ -41,7 +41,7 @@ categories: MachineLearning
 
 로지스틱 회귀를 풀기 위한 가설을 세워봅니다. (e는 자연 상수 2.718281...)
 
-![/images/2022-12-01-MachineLearning-LogisticRegression/binaryclassification2.PNG](/images/2022-12-01-MachineLearning-LogisticRegression/binaryclassification2.PNG)
+![/images/2022-12-01-MachineLearning-LogisticRegression/sigmoid1.PNG](/images/2022-12-01-MachineLearning-LogisticRegression/sigmoid1.PNG)
 
 여기서 구해야 할 것은 주어진 데이터에 가장 적합한 가중치 w(weight)와 편향 b(bias)입니다.
 
@@ -63,7 +63,7 @@ plt.title('Sigmoid Function')
 plt.show()
 ```
 
-![/images/2022-12-01-MachineLearning-LogisticRegression/sigmoid1.PNG](/images/2022-12-01-MachineLearning-LogisticRegression/sigmoid1.PNG)
+![/images/2022-12-01-MachineLearning-LogisticRegression/sigmoid2.PNG](/images/2022-12-01-MachineLearning-LogisticRegression/sigmoid2.PNG)
 
 위의 그래프처럼 시그모이드 함수는 출력값을 0과 1사이의 값으로 조정하여 반환합니다.
 
@@ -91,7 +91,7 @@ plt.title('Sigmoid Function')
 plt.show()
 ```
 
-![/images/2022-12-01-MachineLearning-LogisticRegression/sigmoid1.PNG](/images/2022-12-01-MachineLearning-LogisticRegression/sigmoid2.PNG)
+![/images/2022-12-01-MachineLearning-LogisticRegression/sigmoid3.PNG](/images/2022-12-01-MachineLearning-LogisticRegression/sigmoid3.PNG)
 
 빨간선은 w의 값이 0.5, 초록선은 w의 값이 1, 파란선은 w의 값이 2인 경우입니다. w의 값이 커지면 경사가 커지고 w의 값이 작아지면 경사가 작아집니다.
 
