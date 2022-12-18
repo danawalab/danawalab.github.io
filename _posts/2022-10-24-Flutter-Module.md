@@ -4,7 +4,7 @@ title:  "iOS/Android 프로젝트에 Flutter Module 적용하는 방법"
 description: "iOS/Android 프로젝트에 Flutter Module을 적용하고 Method Channel을 통해 argument를 전달하는 방법을 알아보겠습니다. "
 date:   2022.10.24.
 writer: "선요한"
-categories: Common
+categories: Flutter
 ---
 
 ## Flutter Module이란
