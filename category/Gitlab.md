@@ -1,6 +1,6 @@
 ---
 layout: category
-title: GitLab
+title: Gitlab
 ---
 
 
