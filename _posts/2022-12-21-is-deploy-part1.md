@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "아파치 톰캣 로드밸런싱 상태에서 WAS 무중단 자동 배포하기"
-description: "L4로 묶인 아파치 톰캣 로드밸런싱 환경에서 아파치 종료 없이 동적으로 로드밸런싱을 빼서 WAS 무중단 자동 배포하는 방법을 알아보겠습니다"
+description: "L4로 묶인 아파치 톰캣 로드밸런싱 환경 WAS 무중단 자동 배포하는 방법을 알아보겠습니다"
 date: 2022.12.21.
 writer: "장민규"
 categories: Common
@@ -33,6 +33,8 @@ JkMountFileReload가 uriworkermap.properties을 동적으로 재로드 하는 �
 로드밸런싱 된 상태에서 uriworkermap.properties을 통해서 동적으로 톰캣을 뺄 수 있을 거라 생각했고 개발하기전에 먼저 기술 검증부터 진행 했습니다.    
 로컬에서 윈도우에서 아파치 톰캣, wsl에서 도커를 통해 ubuntu를 띄우고 안에서 아파치 톰캣 환경을 구성하여 진행한 결과 두 환경다 성공적으로 기술 검증에 성공하여
 개발에 들어갔습니다.   
+
+**기술 검증 영상**   
 
 [![기술검증](https://img.youtube.com/vi/XbpoWINb3CY/0.jpg)](https://youtu.be/XbpoWINb3CY)   
 
