@@ -193,7 +193,7 @@ console 사용법은 영상으로 대체하겠습니다
 [![유튜브](https://img.youtube.com/vi/CTDLOm4-Guo/0.jpg)](https://youtu.be/CTDLOm4-Guo)
 
 
-# TO-BE
+# 2.0.0 버전 추가 예정
 
 지금 버전은 console에서 ip를 통해 누가 해당 작업을 했는지 로그를 남겨서 확인하고 있는데   
 2.0.0 버전에는 로그인과 OTP 기능을 추가함으로 어느 유저가 어느 작업을 했는지 로그를 남길 예정입니다.    

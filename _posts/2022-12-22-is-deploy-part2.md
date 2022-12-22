@@ -210,9 +210,8 @@ is-deploy를 개발하면서 많은 팀과의 협업이 있었고 덕분에 충�
 트러블슈팅을 할 때는 참 스트레스 받는다 생각했는데 해결하고 나서의 그 쾌감과 뒤에서 물려오는 재미를 잊을 수 없습니다.   
 물론 아무 이슈 없는 게 좋지만요, 그래도 성장하는데 좋은 경험이였다 생각합니다.
 
-
-
-
-
-
-
+-----
+참고:
+- https://github.com/danawalab/is-deploy-agent
+- https://github.com/danawalab/is-deploy-console
+- https://danawalab.github.io/common/2022/12/21/is-deploy-part1.html
