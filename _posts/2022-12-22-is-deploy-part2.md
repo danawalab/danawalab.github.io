@@ -7,9 +7,7 @@ writer: "장민규"
 categories: Common
 ---
 
-# 회고
-
-# Agent
+# Agent 회고
 
 개발은 agent 먼저 개발하고 다음에 console로 개발이 진행되었습니다.
 
@@ -118,7 +116,7 @@ is-deploy에는 적용은 안됐지만 go 언어를 공부할 때 이해가 잘 
 
 그래서 대안으로 `exec.Command("tail", "-n", line, filePath)`로 console에서 agent의 log api를 특정 간격마다 호출하여 `tail -f`의 기능을 유사하게 구현했습니다.
 
-# Console
+# Console 회고
 
 console에 대한 회고록은 다음 포스팅인 next.js 개발기로 동료와 함께 찾아뵙겠습니다. 
 
@@ -199,7 +197,7 @@ root 권한이면 안됐습니다. 그래서 그룹을 user로 주고 `/etc/apac
 아파치를 mpm worker로 실행을 했는데 아래 사진을 보면
 하위 프로세스들이 nobody로 실행이 되어서 `/etc/apache2/conf.d` 경로 uriworkermap.properties 파일을 권한 문제로 인해 동적으로 리로드를 못하는 것으로 생각하고 있습니다.
 
-![apahce](//images/2022-12-22-is-deploy-part2/7.png)
+![apahce](/images/2022-12-22-is-deploy-part2/7.png)
 
 
 # 정리
