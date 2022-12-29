@@ -8,7 +8,7 @@ categories: Common
 ---
 
 ![!frontend](/images/2022-12-29-nextjs-devstory/0.png)   
-출저 구글
+출처 구글
 
 # 소개
 
@@ -82,7 +82,8 @@ return (
 코드를 간략하게 설명하면 json 설정에 따라 ui 구성이 동적으로 줄었다가 늘었다 하면서 agent 정보를 받으면 그에 맞게 ui 변경이 이루어져야 했습니다.   
 또한 css에서 `float: left`를 넣었는데 왼쪽으로 안 간다거나 등 css 하면서 애를 먹었습니다.
 
-![css](/images/2022-12-29-nextjs-devstory/10.gif)
+![css](/images/2022-12-29-nextjs-devstory/10.gif)   
+출처 구글
 
 이현우 A. React 라이브러리를 사용해 본 적이 없어서 react 기본적인 사용법을 익히고,
 Next.js의 ServerSide Rendering 등 프레임워크의 사용법을 익히는데 시간을 많이 사용했습니다.   
