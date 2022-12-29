@@ -93,9 +93,8 @@ Next.js의 ServerSide Rendering 등 프레임워크의 사용법을 익히는데
 진행하며, web 개발자도구 콘솔과 ServerSide Rendering의 로그를 확인 하기 위해 IDE의 콘솔창을 번갈아가며 확인해 개발하였습니다.
 
 
-![1](/images/2022-12-29-nextjs-devstory/3.PNG)   
-![2](/images/2022-12-29-nextjs-devstory/4.PNG)      
-nextjs를 해서 아픈 곳도 혼돈하더니 오후에 사라진 현우 씨
+![1](/images/2022-12-29-nextjs-devstory/3.PNG)
+nextjs를 해서 아픈 곳도 혼돈하는 현우 씨
 
 ## Q.  아쉬운점이 있나요?
 - 장민규 A. css 실력이 충분하고 미적 감각을 잃어버리지 않았다면 이쁜 UI를 만들지 않았을까 합니다 (예쁜 테마 만들어주세요...), 그리고 기능 구현 부분에만 테스트 코드 좀 대충 작성했는데 좀 더 정확하게 작성하고 UI에 대한 테스트 코드 작성하는 법을 몰라서 UI 개발은 라이브로 보면서 개발만 하고 끝냈는데 그 부분이 아쉽네요.
