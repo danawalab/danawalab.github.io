@@ -50,7 +50,7 @@ Elasticsearch를 통해 데이터를 받아 왔는데 데이터가 없어서 기
 ## Q. 개발하면서 힘들고 오래 걸렸던 부분은 무엇인가요?
 장민규 A. 저는 동적 ui 구성과 css가 힘들었습니다.
 
-```javascript
+```jsx
 return (
     <Grid container spacing={2}>
         {json.node.map((node, nodeIndex) => (
