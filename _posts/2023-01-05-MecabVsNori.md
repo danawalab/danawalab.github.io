@@ -47,9 +47,7 @@ elasticsearch-plugin install analysis-nori
 
 ![/images/2023-01-05-MecabVsNori/image1.png](/images/2023-01-05-MecabVsNori/image1.png)
 
-![/images/2023-01-05-MecabVsNori/image2.png](/images/2023-01-05-MecabVsNori/image2.png)
-
-성능 비교를 위해 각각 300만건, 700만건 정도의 문서수의 인덱스를 플러그인별로 색인해보았습니다.
+성능 비교를 위해 각각 300만, 700만 건 문서 수의 인덱스를 플러그인별로 색인해보았습니다.
 
 현재 플러그인에는 색인 속도 향상을 위한 아무 옵션도 설정하지 않은 상태입니다.
 결과를 보면 Mecab-Ko와 Fastcat의 성능이 동일하고, Nori는 다른 분석기들보다 속도가 열위인것으로 보입니다. 자료만 보았을 때 엘라스틱에서 공식으로 지원하는 플러그인치고 성능이 그렇게 뛰어나다고 볼 수는 없습니다.
