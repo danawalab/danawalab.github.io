@@ -25,7 +25,8 @@ Photo by Joanna Wallace on coralogix
 
 #### Mecab-Ko
 Mecab-Ko 초기 설정 방법은 아래를 참고해주세요.
-여기서는 은전한닢에서 제공되는 가장 최신 버전을 사용합니다.</br>
+여기서는 은전한닢에서 제공되는 가장 최신 버전을 사용합니다.
+
 <https://danawalab.github.io/common/2022/12/19/Mecab-Ko.html>
 
 
