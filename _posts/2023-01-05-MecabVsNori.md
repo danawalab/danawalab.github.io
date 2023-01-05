@@ -7,7 +7,7 @@ writer: "반윤성"
 categories: Elastic
 ---
 
-![/images/2023-01-05-MecabVsNori/image3.png](/images/2023-01-05-MecabVsNori/image3.png)
+![/images/2023-01-05-MecabVsNori/image0.jpeg](/images/2023-01-05-MecabVsNori/image0.jpeg)
 Photo by hogetech.info
 
 ## 어떤 한국어 분석기를 사용할까 ?
