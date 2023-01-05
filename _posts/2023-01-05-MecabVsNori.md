@@ -47,6 +47,8 @@ elasticsearch-plugin install analysis-nori
 
 ![/images/2023-01-05-MecabVsNori/image1.png](/images/2023-01-05-MecabVsNori/image1.png)
 
+![/images/2023-01-05-MecabVsNori/image2.png](/images/2023-01-05-MecabVsNori/image2.png)
+
 성능 비교를 위해 각각 300만건, 700만건 정도의 문서수의 인덱스를 플러그인별로 색인해보았습니다.
 
 현재 플러그인에는 색인 속도 향상을 위한 아무 옵션도 설정하지 않은 상태입니다.
@@ -121,15 +123,12 @@ elasticsearch-plugin install analysis-nori
 
 불필요한 사전을 정리해서 약 20만개까지 줄였습니다.
 
-![/images/2023-01-05-MecabVsNori/image2.png](/images/2023-01-05-MecabVsNori/image2.png)
+![/images/2023-01-05-MecabVsNori/image3.png](/images/2023-01-05-MecabVsNori/image3.png)
+
+모두 700만건의 문서 수를 가진 인덱스의 색인 결과입니다. 위의 데이터를 보면 사전 갯수의 제거에 따라 색인 ``소요 시간(Elapsed Time)``이 감소하는 것으로 나타났습니다. 따라서 다음과 같이 유추할 수 있습니다.
 
 
-추가적으로 기분석된 명사 사전이 있어서 이것도 같이 테스트해봤습니다. 위의 데이터를 보면 사전 갯수의 제거에 따라 색인 ``소요 시간(Elapsed Time)``이 감소하는 것으로 나타났습니다. 그렇지만 ``4300만건``으로 기분석 단어가 많았던 셋팅에서도 속도가 비슷하게 나왔으므로 다음과 같이 유추할 수 있습니다.
-
-
-#### 1) 색인 시 사전이 적을수록 색인 성능이 좋아진다.
-
-#### 2) 단어 수 보다 사전 수가 색인 속도에 미치는 영향이 더 크다.
+#### 색인 시 사전이 적을수록 색인 성능이 좋아진다.
 
 
 ## 정리
