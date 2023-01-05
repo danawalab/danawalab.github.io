@@ -1,11 +1,14 @@
 ---
 layout: post
 title:  "Mecab과 Nori, Fastcat 플러그인 색인 성능 비교"
-description: "다양한 플러그인의 성능을 비교해보면서 성능이 우수한 플러그인을 찾아봅니다"
+description: "다양한 ES 플러그인의 성능을 비교해보면서 성능이 우수한 플러그인을 찾아봅니다"
 date:   2023.01.05.
 writer: "반윤성"
 categories: Elastic
 ---
+
+![/images/2023-01-05-MecabVsNori/image3.png](/images/2023-01-05-MecabVsNori/image3.png)
+Photo by hogetech.info
 
 ## 어떤 한국어 분석기를 사용할까 ?
 
@@ -22,24 +25,20 @@ categories: Elastic
 
 #### Mecab-Ko
 Mecab-Ko 초기 설정 방법은 아래를 참고해주세요.
-
 여기서는 은전한닢에서 제공되는 가장 최신 버전을 사용합니다.
-
 <https://danawalab.github.io/common/2022/12/19/Mecab-Ko.html>
 
 
 #### Nori
 Nori는 엘라스틱서치에서 다음과 같이 입력 및 재시작합니다.
+혹은 사용하는 버전의 엘라스틱서치 코드를 받아 직접 빌드하여 커스터마이징할 수 있습니다.
 
 ```script
 elasticsearch-plugin install analysis-nori
 ```
 
-혹은 사용하는 버전의 엘라스틱서치 코드를 받아 직접 빌드하여 커스터마이징할 수 있습니다.
-
 #### 다나와 상품명 분석기
 상품명 분석기는 private로 개발되어 있기 때문에 코드 오픈없이 진행하겠습니다.
-
 사용 방법은 다른 플러그인과 유사하게 엘라스틱서치 기동 시 도커 볼륨으로 호스트와 연결해주겠습니다.
 
 
@@ -57,7 +56,7 @@ elasticsearch-plugin install analysis-nori
 
 
 ```script
-/mecab-ko-dic-2.1.1-20180720$ wc -l *.csv
+~/mecab-ko-dic-2.1.1-20180720$ wc -l *.csv
      148 CoinedWord.csv
     2547 EC.csv
     1820 EF.csv
@@ -109,7 +108,7 @@ elasticsearch-plugin install analysis-nori
 다나와는 주로 상품에 대한 검색 결과를 제공하고 있기 때문에 동사, 형용사, 인명, 지명, 북한사전(?) 등을 제거하여 다시 색인을 진행하겠습니다.
 
 ```script
-/mecab-ko-dic-2.1.1-20180720$ wc -l *.csv
+~/mecab-ko-dic-2.1.1-20180720$ wc -l *.csv
      140 NNB.csv
      677 NNBC.csv
   205269 NNG.csv
@@ -125,12 +124,12 @@ elasticsearch-plugin install analysis-nori
 ![/images/2023-01-05-MecabVsNori/image2.png](/images/2023-01-05-MecabVsNori/image2.png)
 
 
-추가적으로 기분석된 명사 사전이 있어서 이것도 같이 테스트해봤습니다. 위의 데이터를 보면 사전 갯수의 제거에 따라 색인 소요 시간(Elapsed Time)이 감소하는 것으로 나타났습니다. 그렇지만 4300만건으로 기분석 단어가 많았던 셋팅에서도 속도가 비슷하게 나왔으므로 다음과 같이 유추할 수 있습니다.
+추가적으로 기분석된 명사 사전이 있어서 이것도 같이 테스트해봤습니다. 위의 데이터를 보면 사전 갯수의 제거에 따라 색인 ``소요 시간(Elapsed Time)``이 감소하는 것으로 나타났습니다. 그렇지만 ``4300만건``으로 기분석 단어가 많았던 셋팅에서도 속도가 비슷하게 나왔으므로 다음과 같이 유추할 수 있습니다.
 
 
-1) 색인 시 사전이 적을수록 색인 성능이 좋아진다.
+#### 1) 색인 시 사전이 적을수록 색인 성능이 좋아진다.
 
-2) 단어 수 보다 사전 수가 색인 속도에 미치는 영향이 더 크다.
+#### 2) 단어 수 보다 사전 수가 색인 속도에 미치는 영향이 더 크다.
 
 
 ## 정리
