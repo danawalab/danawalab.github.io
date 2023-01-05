@@ -8,7 +8,7 @@ categories: Elastic
 ---
 
 ![/images/2023-01-05-MecabVsNori/image0.jpeg](/images/2023-01-05-MecabVsNori/image0.jpeg)
-Photo by Joanna Wallace
+Photo by Joanna Wallace on coralogix
 
 ## 어떤 한국어 분석기를 사용할까 ?
 
@@ -25,7 +25,7 @@ Photo by Joanna Wallace
 
 #### Mecab-Ko
 Mecab-Ko 초기 설정 방법은 아래를 참고해주세요.
-여기서는 은전한닢에서 제공되는 가장 최신 버전을 사용합니다.
+여기서는 은전한닢에서 제공되는 가장 최신 버전을 사용합니다.</br>
 <https://danawalab.github.io/common/2022/12/19/Mecab-Ko.html>
 
 
