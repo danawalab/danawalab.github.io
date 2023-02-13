@@ -31,7 +31,7 @@ Search After는 Scroll API 방식과 달리 `live coursor`를 제공하면서 `s
 Search After 사용 예시
 ```
 1. 
-GET twitter/_search
+GET tcmpny_link/_search
 {
     "query": {
         "match": {
@@ -40,12 +40,12 @@ GET twitter/_search
     },
     "sort": [
         {"date": "asc"},
-        {"tie_breaker_id": "asc"}      
+        {"tie_breaker_id": "asc"}
     ]
 }
 
 2. 
-GET twitter/_search
+GET tcmpny_link/_search
 {
     "query": {
         "match": {
@@ -157,8 +157,13 @@ Scroll의 병렬 처리라고 생각하시면 됩니다.
 ![/images/2023-02-13-Search-After/image2.png](/images/2023-02-13-Search-After/image2.png)
 
 ## 테스트 결과
-엘라스틱서치 Search After 및 PIT에 대해 사용해 보았습니다.
-위 테스트에서 2번 Scroll API + Sliced Scroll, 5번 Search After + PIT + Sliced Scroll 은 약 23% 차이가 있지만 Scroll API 메모리 부하를 생각하면 사용성이 많아 보이는 기능임을 확인했습니다.
+위 테스트 2, 5번 케이스를 비교해 보면 아래와 같은 내용을 확인할 수 있습니다.
+
+- Scroll API는 상대적으로 빠르고 효율적이지만 메모리에서 스크롤 컨텍스트를 추적해야 하므로 5번 케이스보다 CPU 사용량이 34% 정도 높았습니다.
+- Search After는 정렬 값으로 표시되는 커서를 지정하여 메모리 오버헤드는 낮았으나 2번 케이스보다 속도가 23% 정도 느렸습니다.
+
+두 가지다 장점과 단점이 있어 각각에 맞는 환경에 사용하시면 좋을 거 같습니다.
+
 
 ## 참고 자료
 - https://www.elastic.co/guide/en/elasticsearch/reference/current/paginate-search-results.html#search-after
