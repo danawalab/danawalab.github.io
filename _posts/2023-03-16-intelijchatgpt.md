@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "IntelliJ "
-description: "IntelliJ chatGPT Plugin Setting"
+title:  "IntelliJ chatGPT Plugin Setting"
+description: "IntelliJ에서 chatGPT를 연동해서 사용하는 방법을 알아봅니다"
 date:   2023.03.16.
 writer: "반윤성"
 categories: Common
