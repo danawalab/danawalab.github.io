@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,51 +16,53 @@
     <meta property="og:description" content="기획 확인 후 작성">
     <link rel="stylesheet" type="text/css" href="//static-t.danawa.com/css/techblog.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.7/styles/monokai_sublime.min.css">
-    <script src="//cdn.jsdelivr.net/highlight.js/8.7/highlight.min.js"></script> 
+    <script src="//cdn.jsdelivr.net/highlight.js/8.7/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-        <!-- 디자인 확인용 스크립트 개발시 삭제 -->
-        <script async type="text/javascript">
-            (function () {
-                document.addEventListener('DOMContentLoaded', function () {
-                    const headerBtn = document.querySelector(".header__btn");
-                    const buttonCate = document.querySelector(".button--cate");
-                    const buttonToggle = document.querySelector(".button__toggle");
-                    const content = document.querySelector(".content");
+    <!-- 디자인 확인용 스크립트 개발시 삭제 -->
+    <script type="text/javascript">
+        (function () {
+            document.addEventListener('DOMContentLoaded', function () {
+                const headerBtn = document.querySelector(".header__btn");
+                const buttonCate = document.querySelector(".button--cate");
+                const buttonToggle = document.querySelector(".button__toggle");
+                const content = document.querySelector(".content");
 
-                    headerBtn.addEventListener("click", toggle_btn);
-                    buttonCate.addEventListener("click", toggle_btn);
-                    buttonToggle.addEventListener("click", removeClass)
+                headerBtn.addEventListener("click", toggle_btn);
+                buttonCate.addEventListener("click", toggle_btn);
+                buttonToggle.addEventListener("click", removeClass)
 
-                    function toggle_btn() {
-                        content.classList.toggle("content--side");
-                    };
+                function toggle_btn() {
+                    content.classList.toggle("content--side");
+                };
 
-                    function removeClass() {
-                        content.classList.remove("content--side");
-                    }
+                function removeClass() {
+                    content.classList.remove("content--side");
+                }
 
-                })
-            })();
-        </script>
+            })
+        })();
+    </script>
 </head>
+
 <body>
     <header class="header">
-    <div class="header__wrap">
-        <button type="button" class="header__btn">
-            <span class="blind">네비게이션</span>
-        </button>
-        <h1 class="header__h1">
-            <a href="" target="_self" class="header__link">
-                <span class="header__logo">
-                    <strong class="blind">danawa</strong>
-                </span>
-                <span class="header__logo header__logo--techblog">
-                    <strong class="blind">기술 블로그</strong>
-                </span>
-            </a>
-        </h1>
-    </div>
-</header>    <div class="content">
+        <div class="header__wrap">
+            <button type="button" class="header__btn">
+                <span class="blind">네비게이션</span>
+            </button>
+            <h1 class="header__h1">
+                <a href="" target="_self" class="header__link">
+                    <span class="header__logo">
+                        <strong class="blind">danawa</strong>
+                    </span>
+                    <span class="header__logo header__logo--techblog">
+                        <strong class="blind">기술 블로그</strong>
+                    </span>
+                </a>
+            </h1>
+        </div>
+    </header>
+    <div class="content">
         <div class="content__wrap">
             <div class="main-banner">
                 <div class="main-banner__cover"></div>
@@ -141,18 +143,20 @@
                     <div class="content__post">
                         <a href="" class="content__link">
                             <h3 class="content__h3">feign 좀 더 나아가기</h3>
-                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세
+                                내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
                         </a>
                         <span class="content__sub">
                             <span class="name">김다나</span>
                             <span class="date">2020.01.03.</span>
-                            
+
                         </span>
                     </div>
                     <div class="content__post">
                         <a href="" class="content__link">
                             <h3 class="content__h3">메인 데이터베이스 IDC 탈출 성공기</h3>
-                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세
+                                내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
                         </a>
                         <span class="content__sub">
                             <span class="name">김다나</span>
@@ -164,29 +168,32 @@
                         <a href="" class="content__link">
                             <h3 class="content__h3">Spock Extension과 Elasticsearch + Kibana 조합으로 테스트
                                 결과를 빠르게 피드백 받기</h3>
-                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세
+                                내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
                         </a>
                         <span class="content__sub">
                             <span class="name">김다나</span>
                             <span class="date">2020.01.03.</span>
-                            
+
                         </span>
                     </div>
                     <div class="content__post">
                         <a href="" class="content__link">
                             <h3 class="content__h3">feign 좀 더 나아가기</h3>
-                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세
+                                내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
                         </a>
                         <span class="content__sub">
                             <span class="name">김다나</span>
                             <span class="date">2020.01.03.</span>
-                            
+
                         </span>
                     </div>
                     <div class="content__post">
                         <a href="" class="content__link">
                             <h3 class="content__h3">메인 데이터베이스 IDC 탈출 성공기</h3>
-                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세
+                                내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
                         </a>
                         <span class="content__sub">
                             <span class="name">김다나</span>
@@ -197,29 +204,32 @@
                     <div class="content__post">
                         <a href="" class="content__link">
                             <h3 class="content__h3">메인 데이터베이스 IDC 탈출 성공기</h3>
-                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세
+                                내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
                         </a>
                         <span class="content__sub">
                             <span class="name">김다나</span>
                             <span class="date">2020.01.03.</span>
-                            
+
                         </span>
                     </div>
                     <div class="content__post">
                         <a href="" class="content__link">
                             <h3 class="content__h3">feign 좀 더 나아가기</h3>
-                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세
+                                내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
                         </a>
                         <span class="content__sub">
                             <span class="name">김다나</span>
                             <span class="date">2020.01.03.</span>
-                            
+
                         </span>
                     </div>
                     <div class="content__post">
                         <a href="" class="content__link">
                             <h3 class="content__h3">메인 데이터베이스 IDC 탈출 성공기</h3>
-                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
+                            <p class="content__p">상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 상세
+                                내용이 들어갑니다 상세 내용이 들어갑니다 상세 내용이 들어갑니다 </p>
                         </a>
                         <span class="content__sub">
                             <span class="name">김다나</span>
@@ -233,8 +243,9 @@
     </div>
     </div>
     <footer class="footer">
-    <p>Copyright © <strong>danawa</strong> Co., Ltd. All Rights Reserved.</p>
-    <span>ⓒ<strong>danawa</strong> </span>
-</footer></body>
+        <p>Copyright © <strong>danawa</strong> Co., Ltd. All Rights Reserved.</p>
+        <span>ⓒ<strong>danawa</strong> </span>
+    </footer>
+</body>
 
 </html>
