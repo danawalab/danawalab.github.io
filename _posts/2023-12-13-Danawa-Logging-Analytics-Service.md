@@ -3,7 +3,7 @@ layout: post
 title: "다나와 웹 트래픽 로그 데이터 분석 시스템 도입기"
 description: "다나와에서 사용되는 웹 트래픽 로그 데이터 분석 시스템 도입기"
 date: 2023.12.13.
-writer: "선지호,이현우"
+writer: "선지호, 이현우"
 categories: "DanawaService"
 ---
 
