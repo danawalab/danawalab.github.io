@@ -2,7 +2,7 @@
 layout: post
 title: "다나와 Kotlin을 만나다!"
 description: "다나와에서 Kotlin을 사용하기 시작한 이야기를 소개합니다."
-date: 2024.02.01.
+date: 2024.02.14.
 writer: "장민규, 윤성현, 이주영"
 categories: Common
 ---
