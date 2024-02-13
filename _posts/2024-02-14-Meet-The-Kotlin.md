@@ -51,7 +51,7 @@ fun valid(productName: String, price: Int) {
 
 무엇보다 Go에 이어 Kotlin의 마스코트가 귀여워서는 비밀입니다. 😊   
 
-![kodee](/images/2024-02-01-Meet-The-Kotlin/kodee.png)   
+![kodee](/images/2024-02-14-Meet-The-Kotlin/kodee.png)   
 
 출처: [Kotlin 공식 홈페이지](https://blog.jetbrains.com/ko/kotlin/2023/05/the-kotlin-mascot-returns/)
 
@@ -66,8 +66,8 @@ Kotlin 스터디를 진행하면서 Kotlin의 장점을 더욱 느끼게 되어,
 
 장민규: 다나와에서 Kotlin의 시작은 저였습니다.
 
-![kotlin1](/images/2024-02-01-Meet-The-Kotlin/kotlin-1.PNG)
-![kotlin2](/images/2024-02-01-Meet-The-Kotlin/kotlin-2.PNG)
+![kotlin1](/images/2024-02-14-Meet-The-Kotlin/kotlin-1.PNG)
+![kotlin2](/images/2024-02-14-Meet-The-Kotlin/kotlin-2.PNG)
 
 사진과 같이 ppt로 Kotlin을 소개 자료도 만들어 발표하고 위키에도 여러 장점들을 작성하였습니다.   
 지금 같이 포스팅하고 있는 성현님과 주영님 그리고 Kotlin에 관심을 가진 팀원들과 함께 제 주도하에 스터디를 진행하기도 했습니다.   
