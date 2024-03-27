@@ -77,6 +77,7 @@ Jsch 라이브러리에서는 자원 해제를 지원해주는 use 함수가 구
 코틀린의 확장 함수를 직접 구현하여 try-finally 블록을 간결하게 처리함으로써 코드의 가독성을 향상시켰습니다
 
 ![image2](/images/2024-03-08-adult-keyword-automation-image/image2.png) 
+
 ![image3](/images/2024-03-08-adult-keyword-automation-image/image3.png) 
 
 SSH 연결 후 수행할 작업(예: 파일 업로드, 백업 파일 활성화 등)은 전략 패턴을 적용하여 구현함으로써, 작업 선택의 유연성을 높였습니다.  
