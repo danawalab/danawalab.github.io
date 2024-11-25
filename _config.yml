@@ -30,6 +30,11 @@ url: "https://danawalab.github.io" # the base hostname & protocol for your site,
 
 # Build settings
 # theme: minima
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -58,4 +63,6 @@ highlighter: rouge
 
 paginate: 5
 paginate_path: "/blog/page:num/"
+
+markdown: kramdown
 
