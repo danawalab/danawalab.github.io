@@ -88,7 +88,7 @@ match 명령어를 수행을 위해서는 크게 3가지가 필요합니다.
 
 그러면 안내에 따라서 3개 파일의 절대경로를 하나씩 올립시다
 
-![image1.png](/images/2025-08-04-iOS-cicd-provisioning-profile/image1.jpg)
+![image1.png](/images/2025-08-04-iOS-cicd-provisioning-profile/image1.png)
 
 그러면 이 파일들을 저장할 git 주소를 올려야합니다. 해당 파일을 유지할 레파지토리를 만들어서 링크를 올립니다.
 
