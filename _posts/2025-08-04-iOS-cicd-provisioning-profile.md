@@ -1,15 +1,11 @@
 ---
-
 layout: post
 title: "CI/CD에 기존 Provisioning Profile 유지하기(Git으로 유지하기)" # 리스트에 보여질 제목
 description: "CI/CD를 적용하면서 겪은 Provisioning Profile을 유지하는 방법에 대해서 고민하고 해결한 경험을 서술합니다." # 리스트에 보여질 설명
-image: "images/2024_12-16-iOS-Tuist/banner.png" # [optional] 배너 이미지를 바꾸고 싶을때 입력하면됩니다. 없을시 기본 배너 표시됩니다.
-date: 2025-08-04 09:00:00 +0900 # 등록일자를 입력하세요.
-writer: "최인호" # 작성자명을 입력하세요.
-categories: iOS # 생성한 카테고리 title을 입력하세요.
-
+date: 2025.08.04
+writer: "최인호" 
+categories: iOS 
 ---
-
 # provisioning profile 관리하기
 
 기존 다나와 서비스는 개발자 각자의 `develop`용 `provisining profile`과 `distribution`용 `provisining profile`을 갖고 있었습니다.
