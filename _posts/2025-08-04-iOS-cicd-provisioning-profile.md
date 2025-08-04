@@ -65,8 +65,8 @@ fastlane에는 match라는 명령어가 있음을 발견했습니다.
 
 그래서 제가 이루고자 하는 조건을 충족하기에 해당 방법을 통해서 Provisioning Profile을 관리하고자 했습니다.
 
-1. 컨트롤 할 수 있을 것
-2. 기존에 있는 Provisioning Profile을 사용할 것
+- 1. 컨트롤 할 수 있을 것
+- 2. 기존에 있는 Provisioning Profile을 사용할 것
 
 # provisioning profile git에 올려 유지하기.
 
@@ -98,7 +98,7 @@ match 명령어를 수행을 위해서는 크게 3가지가 필요합니다.
 
 match는 암호화해서 git에 올리고 fastlane에서 다운로드 받을 때도 암호를 통해서 자동으로 복호화 후 저장하게 됩니다. 그러니 잊어먹지 말고 반드시 기억해야 합니다.
 
-만약에 `p12` 파일이 이미 암호화되어 있다면 이 과정은 Skip됩니다. 비밀번호는 복호화하는데 사용되니 잊어먹지 말아야 합니다.
+만약 잊어버렸다면 KeyChain에서 match_{Git 주소} 이름으로 저장되어 있으니 다시 확인하실 수 있습니다.
 
 ![image3.png](/images/2025-08-04-iOS-cicd-provisioning-profile/image3.png)
 
@@ -114,10 +114,10 @@ match는 암호화해서 git에 올리고 fastlane에서 다운로드 받을 때
 
  프로비저닝 프로파일을 파일을 다운 받기 위해서 우리는 다음을 정하면 됩니다.
 
-1. 무슨 타입으로 다운 받을 것인가?
-2. Git URL
-3. 어느 branch에서 다운로드 받을 것인가?
-4. 어디에 저장할 것인가?
+- 1. 무슨 타입으로 다운 받을 것인가?
+- 2. Git URL
+- 3. 어느 branch에서 다운로드 받을 것인가?
+- 4. 어디에 저장할 것인가?
 
 ### 1. 무슨 타입으로 다운 받을 것인가?
 
@@ -151,11 +151,9 @@ fastlane과 관련되어 있고 매 CI/CD가 작동할 때마다 다운로드 �
 
 Bundle Identifier가 정해졌다는 가정하에 우리가 Project에 넣어줘야 할 정보는 다음과 같습니다.
 
-1. Provisioning Profile
-2. Signing Certificate
-3. Team
-
-*Team ↔ Signing Certificate 순서를 바꾼 이유는 아래에 기재.
+- 1. Provisioning Profile
+- 2. Signing Certificate
+- 3. Team
 
 ---
 
